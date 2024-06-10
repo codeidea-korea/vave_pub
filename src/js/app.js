@@ -24,7 +24,7 @@ import "@left4code/tw-starter/dist/js/tab";
  */
 import "./chart";
 import "./highlight";
-import "./lucide";
+// import "./lucide";
 import "./tiny-slider";
 import "./tippy";
 import "./datepicker";
@@ -52,7 +52,7 @@ import "./show-dropdown";
 import "./search";
 import "./copy-code";
 import "./show-code";
-import "./side-menu";
+// import "./side-menu";
 import "./mobile-menu";
-import "./side-menu-tooltip";
+// import "./side-menu-tooltip";
 import "./dark-mode-switcher";

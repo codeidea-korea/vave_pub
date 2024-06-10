@@ -8,7 +8,7 @@
     --color-pending: 255 78 78;
     --color-danger: 255 78 78;
     --color-light: theme("colors.rgb.slate.100");
-    --color-dark: theme("colors.rgb.slate.800");
+    --color-dark: 31 40 49;
     --color-slate-50: theme("colors.rgb.slate.50");
     --color-slate-100: theme("colors.rgb.slate.100");
     --color-slate-200: theme("colors.rgb.slate.200");
