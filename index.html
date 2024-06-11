@@ -4,21 +4,24 @@
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
         <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
-        <link rel="icon" type="image/png" sizes="16x16" href="https://vave.com/assets/favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./dist/css/app.css" />
         <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
@@ -42,7 +45,309 @@
 
                 <div class="box">
 
+                    <!-- main_visual -->
+                    <div class="main_visual flex flex-col md:flex-row gap-5">
+                        <div class="visual_banner p-4 xl:p-8 rounded" style="background-image:url('./dist/images/banner/main_visual.webp');">
+                            <div>
+                                <b class="text-2xl xl:text-4xl font-extrabold leading-snug">슬롯, 베팅, 라이브 게임</b>
+                                <p class="mt-3 text-xs xl:text-base light-txt">최고 수준의 암호화 카지노</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">즉시 등록하기</button>
+                            </div>
+                        </div>
+                        <div class="slide_visual mySwiper overflow-hidden rounded" data-effect="fade" data-timer="5">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide cursor-pointer p-4 xl:p-6 pb-16 xl:pb-14" style="background-image:url(./dist/images/banner/main_banner_1.webp)">
+                                        <div class="font-extrabold text-base xl:text-2xl">카지노 캐시백</div>
+                                        <div>
+                                            <b class="font-extrabold text-3xl xl:text-7xl mont">100%</b>
+                                            <div class="font-extrabold text-base xl:text-2xl">최대 1BTC 캐시백</div>
+                                        </div>
+                                        <div class="font-extrabold text-base xl:text-2xl">일요일</div>
+                                    </li>
+                                    <li class="swiper-slide cursor-pointer p-4 xl:p-6 pb-16 xl:pb-14" style="background-image:url(./dist/images/banner/main_banner_2.webp)">
+                                        <div class="font-extrabold text-base xl:text-2xl">스포츠 보너스</div>
+                                        <div>
+                                            <b class="font-extrabold text-3xl xl:text-7xl mont">100%</b>
+                                            <div class="font-extrabold text-base xl:text-2xl">최대 500 USDT</div>
+                                        </div>
+                                        <div class="font-extrabold text-base xl:text-2xl">환영 오퍼</div>
+                                    </li>
+                                    <li class="swiper-slide cursor-pointer p-4 xl:p-6 pb-16 xl:pb-14" style="background-image:url(./dist/images/banner/main_banner_3.webp)">
+                                        <div>
+                                            <div class="font-extrabold text-base xl:text-2xl">Judd Trump</div>
+                                            <div class="mt-4 font-extrabold text-base xl:text-2xl">가 당사의 앰버서더가 되었습니다</div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide cursor-pointer p-4 xl:p-6 pb-16 xl:pb-14" style="background-image:url(./dist/images/banner/main_banner_4.webp)">
+                                        <div class="font-extrabold text-base xl:text-2xl">매주 목요일</div>
+                                        <div>
+                                            <b class="font-extrabold text-3xl xl:text-7xl mont">보너스</b>
+                                            <div class="font-extrabold text-base xl:text-2xl">50% 최대 150 USDT</div>
+                                        </div>
+                                        <div class="font-extrabold text-base xl:text-2xl">+100회 무료 스핀</div>
+                                    </li>
+                                    <li class="swiper-slide cursor-pointer p-4 xl:p-6 pb-16 xl:pb-14" style="background-image:url(./dist/images/banner/main_banner_5.webp)">
+                                        <div class="font-extrabold text-base xl:text-2xl">VIP Casino</div>
+                                        <div class="mb-4">
+                                            <b class="font-extrabold text-3xl xl:text-7xl mont">VIP</b>
+                                            <div class="font-extrabold text-base xl:text-2xl">프로그램</div>
+                                        </div>
+                                        <div></div>
+                                    </li>
+                                    <li class="swiper-slide cursor-pointer p-4 xl:p-6 pb-16 xl:pb-14" style="background-image:url(./dist/images/banner/main_banner_6.webp)">
+                                        <div class="font-extrabold text-base xl:text-2xl">VIP Sport</div>
+                                        <div class="mb-4">
+                                            <b class="font-extrabold text-3xl xl:text-7xl mont">VIP</b>
+                                            <div class="font-extrabold text-base xl:text-2xl">프로그램</div>
+                                        </div>
+                                        <div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pagination"></div>
+                        </div>
+                    </div>
+
+                    <!-- 마지막 수상자 -->
+                    <div class="mt-6">
+                        <div class="text-lg font-bold">마지막 수상자</div>
+                        <div class="mySwiper overflow-hidden mt-6" data-per="auto" data-gap="10">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_1.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">GreyArea</a>
+                                            <p class="text-primary mont font-medium">승리 — 15.8 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Monkeys Go Bananas MultiMax</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_2.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">Alpaczo</a>
+                                            <p class="text-primary mont font-medium">승리 — 9.93 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Wild Spin Deluxe</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_3.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">mac72888</a>
+                                            <p class="text-primary mont font-medium">승리 — 27.05 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Retro Sweets</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_4.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">volcanicdogg</a>
+                                            <p class="text-primary mont font-medium">승리 — 29.93 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 5 Lions Megaways</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_5.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">Vadim4ik</a>
+                                            <p class="text-primary mont font-medium">승리 — 5.55 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Happy Fishing</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 게임 카테고리 -->
+                    <div class="game_category mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
+                        <div class="flex flex-col justify-between h-[150px] sm:h-[300px] lg:h-[320px] p-3 sm:p-4 rounded">
+                            <div class="z-10 relative sm:w-full w-2/3">
+                                <b class="text-white text-lg sm:text-2xl">슬롯</b>
+                                <p class="mt-2 text-sm text-light">5000개 이상의 슬롯 게임 중에서 선택하십시오.</p>
+                            </div>
+                            <img class="img left" src="./dist/images/main/banner_slot.webp" alt=""><span class="bg_blur" style="background-color:rgb(246, 194, 60)"></span>
+                            <div class="z-10 relative text-left sm:text-center">
+                                <button class="btn btn-primary">게임 플레이하기 <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3 ml-3"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-between h-[150px] sm:h-[300px] lg:h-[320px] p-3 sm:p-4 rounded">
+                            <div class="z-10 relative sm:w-full w-2/3">
+                                <b class="text-white text-lg sm:text-2xl">라이브 카지노</b>
+                                <p class="mt-2 text-sm text-light">전문 딜러. 편안한 분위기</p>
+                            </div>
+                            <img class="img" src="./dist/images/main/banner-casino.webp" alt=""><span class="bg_blur" style="background-color:rgb(31, 233, 136)"></span>
+                            <div class="z-10 relative text-left sm:text-center">
+                                <button class="btn btn-primary">라이브 게임을 플레이하세요 <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3 ml-3"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-between h-[150px] sm:h-[300px] lg:h-[320px] p-3 sm:p-4 rounded">
+                            <div class="z-10 relative sm:w-full w-2/3">
+                                <b class="text-white text-lg sm:text-2xl">라이브 베팅</b>
+                                <p class="mt-2 text-sm text-light">가장 역동적인 형태의 베팅으로 큰 성공을 거두세요.</p>
+                            </div>
+                            <img class="img" src="./dist/images/main/banner-bet.webp" alt=""><span class="bg_blur" style="background-color:rgb(31, 233, 136)"></span>
+                            <div class="z-10 relative text-left sm:text-center">
+                                <button class="btn btn-primary">실시간 베팅 <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3 ml-3"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-between h-[150px] sm:h-[300px] lg:h-[320px] p-3 sm:p-4 rounded">
+                            <div class="z-10 relative sm:w-full w-2/3">
+                                <b class="text-white text-lg sm:text-2xl">스포츠</b>
+                                <p class="mt-2 text-sm text-light">엄청난 수의 이벤트, 가장 광범위한 베팅</p>
+                            </div>
+                            <img class="img" src="./dist/images/main/banner-sports.webp" alt=""><span class="bg_blur" style="background-color:rgb(38, 32, 216)"></span>
+                            <div class="z-10 relative text-left sm:text-center">
+                                <button class="btn btn-primary">스포츠 베팅 <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3 ml-3"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카지노 마지막 수상자 -->
+                    <div class="mt-28 bg-block rounded">
+                        <div class="p-4 md:p-6 pt-4 md:pt-8 text-lg md:text-2xl font-bold text-center md:text-left">카지노 마지막 수상자</div>
+                        <table class="table table-striped no-border thead-py-big">
+                            <thead class="border-t border-b border-gray-700">
+                                <tr>
+                                    <th class="whitespace-nowrap text-xs text-primary">게임</th>
+                                    <th class="hidden md:table-cell whitespace-nowrap text-xs text-primary">플레이어</th>
+                                    <th class="hidden md:table-cell whitespace-nowrap text-xs text-primary">베팅</th>
+                                    <th class="hidden md:table-cell whitespace-nowrap text-xs text-primary">멀티플라이어</th>
+                                    <th class="whitespace-nowrap text-xs text-primary">지불금</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-bold">
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">XMAS Royale 100</a></td>
+                                    <td class="hidden md:table-cell">Alpaczo</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">4.00 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">XMAS Royale 100</a></td>
+                                    <td class="hidden md:table-cell">Danny33</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">12.50 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">XMAS Royale 100</a></td>
+                                    <td class="hidden md:table-cell">ShameerC</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">20.00 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">Hot Devil Slot</a></td>
+                                    <td class="hidden md:table-cell">Alpaczo</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">146.15 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">Sugar Rush</a></td>
+                                    <td class="hidden md:table-cell">EzeeGiryy</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">4.00 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">XMAS Royale 100</a></td>
+                                    <td class="hidden md:table-cell">Danny33</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">2.60 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">Mystery Stones</a></td>
+                                    <td class="hidden md:table-cell">Alpaczo</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">4.67 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="javascript:;" class="hover:text-primary">Hot Devil Slot</a></td>
+                                    <td class="hidden md:table-cell">Alpaczo</td>
+                                    <td class="hidden md:table-cell"><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">0.00349679</span></td>
+                                    <td class="hidden md:table-cell">4.00 x</td>
+                                    <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">0.00349679</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 프로모션 배너 -->
+                    <div class="overflow-hidden main_probanner flex flex-col justify-between mt-8 p-6 rounded">
+                        <div>
+                            <b class="text-2xl xl:text-3xl">최고의 카지노 및 스포츠 보너스</b>
+                            <p class="text-xs xl:text-sm text-light">현금, 무료 스핀, VIP 프로그램</p>
+                        </div>
+                        <div class="img">
+                            <img class="banner" src="./dist/images/main/promotion_banner.webp" alt="">
+                            <img class="bg" src="./dist/images/main/promotion_banner_bg.webp" alt="">
+                        </div>
+                        <div><button class="btn btn-primary">프로모션 확인</button></div>
+                    </div>
+
                 
+                </div>
+
+
+                <!-- 글로벌 베팅 플랫폼 -->
+                <div class="my-10">
+                    <div class="height_fixed">
+                        <h2>최고의 북메이커 및 카지노 베팅 플랫폼</h2>
+                        <p>글로벌 베팅 플랫폼, Vave(베이브)가 한국에 진출합니다! 당사는 월드 스누커 챔피언인 주드 트럼프가 선택한 최고의 베팅 플랫폼으로 정평이 나 있습니다. 다양한 종류의 슬롯과 스포츠 베팅 카지노를 지원하여 유저들은 본인 취향과 관심사에 맞게 슬롯과 스포츠에 실전 베팅할 수 있습니다. 또한 암호화폐와 카드, 은행 송금 등 다양한 입출금 수단을 지원하여 매우 편리합니다.</p>
+                        <p>이게 끝이 아닙니다. 당사는 합법 라이선스를 보유하여 믿을 수 있을 뿐만 아니라 전문 상담원이 24시간 대기하여 안심하고 이용할 수 있습니다. 다양한 베팅 옵션과 편리한 서비스로 세계적인 플랫폼으로 성장한 당사에 대해 자세히 알아봅시다.</p>
+                        <h2>슬롯과 베팅을 즐기세요!</h2>
+                        <p>당사는 슬롯과 스포츠 베팅 온라인 카지노, e스포츠 베팅 등 다양한 서비스를 제공합니다. 먼저 슬롯의 경우 많은 이들의 사랑을 받는 유명 소프트웨어 공급업체가 개발한 5,000종 이상의 슬롯 게임을 제공합니다. 이러한 폭넓은 선택지를 통해 유저는 본인 취향과 전략에 따라 다양하게 플레이할 수 있는 기회를 누릴 수 있습니다. 북메이커 배당률은 업계 최고 수준입니다.</p>
+                        <p>당사가 자랑스럽게 제공하는 스포츠 베팅의 경우, 폭넓은 종목을 지원하여 실감나는 경험을 선사합니다. 예를 들어 축구를 좋아하는 베팅러의 경우, 즐겨 보는 리그와 구단을 선택 및 베팅하여 경기를 더욱 짜릿하게 즐길 수 있습니다. 최근 높은 인기를 끌고 있는 e스포츠도 빠질 수 없죠. e스포츠는 프로게이머들이 게임을 플레이하고 관중이 이를 관람하며 응원을 하는 스포츠 종목입니다. 당사에서 베팅할 수 있는 e스포츠 게임은 도타2, 리그 오브 레전드, 레인보우 8, FIFA 등이 있습니다.</p>
+                        <p>당사는 슬롯, 스포츠, e스포츠에 대해 라이브 스트림을 제공할 때도 있습니다. 이를 통해 플랫폼 사용자들은 실시간으로 게임을 시청할 수 있습니다. 자사 플랫폼에서 짜릿하고 실감나는 베팅의 세계에 뛰어드세요! 다음 단락에서는 다양한 스포츠 베팅, 실전 온라인 슬롯, 입출금 및 고객 서비스에 대해 알아보겠습니다.</p>
+                        <h2>스포츠 베팅의 종류</h2>
+                        <p>자사 플랫폼에서는 전세계에서 열리는 수많은 스포츠 종목에 대해 카지노 스포츠 베팅을 할 수 있습니다. 축구, 농구, 테니스, NFL(미식축구), 하키, MMA, e스포츠 등을 지원하며 거의 대부분의 인기 종목이 지원되기 때문에 유저는 본인이 좋아하는 종목을 골라 베팅할 수 있습니다.</p>
+                        <p>원하는 종목을 골랐다면 싱글 베팅과 멀티 베팅 중 하나를 고릅니다. 싱글 베팅은 하나의 경기 결과를 예측하는 스포츠 베팅입니다. 프로그램 내에서 지정된 모든 이벤트에 대해 허용되며 당첨금은 베팅액에 배당률을 곱한 값과 같습니다. 멀티 베팅은 동시에 여러 경기에 베팅합니다. 이때 베팅한 여러 경기에서 단 하나의 경기라도 예측이 빗나가면 지게 됩니다. 멀티 베팅에서 당첨금은 베팅액과 멀티 배당률을 곱한 값과 같습니다.</p>
+                        <p>당사가 제공하는 또 다른 스포츠 베팅인 라이브 스포츠 베팅은 매우 광범위한 스포츠 종목 중에서 원하는 종목에 역동적으로 베팅하여 큰 성공을 노릴 수 있습니다. </p>
+                        <p>이와 같이 다양한 종목과 베팅 유형을 당사의 베팅러들은 개개인의 전략에 맞는 베팅 옵션을 활용할 수 있습니다. 스포츠 팬이라면 당사에서 제공하는 스포츠 베팅으로 지금까지 경험하지 못했던 새로운 즐거움을 누리세요.</p>
+                        <h2>실제 현금이 걸린 온라인 슬롯</h2>
+                        <p>글로벌 북메이커 플랫폼, 당사는 실전 온라인 슬롯과 라이브 카지노 베팅을 제공합니다. 그 종류는 무려 5,000가지가 넘어 본인의 취향대로 선택할 수 있습니다. 이러한 다양성 덕분에 사용자들은 당사가 가진 독특한 스타일과 규칙, 형식을 경험할 수 있습니다. </p>
+                        <p>또한 업계에서 좋은 평판을 가졌으며 합법적으로 등록되어 당사에서 사용자들은 안심하고 베팅하여 실제 현금에 당첨될 수 있습니다. 당사에서 지원하는 온라인 슬롯은 90여곳에 달하는 유명 소프트웨어 업체가 개발한 것으로 품질이 뛰어납니다. 대표적인 개발사는 다음과 같습니다.</p>
+                        <ul>
+                            <li>Tvbet</li>
+                            <li>Evolution Gaming</li>
+                            <li>Ezugi</li>
+                            <li>Gameart</li>
+                            <li>Goldenrace</li>
+                            <li>1x2Games</li>
+                            <li>Playtech,</li>
+                            <li>iSoftBet</li>
+                            <li>Playson</li>
+                            <li>BGAMING</li>
+                            <li>Pragmatic Play</li>
+                        </ul>
+                        <p>카지노 베팅 시 현금이 부담되시나요? 당사는 신규회원에게 푸짐한 혜택이 담긴 웰컴 보너스, 매주 목요일에 누구나 받을 수 있는 목요일 보너스, 스포츠 보너스 등 다양한 혜택을 제공합니다. 당사에서 북메이커 베팅을 위한 계정을 개설한 후 제공되는 보너스를 확인하세요. 보너스를 이용하면 누구나 부담없이 시작할 수 있습니다.</p>
+                        <h2>다양한 입출금 옵션</h2>
+                        <p>자사는 퀴라소에서 공식 온라인 겜블링 라이선스를 취득하여 소위 말하는 “먹튀”나 “사기” 위험이 도사리는 불법 사이트와는 차원이 다른 신뢰를 제공하며 언제나 입출금이 가능합니다. 입출금이 소요되는 시간은 선택한 통화와 송금 수단에 따라 다릅니다. 입금 요청은 일반적으로 즉시 처리되나 출금은 일정 시간이 소요될 수 있습니다. 입출금 수단은 고객 편의를 위해 다양하게 지원되며 상세 옵션은 다음과 같습니다.</p>
+                        <h3>입금 옵션</h3>
+                        <p>당사에서 입금 옵션은 전적으로 사용자가 계정 개설 시 등록한 거주지에 따라 다릅니다. 현재 당사 베팅 카지노는 다음 입금 옵션을 제공합니다.</p>
+                        <ol>
+                            <li>암호화폐</li>
+                            <li>비자, 마스터카드</li>
+                            <li>은행 송금</li>
+                            <li>인터랙</li>
+                            <li>페이스택</li>
+                        </ol>
+                        <p></p>
+                        <h2></h2>
+                        <p></p>
+                        <p></p>
+                        <h2></h2>
+                        <p></p>
+                        <p></p>
+                    </div>
                 </div>
 
 
@@ -55,7 +360,13 @@
         <!-- BEGIN: JS Assets-->
         <script src="./dist/js/app.js"></script>
         <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
         <script src="./dist/js/custom.js"></script>
         <!-- END: JS Assets-->
+
+        <script>
+
+        </script>
+
     </body>
 </html>

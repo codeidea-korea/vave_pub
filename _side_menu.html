@@ -1,3 +1,4 @@
+<div class="mo_menu_bg" onclick="hamToggle()"></div>
 <div class="side_menu">
     <nav class="side-nav scrollbar">
         <div class="mo_topinfo mb-6">
@@ -6,14 +7,19 @@
                     <img src="./dist/images/logo/logo.svg" alt="">
                     <img src="./dist/images/logo/logo-text.svg" alt="">
                 </div>
-                <button class="text-white">
-                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#close"></use></svg>
+                <button class="text-white" onclick="hamToggle()">
+                    <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#close"></use></svg>
                 </button>
+            </div>
+            <div class="flex items-center justify-between gap-2 mt-7">
+                <button class="btn btn-sm flex-1 btn-outline-primary border-2">가입</button>
+                <button class="btn btn-sm flex-1 btn-primary">등록</button>
+                <button class="btn btn-sm btn-primary-soft"><img class="w-5 mr-2" src="./dist/images/icon/global.webp" alt=""><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-90 text-white"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
             </div>
         </div>
         <div class="side-nav-event mb-8">
             <button>
-                <div class="wheel">s
+                <div class="wheel">
                     <img class="frame" src="./dist/images/icon/wheel-frame.webp" alt="">
                     <img class="bg" src="./dist/images/icon/wheel-bg.webp" alt="">
                 </div>

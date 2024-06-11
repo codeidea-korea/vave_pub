@@ -1,0 +1,61 @@
+ @charset "utf-8";
+
+/* 
+        **공통으로 쓰여지지 않는 레이아웃**
+*/
+
+
+/* ----------------------------------------------
+            MAIN_VISUAL
+---------------------------------------------- */
+.main_visual > div {height:320px; }
+.main_visual .visual_banner {display:flex; flex-direction:column; justify-content:space-between; width:60%; background-color:var(--sub-color); background-repeat:no-repeat; background-position:right center; }
+.main_visual .visual_banner > div {max-width:60%; }
+
+.main_visual .slide_visual {position:relative; width:40%; }
+.main_visual .slide_visual .swiper-container,
+.main_visual .slide_visual .swiper-wrapper {height:100%; }
+.main_visual .slide_visual li {display:flex; flex-direction:column; justify-content:space-between; background-size:cover; background-repeat:no-repeat; background-position:right center}
+.main_visual .slide_visual .pagination {z-index:10; position:absolute; left:24px; bottom:24px; }
+
+@media all and (max-width:1280px){
+    .main_visual > div {height:220px; }
+}
+
+@media all and (max-width:767px){
+    .main_visual .visual_banner {width:100%; }
+    .main_visual .slide_visual {width:100%; }
+}
+
+
+/* ----------------------------------------------
+            MAIN - GAME_CATEGORY
+---------------------------------------------- */
+.game_category > div {overflow:hidden; position:relative; background-color:rgba(16,23,29,.5); }
+.game_category > div .img {z-index:2; position:absolute; bottom:0; left:50%; max-height:80%; transform:translateX(-50%); }
+.game_category > div .img.left {transform:translateX(-63%);}
+.game_category > div .bg_blur {position: absolute; bottom: 0; left: 50%; content: ""; width: 80%; height: 200px; filter: blur(30px); transform: translate(-50%, 0); z-index: 1; opacity: .15;}
+
+@media all and (max-width:640px){
+    .game_category > div .img {left:auto; right:0; max-width:50%; max-height:90%; transform:none; }
+    .game_category > div .img.left {transform:none; }
+    .game_category > div .bg_blur {width:50%; transform:none; }
+}
+
+
+/* ----------------------------------------------
+            MAIN - PROMOTION BANNER
+---------------------------------------------- */
+.main_probanner {position:relative; min-height:256px; background-color:rgba(16,23,29,.5); }
+.main_probanner .img {position:absolute; right:0; bottom:0; }
+.main_probanner .img .banner {position:absolute; left:50%; bottom:-40px; width:280px; transform:translateX(-40%); }
+
+
+@media all and (max-width:1280px){
+    .main_probanner {min-height:220px; background-color:#22474f; }
+    .main_probanner .img .banner {bottom:-30px; width:200px; transform:translateX(-10%);}
+}
+
+@media all and (max-width:767px){
+    .main_probanner .img .banner {bottom:0; width:190px; }
+}
