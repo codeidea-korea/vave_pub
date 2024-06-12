@@ -9,12 +9,27 @@ window.addEventListener("load", ()=>{
         loader.classList.add('hide')
     },1000)
     
-    // 헤더 
+    // 헤더 - 로그인 후
     fetch("./_header.html")
         .then((response) => response.text())
         .then((htmlData) => {
-            $('body').prepend(htmlData)
-            headerScript();
+            if(!$('body').hasClass('logout')){
+                $('body').prepend(htmlData)
+                headerScript();
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+    // 헤더 - 로그인 전
+    fetch("./_header_logout.html")
+        .then((response) => response.text())
+        .then((htmlData) => {
+            if($('body').hasClass('logout')){
+                $('body').prepend(htmlData)
+                headerScript();
+            }
         })
         .catch((error) => {
             console.log(error);
@@ -35,13 +50,22 @@ window.addEventListener("load", ()=>{
     fetch("./_footer.html")
         .then((response) => response.text())
         .then((htmlData) => {
-            $('#wrap .content').append(htmlData)
-            
-           
+            $('#wrap .content').append(htmlData);
+            footerScript()
         })
         .catch((error) => {
             console.log(error);
         });
+
+    // 모달 
+    fetch("./_modal.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        $('#wrap').append(htmlData);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 });
 
@@ -82,6 +106,28 @@ const sideMenu = ()=>{
 // 헤더 스크립트
 const headerScript = ()=>{
 
+    // 헤더 gnb
+    // let headerGNB = 8; 
+    // $(window).on('resize',function(){
+    //     let headerW = $('header').width();
+    //     let logoW = $('header .logo').innerWidth();
+    //     let gnbW = $('header .gnb').width();
+    //     let rightW = $('header .right_box').width();
+
+    //     let space = 98 - (((logoW+rightW) / headerW )*100);
+    //     let gnbSpace = (gnbW / headerW)*100;
+        
+    //     if(gnbSpace > space){
+    //         let html = $('.gnb > li').eq(headerGNB-1).html();
+    //         $('.gnb > li').eq(headerGNB-1).addClass('hidden')
+
+    //         $('.gnb li .gnb_dot').removeClass('hidden')
+    //         $('.gnb li .gnb_list').prepend(`<li>${html}</li>`)
+    //         headerGNB-=1;
+    //     }
+    // })
+
+    // 모바일 하단 - 퀵메뉴
     $(".quick_menu ul li.type02 > div > a").on('click',function(){
         const parent = $(this).parents('li')
         parent.toggleClass('active_open').siblings().removeClass('active_open');
@@ -100,20 +146,25 @@ const headerScript = ()=>{
         $('body').removeClass('overflow-hidden')
     });
 
+    
+}
+    
+// 푸터 스크립트
+const footerScript = ()=>{
+
+    $(window).on('scroll',function(){
+        // 스크롤시 회원가입캐시백 팝업 닫기
+        let footT = $("footer").offset().top - $(window).height();
+        let scrollTop = $(window).scrollTop()
+        if(footT < scrollTop){
+            $('.cashback_popup').removeClass('open')
+        }else{
+            $('.cashback_popup').addClass('open')
+        }
+    });
+
 }
 
-
-$(window).on('scroll',function(){
-    // 스크롤시 회원가입캐시백 팝업 닫기
-    let footT = $("footer").offset().top - $(window).height();
-    let scrollTop = $(window).scrollTop()
-    if(footT < scrollTop){
-        $('.cashback_popup').removeClass('open')
-    }else{
-        $('.cashback_popup').addClass('open')
-    }
-
-})
 
 
 // 스와이퍼 공통
@@ -164,4 +215,14 @@ const hamToggle = ()=>{
 // 닫기 - 공통
 const parentClose = (item)=>{
     $(item).addClass('!hidden')
+}
+
+// 상세 높이 toggle
+const contentHeight = (item)=>{
+    $(item).parents('.height_fixed').toggleClass('open')
+    if($(item).text() == "더 읽기"){
+        $(item).text('적게 읽기')
+    }else{
+        $(item).text('더 읽기')
+    }
 }
