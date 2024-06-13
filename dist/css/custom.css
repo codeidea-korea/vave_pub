@@ -59,3 +59,14 @@
 @media all and (max-width:767px){
     .main_probanner .img .banner {bottom:0; width:190px; }
 }
+
+
+/* ----------------------------------------------
+            MODAL - JOIN
+---------------------------------------------- */
+.join_wrap {display:flex;}
+.join_wrap .left_box {position:relative; width:250px; min-height:500px; background:linear-gradient(135deg, #01DCBA, #7F30CB); border-radius:8px 125px 0 8px; }
+.join_wrap .right_box {width:380px; }
+
+
+

@@ -65,5 +65,20 @@
     "/dist/images/payment/trx1.svg": "/dist/images/payment/trx1.svg",
     "/dist/images/payment/usdt1.svg": "/dist/images/payment/usdt1.svg",
     "/dist/images/payment/xrp1.svg": "/dist/images/payment/xrp1.svg",
-    "/dist/images/promotion/join_promotion.webp": "/dist/images/promotion/join_promotion.webp"
+    "/dist/images/promotion/join_promotion.webp": "/dist/images/promotion/join_promotion.webp",
+    "/dist/images/coin/bitcoin-btc-logo.svg": "/dist/images/coin/bitcoin-btc-logo.svg",
+    "/dist/images/coin/bitcoin-cash-bch-logo.svg": "/dist/images/coin/bitcoin-cash-bch-logo.svg",
+    "/dist/images/coin/bitcoin-satoshi-vision-bsv-logo.svg": "/dist/images/coin/bitcoin-satoshi-vision-bsv-logo.svg",
+    "/dist/images/coin/cardano-ada-logo.svg": "/dist/images/coin/cardano-ada-logo.svg",
+    "/dist/images/coin/dogecoin-doge-logo.svg": "/dist/images/coin/dogecoin-doge-logo.svg",
+    "/dist/images/coin/ethereum-eth-logo.svg": "/dist/images/coin/ethereum-eth-logo.svg",
+    "/dist/images/coin/toncoin-ton-logo.svg": "/dist/images/coin/toncoin-ton-logo.svg",
+    "/dist/images/coin/tron-trx-logo.svg": "/dist/images/coin/tron-trx-logo.svg",
+    "/dist/images/coin/xrp-xrp-logo.svg": "/dist/images/coin/xrp-xrp-logo.svg",
+    "/dist/images/icon/join_icon-1.webp": "/dist/images/icon/join_icon-1.webp",
+    "/dist/images/icon/join_icon-2.webp": "/dist/images/icon/join_icon-2.webp",
+    "/dist/images/icon/join_icon-3.webp": "/dist/images/icon/join_icon-3.webp",
+    "/dist/images/icon/join_icon-4.webp": "/dist/images/icon/join_icon-4.webp",
+    "/dist/images/icon/join_icon-5.webp": "/dist/images/icon/join_icon-5.webp",
+    "/dist/images/icon/join_img.webp": "/dist/images/icon/join_img.webp"
 }

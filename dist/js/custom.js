@@ -106,27 +106,6 @@ const sideMenu = ()=>{
 // 헤더 스크립트
 const headerScript = ()=>{
 
-    // 헤더 gnb
-    // let headerGNB = 8; 
-    // $(window).on('resize',function(){
-    //     let headerW = $('header').width();
-    //     let logoW = $('header .logo').innerWidth();
-    //     let gnbW = $('header .gnb').width();
-    //     let rightW = $('header .right_box').width();
-
-    //     let space = 98 - (((logoW+rightW) / headerW )*100);
-    //     let gnbSpace = (gnbW / headerW)*100;
-        
-    //     if(gnbSpace > space){
-    //         let html = $('.gnb > li').eq(headerGNB-1).html();
-    //         $('.gnb > li').eq(headerGNB-1).addClass('hidden')
-
-    //         $('.gnb li .gnb_dot').removeClass('hidden')
-    //         $('.gnb li .gnb_list').prepend(`<li>${html}</li>`)
-    //         headerGNB-=1;
-    //     }
-    // })
-
     // 모바일 하단 - 퀵메뉴
     $(".quick_menu ul li.type02 > div > a").on('click',function(){
         const parent = $(this).parents('li')
@@ -226,3 +205,80 @@ const contentHeight = (item)=>{
         $(item).text('더 읽기')
     }
 }
+
+
+// 모달 오픈
+const modalOpen = (item)=>{
+    const modal = document.querySelector(`#${item}`);
+    modal.classList.add('show','overflow-y-auto');
+    modal.style.marginTop = "0";
+    modal.style.marginLeft = "0";
+    modal.style.paddingLeft = "0";
+    modal.style.zIndex = "10000";
+}
+
+// 모달 닫기
+const closeModal = (item)=>{
+    const modal = document.querySelector(`#${item}`);
+    modal.classList.remove('show','overflow-y-auto');
+    modal.style.marginTop = "-10000px";
+    modal.style.marginLeft = "-10000px";
+    modal.style.paddingLeft = "0";
+    modal.style.zIndex = "0";
+}
+
+// 코인 선택시 변경
+const coinChange = (item)=>{
+    let cash = $(item).find('b').text()
+    let coin = $(item).find('p').text();
+    let imgSrc = $(item).find('img').attr('src')
+
+    $('.currentCash').each(function(){
+        $(this).text(cash)
+    });
+
+    $('.currentCoinImg').each(function(){
+        $(this).attr('src',imgSrc)
+    });
+
+    $('.currentCoin').each(function(){
+        $(this).text(coin)
+    });
+}
+
+// 드롭다운 닫기버튼
+const dropdownClose = (item)=>{
+    const id = $(item).parents('.dropdown-menu').attr('id')
+    const btn = $(`div[data-dropdown-replacer=${id}]`).prev('.dropdown-toggle');
+
+    btn.click()
+}
+
+// 커스텀 토글
+const customToggle = (item)=>{
+    $(item).parents('.custom_toggle').toggleClass('open')
+}
+
+// input_wrap 에서 input에 내용 입력했을때 클래스 추가
+const inputChange = (item)=>{
+    if($(item).val().length > 0){
+        $(item).parent('.input_wrap').addClass('on')
+    }else{
+        $(item).parent('.input_wrap').removeClass('on')
+    }
+}
+
+// password <---> text
+const passwordChange = (item)=>{
+    let type = $(item).siblings('input').attr('type')
+    let icon = $(item).find('use').attr('href').split('#')
+
+    if(type == 'text'){
+        $(item).siblings('input').attr('type','password')
+        $(item).find('use').attr('href',`${icon[0]}#eye`)
+    }else{
+        $(item).siblings('input').attr('type','text')
+        $(item).find('use').attr('href',`${icon[0]}#eye-active`)
+    }
+}
+

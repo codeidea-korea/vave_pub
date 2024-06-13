@@ -25,19 +25,238 @@
             </li>
         </ul>
     </div>
-    <div class="right_box">
-        <button class="flex items-center gap-2.5 lang"><img class="w-5" src="./dist/images/icon/global.webp" alt=""><span class="roboto text-xs">KR</span></button>
-        <button class="btn btn-outline-primary border-2">암호 화폐 구매</button>
-        <div class="dropdown inline-block" data-tw-placement="bottom-end"> 
-            <button class="dropdown-toggle btn btn-primary-soft w-32 mr-1 mb-2" aria-expanded="false" data-tw-toggle="dropdown">0.00000000</button>
-            <div class="dropdown-menu w-40">
-                <ul class="dropdown-content">
-                    <li> <a href="" class="dropdown-item">New Dropdown</a> </li>
-                    <li> <a href="" class="dropdown-item">Delete Dropdown</a> </li>
-                </ul>
+
+    <div class="right_box shrink-0">
+        <button class="btn btn-outline-primary border-2 hidden xl:block">암호 화폐 구매</button>
+        <button class="flex items-center gap-2.5 lang" onclick="modalOpen('lang-modal')"><img class="w-5" src="./dist/images/icon/global.webp" alt=""><span class="roboto text-xs">KR</span></button>
+        <div class="flex items-center">
+            <div class="dropdown" data-tw-placement="bottom-end"> 
+                <button class="dropdown-toggle mont balance_btn" aria-expanded="false" data-tw-toggle="dropdown">
+                    <p><img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""><span class="currentCash">0.00000000</span></p>
+                    <span><svg viewBox="0 0 24 24" class="svg-icon xl:w-4 xl:h-4 w-3 h-3"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span>
+                </button>
+                <div class="dropdown-menu !w-[300px]">
+                    <div class="dropdown-content mont">
+                        <div class="relative mo_tit p-6 text-center text-xl font-medium">
+                            암호 화폐 계정
+                            <button class="absolute right-3 top-3" onclick="dropdownClose(this)"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                        </div>
+                        <div class="text-light border-b border-white border-opacity-10 px-4">
+                            <div class="flex items-center justify-between h-10">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5">잔액 <img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""></p>
+                            </div>
+                            <div class="flex items-center justify-between h-10">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5">출금 가능 <img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""></p>
+                            </div>
+                            <div class="flex items-center justify-between h-10">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5">스포츠 보너스 <img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""></p>
+                            </div>
+                            <div class="flex items-center justify-between h-10">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5">카지노 보너스 <img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""></p>
+                            </div>
+                        </div>
+                        <div class="scrollbar overflow-y-auto h-[300px] max-h-[30vh] py-1 text-white">
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">BTC</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/ethereum-eth-logo.svg" alt="">ETH</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000001</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">BNB</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/xrp-xrp-logo.svg" alt="">XRP</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/dogecoin-doge-logo.svg" alt="">DOGE</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/toncoin-ton-logo.svg" alt="">TON</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/cardano-ada-logo.svg" alt="">ADA</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/tron-trx-logo.svg" alt="">TRX</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">LTC</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/bitcoin-cash-bch-logo.svg" alt="">BCH</p>
+                            </button>
+                            <button class="flex items-center justify-between w-full h-12 px-4 hover:bg-gray-700 hover:bg-opacity-20" onclick="coinChange(this)">
+                                <b class="font-semibold">0.00000000</b>
+                                <p class="flex items-center justify-end gap-1.5 font-bold"><img class="w-4 h-4" src="./dist/images/coin/bitcoin-satoshi-vision-bsv-logo.svg" alt="">BSV</p>
+                            </button>
+                        </div>
+                        <div class="border-t border-white border-opacity-10 p-4">
+                            <button class="btn btn-primary w-full">지갑을 설정해 주세요</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="cash_btn block xl:hidden"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#add-circle"></use></svg></button>
+        </div>
+        <div class="dropdown " data-tw-placement="bottom-end">
+            <button class="dropdown-toggle items-center justify-center profile_btn hidden xl:flex" aria-expanded="false" data-tw-toggle="dropdown"><span class="text-light font-extrabold">y</span><b class="deco"><svg viewBox="0 0 24 24" class="svg-icon w-2 h-2"><use href="./dist/images/icon-defs.svg#burger"></use></svg></b></button>
+            <button class="block xl:hidden"><svg viewBox="0 0 24 24" class="svg-icon w-8 h-8"><use href="./dist/images/icon-defs.svg#profile-header"></use></svg></button>
+            <div class="dropdown-menu type02 !w-[500px]">
+                <div class="dropdown-content scrollbar !p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="profile_wrap flex items-center justify-center"><span class="text-light font-extrabold">y</span></div>
+                        <p class="text-lg xl:text-2xl font-extrabold mont">yyyy012</p>
+                    </div>
+                    <div class="xl:p-5 rounded xl:bg-gray-700 xl:bg-opacity-20 grid grid-cols-1 xl:grid-cols-2 gap-2 xl:gap-0 mb-2">
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#profile"></use></svg>
+                            <span class="text-base font-semibold">개인 정보</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#deposit"></use></svg>
+                            <span class="text-base font-semibold">입금하기</span>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#withdrawal"></use></svg>
+                            <span class="text-base font-semibold">출금</span>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#gift-box"></use></svg>
+                            <span class="text-base font-semibold">보너스</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#settings"></use></svg>
+                            <span class="text-base font-semibold">설정</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#wallet"></use></svg>
+                            <span class="text-base font-semibold">추천인</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#lock-shield"></use></svg>
+                            <span class="text-base font-semibold">안전</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#analytics-bars"></use></svg>
+                            <span class="text-base font-semibold">통계</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#archive-drawer"></use></svg>
+                            <span class="text-base font-semibold">베팅 내역</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#time-clock"></use></svg>
+                            <span class="text-base font-semibold">거래 내역</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#support"></use></svg>
+                            <span class="text-base font-semibold">라이브 채팅</span>
+                            <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#logout"></use></svg>
+                            <span class="text-base font-semibold">로그아웃</span>
+                        </a>
+                    </div>
+                    <div class="block xl:hidden mt-2 p-4 bg-zinc-900 bg-opacity-50 rounded-lg">
+                        <p class="text-base font-bold mb-3 text-light">잔액</p>
+                        <div class="mb-2">
+                            <p class="mb-1 text-light">잔액 (<span class="currentCoin">BTC</span>)</p>
+                            <p class="flex items-center gap-3"><img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""><b>0.00000000</b></p>
+                        </div>
+                        <div class="mb-2">
+                            <p class="mb-1 text-light">출금 가능 (<span class="currentCoin">BTC</span>)</p>
+                            <p class="flex items-center gap-3"><img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""><b>0.00000000</b></p>
+                        </div>
+                        <div class="mb-2">
+                            <p class="mb-1 text-light">스포츠 보너스 (<span class="currentCoin">BTC</span>)</p>
+                            <p class="flex items-center gap-3"><img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""><b>0.00000000</b></p>
+                        </div>
+                        <div class="mb-2">
+                            <p class="mb-1 text-light">카지노 보너스 (<span class="currentCoin">BTC</span>)</p>
+                            <p class="flex items-center gap-3"><img class="w-4 h-4 currentCoinImg" src="./dist/images/coin/bitcoin-btc-logo.svg" alt=""><b>0.00000000</b></p>
+                        </div>
+                        <div class="custom_toggle">
+                            <button class="flex items-center justify-between w-full py-2 px-3 text-light bg-zinc-900 bg-opacity-70 rounded-lg" onclick="customToggle(this)"><span class="text-xs">다른 계정</span><svg viewBox="0 0 24 24" class=" svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                            <div class="overflow-y-auto my-4 scrollbar h-[300px]">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/ethereum-eth-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000001</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/xrp-xrp-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/dogecoin-doge-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/toncoin-ton-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/cardano-ada-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/tron-trx-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/bitcoin-cash-bch-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img class="w-5 h-5" src="./dist/images/coin/bitcoin-satoshi-vision-bsv-logo.svg" alt="">
+                                    <b class="font-semibold">0.00000000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-primary h-10">입금하기</button>
+        <button class="btn btn-primary h-10 hidden xl:block">입금하기</button>
+      
+        
         <button class="ham_btn" onclick="hamToggle()"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#burger"></use></svg></button>
     </div>
 </header>
