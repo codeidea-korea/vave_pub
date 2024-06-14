@@ -22,6 +22,9 @@
 		.ex_table th:last-child{
 			border-right-width:0px;
 		}
+		header {display:none; }
+		.quick_menu {display:none; }
+		#wrap .side_menu {display:none; }
 	</style>
 </head>
 </body>
@@ -75,7 +78,10 @@ echo txtRecord('./@record/');
 			<ul>
 				<li>
 					<button class="pop-modal" onclick="modalOpen('lang-modal')">언어변경 모달</button>
-					<button class="pop-modal" onclick="modalOpen('join-modal')">로그인 모달</button>
+					<button class="pop-modal" onclick="modalOpen('join-modal'); tabChange('#join-1-tab button');">로그인 모달</button>
+					<button class="pop-modal" onclick="modalOpen('join-modal'); tabChange('#join-2-tab button');">가입 모달</button>
+					<button class="pop-modal" onclick="modalOpen('password_reset-modal')">비밀번호 재설정 모달</button>
+					<button class="pop-modal" onclick="modalOpen('password_reset_complete-modal')">비밀번호 재설정 확인 후 모달</button>
 				</li>
 			</ul>
 		</li>
@@ -83,106 +89,14 @@ echo txtRecord('./@record/');
 </div>
 
 <!-- 모달 -->
+<div id="wrap"></div>
 
-<!-- 언어선택 모달 -->
-<div id="lang-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body p-10">
-                <button class="close_btn" onclick="closeModal('lang-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
-                <div class="grid grid-cols-2 xl:grid-cols-3 gap-y-4 mont">
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">English</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Deutsch</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Русский</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Español</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Français</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Português</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Italiano</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">ελληνικά</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Bahasa Indonesia</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">日本語</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">한국인</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">हिन्दी</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">汉语</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Tiếng Việt</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Polski</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Suomi</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Tagalog</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Turkish</button>
-                    <button class="flex items-center gap-3 hover:text-primary"><img class="w-7" src="./dist/images/icon/global.webp" alt="">Українська</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
-
-
-<!-- 가입 / 등록 모달 -->
-<div id="join-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-body p-0">
-                <button class="close_btn" onclick="closeModal('join-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
-                <div class="join_wrap">
-                    <div class="left_box flex flex-col justify-between">
-                        <h2 class="p-6 pt-8 text-4xl font-extrabold">Vave 카지노 입장</h2>
-                        <div>
-                            <img src="./dist/images/icon/join_img.webp" alt="">
-                            <div class="flex items-center gap-2 h-14 px-6 bg-gray-900 bg-opacity-50">
-                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 flex-shrink-0"><use href="./dist/images/icon-defs.svg#partnership"></use></svg>
-                                <p class="text-xs">앰버서더 Judd Trump World champion 2019</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right_box py-7 px-4">
-                        <ul class="nav nav-boxed-tabs gap-1 bg-gray-900 bg-opacity-50 !p-1 rounded-lg " role="tablist">
-                            <li id="join-1-tab" class="nav-item flex-1" role="presentation"> 
-                                <button class="nav-link w-full py-1 hover:bg-primary hover:bg-opacity-50 active" data-tw-toggle="pill" data-tw-target="#join-tab-1" type="button" role="tab" aria-controls="join-tab-1" aria-selected="true"> 가입 </button> 
-                            </li>
-                            <li id="join-2-tab" class="nav-item flex-1" role="presentation">
-                                <button class="nav-link w-full py-1 hover:bg-primary hover:bg-opacity-50" data-tw-toggle="pill" data-tw-target="#join-tab-2" type="button" role="tab" aria-controls="join-tab-2" aria-selected="false"> 등록 </button> 
-                            </li>
-                        </ul>
-                        <div class="my-4 border-t border-white border-opacity-10"></div>
-                        <div class="tab-content mt-5">
-                            <div id="join-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="join-1-tab">
-                                <div class="input_wrap mb-3"> 
-                                    <input id="join-email" type="text" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)"> 
-                                    <label for="join-email" class="form-label">이메일</label> 
-                                </div>
-                                <div class="input_wrap error mb-3"> 
-                                    <input id="join-email2" type="text" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)"> 
-                                    <label for="join-email2" class="form-label">이메일</label> 
-                                </div>
-                                <div class="input_wrap mb-3"> 
-                                    <input id="join-password" type="password" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)"> 
-                                    <label for="join-password" class="form-label">비밀번호</label> 
-                                    <button class="password_btn text-light" onclick="passwordChange(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#eye-active"></use></svg></button>
-                                </div>
-                                <a href="javascript:;" class="text-xs text-primary">비밀번호를 잊어버렸습니다.</a>
-                                <div class="my-3">
-                                    <button class="btn btn-primary-soft w-full" disabled>가입</button>
-                                    <button class="btn btn-primary w-full">가입</button>
-                                </div>
-                                <div class="text-xs text-light">
-                                    아직 계정이 없으신가요? <button class="text-xs text-primary hover:text-white">등록</button>
-                                </div>
-                            </div>
-                            <div id="join-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="join-2-tab">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
 
 
 <script src='https://design01.codeidea.io/link_script.js'></script>
 <script src="./dist/js/app.js"></script>
 <script src="./dist/js/swiper-bundle.min.js"></script>
+<script src="./dist/js/jquery-1.12.4.js"></script>
 <script src="./dist/js/custom.js"></script>
 
 

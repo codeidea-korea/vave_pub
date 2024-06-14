@@ -64,9 +64,39 @@
 /* ----------------------------------------------
             MODAL - JOIN
 ---------------------------------------------- */
-.join_wrap {display:flex;}
+#join-modal.modal .modal-dialog .modal-content {background:transparent; }
+.join_body {position:relative; }
+.join_body .deco {position:absolute; }
+.join_body .deco_1 {left:-50px; top:270px; width:81px; }
+.join_body .deco_2 {left:-80px; top:-5px; width:115px; }
+.join_body .deco_3 {z-index:11; left:-150px; top:120px; width:170px; }
+.join_body .deco_4 {z-index:11; left:20px; top:-100px; width:116px; }
+.join_body .deco_5 {left:170px; top:-30px; width:100px; }
+.join_wrap {z-index:10; position:relative;  display:flex; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
 .join_wrap .left_box {position:relative; width:250px; min-height:500px; background:linear-gradient(135deg, #01DCBA, #7F30CB); border-radius:8px 125px 0 8px; }
 .join_wrap .right_box {width:380px; }
 
+.join_wrap .password_tooltip {position:absolute; left:100%; top:50%; display:none; width:280px; transform:translateY(-50%); box-shadow:0 0 5px rgba(43,198,157,.2); }
+.join_wrap .password_tooltip.show {display:block; }
+.join_wrap .password_tooltip:before {content:''; z-index:-1; position:absolute; left:-5px; top:calc(50% - 5px); width:10px; height:10px; background-color:#10171d; transform:rotate(-45deg); box-shadow:0 0 5px rgba(43,198,157,.2); }
+.join_wrap .password_tooltip > div {background-color:#10171d;}
+.join_wrap .password_tooltip li {position:relative; padding-left:10px; }
+.join_wrap .password_tooltip li + li {margin-top:3px; }
+.join_wrap .password_tooltip li:before {content:''; position:absolute; left:0; top:50%; width:5px; height:5px; background-color:var(--primary-color); border-radius:50%; transform:translateY(-50%); }
 
+
+@media all and (max-width:1280px){
+    #join-modal.modal {background-color:rgba(16,23,29,.7); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+    #join-modal.modal .modal-dialog {box-shadow:none; }
+    .join_body {margin-top:40px; }
+    .join_body .deco_1 {left:20px; top:-35px; width:65px; }
+    .join_body .deco_2 {left:45%; top:-55px; width:97px; }
+    .join_body .deco_3 {display:none; }
+    .join_body .deco_4 {right:-10px; left:auto; top:100px; width:70px; }
+    .join_body .deco_5 {right:-20px; left:auto; top:-20px; width:80px; }
+    
+    .join_wrap {flex-direction:column; background:transparent; }
+    .join_wrap .left_box {width:100%; min-height:150px; border-radius:16px; }
+    .join_wrap .right_box {width:100%; }
+}
 

@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 :root {
+    --primary-color:#2bc69d;
     --block-color:#151f27;
     --sub-color:#22474f;
     --light-color:#94aeb4; 
 }
 
-body {font-family: "Noto Sans KR", sans-serif; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
+body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
 .roboto {font-family:Roboto; }
 .mont {font-family: "Montserrat", sans-serif;}
 
@@ -20,6 +21,9 @@ body {font-family: "Noto Sans KR", sans-serif; background:radial-gradient(100% 2
 .text-light {color:#94aeb4; }
 
 .bg-block {background-color:#151f27; }
+
+/* zoom */
+.zoom-80 {zoom:0.8; }
 
 
 /* 
@@ -40,6 +44,8 @@ body {font-family: "Noto Sans KR", sans-serif; background:radial-gradient(100% 2
         CUSTOM_TOGGLE
         TAB
         INPUT_WRAP
+        CHECKBOX / RADIO
+        CUSTOM_TOOLTIP
 */
 
 
@@ -74,6 +80,9 @@ body {font-family: "Noto Sans KR", sans-serif; background:radial-gradient(100% 2
 .table.no-border td {border-bottom-width:0;}
 
 .table.thead-py-big thead th {padding-top:20px; padding-bottom:20px; }
+
+/* tab_content */
+.tab-content > div {width:100% !important; }
 
 /* ----------------------------------------------
             HEADER
@@ -309,14 +318,20 @@ footer .footer_currency .img_list img {height:30px; }
 /* ----------------------------------------------
             MODAL
 ---------------------------------------------- */
-.modal {display:flex; align-items:center; justify-content:center; background-color:rgba(0,0,0,.3); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+.modal {overflow-y:auto; display:flex; align-items:center; justify-content:center; background-color:rgba(0,0,0,.3); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
 .modal .modal-dialog {margin-top:4rem; box-shadow:0 0 200px #2bc69d; border-radius:8px; }
+.modal .modal-dialog.confirm_modal {border:1px solid var(--primary-color); }
 .modal .modal-dialog .modal-content {background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
 .modal .modal-body {position:relative; }
 .modal .modal-body .close_btn {position:absolute; left:calc(100% + 2px); bottom:calc(100% + 2px); }
 
+@media all and (max-width:1280px){
+    .modal .modal-body .close_btn {left:auto; bottom:auto; right:10px; top:10px; }
+}
+
 @media (min-width:640px){
     .modal .modal-dialog {width:720px; max-width:80%; }
+    .modal .modal-dialog.modal-xs {width:520px; max-width:80%; }
     .modal .modal-dialog.modal-sm {width:630px; max-width:80%; }
     .modal .modal-dialog.modal-lg {}
     .modal .modal-dialog.modal-xl {}
@@ -385,4 +400,12 @@ footer .footer_currency .img_list img {height:30px; }
 .input_wrap .password_btn {position:absolute; right:0; top:0; width:48px; height:48px; }
 
 .form-control {background-color:transparent; color:#fff; }
+
+
+
+/* ----------------------------------------------
+            CHECKBOX / RADIO
+---------------------------------------------- */
+.form-check-input[type="checkbox"] {width:20px; height:20px; border:2px solid #94aeb4; background-color:transparent; }
+
 

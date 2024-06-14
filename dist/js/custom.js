@@ -5,9 +5,11 @@
 window.addEventListener("load", ()=>{
     // 로딩이미지 가리기
     const loader = document.querySelector('.main-loader')
-    setTimeout(function(){
-        loader.classList.add('hide')
-    },1000)
+    if(loader){
+        setTimeout(function(){
+            loader.classList.add('hide')
+        },1000)
+    }
     
     // 헤더 - 로그인 후
     fetch("./_header.html")
@@ -282,3 +284,17 @@ const passwordChange = (item)=>{
     }
 }
 
+// tw tab 클릭
+const tabChange = (item)=>{
+    $(item).click();
+}
+
+// passwordFocus 시 툴팁 보이게
+const passwordFocus = (item,state)=>{
+    
+    if(state=="in"){
+        $(item).siblings('.password_tooltip').addClass('show')
+    }else{
+        $(item).siblings('.password_tooltip').removeClass('show')
+    }
+} 
