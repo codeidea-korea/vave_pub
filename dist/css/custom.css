@@ -19,7 +19,7 @@
 .main_visual .slide_visual .pagination {z-index:10; position:absolute; left:24px; bottom:24px; }
 
 @media all and (max-width:1280px){
-    .main_visual > div {height:220px; }
+    .main_visual > div {height:290px; }
 }
 
 @media all and (max-width:767px){
@@ -88,7 +88,7 @@
 @media all and (max-width:1280px){
     #join-modal.modal {background-color:rgba(16,23,29,.7); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
     #join-modal.modal .modal-dialog {box-shadow:none; }
-    .join_body {margin-top:40px; }
+    /* .join_body {margin-top:40px; } */
     .join_body .deco_1 {left:20px; top:-35px; width:65px; }
     .join_body .deco_2 {left:45%; top:-55px; width:97px; }
     .join_body .deco_3 {display:none; }
@@ -100,3 +100,12 @@
     .join_wrap .right_box {width:100%; }
 }
 
+
+/* ----------------------------------------------
+            BOOSTED_ITEM
+---------------------------------------------- */
+.boosted_item {width:380px; padding:12px; background:url('../images/main/footballoddsbooster_bg.webp') no-repeat center center / cover; }
+.boosted_item .btn_box {display:flex; align-items:center; justify-content:space-between; gap:4px; }
+.boosted_item .btn_box button {flex-grow:1; padding:8px; font-weight:600; background:rgba(255, 255, 255, 0.2); border-radius:4px; transition:all 0.4s; }
+.boosted_item .btn_box button p {display:flex; align-items:center; justify-content:flex-end; gap:4px; }
+.boosted_item .btn_box button.active {background:var(--primary-color); }

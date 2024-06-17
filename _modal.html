@@ -33,7 +33,7 @@
 
 <!-- 가입 / 등록 모달 -->
 <div id="join-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-sm noscroll">
         <div class="modal-content">
             <div class="modal-body join_body p-0 rounded-2xl">
                 <img class="deco deco_1" src="./dist/images/icon/join_icon-1.webp" alt="">
@@ -41,14 +41,14 @@
                 <img class="deco deco_3" src="./dist/images/icon/join_icon-3.webp" alt="">
                 <img class="deco deco_4" src="./dist/images/icon/join_icon-4.webp" alt="">
                 <img class="deco deco_5" src="./dist/images/icon/join_icon-5.webp" alt="">
-                <div class="join_wrap">
-                    <button class="close_btn" onclick="closeModal('join-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <button class="close_btn z-20" onclick="closeModal('join-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="join_wrap modalscroll">
                     <div class="relative left_box flex flex-col justify-between">
-                        <div>
+                        <div class="relative z-10">
                             <h2 class="p-3 xl:p-6 pt-3 xl:pt-8 text-2xl xl:text-4xl font-extrabold">Vave 카지노 입장</h2>
                             <div class="tab-content">
                                 <div id="join-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="join-1-tab"></div>
-                                <div id="join-tab-2" class="tab-pane leading-relaxed flex xl:flex-col flex-row xl:pt-2 gap-4 xl:gap-0 px-3 xl:px-6" role="tabpanel" aria-labelledby="join-2-tab">
+                                <div id="join-tab-2" class="tab-pane leading-relaxed flex xl:flex-col flex-row xl:pt-2 gap-2 xl:gap-0 px-3 xl:px-6" role="tabpanel" aria-labelledby="join-2-tab">
                                     <div class="flex items-center gap-4">
                                         <svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 xl:w-9 xl:h-9 flex-shrink-0"><use href="./dist/images/icon-defs.svg#gift-box"></use></svg>
                                         <div>

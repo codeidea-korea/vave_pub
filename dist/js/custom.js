@@ -298,3 +298,8 @@ const passwordFocus = (item,state)=>{
         $(item).siblings('.password_tooltip').removeClass('show')
     }
 } 
+
+// 버튼 클릭시 active 
+const btnActive = (item)=>{
+    $(item).addClass('active').siblings().removeClass('active');
+}
