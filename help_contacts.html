@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body>
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <div class="box mb-5">
+                   <div class="w-full md:w-[340px]">
+                        <div class="flex items-center justify-between xl:hidden px-4 py-3 mb-4 bg-block rounded-md">
+                            <button class="flex items-center gap-1 text-light"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg> 뒤로 가기</button>
+                            <p class="text-base font-bold">문의하기</p>
+                        </div>
+                        <div class="mb-4 text-lg font-semibold">문의하기</div>
+                        <div class="p-4 bg-gray-700 bg-opacity-20 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <p>고객 지원:</p>
+                                <p><span class="text-primary">support</span>@vave.com</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p>불만:</p>
+                                <p><span class="text-primary">complaints</span>@vave.com</p>
+                            </div>
+                        </div>
+                        <div class="my-4 text-lg font-semibold">문의 양식</div>
+
+                        <div class="dropdown inline-block" data-tw-placement="bottom-start"> 
+                            <button class="dropdown-toggle btn btn-primary" aria-expanded="false" data-tw-toggle="dropdown"> Filter Dropdown <i data-lucide="chevron-down" class="w-4 h-4 ml-2"></i> </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="p-2">
+                                        <div>
+                                            <div class="text-xs">From</div> <input type="text" class="form-control mt-2 flex-1" placeholder="example@gmail.com" />
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="text-xs">To</div> <input type="text" class="form-control mt-2 flex-1" placeholder="example@gmail.com" />
+                                        </div>
+                                        <div class="flex items-center mt-3"> <button data-dismiss="dropdown" class="btn btn-secondary w-32 ml-auto">Close</button> <button class="btn btn-primary w-32 ml-2">Search</button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        
+                        <div class="input_wrap mb-4">
+                            <input id="inquiry_email" type="text" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)"> 
+                            <label for="inquiry_email" class="form-label">이메일을 입력해 주십시오</label> 
+                        </div>
+                        <div class="input_wrap !h-28 mb-4">
+                            <textarea name="" id="inquiry_message" class="form-control w-full !h-24 !pt-2 resize-none" onchange="inputChange(this)" oninput="inputChange(this)"></textarea>
+                            <label for="inquiry_message" class="form-label">메시지를 입력해 주십시오...</label> 
+                        </div>
+
+                        <div class="text-xs mb-4">
+                            <div class="form-check items-start mt-2"> 
+                                <input id="join_agree" class="form-check-input" type="checkbox" value=""> 
+                                <label class="form-check-label text-light" for="join_agree">귀하의 개인 정보가 제 3자와 처리 및 공유되는 것에 대해 <a href="javascript:;" class="text-primary underline hover:text-white">동의</a> 함을 확인해 주십시오.</label> 
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <button class="btn bg-sub border-none w-full" disabled>제출</button>
+                        </div>
+
+                        <div class="text-xs text-light">양식을 작성하면 24시간 이내 담당 직원이 연락드리겠습니다.</div>
+                   </div>
+                </div>
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

@@ -2006,6 +2006,12 @@ select{
 .\!mt-0{
     margin-top: 0px !important;
 }
+.mb-5{
+    margin-bottom: 1.25rem;
+}
+.ml-auto{
+    margin-left: auto;
+}
 .block{
     display: block;
 }
@@ -2080,6 +2086,9 @@ select{
 }
 .h-28{
     height: 7rem;
+}
+.\!h-24{
+    height: 6rem !important;
 }
 .max-h-\[50\%\]{
     max-height: 50%;
@@ -2199,6 +2208,9 @@ select{
 }
 .cursor-pointer{
     cursor: pointer;
+}
+.resize-none{
+    resize: none;
 }
 .resize{
     resize: both;
@@ -2615,6 +2627,9 @@ select{
 .\!pl-0{
     padding-left: 0px !important;
 }
+.\!pt-2{
+    padding-top: 0.5rem !important;
+}
 .text-left{
     text-align: left;
 }
@@ -2790,12 +2805,19 @@ select{
 .text-opacity-50{
     --tw-text-opacity: 0.5;
 }
+.underline{
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
 .line-through{
     -webkit-text-decoration-line: line-through;
             text-decoration-line: line-through;
 }
 .opacity-50{
     opacity: 0.5;
+}
+.opacity-20{
+    opacity: 0.2;
 }
 .shadow{
     --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -11862,6 +11884,10 @@ html body{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-400) / var(--tw-text-opacity));
 }
+.dark .dark\:text-slate-500{
+    --tw-text-opacity: 1;
+    color: rgb(var(--color-slate-500) / var(--tw-text-opacity));
+}
 @media (min-width: 640px){
     .sm\:h-\[300px\]{
         height: 300px;
@@ -11889,6 +11915,9 @@ html body{
 @media (min-width: 768px){
     .md\:table-cell{
         display: table-cell;
+    }
+    .md\:w-\[340px\]{
+        width: 340px;
     }
     .md\:grid-cols-2{
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -11968,6 +11997,9 @@ html body{
     }
     .xl\:w-9{
         width: 2.25rem;
+    }
+    .xl\:w-\[340px\]{
+        width: 340px;
     }
     .xl\:grid-cols-3{
         grid-template-columns: repeat(3, minmax(0, 1fr));

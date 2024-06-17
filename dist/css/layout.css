@@ -52,6 +52,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         INPUT_WRAP
         CHECKBOX / RADIO
         CUSTOM_TOOLTIP
+        ACCORDION
 */
 
 
@@ -63,7 +64,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 @media all and (max-width:1280px){
     .content {padding:15px 15px 0 15px; }
-    .box {padding:0; border-radius:0; background:transparent; }
+    .box {padding:0; padding-bottom:30px; border-radius:0; background:transparent; }
 }
 
 
@@ -321,6 +322,7 @@ footer .footer_currency .img_list img {height:30px; }
 /* ----------------------------------------------
             AGREE_BOX
 ---------------------------------------------- */
+.agree_box h1 {font-size:40px; line-height:1.3; font-weight:800; margin-bottom:16px; }
 .agree_box h2 {font-size:24px; line-height:1.3; font-weight:700; margin:20px 0; }
 .agree_box h3 {margin:15px 0; font-size:18px; font-weight:700; }
 .agree_box p {font-size:16px; line-height:1.8; color:var(--light-color); }
@@ -334,7 +336,16 @@ footer .footer_currency .img_list img {height:30px; }
 .agree_box ol li + li {margin-top:20px; }
 .agree_box ol li:before {content: counter(start) "."; font-weight: 700; position: absolute; left: 0; top: 4px;}
 
-
+@media (max-width:767px){
+    .agree_box h2 {font-size:18px; }
+    .agree_box h3 {font-size:16px; }
+    .agree_box p,
+    .agree_box ul li,
+    .agree_box ol li {font-size:14px; }
+    .agree_box p + p {margin-top:12px; }
+    .agree_box ul li + li,
+    .agree_box ol li + li {margin-top:15px; }
+}
 
 /* ----------------------------------------------
             MODAL
@@ -412,7 +423,10 @@ footer .footer_currency .img_list img {height:30px; }
 .input_wrap.on label {color:rgb(var(--color-primary) / 1); opacity:1 !important;  }
 .input_wrap.on input + label,
 .input_wrap input:focus + label {top:30%; font-size:11px; opacity:.5; }
+.input_wrap.on textarea + label,
+.input_wrap textarea:focus + label {top:5px; font-size:11px; opacity:.5; }
 .input_wrap label {position:absolute; left:16px; top:50%; color:var(--light-color); font-weight:700; transform:translateY(-50%); transition:all 0.15s; }
+.input_wrap textarea + label {top:10px; transform:none; }
 
 .input_wrap.error {border:1px solid #ff4e4e; color:#FF4E4E; }
 .input_wrap.error label {color:#FF4E4E; }
@@ -440,4 +454,12 @@ footer .footer_currency .img_list img {height:30px; }
 .hover_custom:hover .hover_cont {visibility: visible; opacity:1; }
 
 
-
+/* ----------------------------------------------
+            ACCORDION
+---------------------------------------------- */
+.accordion .accordion-item:not(:last-child) {border:0 none; }
+.accordion .accordion-item .accordion-header .accordion-button {position:relative; padding:0; }
+.accordion .accordion-item .accordion-header .accordion-button:before {content:'+'; position:absolute; right:5px; top:calc(50% - 5px); width:10px; height:10px; font-size:20px; line-height:10px; opacity:.5; }
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {color:#fff; }
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):before {content:'-'; }
+.accordion .accordion-collapse {color:#fff; }
