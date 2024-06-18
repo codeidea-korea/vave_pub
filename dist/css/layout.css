@@ -216,6 +216,8 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .side-nav > ul li.cs_center ul .side-menu__title {color:#fff; }
 .side-nav > ul > li.faq_menu {display:none; }
 
+.side-nav > ul > li li.cate_more_list {display:none; }
+
 /* 로그인 전/후 메뉴 변경 */
 .side-nav .logout_menu {display:none; }
 .logout .side-nav .logout_menu {display:block; }
@@ -225,6 +227,15 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .faq .side-nav-event {display:none; }
 .faq .side-nav > ul > li {display:none; }
 .faq .side-nav > ul > li.faq_menu {display:block; }
+
+/* body 에 클래스 slot 붙었을떄 */
+.slot .side-nav > ul > li {display:none; }
+.slot .side-nav > ul > li.slots,
+.slot .side-nav > ul > li.casino {display:block; }
+.slot .side-nav > ul > li.slots li.more_list,
+.slot .side-nav > ul > li.casino li.more_list {display:none; }
+.slot .side-nav > ul > li.slots li.cate_more_list,
+.slot .side-nav > ul > li.casino li.cate_more_list {display:block; }
 
 .mo_menu_bg {display:none; }
 
@@ -236,11 +247,21 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
     .side-nav .login_menu {display:block; }
     .side_menu .side-nav {position:relative; top:0; left:0; width:100%; height:100%; padding:24px 24px 60px; }
     .side-nav .side-menu {padding-left:0; }
+    .side-nav > ul > li.faq_menu {display:none !important; }
 
     /* body 에 클래스 faq 붙었을때 */
     .faq .side-nav-event {display:block; }
     .faq .side-nav > ul > li {display:block; }
     .faq .side-nav > ul > li.faq_menu {display:none; }
+
+    /* body 에 클래스 slot 붙었을떄 */
+    .slot .side-nav > ul > li {display:block; }
+    .slot .side-nav > ul > li.slots,
+    .slot .side-nav > ul > li.casino {display:block; }
+    .slot .side-nav > ul > li.slots li.more_list,
+    .slot .side-nav > ul > li.casino li.more_list {display:block; }
+    .slot .side-nav > ul > li.slots li.cate_more_list,
+    .slot .side-nav > ul > li.casino li.cate_more_list {display:none; }
 }
 
 @media all and (max-width:400px){
