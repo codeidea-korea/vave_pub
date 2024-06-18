@@ -90,6 +90,7 @@ echo txtRecord('./@record/');
 				<li><a href="./help_faq.html" target="_blank" class="">자주 묻는 질문</a></li>
 				<li><a href="./help_sportsbook-rules.html" target="_blank" class="">일반 스포츠북</a></li>
 				<li><a href="./help_betting-rules.html" target="_blank" class="">베팅 규칙</a></li>
+				<li><a href="./help_contacts.html" target="_blank" class="">문의하기</a></li>
 				<li><a href="./help_responsible-gaming.html" target="_blank" class="">책임감 있는 게임</a></li>
 				<li><a href="./help_cryptocurrency.html" target="_blank" class="">암호화폐</a></li>
 			</ul>

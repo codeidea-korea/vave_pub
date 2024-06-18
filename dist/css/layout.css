@@ -53,6 +53,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         CHECKBOX / RADIO
         CUSTOM_TOOLTIP
         ACCORDION
+        CUSTOM_SELECT
 */
 
 
@@ -205,6 +206,7 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .side-nav > ul li.cs_center ul .side-menu__icon ,
 .side-nav > ul li.navigation ul .side-menu__title ,
 .side-nav > ul li.cs_center ul .side-menu__title {color:#fff; }
+.side-nav > ul > li.faq_menu {display:none; }
 
 /* body 에 클래스 faq 붙었을때 */
 .faq .side-nav-event {display:none; }
@@ -463,3 +465,23 @@ footer .footer_currency .img_list img {height:30px; }
 .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {color:#fff; }
 .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):before {content:'-'; }
 .accordion .accordion-collapse {color:#fff; }
+
+
+/* ----------------------------------------------
+            CUSTOM_SELECT
+---------------------------------------------- */
+.custom_select {z-index:5; position:relative; }
+.custom_select > button {display:flex; align-items:center; justify-content:space-between; width:100%; height:48px; padding:5px 16px; background:#1c252d; border-radius:8px; }
+.custom_select > button .arrow {position:absolute; right:16px; top:50%; font-size:20px; color:var(--light-color); transform:translateY(-50%) rotate(90deg); }
+.custom_select > div {position:absolute; left:0; top:calc(100% + 10px); overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; padding:10px 0; background:#10171d; box-shadow:0 4px 100px rgba(43,198,157,.2); border-radius:8px; }
+.custom_select ul li {display:flex; align-items:center; justify-content:space-between; padding:13px 12px; min-height:44px; color:var(--light-color); font-weight:700; }
+.custom_select ul li:hover {background:rgba(53,68,78,.2); color:#fff; cursor:pointer; }
+.custom_select.open > button .arrow {transform:translateY(-50%) rotate(-90deg); }
+.custom_select.open > div {display:block; }
+
+
+
+
+
+
+

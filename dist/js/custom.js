@@ -303,3 +303,37 @@ const passwordFocus = (item,state)=>{
 const btnActive = (item)=>{
     $(item).addClass('active').siblings().removeClass('active');
 }
+
+// 윈도우 로드시 jquery
+window.addEventListener("load", ()=>{
+
+    // custom_select 버튼 클릭
+    $('.custom_select > button').on('click',function(){
+        let Parents = $(this).parents('.custom_select');
+        if(Parents.hasClass('open')){
+            Parents.removeClass('open')
+        }else{
+            Parents.addClass('open')
+        }
+    });
+
+    // custom_select option 클릭
+    $('.custom_select > div li').on('click',function(){
+        let Parents = $(this).parents('.custom_select');
+        let text = $(this).find('p').text();
+
+        // option 닫기
+        Parents.removeClass('open')
+        Parents.find('> button p').text(text);
+    })
+    // custom_select 외의 영역 선택했을 시 닫기 
+    document.addEventListener('click',(e)=>{
+        const select = document.querySelector('.custom_select')
+
+        if(select && !select.contains(e.target)){
+            select.classList.remove('open')
+        }
+    })
+
+
+});
