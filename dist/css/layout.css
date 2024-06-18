@@ -5,6 +5,7 @@
     --block-color:#151f27;
     --sub-color:#22474f;
     --light-color:#94aeb4; 
+    --modal-color:#1F2931;
 }
 
 body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
@@ -22,6 +23,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 .bg-block {background-color:var(--block-color); }
 .bg-sub {background-color:var(--sub-color); }
+.bg-modal {background-color:var(--modal-color); }
 
 @media (min-width:1280px){
     .xl\:bg-block {background-color:var(--block-color);}
@@ -29,6 +31,10 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 /* zoom */
 .zoom-80 {zoom:0.8; }
+
+.hover_scale_img {overflow:hidden; }
+.hover_scale_img img {transform:scale(1); transition:transform 0.2s; }
+.hover_scale_img:hover img {transform:scale(1.1); }
 
 
 /* 
@@ -54,6 +60,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         CUSTOM_TOOLTIP
         ACCORDION
         CUSTOM_SELECT
+        PROGRESS
 */
 
 
@@ -184,7 +191,8 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 ---------------------------------------------- */
 .side_menu {padding:15px 0 15px 32px; }
 .side-nav {z-index:90; position:sticky; top:90px; left:0; width:15vw; height:calc(100vh - 105px); padding:15px 5px 15px 0; }
-.side-nav .mo_topinfo {display:none; }
+.side-nav .mo_topinfo,
+.side-nav .login_menu {display:none; }
 .side-nav > ul > li + li {margin-top:25px; }
 .side-nav > ul > li > .side-menu .side-menu__title {margin-left:0; color:#fff !important; opacity:0.5; }
 .side-nav .side-menu .side-menu__title {justify-content:space-between; }
@@ -208,6 +216,11 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .side-nav > ul li.cs_center ul .side-menu__title {color:#fff; }
 .side-nav > ul > li.faq_menu {display:none; }
 
+/* 로그인 전/후 메뉴 변경 */
+.side-nav .logout_menu {display:none; }
+.logout .side-nav .logout_menu {display:block; }
+.logout .side-nav .login_menu {display:none; }
+
 /* body 에 클래스 faq 붙었을때 */
 .faq .side-nav-event {display:none; }
 .faq .side-nav > ul > li {display:none; }
@@ -219,7 +232,8 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
     .mo_menu_bg.open {z-index:101; position:fixed; left:0; top:0; width:100%; height:100%; display:block; background:rgba(16,23,29,.5); backdrop-filter:blur(10px); }
     .side_menu {z-index:102; position:fixed; right:-360px; top:0; width:360px; height:100%; padding:0; background:radial-gradient(100% 200% at 0% 0%, #35444e 0%, #10171D 100%); transition:all 0.3s; }
     .side_menu.open {right:0;}
-    .side-nav .mo_topinfo {display:block; }
+    .side-nav .mo_topinfo,
+    .side-nav .login_menu {display:block; }
     .side_menu .side-nav {position:relative; top:0; left:0; width:100%; height:100%; padding:24px 24px 60px; }
     .side-nav .side-menu {padding-left:0; }
 
@@ -352,28 +366,36 @@ footer .footer_currency .img_list img {height:30px; }
 /* ----------------------------------------------
             MODAL
 ---------------------------------------------- */
-.modal {overflow:hidden; display:flex; align-items:center; justify-content:center; background-color:rgba(0,0,0,.3); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
-.modal .modal-dialog {overflow-x:hidden; overflow-y:auto; max-height:90vh; margin-top:4rem; box-shadow:0 0 200px #2bc69d; border-radius:8px; }
-.modal .modal-dialog.noscroll {overflow-y:visible; max-height:none; }
-.modal .modal-dialog.confirm_modal {border:1px solid var(--primary-color); }
-.modal .modal-dialog .modal-content {background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
+.modal {overflow:hidden; overflow-y:auto; overflow-x:hidden; background-color:rgba(0,0,0,.3); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); scrollbar-color: rgba(43,198,157,.5) rgba(0,0,0,0); scrollbar-width: thin; }
+.modal .modal-dialog {display:flex; align-items:center; min-height:100%; padding:30px 0; margin-top:0 !important; margin-bottom:0 !important; }
+.modal .modal-dialog .modal-content {background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); box-shadow:0 0 200px #2bc69d; border-radius:8px; }
+.modal .modal-dialog.confirm_modal .modal-content {border:1px solid var(--primary-color); }
+.modal .modal-header {border:0 none; }
+.modal .modal-header .close_btn {position:absolute; right:10px; top:10px; }
 .modal .modal-body {position:relative; }
 .modal .modal-body .close_btn {position:absolute; left:calc(100% + 2px); bottom:calc(100% + 2px); }
-.modal .modal-dialog.noscroll .modalscroll {overflow-y:auto; max-height:90vh; }
 
 @media all and (max-width:1280px){
     .modal .modal-body .close_btn {left:auto; bottom:auto; right:10px; top:10px; }
 }
 
+@media (max-width:767px){
+    .modal .modal-dialog.mo_full {width:100% !important; max-width:100% !important; height:100% !important; max-height:100vh !important; margin-top:0; margin-bottom:0; padding:0; }
+    .modal .modal-dialog.mo_full .modal-content {height:100%; padding:0; }
+}
+
 @media (min-width:640px){
-    .modal .modal-dialog {width:720px; max-width:80%; }
+    .modal .modal-dialog {width:720px; max-width:90%; padding:15px 0; }
+    .modal .modal-dialog.modal-xxxs {width:430px; max-width:80%; }
+    .modal .modal-dialog.modal-xxs {width:480px; max-width:80%; }
     .modal .modal-dialog.modal-xs {width:520px; max-width:80%; }
-    .modal .modal-dialog.modal-sm {width:630px; max-width:80%; }
-    .modal .modal-dialog.modal-lg {}
-    .modal .modal-dialog.modal-xl {}
+    .modal .modal-dialog.modal-sm {width:630px; max-width:90%; }
+    .modal .modal-dialog.modal-md {width:690px; max-width:90%; }
+    /* .modal .modal-dialog.modal-lg {} */
+    /* .modal .modal-dialog.modal-xl {} */
 }
 @media (min-width: 1024px) {
-    .modal .modal-dialog.modal-xl {}
+    /* .modal .modal-dialog.modal-xl {} */
 }
 
 
@@ -445,9 +467,20 @@ footer .footer_currency .img_list img {height:30px; }
 /* ----------------------------------------------
             CHECKBOX / RADIO
 ---------------------------------------------- */
+.form-switch .form-check-input[type="checkbox"] {width:60px; height:32px; border:0 none; background-color:#e9e9ea; }
+.form-switch .form-check-input[type="checkbox"]:checked {background-color:rgb(var(--color-primary) / 1);}
+.form-switch .form-check-input:before {width:27px; height:27px; }
+.form-switch .form-check-input:checked::before {margin-left:29px; }
+
 .form-check-input[type="checkbox"] {width:20px; height:20px; border:2px solid #94aeb4; background-color:transparent; }
 
+.form-check-input[type="radio"] {position:relative; width:24px; height:24px; border:2px solid #94aeb4; background-color:transparent; }
+.form-check-input[type="radio"]:before {content:''; position:absolute; left:3px; top:3px; width:14px; height:14px; background-color:transparent; border-radius:50%; }
+.form-check-input[type="radio"]:checked {border-color:rgb(var(--color-primary)); background-color:transparent; }
+.form-check-input[type="radio"]:checked:before {background-color:rgb(var(--color-primary));}
 
+.form-check-input[type="radio"]:disabled:not(:checked) {background-color:transparent; opacity:.5;}
+.form-check-input[type="radio"]:disabled:not(:checked) + label {opacity:.5; }
 /* ----------------------------------------------
             HOVER_CUSTOM
 ---------------------------------------------- */
@@ -480,8 +513,11 @@ footer .footer_currency .img_list img {height:30px; }
 .custom_select.open > div {display:block; }
 
 
-
-
+/* ----------------------------------------------
+            PROGRESS
+---------------------------------------------- */
+.progress {width:100%; height:16px; border-radius:8px; background-color:#22474f; padding:2px; }
+.progress span {display:block; height:12px; background-color:rgb(var(--color-primary)); border-radius:6px; }
 
 
 

@@ -10,8 +10,8 @@
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<link href="https://design01.codeidea.io/link_style.css" rel="stylesheet">
-	<link rel="stylesheet" href="./dist/css/app.css" />
 	<link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./dist/css/app.css" />
 	<link rel="stylesheet" href="./dist/css/layout.css" />
 	<link rel="stylesheet" href="./dist/css/custom.css" />
 	<style>
@@ -83,6 +83,20 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('password_reset-modal')">비밀번호 재설정 모달</button>
 					<button class="pop-modal" onclick="modalOpen('password_reset_complete-modal')">비밀번호 재설정 확인 후 모달</button>
 				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">입금하기 모달</button>
+					<button class="pop-modal" onclick="modalOpen('cashier-modal'); tabChange('#cashier-2-tab button');">출금 모달</button>
+					<button class="pop-modal" onclick="modalOpen('cashier-modal'); tabChange('#cashier-3-tab button');">암호 화폐 구매 모달</button>
+
+					<button class="pop-modal" onclick="modalOpen('deposit_bitcoin-modal');">입금 - bitcoin 모달</button>
+					<button class="pop-modal" onclick="modalOpen('deposit_crypto-modal');">입금 - crypto 모달</button>
+					<button class="pop-modal" onclick="modalOpen('deposit_changelly-modal');">입금 - changelly 모달</button>
+					<button class="pop-modal" onclick="modalOpen('deposit_kado-modal');">입금 - kado 모달</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('wallet_setting-modal');">지갑 설정 모달</button>
+					<button class="pop-modal" onclick="modalOpen('statistics-modal');">통계 모달</button>
+				</li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="도움말">
@@ -105,8 +119,8 @@ echo txtRecord('./@record/');
 
 <script src='https://design01.codeidea.io/link_script.js'></script>
 <script src="./dist/js/app.js"></script>
-<script src="./dist/js/swiper-bundle.min.js"></script>
 <script src="./dist/js/jquery-1.12.4.js"></script>
+<script src="./dist/js/swiper-bundle.min.js"></script>
 <script src="./dist/js/custom.js"></script>
 
 

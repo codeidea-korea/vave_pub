@@ -11,10 +11,21 @@
                     <svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#close"></use></svg>
                 </button>
             </div>
-            <div class="flex items-center justify-between gap-2 mt-7">
-                <button class="btn btn-sm flex-1 btn-outline-primary border-2">가입</button>
-                <button class="btn btn-sm flex-1 btn-primary">등록</button>
-                <button class="btn btn-sm btn-primary-soft"><img class="w-5 mr-2" src="./dist/images/icon/global.webp" alt=""><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-90 text-white"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+            <div class="logout_menu">
+                <div class="flex items-center justify-between gap-2 mt-7">
+                    <button class="btn btn-sm flex-1 btn-outline-primary border-2">가입</button>
+                    <button class="btn btn-sm flex-1 btn-primary">등록</button>
+                    <button class="btn btn-sm btn-primary-soft" onclick="modalOpen('lang-modal')"><img class="w-5 mr-2" src="./dist/images/icon/global.webp" alt=""><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-90 text-white"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                </div>
+            </div>
+            <div class="login_menu">
+                <div class="flex items-center justify-between gap-2 mt-7">
+                    <button class="btn btn-sm border-none flex-1 bg-sub flex items-center justify-between" onclick="hamToggle(); setTimeout(()=>{tabChange('header .mo_profile_btn')},100) ">
+                        <p class="flex items-center gap-2 text-white font-bold mont"><span class="flex items-center justify-center w-6 h-6 text-xs border-2 border-primary rounded-full text-light">y</span>yyyy012</p>
+                        <svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 text-white"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                    </button>
+                    <button class="btn btn-sm border-none bg-sub" onclick="modalOpen('lang-modal')"><img class="w-5 mr-2" src="./dist/images/icon/global.webp" alt=""><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-90 text-white"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                </div>
             </div>
         </div>
         <div class="side-nav-event mb-8">
@@ -29,6 +40,10 @@
                 <img src="./dist/images/icon/referral-icon.webp" alt="">
                 추천 및 적립
             </button>
+        </div>
+        <div class="login_menu mb-8">
+            <button class="btn w-full btn-sm btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">입금하기</button>
+            <button class="btn w-full btn-sm border-2 btn-outline-primary mt-3" onclick="modalOpen('cashier-modal'); tabChange('#cashier-3-tab button');">암호 화폐 구매</button>
         </div>
         <ul>
             <li class="navigation">

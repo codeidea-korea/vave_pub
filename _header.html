@@ -27,7 +27,7 @@
     </div>
 
     <div class="right_box shrink-0">
-        <button class="btn btn-outline-primary border-2 hidden xl:block">암호 화폐 구매</button>
+        <button class="btn btn-outline-primary border-2 hidden xl:block" onclick="modalOpen('cashier-modal'); tabChange('#cashier-3-tab button');">암호 화폐 구매</button>
         <button class="flex items-center gap-2.5 lang" onclick="modalOpen('lang-modal')"><img class="w-5" src="./dist/images/icon/global.webp" alt=""><span class="roboto text-xs">KR</span></button>
         <div class="flex items-center">
             <div class="dropdown" data-tw-placement="bottom-end"> 
@@ -106,16 +106,16 @@
                             </button>
                         </div>
                         <div class="border-t border-white border-opacity-10 p-4">
-                            <button class="btn btn-primary w-full">지갑을 설정해 주세요</button>
+                            <button class="btn btn-primary w-full" onclick="modalOpen('wallet_setting-modal')">지갑을 설정해 주세요</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="cash_btn block xl:hidden"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#add-circle"></use></svg></button>
+            <button class="cash_btn block xl:hidden" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#add-circle"></use></svg></button>
         </div>
         <div class="dropdown " data-tw-placement="bottom-end">
             <button class="dropdown-toggle items-center justify-center profile_btn hidden xl:flex" aria-expanded="false" data-tw-toggle="dropdown"><span class="text-light font-extrabold">y</span><b class="deco"><svg viewBox="0 0 24 24" class="svg-icon w-2 h-2"><use href="./dist/images/icon-defs.svg#burger"></use></svg></b></button>
-            <button class="block xl:hidden"><svg viewBox="0 0 24 24" class="svg-icon w-8 h-8"><use href="./dist/images/icon-defs.svg#profile-header"></use></svg></button>
+            <button class="block xl:hidden mo_profile_btn"><svg viewBox="0 0 24 24" class="svg-icon w-8 h-8"><use href="./dist/images/icon-defs.svg#profile-header"></use></svg></button>
             <div class="dropdown-menu type02 !w-[500px]">
                 <div class="dropdown-content scrollbar !p-6">
                     <div class="flex items-center gap-4 mb-4">
@@ -128,11 +128,11 @@
                             <span class="text-base font-semibold">개인 정보</span>
                             <svg viewBox="0 0 24 24" class="absolute right-4 top-3 svg-icon w-5 h-5 xl:hidden block"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
                         </a>
-                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">
                             <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#deposit"></use></svg>
                             <span class="text-base font-semibold">입금하기</span>
                         </a>
-                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg">
+                        <a href="javascript:;" class="relative flex items-center px-4 xl:px-0 py-3 xl:py-2 gap-2 bg-zinc-900 bg-opacity-50 xl:bg-transparent rounded-lg" onclick="modalOpen('cashier-modal'); tabChange('#cashier-2-tab button');">
                             <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#withdrawal"></use></svg>
                             <span class="text-base font-semibold">출금</span>
                         </a>
@@ -254,7 +254,7 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary h-10 hidden xl:block">입금하기</button>
+        <button class="btn btn-primary h-10 hidden xl:block" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">입금하기</button>
       
         
         <button class="ham_btn" onclick="hamToggle()"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#burger"></use></svg></button>

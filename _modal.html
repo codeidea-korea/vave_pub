@@ -33,7 +33,7 @@
 
 <!-- 가입 / 등록 모달 -->
 <div id="join-modal" class="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-sm noscroll">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-body join_body p-0 rounded-2xl">
                 <img class="deco deco_1" src="./dist/images/icon/join_icon-1.webp" alt="">
@@ -42,7 +42,7 @@
                 <img class="deco deco_4" src="./dist/images/icon/join_icon-4.webp" alt="">
                 <img class="deco deco_5" src="./dist/images/icon/join_icon-5.webp" alt="">
                 <button class="close_btn z-20" onclick="closeModal('join-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
-                <div class="join_wrap modalscroll">
+                <div class="join_wrap">
                     <div class="relative left_box flex flex-col justify-between">
                         <div class="relative z-10">
                             <h2 class="p-3 xl:p-6 pt-3 xl:pt-8 text-2xl xl:text-4xl font-extrabold">Vave 카지노 입장</h2>
@@ -201,6 +201,547 @@
                 </div>
                 <div class="text-center mt-8">
                     <button class="btn btn-primary" onclick="closeModal('password_reset_complete-modal')">네</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<!-- 캐셔 (입금하기 / 출금 / 암호 화폐 구매) -->
+<div id="cashier-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog mo_full">
+        <div class="modal-content">
+            <div class="modal-header justify-center pt-5">
+                <h3 class="text-white text-2xl font-bold">캐셔</h3>
+                <button class="close_btn" onclick="closeModal('cashier-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body p-4">
+                <ul class="nav nav-boxed-tabs p-1 bg-sub rounded" role="tablist">
+                    <li id="cashier-1-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full px-0 h-12 text-xs md:text-sm active" data-tw-toggle="pill" data-tw-target="#cashier-tab-1" type="button" role="tab" aria-controls="cashier-tab-1" aria-selected="true">입금하기</button> 
+                    </li>
+                    <li id="cashier-2-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full px-0 h-12 text-xs md:text-sm" data-tw-toggle="pill" data-tw-target="#cashier-tab-2" type="button" role="tab" aria-controls="cashier-tab-2" aria-selected="false">출금</button> 
+                    </li>
+                    <li id="cashier-3-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full px-0 h-12 text-xs md:text-sm" data-tw-toggle="pill" data-tw-target="#cashier-tab-3" type="button" role="tab" aria-controls="cashier-tab-3" aria-selected="false">암호 화폐 구매</button> 
+                    </li>
+                </ul>
+                <div class="tab-content mt-5">
+                    <div id="cashier-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="cashier-1-tab">
+                        <div class="bg-modal mb-4 p-4 rounded">
+                            <div class="flex items-center justify-between">
+                                <div class="form-check form-switch"> 
+                                    <input id="cashier_bonus" class="form-check-input" type="checkbox" onchange="cashierChange(this)"> 
+                                    <label class="form-check-label font-medium" for="cashier_bonus">나의 보너스</label> 
+                                </div>
+                                <div>
+                                    <div class="bonus_list hidden flex items-center gap-3">
+                                        <input type="text" class="form-control h-8 rounded-3xl border-none !bg-[#35444e] text-xs" placeholder="보너스 코드">
+                                        <button class="btn btn-sm btn-primary whitespace-nowrap" disabled>활성화</button>
+                                    </div>
+                                    <div class="bonus_detail hidden">
+                                        <p class="text-xs">보너스가 선택되었습니다</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bonus_list hidden mt-2">
+                                <p class="text-xs text-white">받고 싶은 보너스를 선택해 주십시오</p>
+                                <div class="overflow-hidden mySwiper mt-3" data-per="auto" data-gap="10" data-loop="false">
+                                    <div class="swiper-container">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide flex items-center gap-2 w-[220px] py-5 px-3 bg-[#27343C] rounded cursor-pointer" onclick="showhideBox('#cashier-modal .bonus_detail','#cashier-modal .bonus_list')">
+                                                <img class="w-16" src="./dist/images/icon/cashier_bonus_1.png" alt="">
+                                                <div class="text-xs">
+                                                    <p class="mb-1">스포츠 환영 보너스</p>
+                                                    <p class="opacity-50 font-semibold mont">100% 최대 500 USDT</p>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide flex items-center gap-2 w-[220px] py-5 px-3 bg-[#27343C] rounded cursor-pointer" onclick="showhideBox('#cashier-modal .bonus_detail','#cashier-modal .bonus_list')">
+                                                <img class="w-16" src="./dist/images/icon/cashier_bonus_1.png" alt="">
+                                                <div class="text-xs">
+                                                    <p class="mb-1">스포츠 환영 보너스</p>
+                                                    <p class="opacity-50 font-semibold mont">100% 최대 500 USDT</p>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide flex items-center gap-2 w-[220px] py-5 px-3 bg-[#27343C] rounded cursor-pointer" onclick="showhideBox('#cashier-modal .bonus_detail','#cashier-modal .bonus_list')">
+                                                <img class="w-16" src="./dist/images/icon/cashier_bonus_1.png" alt="">
+                                                <div class="text-xs">
+                                                    <p class="mb-1">스포츠 환영 보너스</p>
+                                                    <p class="opacity-50 font-semibold mont">100% 최대 500 USDT</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="bonus_detail hidden mt-2">
+                                <div class="relative flex items-center gap-2 w-full py-5 px-3 bg-[#27343C] rounded cursor-pointer">
+                                    <button class="absolute right-2 top-2 prev_btn" onclick="showhideBox('#cashier-modal .bonus_list','#cashier-modal .bonus_detail')"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                                    <img class="w-16" src="./dist/images/icon/cashier_bonus_1.png" alt="">
+                                    <div class="text-xs">
+                                        <p class="mb-1">스포츠 환영 보너스</p>
+                                        <p class="opacity-50 font-semibold mont">100% 최대 500 USDT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-2 text-base md:text-lg font-bold">코인 선택하기</div>
+                        <div class="custom_select w-full md:w-1/2 mb-4 mont">
+                            <button class="font-semibold"><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">Bitcoin</span><span>0.000000000</span></p></button>
+                            <div class="scrollbar !max-h-48">
+                                <ul>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">Bitcoin</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/ethereum-eth-logo.svg" alt="">Ethereum</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/tether-usdt-logo.svg" alt="">Tether</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">Binance Coin</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/xrp-xrp-logo.svg" alt="">XRP</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/dogecoin-doge-logo.svg" alt="">Dogecoin</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/toncoin-ton-logo.svg" alt="">Toncoin</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/cardano-ada-logo.svg" alt="">Cardano</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/tron-trx-logo.svg" alt="">TRON</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/litecoin-ltc-logo.svg" alt="">Litecoin</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/bitcoin-cash-bch-logo.svg" alt="">Bitcoin Cash</span><span>0.000000000</span></p></li>
+                                    <li><p class="flex items-center justify-between w-full text-white"><span class="flex items-center gap-1"><img class="w-3" src="./dist/images/coin/bitcoin-satoshi-vision-bsv-logo.svg" alt="">Bitcoin Satoshi</span><span>0.000000000</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="my-3 text-base md:text-lg text-white font-semibold text-center">귀하가 선호하는 암호화폐 방식을 아래에서 선택해 주십시오 ↓</div>
+                        <div class="bg-modal p-3 rounded">
+                            <div class="mb-2 font-bold text-primary">Cryptocurrency</div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 text-center">
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img" onclick="closeModal('cashier-modal'); modalOpen('deposit_bitcoin-modal');"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsCustodyCryptoBTC.svg" alt=""></button>
+                                    <p>Bitcoin</p>
+                                </div>
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img" onclick="closeModal('cashier-modal'); modalOpen('deposit_crypto-modal');"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsSideShiftBTC.svg" alt=""></button>
+                                    <p>Deposit other crypto</p>
+                                </div>
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img" onclick="closeModal('cashier-modal'); modalOpen('deposit_changelly-modal');"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsChangellyCrypto.svg" alt=""></button>
+                                    <p>Changelly</p>
+                                </div>
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img" onclick="closeModal('cashier-modal'); modalOpen('deposit_kado-modal');"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/CryptoChillBTC.svg" alt=""></button>
+                                    <p>Kado BTC</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cashier-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="cashier-2-tab">
+                        <div class="bg-modal py-14 rounded text-center">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-24 h-24 mx-auto text-danger"><use href="./dist/images/icon-defs.svg?credit#credit-card-disable"></use></svg>
+                            <p class="mt-3 text-xl">출금 전 입금 필수</p>
+                        </div>
+                    </div>
+                    <div id="cashier-tab-3" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="cashier-3-tab">
+                        <div class="my-3 text-base md:text-lg text-white font-semibold text-center">귀하가 선호하는 암호화폐 방식을 아래에서 선택해 주십시오 ↓</div>
+                        <div class="bg-modal p-3 rounded">
+                            <div class="mb-2 font-bold text-primary">Cryptocurrency</div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 text-center">
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img" onclick="closeModal('cashier-modal'); modalOpen('deposit_changelly-modal');"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsChangellyCrypto.svg" alt=""></button>
+                                    <p>Changelly</p>
+                                </div>
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/more_methods.png" alt=""></button>
+                                    <p>More Methods</p>
+                                </div>
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/change_now.jpg" alt=""></button>
+                                    <p>ChangeNow</p>
+                                </div>
+                                <div>
+                                    <button class="w-full h-16 p-2 rounded bg-white hover_scale_img"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/MoonPay.svg" alt=""></button>
+                                    <p>MoonPay</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<!-- deposit - bitcoin -->
+<div id="deposit_bitcoin-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xxs mo_full">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="prev_btn" onclick="closeModal('deposit_bitcoin-modal'); modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 rotate-180"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                <button class="close_btn" onclick="closeModal('deposit_bitcoin-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body px-8 pb-8 !pt-0 text-center">
+                <div class="flex items-center justify-center gap-3 mb-5">
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                    <div class="text-2xl font-bold">Deposit</div>
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary rotate-180"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="flex items-center justify-center w-28 h-16 p-2 mx-auto bg-white shadow rounded-lg"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsCustodyCryptoBTC.svg" alt=""></div>
+                <div class="flex items-center justify-center mt-11 mb-6">
+                    <div class="bg-modal p-3 rounded-lg">Use the following information to complete<br/>the payment process</div>
+                </div>
+                <div class="flex items-center justify-center gap-4 mb-6">
+                    <p class="text-right">최소 금액:</p>
+                    <p class="text-left">0.00045272</p>
+                </div>
+                <div class="flex items-center justify-center gap-4 mb-6">
+                    <p class="text-right">결제되는 통화:</p>
+                    <p class="text-left">btc</p>
+                </div>
+                <div class="flex items-center justify-center gap-4 mb-3">
+                    <p class="text-right">네트워크:</p>
+                    <p class="text-left">bitcoin</p>
+                </div>
+                <svg class="mx-auto" height="128" width="128" viewBox="0 0 37 37" data-test="qr-code"><path fill="#FFFFFF" d="M0,0 h37v37H0z" shape-rendering="crispEdges"></path><path fill="#000000" d="M4 4h7v1H4zM15 4h1v1H15zM17 4h1v1H17zM20 4h2v1H20zM24 4h1v1H24zM26,4 h7v1H26zM4 5h1v1H4zM10 5h1v1H10zM12 5h2v1H12zM15 5h1v1H15zM17 5h1v1H17zM20 5h1v1H20zM22 5h1v1H22zM26 5h1v1H26zM32,5 h1v1H32zM4 6h1v1H4zM6 6h3v1H6zM10 6h1v1H10zM12 6h4v1H12zM18 6h1v1H18zM22 6h3v1H22zM26 6h1v1H26zM28 6h3v1H28zM32,6 h1v1H32zM4 7h1v1H4zM6 7h3v1H6zM10 7h1v1H10zM12 7h1v1H12zM15 7h3v1H15zM20 7h3v1H20zM24 7h1v1H24zM26 7h1v1H26zM28 7h3v1H28zM32,7 h1v1H32zM4 8h1v1H4zM6 8h3v1H6zM10 8h1v1H10zM15 8h1v1H15zM17 8h1v1H17zM20 8h1v1H20zM23 8h2v1H23zM26 8h1v1H26zM28 8h3v1H28zM32,8 h1v1H32zM4 9h1v1H4zM10 9h1v1H10zM14 9h1v1H14zM16 9h1v1H16zM18 9h1v1H18zM21 9h1v1H21zM24 9h1v1H24zM26 9h1v1H26zM32,9 h1v1H32zM4 10h7v1H4zM12 10h1v1H12zM14 10h1v1H14zM16 10h1v1H16zM18 10h1v1H18zM20 10h1v1H20zM22 10h1v1H22zM24 10h1v1H24zM26,10 h7v1H26zM12 11h1v1H12zM14 11h1v1H14zM18 11h1v1H18zM20 11h1v1H20zM22 11h2v1H22zM4 12h1v1H4zM10 12h1v1H10zM12 12h1v1H12zM15 12h1v1H15zM17 12h5v1H17zM25 12h2v1H25zM29 12h3v1H29zM4 13h1v1H4zM6 13h2v1H6zM9 13h1v1H9zM13 13h7v1H13zM22 13h2v1H22zM25 13h1v1H25zM27 13h2v1H27zM30 13h2v1H30zM10 14h2v1H10zM13 14h1v1H13zM15 14h2v1H15zM19 14h1v1H19zM21 14h1v1H21zM25 14h2v1H25zM28 14h2v1H28zM4 15h3v1H4zM9 15h1v1H9zM11 15h3v1H11zM15 15h1v1H15zM19 15h2v1H19zM22 15h1v1H22zM24 15h1v1H24zM26 15h1v1H26zM28 15h2v1H28zM31 15h1v1H31zM4 16h9v1H4zM18 16h2v1H18zM23 16h1v1H23zM26 16h1v1H26zM29 16h1v1H29zM31,16 h2v1H31zM4 17h6v1H4zM12 17h1v1H12zM14 17h1v1H14zM16 17h1v1H16zM18 17h7v1H18zM26 17h3v1H26zM30,17 h3v1H30zM4 18h3v1H4zM8 18h3v1H8zM14 18h1v1H14zM17 18h3v1H17zM26 18h3v1H26zM31 18h1v1H31zM5 19h2v1H5zM9 19h1v1H9zM12 19h1v1H12zM14 19h2v1H14zM19 19h1v1H19zM22 19h1v1H22zM24 19h3v1H24zM29 19h3v1H29zM5 20h1v1H5zM8 20h3v1H8zM13 20h5v1H13zM19 20h3v1H19zM23 20h2v1H23zM27 20h1v1H27zM30 20h2v1H30zM4 21h1v1H4zM7 21h1v1H7zM9 21h1v1H9zM11 21h4v1H11zM18 21h2v1H18zM23 21h2v1H23zM26 21h1v1H26zM28 21h1v1H28zM30 21h1v1H30zM32,21 h1v1H32zM4 22h4v1H4zM10 22h1v1H10zM12 22h1v1H12zM14 22h2v1H14zM17 22h1v1H17zM19 22h1v1H19zM23 22h1v1H23zM26 22h2v1H26zM29 22h1v1H29zM32,22 h1v1H32zM4 23h1v1H4zM7 23h3v1H7zM13 23h1v1H13zM16 23h1v1H16zM22 23h3v1H22zM26 23h4v1H26zM32,23 h1v1H32zM4 24h1v1H4zM7 24h1v1H7zM10 24h1v1H10zM17 24h1v1H17zM19 24h1v1H19zM21 24h2v1H21zM24 24h5v1H24zM30 24h2v1H30zM12 25h2v1H12zM15 25h2v1H15zM19 25h1v1H19zM21 25h1v1H21zM23 25h2v1H23zM28 25h2v1H28zM4 26h7v1H4zM15 26h1v1H15zM19 26h2v1H19zM22 26h3v1H22zM26 26h1v1H26zM28 26h1v1H28zM4 27h1v1H4zM10 27h1v1H10zM15 27h2v1H15zM20 27h1v1H20zM22 27h1v1H22zM24 27h1v1H24zM28 27h2v1H28zM32,27 h1v1H32zM4 28h1v1H4zM6 28h3v1H6zM10 28h1v1H10zM13 28h3v1H13zM17 28h2v1H17zM20 28h1v1H20zM23 28h7v1H23zM31 28h1v1H31zM4 29h1v1H4zM6 29h3v1H6zM10 29h1v1H10zM13 29h1v1H13zM15 29h1v1H15zM19 29h2v1H19zM23 29h1v1H23zM25 29h1v1H25zM27 29h1v1H27zM29 29h2v1H29zM32,29 h1v1H32zM4 30h1v1H4zM6 30h3v1H6zM10 30h1v1H10zM13 30h3v1H13zM17 30h3v1H17zM22 30h2v1H22zM26 30h4v1H26zM31 30h1v1H31zM4 31h1v1H4zM10 31h1v1H10zM15 31h2v1H15zM19 31h2v1H19zM23 31h1v1H23zM26 31h1v1H26zM28 31h1v1H28zM30 31h1v1H30zM32,31 h1v1H32zM4 32h7v1H4zM12 32h2v1H12zM15 32h1v1H15zM21 32h1v1H21zM25 32h1v1H25zM28 32h3v1H28z" shape-rendering="crispEdges"></path></svg>
+                <div class="mt-3">bc1qhjlm0v9pzmfp57xtcf06flv8qjma6vtc3mh740</div>
+                <div class="text-center mt-8">
+                    <button class="btn btn-primary w-2/3 h-12" onclick="closeModal('deposit_bitcoin-modal'); modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 mr-1"><use href="./dist/images/icon-defs.svg?copy#copy"></use></svg>복사</button>
+                    <div class="py-4 text-lg font-semibold">- or -</div>
+                    <button class="btn btn-primary w-2/3 h-12" onclick="closeModal('deposit_bitcoin-modal'); modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">Make new transaction</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- deposit - crypto  -->
+<div id="deposit_crypto-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xxs mo_full">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="prev_btn" onclick="closeModal('deposit_crypto-modal'); modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 rotate-180"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                <button class="close_btn" onclick="closeModal('deposit_crypto-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body px-8 pb-10 !pt-0 text-center">
+                <div class="flex items-center justify-center gap-3 mb-5">
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                    <div class="text-2xl font-bold">Deposit</div>
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary rotate-180"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="flex items-center justify-center w-28 h-16 p-2 mx-auto bg-white shadow rounded-lg"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsSideShiftBTC.svg" alt=""></div>
+                
+                <div class="custom_select mt-6">
+                    <button class="font-medium"><p>암호화폐</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                    <div class="scrollbar !max-h-24">
+                        <ul>
+                            <li><p>CHZ</p></li>
+                            <li><p>YFI</p></li>
+                            <li><p>SRM</p></li>
+                            <li><p>APE</p></li>
+                            <li><p>ARB</p></li>
+                            <li><p>AVAX</p></li>
+                            <li><p>DAI ethereum</p></li>
+                            <li><p>DAI avax</p></li>
+                            <li><p>DAI optimism</p></li>
+                            <li><p>DAI polygon</p></li>
+                            <li><p>DAI arbitum</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <button class="btn btn-primary w-full h-12">Deposit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- deposit - changelly -->
+<div id="deposit_changelly-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xxs mo_full">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="prev_btn" onclick="closeModal('deposit_changelly-modal'); modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 rotate-180"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                <button class="close_btn" onclick="closeModal('deposit_changelly-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body px-8 pb-10 !pt-0 text-center">
+                <div class="flex items-center justify-center gap-3 mb-5">
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                    <div class="text-2xl font-bold">Deposit</div>
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary rotate-180"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="flex items-center justify-center w-28 h-16 p-2 mx-auto bg-white shadow rounded-lg"><img class="max-w-full max-h-full mx-auto" src="./dist/images/cashier/HeroPaymentsChangellyCrypto.svg" alt=""></div>
+
+                <div class="mt-10 text-light">아래의 타사 방법 중 하나를 사용하여 신용 카드로 암호화폐를 구입하십시오. 거래 후 구매한 암호화폐는 Vave 암호화폐 지갑으로 전송됩니다.</div>
+              
+
+                <div class="text-center mt-10">
+                    <button class="btn btn-primary w-full h-12">Deposit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- deposit - kado -->
+<div id="deposit_kado-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xxs mo_full">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="prev_btn" onclick="closeModal('deposit_kado-modal'); modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6 rotate-180"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                <button class="close_btn" onclick="closeModal('deposit_kado-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body px-8 pb-10 !pt-0 text-center">
+                <div class="flex items-center justify-center gap-3 mb-5">
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                    <div class="text-2xl font-bold">Deposit</div>
+                    <svg width="72" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary rotate-180"><path d="M15.828 3.134H52.83L47.658 7.51l5.173 5.173H15.827" stroke="#FFFAF3"></path><path d="M44.077 7.51H.31M59.913 1.534l-6.335 6.334 6.335 6.335 6.334-6.335-6.334-6.334Z" stroke="currentColor"></path><path d="M59.913 4.645 56.69 7.868l3.223 3.223 3.223-3.223-3.223-3.223Z" fill="currentColor"></path></svg>
+                </div>
+                <div class="mt-10 bg-modal rounded px-2 py-8 text-center">
+                    <p class="text-xs opacity-50">WAITING FOR KADO BTC</p>
+                    <svg width="20" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mt-3 text-white">
+                        <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(1 1)">
+                                <circle cx="5" cy="50" r="5" fill="rgb(255, 255, 255)">
+                                    <animate attributeName="cy" begin="0s" dur="2.2s" values="50;5;50;50" calcMode="linear" repeatCount="indefinite"></animate>
+                                    <animate attributeName="cx" begin="0s" dur="2.2s" values="5;27;49;5" calcMode="linear" repeatCount="indefinite"></animate>
+                                </circle>
+                                <circle cx="27" cy="5" r="5" fill="rgb(255, 255, 255)">
+                                    <animate attributeName="cy" begin="0s" dur="2.2s" from="5" to="5" values="5;50;50;5" calcMode="linear" repeatCount="indefinite"></animate>
+                                    <animate attributeName="cx" begin="0s" dur="2.2s" from="27" to="27" values="27;49;5;27" calcMode="linear" repeatCount="indefinite"></animate>
+                                </circle>
+                                <circle cx="49" cy="50" r="5" fill="rgb(255, 255, 255)">
+                                    <animate attributeName="cy" begin="0s" dur="2.2s" values="50;50;5;50" calcMode="linear" repeatCount="indefinite"></animate>
+                                    <animate attributeName="cx" from="49" to="49" begin="0s" dur="2.2s" values="49;5;27;49" calcMode="linear" repeatCount="indefinite"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                
+
+                <div class="mt-10 "><a href="javascript:;" class="text-primary hover:underline">리디렉션되지 않는 경우 여기를 클릭하십시오.</a></div>
+              
+
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- 지갑설정 모달 -->
+<div id="wallet_setting-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xxxs">
+        <div class="modal-content">
+            <div class="modal-body p-6">
+                <button class="close_btn" onclick="closeModal('wallet_setting-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div>
+                    <div class="text-lg md:text-2xl font-bold mb-6">지갑을 설정해 주세요</div>
+                    <div class="form-check form-switch"> 
+                        <input id="wallet_zero" class="form-check-input" type="checkbox"> 
+                        <label class="form-check-label font-medium" for="wallet_zero">
+                            <p class="text-light">제로 잔액 숨기기</p>
+                            <span class="text-light text-xs">0 잔액은 지갑에 나타나지 않습니다</span>
+                        </label> 
+                    </div>
+                    <div class="form-check form-switch mt-2"> 
+                        <input id="wallet_currency" class="form-check-input" type="checkbox" onchange="walletChange(this)"> 
+                        <label class="form-check-label font-medium" for="wallet_currency">
+                            <p class="text-light">법정 화폐로 표시합니다</p>
+                            <span class="text-light text-xs">모든 베팅 및 거래는 암호화폐로 정산됩니다.</span>
+                        </label> 
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mt-4 mont font-bold" id="wallet_currency_list">
+                        <div class="form-check "> 
+                            <input id="wallet_currency-1" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-1">EUR</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-2" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-2">USD</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-3" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-3">TRY</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-4" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-4">PLN</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-5" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-5">CAD</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-6" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-6">INR</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-7" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-7">JPY</label> 
+                        </div>
+                        <div class="form-check "> 
+                            <input id="wallet_currency-8" class="form-check-input" type="radio" name="vertical_radio_button" disabled> 
+                            <label class="form-check-label text-base" for="wallet_currency-8">BRL</label> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <button class="btn btn-primary w-full">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- 통계 모달 -->
+<div id="statistics-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header py-4">
+                <h3 class="text-2xl font-bold">통계</h3>
+                <button class="close_btn" onclick="closeModal('statistics-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body p-6 !pt-0">
+                <div class="flex items-center justify-between py-2 px-3 border border-white border-opacity-10 rounded bg-gray-700 bg-opacity-20">
+                    <div class="font-bold">Ants1313</div>
+                    <div class="text-light">가입: <b>13.02.2024</b> 11:25</div>
+                </div>
+                <ul class="nav nav-boxed-tabs !inline-flex xl:w-1/2 w-full mt-3 p-1 bg-sub rounded" role="tablist">
+                    <li id="statistics-1-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-1.5 active" data-tw-toggle="pill" data-tw-target="#statistics-tab-1" type="button" role="tab" aria-controls="statistics-tab-1" aria-selected="true"> 스포츠 </button> 
+                    </li>
+                    <li id="statistics-2-tab" class="nav-item flex-1" role="presentation"> 
+                        <button class="nav-link w-full py-1.5" data-tw-toggle="pill" data-tw-target="#statistics-tab-2" type="button" role="tab" aria-controls="statistics-tab-2" aria-selected="false"> 카지노 </button> 
+                    </li>
+                </ul>
+                <div class="tab-content mt-5">
+                    <div id="statistics-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="statistics-1-tab">
+                        <div class="flex gap-3">
+                            <div class="w-3/5">
+                                <div class="overflow-hidden relative flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-md">
+                                    <div class="absolute top-10 -right-9 w-60" style="opacity:.5"><div class="absolute left-0 top-0 flex flex-col items-center justify-center w-full h-28"><p class="text-xs">레벨 테이블</p><b class="text-4xl font-bold">1</b></div><svg viewBox="-1 -1 140 230" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M105.094 36c0 19.32-15.829 35-35.375 35-19.547 0-35.375-15.68-35.375-35S50.172 1 69.719 1c19.546 0 35.375 15.68 35.375 35Z" fill="url(#imgIconLevel-1)"></path><path d="M112.156 36.6535C112.156 59.8359 93.1561 78.6289 69.7186 78.6289C46.281 78.6289 27.2812 59.8359 27.2812 36.6535C27.2812 32.9811 27.758 29.419 28.6536 26.0242C21.7457 27.4751 17.6267 29.3066 17.6267 31.2986C17.6282 33.4745 17.1733 35.6295 16.288 37.6401C15.4027 39.6507 14.1044 41.4775 12.4673 43.0162C10.8302 44.5548 8.88645 45.7751 6.74721 46.6072C4.60796 47.4392 2.31519 47.8668 0 47.8654V193.417C0 197.464 3.91455 200.268 7.57527 201.664C14.4467 204.286 21.4228 206.672 28.3992 209.059C38.5419 212.528 48.6854 215.997 58.5095 220.193L58.5451 220.208C60.201 220.917 68.0394 224.275 69.2134 226.024C70.3829 224.277 78.1669 220.942 79.8627 220.216L79.9173 220.193C89.7413 215.997 99.8849 212.528 110.028 209.059C117.004 206.672 123.98 204.286 130.851 201.664C134.512 200.268 138.427 197.464 138.427 193.417V47.8654C136.112 47.8668 133.819 47.4392 131.68 46.6072C129.54 45.7751 127.597 44.5548 125.959 43.0162C124.322 41.4775 123.024 39.6507 122.139 37.6401C121.253 35.6295 120.799 33.4745 120.8 31.2986C120.8 29.4118 117.105 27.6691 110.844 26.2573C111.701 29.5819 112.156 33.0651 112.156 36.6535Z" fill="url(#imgIconLevel-1)"></path><path d="M112.156 36.654h2-2Zm-84.875 0h2-2Zm1.373-10.63 1.933.51.827-3.133-3.172.666.412 1.957ZM17.627 31.3h-2 2Zm-1.339 6.341 1.83.806-1.83-.806Zm-3.82 5.376 1.369 1.458-1.37-1.458Zm-5.72 3.591-.726-1.864.725 1.864ZM0 47.865l.001-2H-2v2h2Zm7.575 153.799.713-1.868-.713 1.868Zm20.824 7.395-.647 1.892.647-1.892Zm30.11 11.134.788-1.839-.002-.001-.785 1.84Zm.036.015.788-1.839-.788 1.839Zm10.668 5.816-1.66 1.115 1.663 2.477 1.66-2.479-1.663-1.113Zm10.65-5.808-.788-1.838.788 1.838Zm.054-.023-.785-1.84-.002.001.787 1.839Zm30.111-11.134-.648-1.893.648 1.893Zm20.823-7.395-.712-1.868h-.001l.713 1.868Zm7.576-153.799h2v-2h-2.001l.001 2Zm-12.468-4.849 1.37-1.457-1.37 1.457Zm-3.82-5.376-1.831.806 1.831-.806ZM120.8 31.3h2-2Zm-9.956-5.042.44-1.95-3.193-.72.817 3.17 1.936-.5ZM69.719 80.63c24.521 0 44.437-19.668 44.437-43.976h-4c0 22.058-18.084 39.976-40.437 39.976v4ZM25.28 36.653c0 24.308 19.916 43.976 44.438 43.976v-4c-22.354 0-40.438-17.918-40.438-39.976h-4Zm1.439-11.14a43.613 43.613 0 0 0-1.439 11.14h4c0-3.498.454-6.889 1.306-10.119l-3.867-1.02Zm1.523-1.446c-3.511.737-6.443 1.596-8.543 2.58-1.044.49-1.992 1.062-2.707 1.749-.716.688-1.366 1.662-1.366 2.903h4c0 .244-.135.243.137-.018.273-.263.786-.614 1.635-1.012 1.687-.791 4.269-1.574 7.666-2.287l-.823-3.915ZM15.627 31.3a13.695 13.695 0 0 1-1.17 5.534l3.661 1.612a17.695 17.695 0 0 0 1.509-7.149l-4 .003Zm-1.17 5.534a14.53 14.53 0 0 1-3.36 4.725l2.74 2.915a18.526 18.526 0 0 0 4.281-6.028l-3.66-1.612Zm-3.36 4.725a15.732 15.732 0 0 1-5.075 3.184l1.45 3.728a19.73 19.73 0 0 0 6.365-3.997l-2.74-2.915Zm-5.075 3.184a16.6 16.6 0 0 1-6.02 1.122l-.003 4a20.6 20.6 0 0 0 7.473-1.394l-1.45-3.728ZM-2 47.865v145.552h4V47.865h-4Zm0 145.552c0 2.726 1.331 4.927 3.028 6.559 1.685 1.621 3.836 2.795 5.835 3.557l1.425-3.737c-1.662-.634-3.299-1.56-4.487-2.703C2.626 195.963 2 194.738 2 193.417h-4Zm8.862 10.116c6.91 2.636 13.92 5.034 20.89 7.418l1.295-3.785c-6.983-2.388-13.925-4.763-20.759-7.37l-1.426 3.737Zm20.89 7.418c10.155 3.473 20.228 6.92 29.972 11.081l1.57-3.679c-9.903-4.229-20.117-7.722-30.247-11.187l-1.295 3.785Zm29.97 11.08.036.015 1.575-3.677-.036-.015-1.575 3.677Zm.035.015c.827.355 3.156 1.352 5.415 2.472 1.132.562 2.211 1.136 3.061 1.661.425.263.765.495 1.013.692.275.217.334.308.307.268l3.32-2.23c-.32-.477-.763-.873-1.148-1.177-.41-.325-.89-.647-1.39-.956-1.002-.619-2.206-1.256-3.387-1.842-2.367-1.173-4.786-2.209-5.615-2.565l-1.575 3.677Zm13.119 5.091c-.027.039.03-.051.303-.267.246-.195.583-.426 1.006-.688.844-.522 1.916-1.094 3.044-1.653 2.25-1.116 4.574-2.112 5.421-2.475l-1.575-3.676c-.849.363-3.264 1.397-5.623 2.567-1.176.584-2.375 1.219-3.372 1.836-.498.308-.975.629-1.385.954-.383.304-.825.7-1.144 1.177l3.325 2.225Zm9.774-5.083.055-.023-1.575-3.677-.055.024 1.575 3.676Zm.053-.022c9.744-4.161 19.817-7.608 29.972-11.081l-1.295-3.785c-10.13 3.465-20.345 6.958-30.248 11.187l1.57 3.679Zm29.972-11.081c6.971-2.384 13.98-4.782 20.889-7.418l-1.426-3.737c-6.833 2.607-13.776 4.982-20.758 7.37l1.295 3.785Zm20.889-7.418c1.999-.762 4.15-1.936 5.834-3.557 1.698-1.632 3.029-3.833 3.029-6.559h-4c0 1.321-.626 2.546-1.802 3.676-1.187 1.143-2.824 2.069-4.486 2.703l1.425 3.737Zm8.863-10.116V47.865h-4v145.552h4Zm-2.001-147.552a16.597 16.597 0 0 1-6.021-1.122l-1.45 3.728a20.596 20.596 0 0 0 7.473 1.394l-.002-4Zm-6.021-1.122a15.728 15.728 0 0 1-5.076-3.184l-2.739 2.915a19.728 19.728 0 0 0 6.365 3.997l1.45-3.728Zm-5.076-3.184a14.532 14.532 0 0 1-3.36-4.725l-3.661 1.612a18.518 18.518 0 0 0 4.282 6.028l2.739-2.915Zm-3.36-4.725A13.707 13.707 0 0 1 122.8 31.3l-4-.003a17.693 17.693 0 0 0 1.508 7.149l3.661-1.612ZM122.8 31.3c0-1.174-.584-2.113-1.251-2.79-.661-.67-1.534-1.226-2.489-1.7-1.918-.953-4.587-1.784-7.776-2.503l-.88 3.902c3.072.693 5.38 1.44 6.876 2.183.751.373 1.193.695 1.42.926.222.225.1.212.1-.018h4Zm-8.644 5.355c0-3.759-.477-7.41-1.375-10.896l-3.873.998a39.662 39.662 0 0 1 1.248 9.898h4Z" fill="#FFBD3A" mask="url(#maskImg-1)"></path><path d="M112.156 36.654h2-2Zm-84.875 0h2-2Zm1.373-10.63 1.933.51.827-3.133-3.172.666.412 1.957ZM17.627 31.3h-2 2Zm-1.339 6.341 1.83.806-1.83-.806Zm-3.82 5.376 1.369 1.458-1.37-1.458Zm-5.72 3.591-.726-1.864.725 1.864ZM0 47.865l.001-2H-2v2h2Zm7.575 153.799.713-1.868-.713 1.868Zm20.824 7.395-.647 1.892.647-1.892Zm30.11 11.134.788-1.839-.002-.001-.785 1.84Zm.036.015.788-1.839-.788 1.839Zm10.668 5.816-1.66 1.115 1.663 2.477 1.66-2.479-1.663-1.113Zm10.65-5.808-.788-1.838.788 1.838Zm.054-.023-.785-1.84-.002.001.787 1.839Zm30.111-11.134-.648-1.893.648 1.893Zm20.823-7.395-.712-1.868h-.001l.713 1.868Zm7.576-153.799h2v-2h-2.001l.001 2Zm-12.468-4.849 1.37-1.457-1.37 1.457Zm-3.82-5.376-1.831.806 1.831-.806ZM120.8 31.3h2-2Zm-9.956-5.042.44-1.95-3.193-.72.817 3.17 1.936-.5ZM69.719 80.63c24.521 0 44.437-19.668 44.437-43.976h-4c0 22.058-18.084 39.976-40.437 39.976v4ZM25.28 36.653c0 24.308 19.916 43.976 44.438 43.976v-4c-22.354 0-40.438-17.918-40.438-39.976h-4Zm1.439-11.14a43.613 43.613 0 0 0-1.439 11.14h4c0-3.498.454-6.889 1.306-10.119l-3.867-1.02Zm1.523-1.446c-3.511.737-6.443 1.596-8.543 2.58-1.044.49-1.992 1.062-2.707 1.749-.716.688-1.366 1.662-1.366 2.903h4c0 .244-.135.243.137-.018.273-.263.786-.614 1.635-1.012 1.687-.791 4.269-1.574 7.666-2.287l-.823-3.915ZM15.627 31.3a13.695 13.695 0 0 1-1.17 5.534l3.661 1.612a17.695 17.695 0 0 0 1.509-7.149l-4 .003Zm-1.17 5.534a14.53 14.53 0 0 1-3.36 4.725l2.74 2.915a18.526 18.526 0 0 0 4.281-6.028l-3.66-1.612Zm-3.36 4.725a15.732 15.732 0 0 1-5.075 3.184l1.45 3.728a19.73 19.73 0 0 0 6.365-3.997l-2.74-2.915Zm-5.075 3.184a16.6 16.6 0 0 1-6.02 1.122l-.003 4a20.6 20.6 0 0 0 7.473-1.394l-1.45-3.728ZM-2 47.865v145.552h4V47.865h-4Zm0 145.552c0 2.726 1.331 4.927 3.028 6.559 1.685 1.621 3.836 2.795 5.835 3.557l1.425-3.737c-1.662-.634-3.299-1.56-4.487-2.703C2.626 195.963 2 194.738 2 193.417h-4Zm8.862 10.116c6.91 2.636 13.92 5.034 20.89 7.418l1.295-3.785c-6.983-2.388-13.925-4.763-20.759-7.37l-1.426 3.737Zm20.89 7.418c10.155 3.473 20.228 6.92 29.972 11.081l1.57-3.679c-9.903-4.229-20.117-7.722-30.247-11.187l-1.295 3.785Zm29.97 11.08.036.015 1.575-3.677-.036-.015-1.575 3.677Zm.035.015c.827.355 3.156 1.352 5.415 2.472 1.132.562 2.211 1.136 3.061 1.661.425.263.765.495 1.013.692.275.217.334.308.307.268l3.32-2.23c-.32-.477-.763-.873-1.148-1.177-.41-.325-.89-.647-1.39-.956-1.002-.619-2.206-1.256-3.387-1.842-2.367-1.173-4.786-2.209-5.615-2.565l-1.575 3.677Zm13.119 5.091c-.027.039.03-.051.303-.267.246-.195.583-.426 1.006-.688.844-.522 1.916-1.094 3.044-1.653 2.25-1.116 4.574-2.112 5.421-2.475l-1.575-3.676c-.849.363-3.264 1.397-5.623 2.567-1.176.584-2.375 1.219-3.372 1.836-.498.308-.975.629-1.385.954-.383.304-.825.7-1.144 1.177l3.325 2.225Zm9.774-5.083.055-.023-1.575-3.677-.055.024 1.575 3.676Zm.053-.022c9.744-4.161 19.817-7.608 29.972-11.081l-1.295-3.785c-10.13 3.465-20.345 6.958-30.248 11.187l1.57 3.679Zm29.972-11.081c6.971-2.384 13.98-4.782 20.889-7.418l-1.426-3.737c-6.833 2.607-13.776 4.982-20.758 7.37l1.295 3.785Zm20.889-7.418c1.999-.762 4.15-1.936 5.834-3.557 1.698-1.632 3.029-3.833 3.029-6.559h-4c0 1.321-.626 2.546-1.802 3.676-1.187 1.143-2.824 2.069-4.486 2.703l1.425 3.737Zm8.863-10.116V47.865h-4v145.552h4Zm-2.001-147.552a16.597 16.597 0 0 1-6.021-1.122l-1.45 3.728a20.596 20.596 0 0 0 7.473 1.394l-.002-4Zm-6.021-1.122a15.728 15.728 0 0 1-5.076-3.184l-2.739 2.915a19.728 19.728 0 0 0 6.365 3.997l1.45-3.728Zm-5.076-3.184a14.532 14.532 0 0 1-3.36-4.725l-3.661 1.612a18.518 18.518 0 0 0 4.282 6.028l2.739-2.915Zm-3.36-4.725A13.707 13.707 0 0 1 122.8 31.3l-4-.003a17.693 17.693 0 0 0 1.508 7.149l3.661-1.612ZM122.8 31.3c0-1.174-.584-2.113-1.251-2.79-.661-.67-1.534-1.226-2.489-1.7-1.918-.953-4.587-1.784-7.776-2.503l-.88 3.902c3.072.693 5.38 1.44 6.876 2.183.751.373 1.193.695 1.42.926.222.225.1.212.1-.018h4Zm-8.644 5.355c0-3.759-.477-7.41-1.375-10.896l-3.873.998a39.662 39.662 0 0 1 1.248 9.898h4Z" fill="url(#gradientRound-1)" fill-opacity=".5" mask="url(#maskImg-1)"></path><path d="M105.094 36c0 19.32-15.829 35-35.375 35-19.547 0-35.375-15.68-35.375-35S50.172 1 69.719 1c19.546 0 35.375 15.68 35.375 35Z" stroke="#FFBD3A" stroke-width="2"></path><path d="M105.094 36c0 19.32-15.829 35-35.375 35-19.547 0-35.375-15.68-35.375-35S50.172 1 69.719 1c19.546 0 35.375 15.68 35.375 35Z" stroke="url(#gradientBody-1)" stroke-opacity=".5" stroke-width="2"></path><mask id="maskImg-1" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M112.156 36.654c0 23.182-19 41.975-42.437 41.975-23.438 0-42.438-18.793-42.438-41.976 0-3.672.477-7.234 1.373-10.629-6.908 1.451-11.027 3.283-11.027 5.275a15.696 15.696 0 0 1-1.339 6.341 16.528 16.528 0 0 1-3.82 5.376 17.73 17.73 0 0 1-5.72 3.591A18.598 18.598 0 0 1 0 47.865v145.552c0 4.047 3.915 6.851 7.575 8.247 6.872 2.622 13.848 5.008 20.824 7.395 10.143 3.469 20.286 6.938 30.11 11.134l.036.015c1.656.709 9.494 4.067 10.668 5.816 1.17-1.747 8.954-5.082 10.65-5.808l.054-.023c9.824-4.196 19.968-7.665 30.111-11.134 6.976-2.387 13.952-4.773 20.823-7.395 3.661-1.396 7.576-4.2 7.576-8.247V47.865a18.597 18.597 0 0 1-6.747-1.258 17.736 17.736 0 0 1-5.721-3.59 16.523 16.523 0 0 1-3.82-5.377A15.693 15.693 0 0 1 120.8 31.3c0-1.887-3.695-3.63-9.956-5.042a41.598 41.598 0 0 1 1.312 10.396Z"></path></mask><defs><linearGradient id="gradientRound-1" x1="-.067" y1="169.764" x2="153.596" y2="147.557" gradientUnits="userSpaceOnUse"><stop offset=".068" stop-color="#576265"></stop><stop offset=".219" stop-color="#9EA1A1"></stop><stop offset=".453" stop-color="#848B8A"></stop><stop offset=".524" stop-color="#576265"></stop><stop offset=".797" stop-color="#576265"></stop><stop offset=".896" stop-color="#757A7B"></stop><stop offset="1" stop-color="#576265"></stop></linearGradient><linearGradient id="gradientBody-1" x1="33.308" y1="51.746" x2="112.239" y2="35.094" gradientUnits="userSpaceOnUse"><stop offset=".068" stop-color="#576265"></stop><stop offset=".219" stop-color="#9EA1A1"></stop><stop offset=".453" stop-color="#848B8A"></stop><stop offset=".524" stop-color="#576265"></stop><stop offset=".797" stop-color="#576265"></stop><stop offset=".896" stop-color="#757A7B"></stop><stop offset="1" stop-color="#576265"></stop></linearGradient><pattern id="imgIconLevel-1" patternUnits="userSpaceOnUse" width="100%" height="100%"><image href="./dist/images/vip/bg_level-1.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image></pattern></defs></svg></div>
+                                    <div class="relative z-10">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-1 font-bold">
+                                                <i class="p-1 bg-gray-900 bg-opacity-50 rounded"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#ball"></use></svg></i>
+                                                sport VIP 프로그램
+                                            </div>
+                                            <div class="flex items-center gap-1 text-xs"><svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?Ddd#timer"></use></svg> 01.07.2024</div>
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="w-12">
+                                                <img class="w-full" src="./dist/images/vip/sport-info-reward.webp" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-light text-xs">필요 포인트</p>
+                                                <b class="text-base font-semibold mont">200</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="w-12">
+                                                <img class="w-10" src="./dist/images/vip/info-require.webp" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-light text-xs">보상</p>
+                                                <b class="text-base font-semibold mont">100 VP</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="w-12">
+                                                <img class="w-full" src="./dist/images/vip/your-vave-point.webp" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-light text-xs">귀하의 Vave 포인트</p>
+                                                <b class="text-base font-semibold mont">0</b>
+                                            </div>
+                                        </div>
+                                        <div class="mt-8 text-xs">
+                                            <div class="flex items-center justify-between"><span>이전</span><span>다음</span></div>
+                                            <div class="progress my-1"><span style="width:40%"></span></div>
+                                            <div class="flex items-center justify-between mont font-bold"><span class="text-light">0</span><span class="text-primary">200 남음</span><span class="text-light">200</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-2/5 grid grid-rows-3 gap-3">
+                                <div class="flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-lg bg-no-repeat" style="background-image:url(./dist/images/icon/statistic-bets.webp); background-position:calc(100% - 16px) bottom">
+                                    <div class="text-base mont font-bold">0</div>
+                                    <div class="text-light">베팅</div>
+                                </div>
+                                <div class="flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-lg bg-no-repeat" style="background-image:url(./dist/images/icon/statistic-bonuses.webp); background-position:calc(100% - 16px) bottom">
+                                    <div class="flex items-center gap-1 text-base mont font-bold"><img class="w-4" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">0.00028436</div>
+                                    <div class="text-light">보너스</div>
+                                </div>
+                                <div class="flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-lg bg-no-repeat" style="background-image:url(./dist/images/icon/statistic-wager.webp); background-position:calc(100% - 16px) bottom">
+                                    <div class="flex items-center gap-1 text-base mont font-bold"><img class="w-4" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">0.00000000</div>
+                                    <div class="text-light">베팅</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="statistics-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="statistics-2-tab">
+                        <div class="flex gap-3">
+                            <div class="w-3/5">
+                                <div class="overflow-hidden relative flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-md">
+                                    <div class="absolute top-10 -right-2 w-72" style="opacity:.5"><img class="w-full" src="./dist/images/vip/level-6.webp" alt=""></div>
+                                    <div class="relative z-10">
+                                        <div class="flex items-center gap-1 font-bold">
+                                            <i class="p-1 bg-gray-900 bg-opacity-50 rounded"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                            casino VIP 프로그램
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="w-12">
+                                                <img class="w-full" src="./dist/images/vip/casino-info-reward.webp" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-light text-xs">필요 포인트</p>
+                                                <b class="text-base font-semibold mont">2000</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="w-12">
+                                                <img class="w-10" src="./dist/images/vip/info-require.webp" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-light text-xs">보상</p>
+                                                <b class="text-base font-semibold mont">50 USDT</b>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="w-12">
+                                                <img class="w-full" src="./dist/images/vip/your-vave-point.webp" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-light text-xs">귀하의 Vave 포인트</p>
+                                                <b class="text-base font-semibold mont">104</b>
+                                            </div>
+                                        </div>
+                                        <div class="mt-8 text-xs">
+                                            <div class="flex items-center justify-between"><span>이전</span><span>다음</span></div>
+                                            <div class="progress my-1"><span style="width:40%"></span></div>
+                                            <div class="flex items-center justify-between mont font-bold"><span class="text-light">1000</span><span class="text-primary">996 남음</span><span class="text-light">2000</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-2/5 grid grid-rows-3 gap-3">
+                                <div class="flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-lg bg-no-repeat" style="background-image:url(./dist/images/icon/statistic-bets.webp); background-position:calc(100% - 16px) bottom">
+                                    <div class="text-base mont font-bold">47159</div>
+                                    <div class="text-light">베팅</div>
+                                </div>
+                                <div class="flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-lg bg-no-repeat" style="background-image:url(./dist/images/icon/statistic-bonuses.webp); background-position:calc(100% - 16px) bottom">
+                                    <div class="flex items-center gap-1 text-base mont font-bold"><img class="w-4" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">0.00873459</div>
+                                    <div class="text-light">보너스</div>
+                                </div>
+                                <div class="flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-lg bg-no-repeat" style="background-image:url(./dist/images/icon/statistic-wager.webp); background-position:calc(100% - 16px) bottom">
+                                    <div class="flex items-center gap-1 text-base mont font-bold"><img class="w-4" src="./dist/images/coin/bitcoin-btc-logo.svg" alt="">0.67075895</div>
+                                    <div class="text-light">베팅</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

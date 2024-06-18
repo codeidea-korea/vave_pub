@@ -109,3 +109,4 @@
 .boosted_item .btn_box button {flex-grow:1; padding:8px; font-weight:600; background:rgba(255, 255, 255, 0.2); border-radius:4px; transition:all 0.4s; }
 .boosted_item .btn_box button p {display:flex; align-items:center; justify-content:flex-end; gap:4px; }
 .boosted_item .btn_box button.active {background:var(--primary-color); }
+

@@ -64,6 +64,7 @@ window.addEventListener("load", ()=>{
     .then((response) => response.text())
     .then((htmlData) => {
         $('#wrap').append(htmlData);
+        loadJquery();
     })
     .catch((error) => {
         console.log(error);
@@ -147,45 +148,6 @@ const footerScript = ()=>{
 }
 
 
-
-// 스와이퍼 공통
-$('.mySwiper').each(function(index) {
-    var mySwiper = $(this),
-        swiperContainer = $(this).find('.swiper-container'),
-        itemPer = $(this).attr('data-per') ? $(this).attr('data-per') : 1,
-        itemGap = $(this).attr('data-gap') ? $(this).attr('data-gap') : 0,
-        slideLoop = $(this).attr('data-loop') == 'false' ? false : true,
-        slideCenter = $(this).attr('data-center') == 'true' ? true : false,
-        slidePlayTime = $(this).attr('data-timer') ? $(this).attr('data-timer') * 1000 : 0;
-        effect = $(this).attr('data-effect') ? $(this).attr('data-effect') : 'slide';
-    $(this).addClass('num'+index);		
-    var swiper =  new Swiper( '.mySwiper.num' + index + ' .swiper-container', {
-        spaceBetween: parseInt(itemGap),
-        slidesPerView: itemPer == 'auto' ? "auto" : itemPer,
-        effect: effect,
-        pagination: {
-            el: '.mySwiper.num' + index + ' .pagination',
-            clickable: true,
-            type:  $('.mySwiper.num' + index + ' .pagination').hasClass('fraction') ? "fraction" : "bullets",
-        },
-        navigation: {
-            nextEl: '.mySwiper.num' + index + ' .next',
-            prevEl: '.mySwiper.num' + index + ' .prev'
-        },
-        speed : 1000,
-        centeredSlides: slideCenter,
-        autoplay: slidePlayTime ? {delay: parseInt(slidePlayTime),disableOnInteraction:true} : false,
-        loop: slideLoop			
-    });		
-    if($(this).attr('data-slideto') == '1') {
-        $(slideWrapper.find('.swiper-slide')).click(function() {
-            var i = $(this).index();
-            swiper.slideTo(i,700,false);
-        });
-    }
-});
-
-
 // 햄버거메뉴
 const hamToggle = ()=>{
     $('.side_menu').toggleClass('open');
@@ -217,6 +179,7 @@ const modalOpen = (item)=>{
     modal.style.marginLeft = "0";
     modal.style.paddingLeft = "0";
     modal.style.zIndex = "10000";
+    document.querySelector('body').classList.add('overflow-hidden');
 }
 
 // 모달 닫기
@@ -227,6 +190,7 @@ const closeModal = (item)=>{
     modal.style.marginLeft = "-10000px";
     modal.style.paddingLeft = "0";
     modal.style.zIndex = "0";
+    document.querySelector('body').classList.remove('overflow-hidden');
 }
 
 // 코인 선택시 변경
@@ -304,8 +268,84 @@ const btnActive = (item)=>{
     $(item).addClass('active').siblings().removeClass('active');
 }
 
-// 윈도우 로드시 jquery
-window.addEventListener("load", ()=>{
+//  페이지 넘김
+const showhideBox = (showItem, hideItem)=>{
+    $(showItem).each(function(){
+        $(this).removeClass('hidden')
+    })
+    $(hideItem).each(function(){
+        $(this).addClass('hidden')
+    })
+}
+
+// 캐셔 - 입금하기 모달
+const cashierChange = (item)=>{
+    if($(item).prop('checked')){
+        $('.bonus_list').each(function(){
+            $(this).removeClass('hidden')
+        })
+    }else{
+        $('.bonus_list, .bonus_detail').each(function(){
+            $(this).addClass('hidden')
+        })
+        
+    }
+}
+
+// 지갑설정 - 법정화폐
+const walletChange = (item)=>{
+    if($(item).prop('checked')){
+        $('#wallet_currency_list input').each(function(){
+            $(this).prop('disabled',false)
+        })
+    }else{
+        $('#wallet_currency_list input').each(function(){
+            $(this).prop('disabled',true)
+        })
+    }
+}
+
+
+
+// jquery 모음
+const loadJquery = ()=>{
+
+    // 스와이퍼 공통
+    $('.mySwiper').each(function(index) {
+        var mySwiper = $(this),
+            swiperContainer = $(this).find('.swiper-container'),
+            itemPer = $(this).attr('data-per') ? $(this).attr('data-per') : 1,
+            itemGap = $(this).attr('data-gap') ? $(this).attr('data-gap') : 0,
+            slideLoop = $(this).attr('data-loop') == 'false' ? false : true,
+            slideCenter = $(this).attr('data-center') == 'true' ? true : false,
+            slidePlayTime = $(this).attr('data-timer') ? $(this).attr('data-timer') * 1000 : 0;
+            effect = $(this).attr('data-effect') ? $(this).attr('data-effect') : 'slide';
+        $(this).addClass('num'+index);		
+        var swiper =  new Swiper( '.mySwiper.num' + index + ' .swiper-container', {
+            spaceBetween: parseInt(itemGap),
+            slidesPerView: itemPer == 'auto' ? "auto" : itemPer,
+            effect: effect,
+            pagination: {
+                el: '.mySwiper.num' + index + ' .pagination',
+                clickable: true,
+                type:  $('.mySwiper.num' + index + ' .pagination').hasClass('fraction') ? "fraction" : "bullets",
+            },
+            navigation: {
+                nextEl: '.mySwiper.num' + index + ' .next',
+                prevEl: '.mySwiper.num' + index + ' .prev'
+            },
+            speed : 1000,
+            centeredSlides: slideCenter,
+            autoplay: slidePlayTime ? {delay: parseInt(slidePlayTime),disableOnInteraction:true} : false,
+            loop: slideLoop			
+        });		
+        if($(this).attr('data-slideto') == '1') {
+            $(slideWrapper.find('.swiper-slide')).click(function() {
+                var i = $(this).index();
+                swiper.slideTo(i,700,false);
+            });
+        }
+    });
 
     // custom_select 버튼 클릭
     $('.custom_select > button').on('click',function(){
@@ -320,11 +360,11 @@ window.addEventListener("load", ()=>{
     // custom_select option 클릭
     $('.custom_select > div li').on('click',function(){
         let Parents = $(this).parents('.custom_select');
-        let text = $(this).find('p').text();
+        let text = $(this).find('p').html();
 
         // option 닫기
         Parents.removeClass('open')
-        Parents.find('> button p').text(text);
+        Parents.find('> button p').html(text);
     })
     // custom_select 외의 영역 선택했을 시 닫기 
     document.addEventListener('click',(e)=>{
@@ -336,4 +376,4 @@ window.addEventListener("load", ()=>{
     })
 
 
-});
+};
