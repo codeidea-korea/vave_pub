@@ -2176,6 +2176,9 @@ select{
 .h-16{
     height: 4rem;
 }
+.h-11{
+    height: 2.75rem;
+}
 .max-h-\[50\%\]{
     max-height: 50%;
 }
@@ -2307,6 +2310,9 @@ select{
 }
 .w-3\/5{
     width: 60%;
+}
+.\!w-\[180px\]{
+    width: 180px !important;
 }
 .max-w-full{
     max-width: 100%;

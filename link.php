@@ -99,6 +99,11 @@ echo txtRecord('./@record/');
 				</li>
 			</ul>
 		</li>
+		<li class="mt40" data-label="슬롯">
+			<ul>
+				<li><a href="./slot.html" target="_blank" class="">슬롯</a></li>
+			</ul>
+		</li>
 		<li class="mt40" data-label="도움말">
 			<ul>
 				<li><a href="./help_faq.html" target="_blank" class="">자주 묻는 질문</a></li>
