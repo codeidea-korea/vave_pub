@@ -12149,6 +12149,9 @@ html body{
     .md\:p-6{
         padding: 1.5rem;
     }
+    .md\:p-8{
+        padding: 2rem;
+    }
     .md\:pt-8{
         padding-top: 2rem;
     }
@@ -12171,6 +12174,10 @@ html body{
         font-size: 1rem;
         line-height: 1.5rem;
     }
+    .md\:text-4xl{
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
 }
 @media (min-width: 1024px){
     .lg\:h-\[320px\]{
@@ -12181,6 +12188,9 @@ html body{
     }
     .lg\:justify-center{
         justify-content: center;
+    }
+    .lg\:p-8{
+        padding: 2rem;
     }
 }
 @media (min-width: 1280px){
@@ -12269,6 +12279,9 @@ html body{
     }
     .xl\:p-0{
         padding: 0px;
+    }
+    .xl\:p-16{
+        padding: 4rem;
     }
     .xl\:px-0{
         padding-left: 0px;
