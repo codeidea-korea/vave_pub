@@ -24,6 +24,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-block {background-color:var(--block-color); }
 .bg-sub {background-color:var(--sub-color); }
 .bg-modal {background-color:var(--modal-color); }
+.\!bg-sub {background-color:var(--sub-color) !important; }
 
 @media (min-width:1280px){
     .xl\:bg-block {background-color:var(--block-color);}
@@ -70,7 +71,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 /* ----------------------------------------------
             CONTENT
 ---------------------------------------------- */
-.content {padding:35px; }
+.content {padding:30px 35px 35px; }
 .box {padding:32px; border-radius:16px; background:rgba(16,23,29,.3); }
 
 @media all and (max-width:1280px){
@@ -193,11 +194,12 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
             SIDE-NAV
 ---------------------------------------------- */
 .side_menu {padding:15px 0 15px 32px; }
-.side-nav {z-index:90; position:sticky; top:90px; left:0; width:15vw; height:calc(100vh - 105px); padding:15px 5px 15px 0; }
+.side-nav {z-index:90; position:sticky; top:90px; left:0; width:calc(15vw - 35px); height:calc(100vh - 105px); padding:15px 5px 15px 0; }
 .side-nav .mo_topinfo,
 .side-nav .login_menu {display:none; }
 .side-nav > ul > li + li {margin-top:25px; }
 .side-nav > ul > li > .side-menu .side-menu__title {margin-left:0; color:#fff !important; opacity:0.5; }
+.side-nav .side-menu {padding-left:0; }
 .side-nav .side-menu .side-menu__title {justify-content:space-between; }
 .side-nav .side-menu .side-menu__title .count {display:flex; align-items:center; justify-content:center; width:20px; height:20px; background-color:rgb(var(--color-primary)); font-size:12px; font-weight:500; text-shadow:0 0 2px #104839; border-radius:50%; }
 .side-nav .side-menu .side-menu__title .side-menu__sub-icon svg {width:12px; height:12px; transform:rotate(90deg); }
@@ -231,15 +233,26 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .faq .side-nav > ul > li {display:none; }
 .faq .side-nav > ul > li.faq_menu {display:block; }
 
-/* body 에 클래스 slot 붙었을떄 */
-.slot .gnb li.slots a {color:rgb(var(--color-primary)); }
-.slot .side-nav > ul > li {display:none; }
+/* body 에 클래스 slot, casino 붙었을떄 */
+.slot .gnb li.slots a,
+.casino .gnb li.casino a {color:rgb(var(--color-primary)); }
+.slot .side-nav > ul > li,
+.casino .side-nav > ul > li {display:none; }
+
 .slot .side-nav > ul > li.slots,
-.slot .side-nav > ul > li.casino {display:block; }
+.slot .side-nav > ul > li.casino,
+.casino .side-nav > ul > li.slots,
+.casino .side-nav > ul > li.casino {display:block; }
+
 .slot .side-nav > ul > li.slots li.more_list,
-.slot .side-nav > ul > li.casino li.more_list {display:none; }
+.slot .side-nav > ul > li.casino li.more_list,
+.casino .side-nav > ul > li.slots li.more_list,
+.casino .side-nav > ul > li.casino li.more_list {display:none; }
+
 .slot .side-nav > ul > li.slots li.cate_more_list,
-.slot .side-nav > ul > li.casino li.cate_more_list {display:block; }
+.slot .side-nav > ul > li.casino li.cate_more_list,
+.casino .side-nav > ul > li.slots li.cate_more_list,
+.casino .side-nav > ul > li.casino li.cate_more_list  {display:block; }
 
 .mo_menu_bg {display:none; }
 
@@ -330,7 +343,7 @@ footer .footer_currency .img_list img {height:30px; }
 .cashback_popup .info_list {padding-right:40px; }
 
 @media all and (max-width:1280px){
-    .cashback_popup {bottom:60px; }
+    .cashback_popup.open {bottom:60px; }
 }
 
 @media all and (max-width:1000px){
@@ -399,6 +412,7 @@ footer .footer_currency .img_list img {height:30px; }
 .modal .modal-header .close_btn {position:absolute; right:10px; top:10px; }
 .modal .modal-body {position:relative; }
 .modal .modal-body .close_btn {position:absolute; left:calc(100% + 2px); bottom:calc(100% + 2px); }
+.modal .modal-body .close_btn.inner {left:auto; bottom:auto; right:10px; top:10px; }
 
 @media all and (max-width:1280px){
     .modal .modal-body .close_btn {left:auto; bottom:auto; right:10px; top:10px; }
@@ -411,12 +425,13 @@ footer .footer_currency .img_list img {height:30px; }
 
 @media (min-width:640px){
     .modal .modal-dialog {width:720px; max-width:90%; padding:15px 0; }
+    .modal .modal-dialog.modal-3xs {width:290px; max-width:80%; }
     .modal .modal-dialog.modal-xxxs {width:430px; max-width:80%; }
     .modal .modal-dialog.modal-xxs {width:480px; max-width:80%; }
     .modal .modal-dialog.modal-xs {width:520px; max-width:80%; }
     .modal .modal-dialog.modal-sm {width:630px; max-width:90%; }
     .modal .modal-dialog.modal-md {width:690px; max-width:90%; }
-    /* .modal .modal-dialog.modal-lg {} */
+    .modal .modal-dialog.modal-lg {width:780px; max-width:90%; }
     /* .modal .modal-dialog.modal-xl {} */
 }
 @media (min-width: 1024px) {
@@ -569,12 +584,16 @@ footer .footer_currency .img_list img {height:30px; }
 .input_custom input:focus {box-shadow:none;}
 .input_custom .right_box {position:absolute; right:0; top:0; display:flex; align-items:center; height:100%; padding:0 10px; }
 
+@media all and (max-width:1280px){
+    .input_custom input {height:40px; }
+}
 
 /* ----------------------------------------------
             GAME_ITME
 ---------------------------------------------- */
-.game_item {width:164px; }
+.game_item.swiper-slide {width:164px; }
 .game_item .img_box {position:relative; }
+.game_item .img_box img {width:100%; height:100%; }
 .game_item .img_box .players {position:absolute; right:8px; top:8px; display:flex; align-items:center; gap:4px; padding:4px 8px; border-radius:16px; background-color:#0D1D34B2; font-size:12px; font-weight:700; }
 .game_item .img_box .hover_box {opacity:0; position:absolute; left:0; top:0; display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; padding:32px 8px 8px; background-color:rgba(34,71,79,.9); transition:all 0.5s; }
 .game_item:hover .img_box .hover_box {opacity:1; }
@@ -582,9 +601,22 @@ footer .footer_currency .img_list img {height:30px; }
 .game_item .img_box .hover_box .bookmark {position:absolute; right:10px; top:10px; }
 
 @media all and (max-width:767px){
-    .game_item {width:144px; }
+    .game_item.swiper-slide {width:144px; }
 }
 
 
+/* ----------------------------------------------
+            공급자 리스트
+---------------------------------------------- */
+.producer_btn:hover img {filter:brightness(0) invert(1); }
+.producer_list button {border-radius:6px; }
+.producer_list button span {width:calc(100% - 37px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left; }
+.producer_list button:hover span {color:var(--primary-color); }
+.producer_list button.active {background-color:var(--sub-color); }
+.producer_list button.active span {color:var(--primary-color); }
+
+@media all and (max-width:1280px){
+    .producer_btn {background:var(--block-color) url('../images/icon/simple-arrow.svg') no-repeat 97% center / 14px 14px; }
+}
 
 

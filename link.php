@@ -97,11 +97,48 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('wallet_setting-modal');">지갑 설정 모달</button>
 					<button class="pop-modal" onclick="modalOpen('statistics-modal');">통계 모달</button>
 				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('producer-modal');">공급자 모달</button>
+					<button class="pop-modal" onclick="modalOpen('slot_category-modal');">슬롯/라이브카지노 카테고리 모달</button>
+				</li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="슬롯">
 			<ul>
-				<li><a href="./slot.html" target="_blank" class="">슬롯</a></li>
+				<li>
+					<a href="./slot.html" target="_blank" class="">슬롯</a>
+					<ul>
+						<li><a href="./game_detail.html" target="_blank" class="">게임 상세</a></li>
+					</ul>
+				</li>
+				<li><a href="./slot_my_favorites.html" target="_blank" class="">나의 즐겨찾기</a></li>
+				<li><a href="./slot_popular.html" target="_blank" class="">인기 게임</a></li>
+				<li><a href="./slot_new.html" target="_blank" class="">신규</a></li>
+				<li><a href="./slot_slots.html" target="_blank" class="">슬롯</a></li>
+				<li><a href="./slot_hits.html" target="_blank" class="">히트</a></li>
+				<li><a href="./slot_bonus_buy.html" target="_blank" class="">보너스 구매</a></li>
+				<li><a href="./slot_dropandwins.html" target="_blank" class="">일일 Drops & Wins</a></li>
+				<li><a href="./slot_other.html" target="_blank" class="">기타</a></li>
+				<li><a href="./slot_vave.html" target="_blank" class="">Vave 게임</a></li>
+			</ul>
+		</li>
+		<li class="mt20" data-label="라이브 카지노">
+			<ul>
+				<li>
+					<a href="./casino.html" target="_blank" class="">라이브 카지노</a>
+					<ul>
+						<li><a href="./game_detail.html" target="_blank" class="">게임 상세</a></li>
+					</ul>
+				</li>
+				<li><a href="./casino_my_favorites.html" target="_blank" class="">나의 즐겨찾기</a></li>
+				<li><a href="./casino_popular.html" target="_blank" class="">인기 게임</a></li>
+				<li><a href="./casino_new.html" target="_blank" class="">신규</a></li>
+				<li><a href="./casino_roulette.html" target="_blank" class="">룰렛</a></li>
+				<li><a href="./casino_blackjack.html" target="_blank" class="">블랙잭</a></li>
+				<li><a href="./casino_blackjack_league.html" target="_blank" class="">블랙잭 리그</a></li>
+				<li><a href="./casino_game_shows.html" target="_blank" class="">게임 쇼</a></li>
+				<li><a href="./casino_baccarat.html" target="_blank" class="">바카라</a></li>
+				<li><a href="./casino_poker.html" target="_blank" class="">포커</a></li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="도움말">

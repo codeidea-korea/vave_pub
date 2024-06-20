@@ -54,8 +54,8 @@
                     </div>
 
                     <!-- 카테고리 및 필터 -->
-                    <div class="flex gap-3 mb-8">
-                        <div class="overflow-hidden mySwiper w-3/5" data-per="auto" data-loop="false">
+                    <div class="flex flex-wrap xl:flex-nowrap gap-3 mb-8">
+                        <div class="overflow-hidden mySwiper w-3/5 hidden xl:block" data-per="auto" data-loop="false">
                             <div class="swiper-container p-1 bg-sub rounded-lg">
                                 <ul class="swiper-wrapper nav nav-boxed-tabs">
                                     <!-- 탭 활성화 시 active 클래스 추가 -->
@@ -71,8 +71,14 @@
                                 </ul>
                             </div>
                         </div>
-                        <button class="btn bg-block border-none flex items-center gap-1 text-light"><img class="w-5" src="./dist/images/icon/all-providers.svg" alt="">모든 공급자</button>
-                        <div class="relative input_custom flex-1">
+                        <button class="btn bg-block border-none flex xl:hidden items-center gap-2 text-light hover:bg-primary hover:text-white" onclick="modalOpen('slot_category-modal')">
+                            <span class="text-xs xl:text-sm">모든게임</span>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 text-light rotate-90"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </button>
+                        <button class="btn bg-block border-none flex items-center justify-start gap-1 w-1/2 xl:w-auto text-light hover:bg-primary hover:text-white producer_btn" onclick="modalOpen('producer-modal')">
+                            <img class="w-5" src="./dist/images/icon/all-providers.svg" alt=""><span class="text-xs xl:text-sm">모든 공급자</span>
+                        </button>
+                        <div class="relative input_custom xl:flex-1 w-full xl:w-auto">
                             <input type="search" placeholder="게임 검색">
                             <div class="right_box">
                                 <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg?19#search"></use></svg>
@@ -92,9 +98,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -108,9 +114,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -124,9 +130,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -140,9 +146,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -156,9 +162,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -172,9 +178,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -188,9 +194,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -204,9 +210,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -220,9 +226,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -236,9 +242,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -265,9 +271,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -281,9 +287,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -297,9 +303,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -313,9 +319,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -329,9 +335,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -345,9 +351,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -361,9 +367,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -377,9 +383,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -393,9 +399,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -409,9 +415,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -438,9 +444,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -454,9 +460,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -470,9 +476,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -486,9 +492,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -502,9 +508,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -518,9 +524,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -534,9 +540,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -550,9 +556,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -566,9 +572,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -582,9 +588,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -611,9 +617,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -627,9 +633,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -643,9 +649,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -659,9 +665,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -675,9 +681,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -691,9 +697,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -707,9 +713,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -723,9 +729,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -739,9 +745,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -755,9 +761,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -784,9 +790,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -800,9 +806,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -816,9 +822,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -832,9 +838,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -848,9 +854,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -864,9 +870,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -880,9 +886,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -896,9 +902,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -912,9 +918,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -928,9 +934,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -957,9 +963,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -973,9 +979,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -989,9 +995,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1005,9 +1011,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1021,9 +1027,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1037,9 +1043,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1053,9 +1059,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1069,9 +1075,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1085,9 +1091,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1101,9 +1107,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1130,9 +1136,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1146,9 +1152,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1162,9 +1168,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_6.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1178,9 +1184,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_9.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1194,9 +1200,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_10.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1210,9 +1216,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1226,9 +1232,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1242,9 +1248,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_7.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1258,9 +1264,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_8.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1274,9 +1280,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1303,9 +1309,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_vave_1.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1319,9 +1325,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_vave_2.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1335,9 +1341,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_vave_3.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1351,9 +1357,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_vave_4.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>
@@ -1367,9 +1373,9 @@
                                     <li class="swiper-slide game_item">
                                         <div class="overflow-hidden img_box rounded-lg">
                                             <img src="./dist/images/slots/slots_vave_5.webp" alt="">
-                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0619#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
                                             <div class="hover_box">
-                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?06129#category-my-favorites-inactive"></use></svg></button>
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
                                                 <a href="javascript:;" class="btn btn-primary">실제 게임</a>
                                                 <span class="my-1">또는</span>
                                                 <a href="javascript:;" class="btn btn-outline-primary border-2">데모</a>

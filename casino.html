@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="casino">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <div class="box mb-5">
+                    <!-- sub_visual -->
+                    <div class="sub_visual">
+                        <div class="txt_box p-4 md:p-8 xl:p-16">
+                            <h4 class="text-2xl md:text-4xl font-bold">Vave 최고의 게임</h4>
+                            <p class="mt-2 text-xs md:text-sm font-semibold text-light">새로운 릴리스 및 가장 인기 있는 공급자</p>
+                        </div>
+                        <img src="./dist/images/banner/slot_visual.webp" alt="">
+                    </div>
+
+                    <!-- 카테고리 및 필터 -->
+                    <div class="flex flex-wrap xl:flex-nowrap gap-3 mb-8">
+                        <div class="overflow-hidden mySwiper w-3/5 hidden xl:block" data-per="auto" data-loop="false">
+                            <div class="swiper-container p-1 bg-sub rounded-lg">
+                                <ul class="swiper-wrapper nav nav-boxed-tabs">
+                                    <!-- 탭 활성화 시 active 클래스 추가 -->
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_my_favorites.html" class="nav-link w-full h-11" type="button">나의 즐겨찾기</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_popular.html" class="nav-link w-full h-11" type="button">인기 게임</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_new.html" class="nav-link w-full h-11" type="button">신규</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_roulette.html" class="nav-link w-full h-11" type="button">룰렛</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_blackjack.html" class="nav-link w-full h-11" type="button">블랙잭</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_blackjack_league.html" class="nav-link w-full h-11" type="button">블랙잭 리그</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_game_shows.html" class="nav-link w-full h-11" type="button">게임 쇼</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_baccarat.html" class="nav-link w-full h-11" type="button">바카라</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_poker.html" class="nav-link w-full h-11" type="button">포커</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn bg-block border-none flex xl:hidden items-center gap-2 text-light hover:bg-primary hover:text-white" onclick="modalOpen('slot_category-modal')">
+                            <span class="text-xs xl:text-sm">모든게임</span>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 text-light rotate-90"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </button>
+                        <button class="btn bg-block border-none flex items-center justify-start gap-1 w-1/2 xl:w-auto text-light hover:bg-primary hover:text-white producer_btn" onclick="modalOpen('producer-modal')">
+                            <img class="w-5" src="./dist/images/icon/all-providers.svg" alt=""><span class="text-xs xl:text-sm">모든 공급자</span>
+                        </button>
+                        <div class="relative input_custom xl:flex-1 w-full xl:w-auto">
+                            <input type="search" placeholder="게임 검색">
+                            <div class="right_box">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg?19#search"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 게임 리스트 -->
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">인기 게임</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">신규</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">룰렛</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">블랙잭</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">블랙잭 리그ㄴ</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">게임 쇼</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">바카라</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">포커</h4>
+                            <a href="javascrsipt:;" class="text-primary font-semibold">모두 보기(469)</a>
+                        </div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-loop="false" data-gap="25">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_9.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_10.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_1.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_4.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_7.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_8.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_2.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_3.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_5.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide game_item">
+                                        <div class="overflow-hidden img_box rounded-lg">
+                                            <img src="./dist/images/casino/casino_6.webp" alt="">
+                                            <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                            <div class="hover_box">
+                                                <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                                <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box mont mt-2">
+                                            <h6 class="font-semibold">Live Casino Lobby</h6>
+                                            <p class="mt-1 text-[10px] opacity-50">Pragmatic Play Live</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 글로벌 온라인 카지노 Vave 한국 진출! -->
+                <div class="my-10">
+                    <div class="height_fixed agree_box">
+                        <div>
+                            <h1>Vave 온라인 카지노 딜러 게임</h1>
+                            <p>온라인과 오프라인의 경계가 무너지는 이 시대에 카지노도 진화를 거듭하고 있습니다. 당사는 이러한 흐름에 맞춰 더욱 현실 같은 온라인 카지노 서비스를 제공합니다. 온라인 카지노 라이브 게임이 그중 하나로, 이 게임은 말 그대로 온라인에서 실시간으로 딜러와 소통하며 카지노를 즐길 수 있길 수 있습니다. 인터넷 연결만 있으면 장소에 상관없이 즐길 수 있으며 당사 홈페이지의 “라이브 카지노” 메뉴를 클릭하면 해당 서비스로 이동합니다.</p>
+                            <p>당사의 라이브 카지노는 사용자가 본인 취향에 맞는 딜러를 선택하고 다양한 게임을 지원하는 점이 특징입니다. 이를 통해 오직 나를 위한 딜러와 게임 환경에서 더욱 몰입감 있게 플레이할 수 있습니다. 딜러와 실시간 소통이 가능한 점은 공간을 초월한 현실감을 선사합니다.</p>
+                            <p>이처럼 라이브 카지노는 인터넷이 필수적인 요소로 자리잡은 요즘 시대에 많은 인기를 끌고 있습니다. 당사가 제공하는 라이브 카지노는 여타의 플랫폼과 달리 최고의 온라인 카지노 라이브 딜러와 다양한 클래식 게임을 갖추고 있다는 점이 특징입니다.</p>
+                            <h2>클래식 온라인 라이브 카지노 게임</h2>
+                            <p>당사의 라이브 카지노에서는 사용자가 일반 카지노에서 즐겨 찾는 클래식 게임을 그대로 제공합니다. 해당 게임은 다음과 같습니다.</p>
+                            <ol>
+                                <li><a href="/ko/live-casino/baccarat">바카라</a></li>
+                                <li><a href="/ko/live-casino/blackjack">블랙잭</a></li>
+                                <li><a href="/ko/live-casino/roulette">룰렛</a></li>
+                                <li><a href="/ko/live-casino/poker">포커</a></li>
+                            </ol>
+                            <p>위 게임은 카지노 중에서 제일 인기 있는 게임입니다. 현실에서 즐기던 인기 카지노 게임을 이제 온라인에서 실시간으로 플레이할 수 있다는 사실은 전 세계 많은 플레이어들을 흥분시키고 있습니다. 당사 플랫폼에서는 위 인기 라이브 카지노 게임을 원하는 딜러를 골라 즐길 수 있습니다.</p>
+                            <p>홈페이지에 접속한 뒤 우측 상단의 “라이브 카지노” 메뉴를 클릭하고 카테고리 선택하기에서 클래식 게임 리스트를 확인할 수 있습니다. 각 게임마다 선택할 수 있는 옵션도 많게는 수백 가지에 달해 플레이어가 더욱 풍부한 경험을 즐길 수 있습니다. 대표적인 인기 게임은 다음과 같습니다.</p>
+                            <ul>
+                                <li>Monopoly Big Baller</li>
+                                <li>Crazy Pachinko</li>
+                                <li>Boom City</li>
+                                <li>Red Door Roulette</li>
+                                <li>Aurora Blackjack Libra</li></ul>
+                            <p>라스베이거스의 현장감을 온라인에서 느끼고 싶나요? 당사 홈페이지에 접속하여 라이브 카지노를 플레이하세요. 실시간으로 펼쳐지는 클래식 게임이 마치 현장에 있는 듯한 몰입감을 선사합니다.</p><h2>스페셜 게임 쇼</h2>
+                            <p>당사 플랫폼은 전문 온라인 카지노 딜러가 진행하는 라이브 게임 쇼도 제공합니다. 이 쇼에서는 마치 TV 쇼를 보는 듯해 라이브 카지노를 더욱 재밌고 혁신적으로 즐길 수 있습니다. 게임 쇼에서는 특정 테마와 게임에 따라 구비된 세트장에서 플레이어가 접속하고 진행 딜러가 게임을 설명합니다. 플레이어들은 게임 쇼 <a href="/live-casino/game-shows">전용 페이지</a>에 접속하여 원하는 쇼를 선택할 수 있습니다. 당사가 제공하는 쇼는 수십 가지에 달해 한국 플레이어들도 취향에 맞는 쇼를 선택하여 즐길 수 있습니다. 대표적인 공급업체 3곳은 다음과 같습니다.</p>
+                            <ol>
+                                <li>Evolution</li>
+                                <li>Progmatic Play Live</li>
+                                <li>Playtech</li>
+                            </ol>
+                            <p>게임에 참가하면 앞서 말했듯 최고의 온라인 카지노 라이브 딜러가 룰을 설명합니다. 참가자는 게임에서 요구하는 액션을 취하며 베팅하고 쇼에 직접 참가함으로써 만끽할 수 있는 스릴감과 몰입감 넘치는 현장감을 느낄 수 있습니다. 라이브 카지노에 엔터테인먼트 요소를 가미하여 풍부해진 재미를 놓치지 마세요.&nbsp;</p>
+                            <h2>초보자도 라이브 테이블에서 플레이할 수 있나요?</h2>
+                            <p>물론입니다. 초보자도 당사의 온라인 카지노 라이브 딜러와 함께 라이브 테이블에 참여하실 수 있습니다. 룰이 익숙하지 않아도 걱정 마세요. 전문 딜러가 친절히 플레이 방법을 설명해 드립니다. 모르는 게 있으면 실시간 대화를 통해 딜러에게 직접 질문하셔도 좋습니다.</p>
+                            <p>라이브 카지노는 오프라인 카지노처럼 실시간 소통이 가능하기 때문에 혼자 방법을 몰라 고민하지 않아도 됩니다. 라이브 딜러 카지노 온라인은 말 그대로 실시간으로 접속해 있는 전문 딜러와 온라인으로 만나 게임을 플레이하기 때문에 규칙을 모르는 초보자도 소통을 통해 정보를 습득할 수 있습니다. 라이브 테이블 별도의 제한이 없고 누구나 게임에 참가할 수 있는 오픈 게임이니 부담 없이 라이브 카지노에 접속하세요. 당사 플랫폼은 수십 종의 라이브 카지노 게임을 제공하고 있으니 원하는 게임을 클릭하여 바로 경험을 쌓을 수 있습니다.</p>
+                            <h2>투명한 라이브 게임</h2>
+                            <p>당사는 퀴라소 정부로부터 공식 겜블링 라이선스를 취득한 규제 준수 플랫폼입니다. 라이브 게임을 포함하여 당사가 제공하는 게임은 높은 공정성과 투명성을 최우선시하여 개발되었으며 당국의 엄격한 감독을 받습니다. 이를 통해 당사는 그 어느 플랫폼보다 뛰어난 신뢰를 자랑합니다.</p>
+                            <p>라이브 게임은 실시간으로 진행되기 때문에 룰대로 게임이 진행되는 것이 대단히 중요합니다. 글로벌 단위에서 서비스를 제공하는 당사는 당연히 이를 잘 알고 있으며 모든 사용자들이 라이브 카지노 게임 온라인에서 단 한 번의 불편을 겪지 않도록 플랫폼 전반에 걸쳐 엄격한 투명성 정책을 시행하고 있습니다.</p>
+                            <p>이를 통해 모든 게임에서 동일한 승률이 적용됩니다. 즉, 예를 들어 룰렛 휠을 돌릴 때마다 모든 숫자가 나올 확률은 각각 동일하며 스핀마다 잭팟이 터지는 확률도 동일합니다. 당사는 최고의 개발자를 투여하여 모든 라이브 게임이 예상치 못한 중단이 발생하지 않는 난수 생성기를 기반으로 진행되도록 개발했습니다.</p>
+                            <h2>연중무휴 제한 없는 플레이</h2>
+                            <p>라이브 카지노는 물리적 환경의 제약을 받지 않는 강점이 있습니다. 당사가 구축한 온라인 카지노 라이브 딜러 시스템도 이러한 강점을 바탕으로 플레이어들에게 연중무휴 하루 24시간 내내 게임을 즐길 수 있는 기회를 제공합니다. 사용자는 이를 통해 본인이 원하는 장소와 시간에 당사 플랫폼에 액세스하여 원하는 딜러와 함께 게임을 플레이할 수 있습니다.</p>
+                            <p>일반적으로 라이브 딜러 카지노 온라인라 할지라도 전문적으로 훈련된 딜러가 부족하기 때문에 플레이어들은 양질의 라이브 경험을 보장받을 수 없습니다. 하지만 당사는 전 세계 베팅러들에게 서비스를 제공하는 글로벌 플랫폼이기에 업계 최대 규모의 딜러를 확보하고 있습니다.</p>
+                            <p>현재 제공되고 있는 라이브 게임은 수십 가지에 달하며 이는 “라이브 카지노” 메뉴에서 직접 확인하실 수 있습니다.&nbsp;</p>
+                            <p>당사 플랫폼에서 제한 없는 최고의 라이브 게임을 시작하세요.</p>
+                            <h2>편리한 입출금</h2>
+                            <p>당사는 공인 라이선스를 취득한 규제 준수 라이브 카지노 플랫폼입니다. 투명하고 매끄러운 입출금은 당사가 자랑하는 높은 신뢰도의 기반 중 하나입니다. 플레이어는 본인이 원하는 때에 입출금을 요청할 수 있습니다. 처리되는 시간은 선택한 통화 종류와 지급결제 옵션에 따라 상이하나 일반적으로 입금은 즉시 처리되며 출금은 약간의 시간이 소요됩니다.&nbsp;</p>
+                            <p>지원하는 옵션은 매우 다양합니다. 전통적인 카드, 은행 송금, 결제 서비스는 물론이고 암호화폐까지 지원합니다. 특히 암호화폐 입출금은 당사가와 왜 업계를 대표하는 비트코인 라이브 카지노 온라인로 불리는지 잘 나타냅니다. 플레이어는 입출금 신청부터 처리 확인까지 안정적인 프로세스를 경험할 수 있습니다. 플레이어가 예치한 암호화폐는 콜드 월렛을 통해 안전하게 보관됩니다.</p>
+                            <p>당사가 지원하는 입출금 옵션은 각각 아래와 같습니다.</p>
+                            <p>입금 옵션</p>
+                            <ul>
+                                <li>암호화폐&nbsp;</li>
+                                <li>비자, 마스터카드</li>
+                                <li>은행 송금&nbsp;</li>
+                                <li>인터랙&nbsp;</li>
+                                <li>페이스택&nbsp;</li>
+                            </ul>
+                            <p>출금 옵션</p>
+                            <ul>
+                                <li>암호화폐</li>
+                                <li>은행 송금&nbsp;</li>
+                                <li>인터랙&nbsp;</li>
+                                <li>페이스택</li></ul>
+                            <p>당사가 지원하는 입출금 수단으로 편리하게 최상의 라이브 온라인 카지노 실제 현금 경험을 만끽하세요.</p>
+                            <h2>결론</h2>
+                            <p>지금까지 당사가 제공하는 라이브 게임에 대해 알아보았습니다. 당사가 자랑하는 온라인 카지노 딜러와 함께 클래식 게임을 더욱 몰입감 있게 즐기고 편리하게 입출금 옵션을 이용하세요.</p>
+                            <h3>FAQ</h3>
+                            <ul>
+                                <li><strong>라이브 카지노를 즐길 수 있는 연령은 몇 살인가요?</strong></li>
+                                </ul>
+                            <p>국가 또는 지역에 따라 상이하나 일반적으로 만 18세에서 21세입니다.&nbsp;</p>
+                            <ul>
+                                <li><strong>라이브 카지노에서 예치금은 안전한가요?</strong></li>
+                            </ul>
+                            <p>물론입니다. 당사는 업계 최고 수준의 암호화 기술과 보안 결제 시스템을 갖추어 사용자가 안심하고 이용할 수 있습니다.</p>
+                            <ul>
+                                <li><strong>라이브 카지노의 단점은 무엇인가요?</strong></li>
+                            </ul>
+                            <p>라이브 카지노는 인터넷 연결이 필수라는 점에서 연결이 불안정한 지역에서는 이용할 수 없다는 단점이 있습니다.</p>
+                        </div>
+                        <button class="w-full pt-2.5 text-center text-xs text-primary" onclick="contentHeight(this)">더 읽기</button>
+                    </div>
+                </div>
+
+               
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

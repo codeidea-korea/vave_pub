@@ -320,6 +320,7 @@ const loadJquery = ()=>{
             slideCenter = $(this).attr('data-center') == 'true' ? true : false,
             slidePlayTime = $(this).attr('data-timer') ? $(this).attr('data-timer') * 1000 : 0;
             effect = $(this).attr('data-effect') ? $(this).attr('data-effect') : 'slide';
+            initial = $(this).attr('data-initial') ? $(this).attr('data-initial') : 0;
         $(this).addClass('num'+index);		
         var swiper =  new Swiper( '.mySwiper.num' + index + ' .swiper-container', {
             spaceBetween: parseInt(itemGap),
@@ -337,7 +338,8 @@ const loadJquery = ()=>{
             speed : 1000,
             centeredSlides: slideCenter,
             autoplay: slidePlayTime ? {delay: parseInt(slidePlayTime),disableOnInteraction:true} : false,
-            loop: slideLoop			
+            loop: slideLoop,
+            initialSlide: initial
         });		
         if($(this).attr('data-slideto') == '1') {
             $(slideWrapper.find('.swiper-slide')).click(function() {
@@ -375,5 +377,35 @@ const loadJquery = ()=>{
         }
     })
 
+    // 모달 배경 클릭시 body overflow-hidden 클래스 빼기
+    $('body').on('click',function(e){
+        if($(e.target).hasClass('modal') && $(e.target).hasClass('show')){
+            closeModal(e.target.id)
+        }
+    })
+
+    // 공급자 모달 > 공급자 리스트 클릭
+    $('.producer_list button').on('click',function(){
+        let img = $(this).find('i img').attr('src');
+        let text = $(this).find('span').text();
+
+        $('.producer_btn').find('img').attr('src',img)
+        $('.producer_btn').find('span').text(text)
+
+        closeModal('producer-modal');
+    })
+
+    // 북마크 클릭시 toggle
+    $('.bookmark').on('click',function(){
+        const href_origin = $(this).find('use').attr('href').split('#')[0]
+        const href = $(this).find('use').attr('href').split('#')[1]
+        
+        if(href == "category-my-favorites-inactive"){
+            $(this).find('use').attr('href',`${href_origin}#category-my-favorites`)
+        }else{
+            $(this).find('use').attr('href',`${href_origin}#category-my-favorites-inactive`)
+        }
+
+    })
 
 };

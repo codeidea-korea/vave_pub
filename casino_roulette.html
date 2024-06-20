@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="casino">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <div class="box mb-5">
+                    <!-- sub_visual -->
+                    <div class="sub_visual">
+                        <div class="txt_box p-4 md:p-8 xl:p-16">
+                            <h4 class="text-2xl md:text-4xl font-bold">룰렛</h4>
+                            <p class="mt-2 text-xs md:text-sm font-semibold text-light">행운의 수레바퀴를 돌리십시오.</p>
+                        </div>
+                        <img src="./dist/images/banner/casino_roulette.webp" alt="">
+                    </div>
+
+                    <!-- 카테고리 및 필터 -->
+                    <div class="flex flex-wrap xl:flex-nowrap gap-3 mb-8">
+                        <div class="overflow-hidden mySwiper w-3/5 hidden xl:block" data-per="auto" data-loop="false">
+                            <div class="swiper-container p-1 bg-sub rounded-lg">
+                                <ul class="swiper-wrapper nav nav-boxed-tabs">
+                                    <!-- 탭 활성화 시 active 클래스 추가 -->
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_my_favorites.html" class="nav-link w-full h-11" type="button">나의 즐겨찾기</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_popular.html" class="nav-link w-full h-11" type="button">인기 게임</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_new.html" class="nav-link w-full h-11" type="button">신규</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_roulette.html" class="nav-link w-full h-11 active" type="button">룰렛</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_blackjack.html" class="nav-link w-full h-11" type="button">블랙잭</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_blackjack_league.html" class="nav-link w-full h-11" type="button">블랙잭 리그</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_game_shows.html" class="nav-link w-full h-11" type="button">게임 쇼</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_baccarat.html" class="nav-link w-full h-11" type="button">바카라</a> </li>
+                                    <li class="swiper-slide nav-item !w-auto"><a href="./casino_poker.html" class="nav-link w-full h-11" type="button">포커</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn bg-block border-none flex xl:hidden items-center gap-2 text-light hover:bg-primary hover:text-white" onclick="modalOpen('slot_category-modal')">
+                            <span class="text-xs xl:text-sm">모든게임</span>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 text-light rotate-90"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                        </button>
+                        <button class="btn bg-block border-none flex items-center justify-start gap-1 w-1/2 xl:w-auto text-light hover:bg-primary hover:text-white producer_btn" onclick="modalOpen('producer-modal')">
+                            <img class="w-5" src="./dist/images/icon/all-providers.svg" alt=""><span class="text-xs xl:text-sm">모든 공급자</span>
+                        </button>
+                        <div class="relative input_custom xl:flex-1 w-full xl:w-auto">
+                            <input type="search" placeholder="게임 검색">
+                            <div class="right_box">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg?19#search"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 게임 리스트 -->
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-lg font-semibold">룰렛</h4>
+                        </div>
+
+                        <div class="mt-4">
+                            <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-5">
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_11.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_12.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_13.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_1.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_2.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_3.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_4.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_8.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_9.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_10.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_5.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_6.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_7.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_15.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                                <li class="game_item">
+                                    <div class="overflow-hidden img_box rounded-lg">
+                                        <img src="./dist/images/casino/casino_16.webp" alt="">
+                                        <div class="players"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-online-players-icon"></use></svg>16</div>
+                                        <div class="hover_box">
+                                            <button class="bookmark flex items-center justify-center w-8 h-8 rounded-full bg-primary"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#category-my-favorites-inactive"></use></svg></button>
+                                            <a href="javascript:;" class="btn btn-primary">실제 게임</a>
+                                        </div>
+                                    </div>
+                                    <div class="txt_box mont mt-2">
+                                        <h6 class="font-semibold">Night Wolf - Frozen Flame</h6>
+                                        <p class="mt-1 text-[10px] opacity-50">Spinomenal</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-10 text-center">
+                                <button class="btn btn-primary">더보기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+               
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

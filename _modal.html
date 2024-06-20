@@ -747,3 +747,181 @@
         </div>
     </div>
 </div> 
+
+<!-- 공급자 모달 -->
+<div id="producer-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-6">
+                <button class="close_btn inner" onclick="closeModal('producer-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                
+                <!-- 검색 -->
+                <div class="relative input_custom">
+                    <input type="search" placeholder="공급자 검색">
+                    <div class="right_box">
+                        <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg?19#search"></use></svg>
+                    </div>
+                </div>
+
+                <!-- 공급자 리스트 -->
+                <div class="producer_list grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1 mt-2">
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12 active">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/all-providers.svg" alt=""></i>
+                        <span>모든 공급자</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/bgaming.svg" alt=""></i>
+                        <span>BGaming</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/pragmaticplay.svg" alt=""></i>
+                        <span>Pragmatic Play</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/felixgaming.svg" alt=""></i>
+                        <span>Felix Gaming</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/belatra.svg" alt=""></i>
+                        <span>Belatra</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/fugaso1.svg" alt=""></i>
+                        <span>Fugaso</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/wazdan.svg" alt=""></i>
+                        <span>Wazdan</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/nolimit.svg" alt=""></i>
+                        <span>Nolimit</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/1spin4win.svg" alt=""></i>
+                        <span>1spin4win</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/netgame.svg" alt=""></i>
+                        <span>NetGame</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/booming.svg" alt=""></i>
+                        <span>Booming Games</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/gamebeat1.svg" alt=""></i>
+                        <span>GameBeat</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/playson.svg" alt=""></i>
+                        <span>Playson</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/playngo.svg" alt=""></i>
+                        <span>Play'n Go</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/popiplay.svg" alt=""></i>
+                        <span>Popiplay</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/truelab1.svg" alt=""></i>
+                        <span>TrueLab</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/gamzix.svg" alt=""></i>
+                        <span>Gamzix</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/platipus.svg" alt=""></i>
+                        <span>Platipus</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/pushgaming.svg" alt=""></i>
+                        <span>Push Gaming</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/bsg.svg" alt=""></i>
+                        <span>Betsoft Gaming</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/playtech.svg" alt=""></i>
+                        <span>Playtech</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/1x2gaming.svg" alt=""></i>
+                        <span>1x2 Gaming</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/4theplayer.svg" alt=""></i>
+                        <span>4thePlayer</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/7mojos.svg" alt=""></i>
+                        <span>7Mojos</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/acerun.svg" alt=""></i>
+                        <span>Acerun</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/adlunam.svg" alt=""></i>
+                        <span>Adlunam</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/altente.svg" alt=""></i>
+                        <span>Altente</span>
+                    </button>
+                    <button class="flex items-center gap-2 py-2 px-3 min-h-12">
+                        <i class="shrink-0 w-7 h-7 flex items-center justify-center bg-white bg-opacity-20 rounded-full"><img class="w-5" src="./dist/images/producer/amigo1.svg" alt=""></i>
+                        <span>Amigo Gaming</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- 슬롯/라이브카지노 카테고리 모달 -->
+<div id="slot_category-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-3xs">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-lg font-semibold">카테고리 선택하기</h3>
+                <button class="close_btn" onclick="closeModal('slot_category-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-xs text-light">슬롯</p>
+                        <a href="./slot.html" class="btn btn-primary-soft justify-start !text-left">모든게임</a>
+                        <a href="./slot_my_favorites.html" class="btn btn-dark text-light justify-start !text-left">나의 즐겨찾기</a>
+                        <a href="./slot_popular.html" class="btn btn-dark text-light justify-start !text-left">인기 게임</a>
+                        <a href="./slot_new.html" class="btn btn-dark text-light justify-start !text-left">신규</a>
+                        <a href="./slot_slots.html" class="btn btn-dark text-light justify-start !text-left">슬롯</a>
+                        <a href="./slot_hits.html" class="btn btn-dark text-light justify-start !text-left">히트</a>
+                        <a href="./slot_bonus_buy.html" class="btn btn-dark text-light justify-start !text-left">보너스 구매</a>
+                        <a href="./slot_dropandwins.html" class="btn btn-dark text-light justify-start !text-left">일일 Drops & Wins</a>
+                        <a href="./slot_other.html" class="btn btn-dark text-light justify-start !text-left">기타</a>
+                        <a href="./slot_vave.html" class="btn btn-dark text-light justify-start !text-left">Vave 게임</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <p class="text-xs text-light">라이브 카지노</p>
+                        <a href="./casino.html" class="btn btn-dark text-light justify-start !text-left">모든게임</a>
+                        <a href="./casino_my_favorites.html" class="btn btn-dark text-light justify-start !text-left">나의 즐겨찾기</a>
+                        <a href="./casino_popular.html" class="btn btn-dark text-light justify-start !text-left">인기 게임</a>
+                        <a href="./casino_new.html" class="btn btn-dark text-light justify-start !text-left">신규</a>
+                        <a href="./casino_roulette.html" class="btn btn-dark text-light justify-start !text-left">룰렛</a>
+                        <a href="./casino_blackjack.html" class="btn btn-dark text-light justify-start !text-left">블랙잭</a>
+                        <a href="./casino_blackjack_league.html" class="btn btn-dark text-light justify-start !text-left">블랙잭 리그</a>
+                        <a href="./casino_game_shows.html" class="btn btn-dark text-light justify-start !text-left">게임 쇼</a>
+                        <a href="./casino_baccarat.html" class="btn btn-dark text-light justify-start !text-left">바카라</a>
+                        <a href="./casino_poker.html" class="btn btn-dark text-light justify-start !text-left">포커</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

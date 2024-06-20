@@ -2179,6 +2179,12 @@ select{
 .h-11{
     height: 2.75rem;
 }
+.h-7{
+    height: 1.75rem;
+}
+.h-\[600px\]{
+    height: 600px;
+}
 .max-h-\[50\%\]{
     max-height: 50%;
 }
@@ -2376,6 +2382,9 @@ select{
 .items-center{
     align-items: center;
 }
+.justify-start{
+    justify-content: flex-start;
+}
 .justify-end{
     justify-content: flex-end;
 }
@@ -2453,6 +2462,14 @@ select{
 }
 .rounded-xl{
     border-radius: 0.75rem;
+}
+.rounded-t-lg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.rounded-b-lg{
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 .border{
     border-width: 1px;
@@ -2847,6 +2864,9 @@ select{
 }
 .text-left{
     text-align: left;
+}
+.\!text-left{
+    text-align: left !important;
 }
 .text-center{
     text-align: center;
@@ -12091,6 +12111,9 @@ html body{
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
 }
+.hover\:opacity-100:hover{
+    opacity: 1;
+}
 .dark .dark\:text-slate-200{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-200) / var(--tw-text-opacity));
@@ -12112,6 +12135,9 @@ html body{
     }
     .sm\:grid-cols-2{
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .sm\:grid-cols-3{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .sm\:gap-4{
         gap: 1rem;
@@ -12142,6 +12168,9 @@ html body{
     }
     .md\:grid-cols-3{
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .md\:grid-cols-4{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     .md\:flex-row{
         flex-direction: row;
@@ -12184,6 +12213,10 @@ html body{
         font-size: 2.25rem;
         line-height: 2.5rem;
     }
+    .md\:text-3xl{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
 }
 @media (min-width: 1024px){
     .lg\:h-\[320px\]{
@@ -12191,6 +12224,9 @@ html body{
     }
     .lg\:grid-cols-4{
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-5{
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
     .lg\:justify-center{
         justify-content: center;
@@ -12239,6 +12275,12 @@ html body{
     .xl\:w-1\/2{
         width: 50%;
     }
+    .xl\:w-auto{
+        width: auto;
+    }
+    .xl\:flex-1{
+        flex: 1 1 0%;
+    }
     .xl\:grid-cols-3{
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -12248,11 +12290,23 @@ html body{
     .xl\:grid-cols-5{
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
+    .xl\:grid-cols-4{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .xl\:grid-cols-7{
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+    .xl\:grid-cols-6{
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
     .xl\:flex-row{
         flex-direction: row;
     }
     .xl\:flex-col{
         flex-direction: column;
+    }
+    .xl\:flex-nowrap{
+        flex-wrap: nowrap;
     }
     .xl\:gap-0{
         gap: 0px;
@@ -12343,5 +12397,10 @@ html body{
     .xl\:text-sm{
         font-size: 0.875rem;
         line-height: 1.25rem;
+    }
+}
+@media (min-width: 1536px){
+    .\32xl\:grid-cols-7{
+        grid-template-columns: repeat(7, minmax(0, 1fr));
     }
 }
