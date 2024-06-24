@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body>
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <div class="box mb-5">
+
+                    <!-- 카지노 vip 프로그램 -->
+                    <div class="vip_program flex xl:block items-end p-4 xl:p-14 rounded-md">
+                        <div>
+                            <h3 class="mb-2 text-2xl xl:text-4xl font-bold">카지노 VIP 프로그램</h3>
+                            <p class="mt-4 opacity-50">Vave와 함께 해서 주요 상금을 받으십시오 - 100 000 USDT!</p>
+                        </div>
+                        <div class="hidden xl:grid grid-cols-2 gap-4 mt-8">
+                            <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#support"></use></svg>
+                                <div>
+                                    <b class="text-base font-medium">우선 고객 지원</b>
+                                    <p class="mt-2 text-xs text-light">높은 레벨 플레이어를 위한 독자적인 VIP 관리자</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#gift-box"></use></svg>
+                                <div>
+                                    <b class="text-base font-medium">독점 VIP 오퍼</b>
+                                    <p class="mt-2 text-xs text-light">높은 수준에 도달하여 고유한 보너스를 획득하십시오</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#gift-box"></use></svg>
+                                <div>
+                                    <b class="text-base font-medium">레벨이 높을수록 더 큰 보너스가 기다리고 있습니다.</b>
+                                    <p class="mt-2 text-xs text-light">최대 100 000 USDT</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                                <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg>
+                                <div>
+                                    <b class="text-base font-medium">무료 스핀 받기</b>
+                                    <p class="mt-2 text-xs text-light">무료 스핀으로 Vave 를 경험해 보십시오.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 레벨 -->
+                    <div class="vip_level hidden xl:block mt-4 py-8 px-6 bg-box rounded-md">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-gradient-yellow text-2xl font-extrabold">귀하의 레벨 1</h3>
+                            <div class="flex items-center gap-5 text-center text-base">
+                                <div>포인트<br/><b class="text-primary">0 VP</b></div>
+                                <button class="btn border-none bg-sub text-light flex-1 tooltip" title="입금 후 최소 100VP 에 달성해야 교환이 가능합니다.">포인트 교환 <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#exchange"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-10">
+                            <div class="level_point flex items-center justify-between rounded-md">
+                                <div class="pl-8">
+                                    <p class="text-base">필요 포인트</p>
+                                    <b class="text-3xl font-extrabold">30</b>
+                                </div>
+                                <img class="relative right-[10%] h-[110%]" src="./dist/images/vip/casino-info-reward.webp" alt="">
+                            </div>
+                            <div class="level_require flex items-center justify-between rounded-md">
+                                <div class="pl-8">
+                                    <p class="text-base">보상</p>
+                                    <b class="text-3xl font-extrabold">10 FS+5USDT</b>
+                                </div>
+                                <img class="relative right-[10%] h-[110%]" src="./dist/images/vip/info-require.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="mt-8 text-base">
+                            <div class="flex items-center justify-between"><span>이전</span><span>다음</span></div>
+                            <div class="progress my-1"><span style="width:40%"></span></div>
+                            <div class="flex items-center justify-between mont font-bold"><span class="text-light">0</span><span class="text-primary">200 남음</span><span class="text-light">200</span></div>
+                        </div>
+                    </div>
+                    <div class="block xl:hidden mt-4">
+                        <div class="overflow-hidden relative flex flex-col justify-between p-4 bg-gray-900 bg-opacity-50 rounded-md">
+                            <div class="absolute top-10 -right-2 w-72" style="z-index:-1;"><img class="w-full" src="./dist/images/vip/level-1.webp" alt=""></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-1 font-bold">
+                                    <i class="p-1 bg-gray-900 bg-opacity-50 rounded"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                    casino VIP 프로그램
+                                </div>
+                                <div class="flex items-center gap-2 mt-4">
+                                    <div class="w-12">
+                                        <img class="w-full" src="./dist/images/vip/casino-info-reward.webp" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="text-light text-xs">필요 포인트</p>
+                                        <b class="text-base font-semibold mont">30</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3">
+                                    <div class="w-12">
+                                        <img class="w-10" src="./dist/images/vip/info-require.webp" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="text-light text-xs">보상</p>
+                                        <b class="text-base font-semibold mont">10 FS + 5 USDT</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 mt-3">
+                                    <div class="w-12">
+                                        <img class="w-full" src="./dist/images/vip/your-vave-point.webp" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="text-light text-xs">귀하의 Vave 포인트</p>
+                                        <b class="text-base font-semibold mont">0</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative z-10 flex gap-2 mt-4">
+                                <button class="btn border-none bg-sub text-light flex-1 tooltip" title="입금 후 최소 100VP 에 달성해야 교환이 가능합니다.">포인트 교환 <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#exchange"></use></svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 레벨 테이블 -->
+                    <div class="mySwiper mt-4 bg-box py-8 px-6 rounded-md overflow-hidden" data-per="1" data-loop="false">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-2xl font-bold">레벨 테이블</h3>
+                            <div>
+                                <button class="prev p-2 bg-black rounded"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-white rotate-180"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                                <button class="next p-2 bg-black rounded"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-white"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                            </div>
+                        </div>
+                        <div class="vip_level_slide mt-4">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-1.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:40%"></span></div>
+                                            <div>
+                                                <p>VIP 프로그램 참여</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-2.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>10 FS +<br/>5 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-3.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>25 FS +<br/>10 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-4.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>50 FS +<br/>15 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-5.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>75 FS +<br/>20 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-6.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>100 FS +<br/>30 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-7.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>50 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-8.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>100 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-9.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>150 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-10.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>200 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-11.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>500 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-12.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>1000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-13.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>2000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-14.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>5000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-15.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>10000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-16.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>30000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-17.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>50000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="./dist/images/vip/level-18.webp" alt="">
+                                        <div class="txt_box">
+                                            <div class="progress my-1"><span style="width:0%"></span></div>
+                                            <div>
+                                                <p>나의 상금</p>
+                                                <b>100000 USDT</b>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xl:hidden grid grid-cols-2 gap-4 mt-4">
+                        <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#support"></use></svg>
+                            <div>
+                                <b class="text-sm md:text-base font-medium">우선 고객 지원</b>
+                                <p class="mt-2 text-xs text-light">높은 레벨 플레이어를 위한 독자적인 VIP 관리자</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#gift-box"></use></svg>
+                            <div>
+                                <b class="text-sm md:text-base font-medium">독점 VIP 오퍼</b>
+                                <p class="mt-2 text-xs text-light">높은 수준에 도달하여 고유한 보너스를 획득하십시오</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#gift-box"></use></svg>
+                            <div>
+                                <b class="text-sm md:text-base font-medium">레벨이 높을수록 더 큰 보너스가 기다리고 있습니다.</b>
+                                <p class="mt-2 text-xs text-light">최대 100 000 USDT</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 px-4 py-3 bg-[#10171d] rounded-lg">
+                            <svg viewBox="0 0 24 24" class="svg-icon w-8 h-8 text-white"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg>
+                            <div>
+                                <b class="text-sm md:text-base font-medium">무료 스핀 받기</b>
+                                <p class="mt-2 text-xs text-light">무료 스핀으로 Vave 를 경험해 보십시오.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 이용약관 -->
+                    <div class="mt-4 bg-box pb-8 px-6 rounded-md">
+                        <div class="height_fixed agree_box">
+                            <div>
+                                <h2>이용약관</h2>
+                                <div>
+                                    <p><span>1.<span>&nbsp;&nbsp;&nbsp;첫 입금 후 VIP 프로그램에 자동으로 가입됩니다</span></span><span>.</span></p>
+                                    <p><span>2.<span>&nbsp;&nbsp;&nbsp; VP는 베팅(또는 이에 상응하는 암호화폐) 30 USDT당 1포인트로 적립됩니다. 포인트는 슬롯에 베팅하는 것으로 적립됩니다 (테이블 게임 및 라이브 딜러 게임은 포함되지 않습니다).</span></span></p>
+                                    <p><span>3.<span>&nbsp;&nbsp;&nbsp; VP 환율 -&nbsp;1 USDT(또는 이에 상응하는 암호화폐) 당 100VP</span></span><span>.</span></p>
+                                    <p><span>4.<span>&nbsp;&nbsp;&nbsp; 테이블 게임과 라이브 딜러 게임은 보너스 베팅 요건에 포함되지 않습니다</span></span><span>.<br><br>5.&nbsp;&nbsp;&nbsp; 보너스 자금으로 이루어진 베팅은 VP 적립에 포함되지 않습니다.<br></span></p>
+                                    <p><span>6.<span>&nbsp;&nbsp;&nbsp; 모든 보상에는 10배 베팅 요건이 따릅니다</span></span><span>.</span></p>
+                                    <p><span>7.<span>&nbsp;&nbsp;&nbsp; VP를 실제 현금으로 교환하여 생성된 자금은x5의 베팅 요건을 갖습니다</span></span><span>.</span></p>
+                                    <p><span>8.<span>&nbsp;&nbsp;&nbsp; 모든 상품과 무료 스핀은 플레이어가 VIP 상태를 획득한 순간부터 24시간 이내에 사용할 수 있습니다</span></span><span>.</span></p>
+                                    <p><span>9.<span>&nbsp;&nbsp;&nbsp;&nbsp;Vave는 언제든지VIP 프로그램의 조건을 변경할 권리가 있습니다.</span></span></p>
+                                    <p>10.<span>&nbsp;&nbsp;&nbsp; </span><a class="text-white underline" href="/information/bonus-terms">일반 보너스 약관 을 준수해야 합니다</a>.</p>
+                                    <p><span>11.&nbsp; 보상 목록</span><span>:</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>0-</span><span lang="EN-US">3</span><span>0 VP: <span lang="KO">레벨</span>1 –&nbsp;VIP프로그램 참여</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">3</span><span>0 VP: <span lang="KO">레벨</span>2 –&nbsp;</span><span lang="EN-US">5 USDT + </span><span><span lang="EN-US">10</span><span lang="KO">회</span><span lang="KO">무료</span><span lang="KO">스핀</span></span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">100</span><span> VP: <span lang="KO">레벨</span>3 – </span><span lang="EN-US">10 USDT + </span><span><span lang="EN-US">25</span><span lang="KO">회</span><span lang="KO">무료</span><span lang="KO">스핀</span></span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">200</span><span> VP: <span lang="KO">레벨</span>4 – </span><span lang="EN-US">15&nbsp;USDT + </span><span><span lang="EN-US">50</span><span lang="KO">회</span><span lang="KO">무료</span><span lang="KO">스핀</span></span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">5</span><span>00 VP: <span lang="KO">레벨</span>5 – </span><span lang="EN-US">20 USDT + </span><span><span lang="EN-US">75</span><span lang="KO">회</span><span lang="KO">무료</span><span lang="KO">스핀</span></span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">1,0</span><span>00 VP: <span lang="KO">레벨</span>6 – </span><span lang="EN-US">30 USDT + </span><span><span lang="EN-US">100</span><span lang="KO">회</span><span lang="KO">무료</span><span lang="KO">스핀</span></span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">2,00</span><span>0 VP: <span lang="KO">레벨</span>7 –</span><span lang="EN-US"> 50 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">5,0</span><span>00 VP: <span lang="KO">레벨</span>8 – </span><span lang="EN-US">100 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">10,</span><span>000 VP: <span lang="KO">레벨</span>9 – </span><span lang="EN-US">150 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>1</span><span lang="EN-US">7,0</span><span>00 VP: <span lang="KO">레벨</span>10 – </span><span lang="EN-US">200 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">30,00</span><span>0 VP: <span lang="KO">레벨</span>11 – </span><span lang="EN-US">500 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>5</span><span lang="EN-US">0,0</span><span>00 VP: <span lang="KO">레벨</span>12 – </span><span lang="EN-US">1,000 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">100,</span><span>000 VP: <span lang="KO">레벨</span>13 – </span><span lang="EN-US">2,000 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">200,0</span><span>00 VP:&nbsp;<span lang="KO">레벨</span> 14 – </span><span lang="EN-US">5,000 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">500,</span><span>000 VP: <span lang="KO">레벨</span>15 – </span><span lang="EN-US">10,000 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">1,000,</span><span>000 VP: <span lang="KO">레벨</span>16 – </span><span lang="EN-US">30,000 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">2,000,</span><span>000 VP: <span lang="KO">레벨</span>17 – </span><span lang="EN-US">50,000 USDT</span></p>
+                                    <p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">5,000,</span><span>000 VP: <span lang="KO">레벨</span>18 – </span><span lang="EN-US">100,000 USDT</span></p>
+                                    <p><span>12.&nbsp;&nbsp;모든 현금 보상은 암호화폐로 적립될 수 있습니다</span><span lang="EN-US">.</span></p>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary border-2 mt-3" onclick="contentHeight(this)">더 많은 정보</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+               
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

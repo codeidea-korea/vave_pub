@@ -1959,6 +1959,9 @@ select{
 .top-0{
     top: 0px;
 }
+.right-\[10\%\]{
+    right: 10%;
+}
 .z-10{
     z-index: 10;
 }
@@ -2185,6 +2188,9 @@ select{
 .h-\[600px\]{
     height: 600px;
 }
+.h-\[110\%\]{
+    height: 110%;
+}
 .max-h-\[50\%\]{
     max-height: 50%;
 }
@@ -2378,6 +2384,9 @@ select{
 }
 .items-start{
     align-items: flex-start;
+}
+.items-end{
+    align-items: flex-end;
 }
 .items-center{
     align-items: center;
@@ -2649,6 +2658,10 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(39 52 60 / var(--tw-bg-opacity));
 }
+.bg-\[\#10171d\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(16 23 29 / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -2732,6 +2745,9 @@ select{
 }
 .p-0\.5{
     padding: 0.125rem;
+}
+.p-14{
+    padding: 3.5rem;
 }
 .px-3{
     padding-left: 0.75rem;
@@ -2861,6 +2877,9 @@ select{
 }
 .pb-1{
     padding-bottom: 0.25rem;
+}
+.pl-8{
+    padding-left: 2rem;
 }
 .text-left{
     text-align: left;
@@ -12234,6 +12253,10 @@ html body{
     .lg\:p-8{
         padding: 2rem;
     }
+    .lg\:text-4xl{
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
 }
 @media (min-width: 1280px){
     .xl\:relative{
@@ -12250,6 +12273,9 @@ html body{
     }
     .xl\:flex{
         display: flex;
+    }
+    .xl\:grid{
+        display: grid;
     }
     .xl\:hidden{
         display: none;
@@ -12342,6 +12368,9 @@ html body{
     }
     .xl\:p-16{
         padding: 4rem;
+    }
+    .xl\:p-14{
+        padding: 3.5rem;
     }
     .xl\:px-0{
         padding-left: 0px;

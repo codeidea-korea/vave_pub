@@ -216,5 +216,8 @@
     "/dist/images/casino/casino_6.webp": "/dist/images/casino/casino_6.webp",
     "/dist/images/casino/casino_7.webp": "/dist/images/casino/casino_7.webp",
     "/dist/images/casino/casino_8.webp": "/dist/images/casino/casino_8.webp",
-    "/dist/images/casino/casino_9.webp": "/dist/images/casino/casino_9.webp"
+    "/dist/images/casino/casino_9.webp": "/dist/images/casino/casino_9.webp",
+    "/dist/images/banner/casino_vip_banner.webp": "/dist/images/banner/casino_vip_banner.webp",
+    "/dist/images/vip/casino-info-reward-bg.webp": "/dist/images/vip/casino-info-reward-bg.webp",
+    "/dist/images/vip/info-require-bg.webp": "/dist/images/vip/info-require-bg.webp"
 }

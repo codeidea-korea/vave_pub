@@ -165,8 +165,12 @@ const contentHeight = (item)=>{
     $(item).parents('.height_fixed').toggleClass('open')
     if($(item).text() == "더 읽기"){
         $(item).text('적게 읽기')
-    }else{
+    }else if($(item).text() == "적게 읽기"){
         $(item).text('더 읽기')
+    }else if($(item).text() == "더 많은 정보"){
+        $(item).text('정보 간략히')
+    }else{
+        $(item).text('더 많은 정보')
     }
 }
 

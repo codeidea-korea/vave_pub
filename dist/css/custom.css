@@ -112,7 +112,32 @@
 
 
 /* ----------------------------------------------
-            카테고리 모달
+            vip 프로그램
 ---------------------------------------------- */
-.modal .mo_category_btn {}
+/* 카지노 */
+.vip_program {background:var(--box-color) url('../images/banner/casino_vip_banner.webp') no-repeat center right / contain; }
+.sport_vip_program {background:var(--box-color) url('../images/banner/sport_vip_banner.webp') no-repeat center right / contain; }
+
+.vip_level .level_point {background:var(--box-color) url('../images/vip/casino-info-reward-bg.webp') no-repeat center center / cover;}
+.vip_level .sport_level_point {background:var(--box-color) url('../images/vip/sport-info-reward-bg.webp') no-repeat center center / cover;}
+.vip_level .level_require {background:var(--box-color) url('../images/vip/info-require-bg.webp') no-repeat center center / cover;}
+
+.vip_level_slide {width:190px; }
+.vip_level_slide.sport {width:175px; }
+.vip_level_slide li {position:relative;}
+.vip_level_slide li img {width:100%; }
+.vip_level_slide li .txt_box {position:absolute; left:0; bottom:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; width:100%; padding:15px 30px 20px 30px; min-height:90px; text-align:center; }
+.vip_level_slide li .txt_box p {font-size:7px; font-weight:900; line-height:1.2; }
+.vip_level_slide li .txt_box b {display:block; margin-top:4px; font-size:11px; font-weight:900; line-height:1.2; }
+.vip_level_slide li .txt_box b br {line-height:1; }
+
+.vip_level_slide li {filter:grayscale(1); transform:scale(0.85) !important; }
+.vip_level_slide li.swiper-slide-active {filter:grayscale(0); transform:scale(1.05) !important; }
+
+
+@media all and (max-width:1280px){
+    .vip_program {min-height:280px; background-size:cover; }
+}
+
+
 

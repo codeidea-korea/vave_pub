@@ -141,7 +141,16 @@ echo txtRecord('./@record/');
 				<li><a href="./casino_poker.html" target="_blank" class="">포커</a></li>
 			</ul>
 		</li>
-		<li class="mt40" data-label="도움말">
+		<li class="mt40" data-label="회사 소개">
+			<ul>
+				<li><a href="./info_terms.html" target="_blank" class="">이용약관</a></li>
+				<li><a href="./info_bonus_term.html" target="_blank" class="">일반 보너스 조건</a></li>
+				<li><a href="./info_privacy.html" target="_blank" class="">개인 정보 보호 정책</a></li>
+				<li><a href="./info_about.html" target="_blank" class="">부가 정보</a></li>
+				<li><a href="./info_source.html" target="_blank" class="">주요 정보 출처</a></li>
+			</ul>
+		</li>
+		<li class="mt20" data-label="도움말">
 			<ul>
 				<li><a href="./help_faq.html" target="_blank" class="">자주 묻는 질문</a></li>
 				<li><a href="./help_sportsbook-rules.html" target="_blank" class="">일반 스포츠북</a></li>
