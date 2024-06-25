@@ -100,7 +100,17 @@ echo txtRecord('./@record/');
 				<li>
 					<button class="pop-modal" onclick="modalOpen('producer-modal');">공급자 모달</button>
 					<button class="pop-modal" onclick="modalOpen('slot_category-modal');">슬롯/라이브카지노 카테고리 모달</button>
+					<button class="pop-modal" onclick="modalOpen('affiliate-modal');">Affiliate 모달</button>
 				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('spin-modal');">행운의 휠(SPIN) 모달</button>
+				</li>
+			</ul>
+		</li>
+
+		<li class="mt40" data-label="네비게이션">
+			<ul>
+				<li><a href="./referrals.html" target="_blank" class="">추천</a></li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="슬롯">
@@ -139,6 +149,12 @@ echo txtRecord('./@record/');
 				<li><a href="./casino_game_shows.html" target="_blank" class="">게임 쇼</a></li>
 				<li><a href="./casino_baccarat.html" target="_blank" class="">바카라</a></li>
 				<li><a href="./casino_poker.html" target="_blank" class="">포커</a></li>
+			</ul>
+		</li>
+		<li class="mt20" data-label="기타">
+			<ul>
+				<li><a href="./vip_program.html" target="_blank" class="">VIP 카지노</a></li>
+				<li><a href="./vip_program_sport.html" target="_blank" class="">VIP 스포츠</a></li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="회사 소개">

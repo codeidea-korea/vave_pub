@@ -795,6 +795,14 @@ select{
     font-size: 0.75rem;
     line-height: 1rem;
 }
+.btn-lg{
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
 /* Button Colors */
 .btn-primary{
     --tw-border-opacity: 1;
@@ -2092,6 +2100,9 @@ select{
 .mt-11{
     margin-top: 2.75rem;
 }
+.mt-9{
+    margin-top: 2.25rem;
+}
 .block{
     display: block;
 }
@@ -2191,6 +2202,15 @@ select{
 .h-\[110\%\]{
     height: 110%;
 }
+.h-20{
+    height: 5rem;
+}
+.h-full{
+    height: 100%;
+}
+.h-1\/2{
+    height: 50%;
+}
 .max-h-\[50\%\]{
     max-height: 50%;
 }
@@ -2214,6 +2234,9 @@ select{
 }
 .\!max-h-48{
     max-height: 12rem !important;
+}
+.min-h-\[64px\]{
+    min-height: 64px;
 }
 .\!w-56{
     width: 14rem !important;
@@ -2326,6 +2349,15 @@ select{
 .\!w-\[180px\]{
     width: 180px !important;
 }
+.w-\[1000px\]{
+    width: 1000px;
+}
+.w-\[700px\]{
+    width: 700px;
+}
+.w-1\/4{
+    width: 25%;
+}
 .max-w-full{
     max-width: 100%;
 }
@@ -2406,6 +2438,9 @@ select{
 .justify-around{
     justify-content: space-around;
 }
+.justify-evenly{
+    justify-content: space-evenly;
+}
 .gap-2{
     gap: 0.5rem;
 }
@@ -2485,6 +2520,10 @@ select{
 }
 .border-2{
     border-width: 2px;
+}
+.border-y{
+    border-top-width: 1px;
+    border-bottom-width: 1px;
 }
 .border-b{
     border-bottom-width: 1px;
@@ -2880,6 +2919,12 @@ select{
 }
 .pl-8{
     padding-left: 2rem;
+}
+.pt-1{
+    padding-top: 0.25rem;
+}
+.pb-14{
+    padding-bottom: 3.5rem;
 }
 .text-left{
     text-align: left;
@@ -12176,6 +12221,9 @@ html body{
     .md\:table-cell{
         display: table-cell;
     }
+    .md\:h-16{
+        height: 4rem;
+    }
     .md\:w-\[340px\]{
         width: 340px;
     }
@@ -12193,6 +12241,9 @@ html body{
     }
     .md\:flex-row{
         flex-direction: row;
+    }
+    .md\:flex-col{
+        flex-direction: column;
     }
     .md\:items-center{
         align-items: center;
@@ -12236,10 +12287,23 @@ html body{
         font-size: 1.875rem;
         line-height: 2.25rem;
     }
+    .md\:text-xl{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
 }
 @media (min-width: 1024px){
+    .lg\:mt-0{
+        margin-top: 0px;
+    }
     .lg\:h-\[320px\]{
         height: 320px;
+    }
+    .lg\:min-h-\[64px\]{
+        min-height: 64px;
+    }
+    .lg\:w-\[700px\]{
+        width: 700px;
     }
     .lg\:grid-cols-4{
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -12247,15 +12311,28 @@ html body{
     .lg\:grid-cols-5{
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
+    .lg\:grid-cols-3{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .lg\:justify-center{
         justify-content: center;
     }
     .lg\:p-8{
         padding: 2rem;
     }
+    .lg\:pb-14{
+        padding-bottom: 3.5rem;
+    }
+    .lg\:text-right{
+        text-align: right;
+    }
     .lg\:text-4xl{
         font-size: 2.25rem;
         line-height: 2.5rem;
+    }
+    .lg\:text-7xl{
+        font-size: 4.5rem;
+        line-height: 1;
     }
 }
 @media (min-width: 1280px){
@@ -12402,6 +12479,9 @@ html body{
     }
     .xl\:pt-2{
         padding-top: 0.5rem;
+    }
+    .xl\:text-right{
+        text-align: right;
     }
     .xl\:text-2xl{
         font-size: 1.5rem;

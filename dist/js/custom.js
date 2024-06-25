@@ -309,6 +309,11 @@ const walletChange = (item)=>{
     }
 }
 
+// 클릭시 스와이퍼 이동
+const swiperClick = (item)=>{
+    swiper.slideTo(3)
+}
+
 
 
 // jquery 모음
@@ -350,6 +355,11 @@ const loadJquery = ()=>{
                 var i = $(this).index();
                 swiper.slideTo(i,700,false);
             });
+        }
+        if($(this).attr('data-click')){
+            $('.mySwiper li').on('click',function(){
+                swiper.slideTo($(this).index())
+            })
         }
     });
 

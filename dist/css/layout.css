@@ -22,6 +22,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .text-sub {color:var(--sub-color); }
 .text-light {color:var(--light-color); }
 .text-gradient-yellow {background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), #F7C23C); -webkit-background-clip: text; -webkit-text-fill-color: rgba(0, 0, 0, 0); }
+.text-primary-shadow {text-shadow: 0 0 10px rgb(var(--color-primary)); }
 
 .bg-block {background-color:var(--block-color); }
 .bg-sub {background-color:var(--sub-color); }
@@ -49,22 +50,27 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         HEADER
         QUICK_MENU
         SIDE-NAV
+
         MAIN-LOADER
         FOOTER
+
         CASHBACK_POPUP
         SWIPER - PAGINATION
+
         HEIGHT-FIXED
         AGREE_BOX
         MODAL
         DROPDOWN
         CUSTOM_TOGGLE
         TAB
+
         INPUT_WRAP
         CHECKBOX / RADIO
         CUSTOM_TOOLTIP
         ACCORDION
         CUSTOM_SELECT
         PROGRESS
+
         SUB_VISUAL
         INPUT_CUSTOM
         GAME_ITEM
@@ -97,11 +103,21 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .table.table-striped tr:nth-of-type(even) td {background-color:#2b373f; }
 .table.table-striped tr:nth-of-type(odd) td {background-color:transparent; }
 
+.table.table-striped.striped_type02 tr:nth-of-type(even) td {background-color:#1c252c; }
+.table.table-striped.striped_type02 tr:nth-of-type(odd) td {background-color:#212b32; }
+
 /* table border 삭제 */
 .table.no-border th,
 .table.no-border td {border-bottom-width:0;}
 
+.table.no-border.table-border-r th,
+.table.no-border.table-border-r td {border-right:1px solid rgba(217, 217, 217, 0.3)}
+.table.no-border.table-border-r th:last-of-type,
+.table.no-border.table-border-r td:last-of-type {border-right:0 none; }
+
 .table.thead-py-big thead th {padding-top:20px; padding-bottom:20px; }
+
+.table.thead-px-sm thead th{padding-right:10px; padding-left:10px; }
 
 /* tab_content */
 .tab-content > div {width:100% !important; }
@@ -256,6 +272,10 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .slot .side-nav > ul > li.casino li.cate_more_list,
 .casino .side-nav > ul > li.slots li.cate_more_list,
 .casino .side-nav > ul > li.casino li.cate_more_list  {display:block; }
+
+/* body 에 클래스 referrals 붙었을때 */
+.referrals .side-nav .referrals .side-menu__title,
+.referrals .side-nav .referrals .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 
 .mo_menu_bg {display:none; }
 
@@ -414,7 +434,7 @@ footer .footer_currency .img_list img {height:30px; }
 .modal .modal-header {border:0 none; }
 .modal .modal-header .close_btn {position:absolute; right:10px; top:10px; }
 .modal .modal-body {position:relative; }
-.modal .modal-body .close_btn {position:absolute; left:calc(100% + 2px); bottom:calc(100% + 2px); }
+.modal .modal-body .close_btn {z-index:20; position:absolute; left:calc(100% + 2px); bottom:calc(100% + 2px); }
 .modal .modal-body .close_btn.inner {left:auto; bottom:auto; right:10px; top:10px; }
 
 @media all and (max-width:1280px){
@@ -435,7 +455,7 @@ footer .footer_currency .img_list img {height:30px; }
     .modal .modal-dialog.modal-sm {width:630px; max-width:90%; }
     .modal .modal-dialog.modal-md {width:690px; max-width:90%; }
     .modal .modal-dialog.modal-lg {width:780px; max-width:90%; }
-    /* .modal .modal-dialog.modal-xl {} */
+    .modal .modal-dialog.modal-xl {width:900px; max-width:90%; }
 }
 @media (min-width: 1024px) {
     /* .modal .modal-dialog.modal-xl {} */
