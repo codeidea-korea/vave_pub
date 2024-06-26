@@ -2004,6 +2004,10 @@ select{
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 }
+.my-2\.5{
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
 .-ml-5{
     margin-left: -1.25rem;
 }
@@ -2238,6 +2242,9 @@ select{
 .min-h-\[64px\]{
     min-height: 64px;
 }
+.min-h-\[54px\]{
+    min-height: 54px;
+}
 .\!w-56{
     width: 14rem !important;
 }
@@ -2358,8 +2365,14 @@ select{
 .w-1\/4{
     width: 25%;
 }
+.w-\[450px\]{
+    width: 450px;
+}
 .max-w-full{
     max-width: 100%;
+}
+.max-w-\[305px\]{
+    max-width: 305px;
 }
 .flex-1{
     flex: 1 1 0%;
@@ -2401,6 +2414,9 @@ select{
 }
 .grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-7{
+    grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .grid-rows-3{
     grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -2847,6 +2863,10 @@ select{
 .py-1\.5{
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
+}
+.py-2\.5{
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
 }
 .pb-16{
     padding-bottom: 4rem;

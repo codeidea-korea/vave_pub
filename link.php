@@ -110,6 +110,12 @@ echo txtRecord('./@record/');
 
 		<li class="mt40" data-label="네비게이션">
 			<ul>
+				<li>
+					<a href="./bettors_tournament.html" target="_blank" class="">리더보드</a>
+					<ul>
+						<li><button class="pop-modal" onclick="modalOpen('bettor_terms-modal');">베터 이용약관 모달</button></li>
+					</ul>
+				</li>
 				<li><a href="./referrals.html" target="_blank" class="">추천</a></li>
 			</ul>
 		</li>

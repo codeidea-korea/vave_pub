@@ -247,5 +247,7 @@
     "/dist/images/spin/wof-frame.webp": "/dist/images/spin/wof-frame.webp",
     "/dist/images/spin/wof-star.webp": "/dist/images/spin/wof-star.webp",
     "/dist/images/spin/wof-usdt-icon.png": "/dist/images/spin/wof-usdt-icon.png",
-    "/dist/images/spin/wof-vc-icon.png": "/dist/images/spin/wof-vc-icon.png"
+    "/dist/images/spin/wof-vc-icon.png": "/dist/images/spin/wof-vc-icon.png",
+    "/dist/images/banner/tournament-banner-bg.webp": "/dist/images/banner/tournament-banner-bg.webp",
+    "/dist/images/banner/tournament-banner-bg-mobile.webp": "/dist/images/banner/tournament-banner-bg-mobile.webp"
 }

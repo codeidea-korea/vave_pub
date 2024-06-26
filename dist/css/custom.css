@@ -18,7 +18,7 @@
 .main_visual .slide_visual li {display:flex; flex-direction:column; justify-content:space-between; background-size:cover; background-repeat:no-repeat; background-position:right center}
 .main_visual .slide_visual .pagination {z-index:10; position:absolute; left:24px; bottom:24px; }
 
-@media all and (max-width:1280px){
+@media all and (max-width:1279px){
     .main_visual > div {height:290px; }
 }
 
@@ -51,7 +51,7 @@
 .main_probanner .img .banner {position:absolute; left:50%; bottom:-40px; width:280px; transform:translateX(-40%); }
 
 
-@media all and (max-width:1280px){
+@media all and (max-width:1279px){
     .main_probanner {min-height:220px; background-color:#22474f; }
     .main_probanner .img .banner {bottom:-30px; width:200px; transform:translateX(-10%);}
 }
@@ -85,7 +85,7 @@
 .join_wrap .password_tooltip li:before {content:''; position:absolute; left:0; top:50%; width:5px; height:5px; background-color:var(--primary-color); border-radius:50%; transform:translateY(-50%); }
 
 
-@media all and (max-width:1280px){
+@media all and (max-width:1279px){
     #join-modal.modal {background-color:rgba(16,23,29,.7); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
     #join-modal.modal .modal-dialog {box-shadow:none; }
     /* .join_body {margin-top:40px; } */
@@ -135,7 +135,7 @@
 .vip_level_slide li.swiper-slide-active {filter:grayscale(0); transform:scale(1.05) !important; }
 
 
-@media all and (max-width:1280px){
+@media all and (max-width:1279px){
     .vip_program {min-height:280px; background-size:cover; }
 }
 
@@ -245,7 +245,7 @@
 .wheel_wrap .wheel_fly_2 {animation:wheelfly2 15s linear infinite; }
 
 
-@media all and (max-width:1280px){
+@media all and (max-width:1279px){
     .wheel_wrap {zoom:0.6; }
 }
 
@@ -300,3 +300,18 @@
     50% {box-shadow:0 0 10px 6px #1FE988; }
     100% {box-shadow:0 0 0 0 #1FE988; }
 }
+
+
+/* ----------------------------------------------
+            베터 토너먼트
+---------------------------------------------- */
+.tournament_visual {min-height:315px; padding:50px 56px; background:url('../images/banner/tournament-banner-bg.webp') no-repeat center center / cover; }
+
+@media all and (min-width:1280px){
+    .mo_tab_content > div {display:block !important; }
+}
+
+@media all and (max-width:1279px){
+    .tournament_visual {min-height:auto; padding:32px 16px; background:#1d272d url('../images/banner/tournament-banner-bg-mobile.webp') no-repeat right center / contain; }
+}
+
