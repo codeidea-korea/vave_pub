@@ -2008,6 +2008,10 @@ select{
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
 }
+.my-6{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
 .-ml-5{
     margin-left: -1.25rem;
 }
@@ -2368,6 +2372,9 @@ select{
 .w-\[450px\]{
     width: 450px;
 }
+.w-56{
+    width: 14rem;
+}
 .max-w-full{
     max-width: 100%;
 }
@@ -2530,6 +2537,10 @@ select{
 .rounded-b-lg{
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+}
+.rounded-l{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
 .border{
     border-width: 1px;
@@ -2946,6 +2957,9 @@ select{
 .pb-14{
     padding-bottom: 3.5rem;
 }
+.pl-12{
+    padding-left: 3rem;
+}
 .text-left{
     text-align: left;
 }
@@ -3137,6 +3151,9 @@ select{
 }
 .opacity-20{
     opacity: 0.2;
+}
+.opacity-10{
+    opacity: 0.1;
 }
 .shadow{
     --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -12198,6 +12215,14 @@ html body{
 .hover\:opacity-100:hover{
     opacity: 1;
 }
+.dark .dark\:border-darkmode-800{
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--color-darkmode-800) / var(--tw-border-opacity));
+}
+.dark .dark\:bg-darkmode-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-darkmode-700) / var(--tw-bg-opacity));
+}
 .dark .dark\:text-slate-200{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-200) / var(--tw-text-opacity));
@@ -12267,6 +12292,9 @@ html body{
     }
     .md\:items-center{
         align-items: center;
+    }
+    .md\:justify-start{
+        justify-content: flex-start;
     }
     .md\:gap-0{
         gap: 0px;
@@ -12371,6 +12399,12 @@ html body{
     .xl\:flex{
         display: flex;
     }
+    .xl\:\!inline-flex{
+        display: inline-flex !important;
+    }
+    .xl\:table-cell{
+        display: table-cell;
+    }
     .xl\:grid{
         display: grid;
     }
@@ -12431,6 +12465,9 @@ html body{
     .xl\:flex-nowrap{
         flex-wrap: nowrap;
     }
+    .xl\:justify-start{
+        justify-content: flex-start;
+    }
     .xl\:gap-0{
         gap: 0px;
     }
@@ -12484,6 +12521,14 @@ html body{
     .xl\:py-0{
         padding-top: 0px;
         padding-bottom: 0px;
+    }
+    .xl\:px-14{
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+    .xl\:py-14{
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
     .xl\:pb-14{
         padding-bottom: 3.5rem;

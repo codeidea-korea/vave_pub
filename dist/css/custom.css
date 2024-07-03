@@ -315,3 +315,11 @@
     .tournament_visual {min-height:auto; padding:32px 16px; background:#1d272d url('../images/banner/tournament-banner-bg-mobile.webp') no-repeat right center / contain; }
 }
 
+/* ----------------------------------------------
+            명예의 전당
+---------------------------------------------- */
+.hall_sub_visual {position:relative; width:100%; height:400px; background:rgb(24,32,38) url('../images/banner/hall-of-fame-banner-casino-bg.webp') no-repeat right center / contain; }
+
+@media all and (max-width:1279px){
+    .hall_sub_visual {height:300px; }
+}
