@@ -7,6 +7,7 @@
     --light-color:#94aeb4; 
     --modal-color:#1F2931;
     --box-color:rgba(16,23,29,0.5);
+    --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
 
     --gold-color:linear-gradient(80deg, rgba(87, 98, 101, 0.5) 10%, rgba(158, 161, 161, 0.5) 25%, rgba(132, 139, 138, 0.5) 50%, rgba(87, 98, 101, 0.5) 55%, rgba(87, 98, 101, 0.5) 80%, rgba(117, 122, 123, 0.5) 90%, rgba(87, 98, 101, 0.5) 100%), #FFBD3A;
@@ -37,6 +38,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-modal {background-color:var(--modal-color); }
 .\!bg-sub {background-color:var(--sub-color) !important; }
 .bg-box {background:var(--box-color);}
+.bg-box2 {background:var(--box-color-2);}
 .bg-table {background:var(--table-color);}
 
 .bg-gold {background:var(--gold-color); }
@@ -44,7 +46,9 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-bronze {background:var(--bronze-color); }
 
 @media (min-width:1280px){
+    .xl\:bg-sub {background-color:var(--sub-color);}
     .xl\:bg-block {background-color:var(--block-color);}
+    .xl\:bg-table {background-color:var(--table-color);}
 }
 
 /* zoom */
@@ -59,6 +63,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
         CONTENT
         버튼 커스텀
+        폼 커스텀
         테이블 커스텀
         HEADER
         QUICK_MENU
@@ -110,6 +115,12 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 
 /* ----------------------------------------------
+            폼 커스텀
+---------------------------------------------- */
+.form-control {border:0 none; }
+
+
+/* ----------------------------------------------
             테이블 커스텀
 ---------------------------------------------- */
 /* table-striped 색상변경 */
@@ -118,6 +129,9 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 .table.table-striped.striped_type02 tr:nth-of-type(even) td {background-color:#1c252c; }
 .table.table-striped.striped_type02 tr:nth-of-type(odd) td {background-color:#212b32; }
+
+.table.table-striped.striped_type03 tr:nth-of-type(even) td {background-color:#1a242b; }
+.table.table-striped.striped_type03 tr:nth-of-type(odd) td {background-color:#131b23; }
 
 /* table border 삭제 */
 .table.no-border th,
@@ -132,6 +146,11 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 .table.thead-px-sm thead th{padding-right:10px; padding-left:10px; }
 .table.tbody-px-sm tbody td{padding-right:10px; padding-left:10px; }
+
+
+@media all and (max-width:1279px){
+    .table.mo_hide {display:none; }
+}
 
 /* tab_content */
 .tab-content > div {width:100% !important; }

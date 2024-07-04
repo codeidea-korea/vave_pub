@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="referrals">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <div class="box mb-5">
+
+                    <!-- 모바일용 -->
+                    <div class="flex items-center justify-between xl:hidden px-4 py-3 mb-4 bg-block rounded-md">
+                        <button class="flex items-center gap-1 text-light"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg> 뒤로 가기</button>
+                        <p class="text-base font-bold">명예의 전당</p>
+                    </div>
+
+                    <ul class="nav nav-boxed-tabs xl:hidden mb-3 p-1 bg-sub rounded-lg">
+                        <li class="nav-item flex-1">
+                            <button class="nav-link w-full py-1.5 text-sm active" type="button"> 스포츠 베팅 </button> 
+                        </li>
+                        <li class="nav-item flex-1"> 
+                            <a href="./hall_of_fame.html" class="nav-link w-full py-1.5 text-center text-sm" type="button"> 카지노</a> 
+                        </li>
+                    </ul>
+
+                    <!-- 배너 -->
+                    <div class="hall_sub_visual_sports  rounded-lg">
+                        <div class="h-full flex flex-col justify-end xl:justify-start txt_box px-4 py-8 xl:px-14 xl:py-14">
+                            <div>
+                                <ul class="nav nav-boxed-tabs hidden xl:!inline-flex !w-auto p-1 bg-sub rounded-lg">
+                                    <li class="nav-item">
+                                        <button class="nav-link py-1.5 active" type="button"> 스포츠 베팅 </button> 
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a href="./hall_of_fame.html" class="nav-link py-1.5" type="button"> 카지노 </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="mt-4 text-2xl md:text-4xl font-bold">명예의 전당</h4>
+                            <p class="mt-2 text-sm font-semibold text-light">베팅을 하고 정상에 있는 자신을 확인해 보십시오</p>
+                        </div>
+                    </div>
+
+                    <div class="my-6 border-t border-white opacity-10"></div>
+
+                    <!-- 최고 수상자 -->
+                    <div class="mt-6 xl:bg-block rounded">
+                        <div class="flex items-center justify-between">
+                            <div class="hidden xl:block p-4 md:p-6 pt-4 md:pt-8 text-lg md:text-2xl font-bold text-center md:text-left">최고 수상자</div>
+                            <div class="flex items-center flex-col xl:flex-row gap-2 w-full">
+
+                                <ul class="nav nav-boxed-tabs fame_tab !w-auto p-1 bg-sub rounded-lg mr-2">
+                                    <li class="nav-item"><button class="nav-link py-1.5 text-sm active" type="button"> 오늘 </button> </li>
+                                    <li class="nav-item"><button class="nav-link py-1.5 text-sm" type="button"> 주 </button> </li>
+                                    <li class="nav-item"><button class="nav-link py-1.5 text-sm" type="button"> 모든 시간 </button> </li>
+                                </ul>
+
+                                <div class="flex items-center gap-2">
+                                    <button class="flex items-center justify-center w-6 h-6 bg-sub rounded-full"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                    <div class="relative w-36 mx-auto bg-sub xl:bg-table rounded overflow-hidden">
+                                        <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-block xl:bg-sub text-white"> 
+                                            <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?0704#calendar"></use></svg>
+                                        </div>
+                                        <input type="text" class="datepicker form-control pl-12 mont" data-single-mode="true">
+                                    </div>
+                                    <button class="flex items-center justify-center w-6 h-6 bg-sub rounded-full"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table w-full table-striped striped_type03 no-border thead-py-big mont mo_hide">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="*">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead class="">
+                                <tr>
+                                    <th class="whitespace-nowrap text-xs text-primary">베츨립<br/>아이디</th>
+                                    <th class="whitespace-nowrap text-xs text-primary">이벤트</th>
+                                    <th class="whitespace-nowrap text-xs text-primary">선택</th>
+                                    <th class="whitespace-nowrap text-xs text-primary">배당률</th>
+                                    <th class="whitespace-nowrap text-xs text-primary">스테이크</th>
+                                    <th class="whitespace-nowrap text-xs text-primary">상</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-bold align-top">
+                                <tr>
+                                    <td>#1592480</td>
+                                    <td>
+                                        <div class="flex flex-col gap-1 p-3 bg-box2 rounded text-xs">
+                                            <div class="flex items-center gap-2 mb-2">
+                                                <img src="./dist/images/sports/icon_football.svg" alt="">
+                                                <img src="./dist/images/sports/euro2024.svg" alt="">
+                                                <span class="text-light">UEFA Euro</span>
+                                            </div>
+                                            <div class="flex items-center justify-between text-light">
+                                                <span>02.07.2024 01:00</span>
+                                                <span>0:0 | 1:0</span>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-white">France</span>
+                                                <span class="text-primary text-sm">1</span>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-white">Belgium</span>
+                                                <span class="text-primary text-sm">0</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>1x2<br/>France</td>
+                                    <td>1.94</td>
+                                    <td><span class="flex items-center gap-2">200.00000000<img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt=""></span></td>
+                                    <td><span class="flex items-center gap-2 text-primary"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">388.00000000</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#1592480</td>
+                                    <td>
+                                        <div class="flex flex-col gap-1 p-3 bg-box2 rounded text-xs">
+                                            <div class="flex items-center gap-2 mb-2">
+                                                <img src="./dist/images/sports/icon_football.svg" alt="">
+                                                <img src="./dist/images/sports/euro2024.svg" alt="">
+                                                <span class="text-light">UEFA Euro</span>
+                                            </div>
+                                            <div class="flex items-center justify-between text-light">
+                                                <span>02.07.2024 01:00</span>
+                                                <span>0:0 | 1:0</span>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-white">France</span>
+                                                <span class="text-primary text-sm">1</span>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-white">Belgium</span>
+                                                <span class="text-primary text-sm">0</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>1x2<br/>France</td>
+                                    <td>1.94</td>
+                                    <td><span class="flex items-center gap-2">200.00000000<img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt=""></span></td>
+                                    <td><span class="flex items-center gap-2 text-primary"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">388.00000000</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="!p-0">
+                                        <table class="table fame_table">
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="*">
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="20%">
+                                                <col width="20%">
+                                            </colgroup>
+                                            <tbody class="align-top">
+                                                <tr>
+                                                    <td>#1592507</td>
+                                                    <td>
+                                                        <div class="flex flex-col gap-1 p-3 bg-box2 rounded text-xs">
+                                                            <p class="text-white">2 결과</p>
+                                                            <div class="flex items-center gap-2.5">
+                                                                <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                                                <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                                            </div>
+                                                            <div class="flex items-center gap-1 mt-1">
+                                                                <span class="block w-6 h-2 bg-primary rounded"></span>
+                                                                <span class="block w-6 h-2 bg-primary rounded"></span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>정확한 스코어<br/>0:2</td>
+                                                    <td>10.56</td>
+                                                    <td><span class="flex items-center gap-2">3000.00000000<img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt=""></span></td>
+                                                    <td class="relative !pr-10">
+                                                        <span class="flex items-center gap-2 text-primary"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">31680.00000000</span>
+                                                        <button class="table_open_btn absolute right-3 top-3"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5 rotate-90 text-light"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="detail">
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="flex flex-col gap-1 p-3 bg-box2 rounded text-xs">
+                                                            <div class="flex items-center gap-2 mb-2">
+                                                                <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                                                <img src="./dist/images/sports/wimbledon.svg" alt="">
+                                                                <span class="text-light">Wimbledon Women Singles</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-between text-light">
+                                                                <span>02.07.2024 00:25</span>
+                                                                <span>4:6 | 3:5</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="text-white">van Uytvanck, Alison</span>
+                                                                <span class="text-primary text-sm">0</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="text-white">Starodubtseva, Yuliia</span>
+                                                                <span class="text-primary text-sm">2</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>정확한 스코어<br/>0:2</td>
+                                                    <td>3.3000</td>
+                                                    <td></td>
+                                                    <td><button class="btn btn-success p-2 text-white font-bold">우승</button></td>
+                                                </tr>
+                                                <tr class="detail">
+                                                    <td></td>
+                                                    <td>
+                                                        <div class="flex flex-col gap-1 p-3 bg-box2 rounded text-xs">
+                                                            <div class="flex items-center gap-2 mb-2">
+                                                                <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                                                <img src="./dist/images/sports/wimbledon.svg" alt="">
+                                                                <span class="text-light">Wimbledon Women Singles</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-between text-light">
+                                                                <span>02.07.2024 00:25</span>
+                                                                <span>4:6 | 3:5</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="text-white">van Uytvanck, Alison</span>
+                                                                <span class="text-primary text-sm">0</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="text-white">Starodubtseva, Yuliia</span>
+                                                                <span class="text-primary text-sm">2</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>정확한 스코어<br/>0:2</td>
+                                                    <td>3.3000</td>
+                                                    <td></td>
+                                                    <td><button class="btn btn-success p-2 text-white font-bold">우승</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <div class="flex xl:hidden flex-col w-full mt-5">
+                            <div class="bg-box rounded-md mb-4">
+                                <div class="p-4">
+                                    <div class="flex flex-col gap-1 p-3 mb-2 bg-box2 rounded text-xs">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <img src="./dist/images/sports/icon_football.svg" alt="">
+                                            <img src="./dist/images/sports/euro2024.svg" alt="">
+                                            <span class="text-light">UEFA Euro</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-light">
+                                            <span>02.07.2024 01:00</span>
+                                            <span>0:0 | 1:0</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-white">France</span>
+                                            <span class="text-primary text-sm">1</span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-white">Belgium</span>
+                                            <span class="text-primary text-sm">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">우승</div>
+                                        <div class="flex items-center gap-2 text-primary font-semibold text-sm"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">388.00000000</div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">스테이크</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold text-sm">388.00000000<img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt=""></div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">선택</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold">1x2<br/>France</div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">배당률</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold">4.4</div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">신분증</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold">#1596853</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-box rounded-md mb-4">
+                                <div class="p-4">
+                                    <div class="flex flex-col gap-1 p-3 bg-box2 rounded text-xs">
+                                        <p class="text-white">2 결과</p>
+                                        <div class="flex items-center gap-2.5">
+                                            <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                            <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                        </div>
+                                        <div class="flex items-center gap-1 mt-1">
+                                            <span class="block w-6 h-2 bg-primary rounded"></span>
+                                            <span class="block w-6 h-2 bg-primary rounded"></span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">우승</div>
+                                        <div class="flex items-center gap-2 text-primary font-semibold text-sm"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">388.00000000</div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">스테이크</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold text-sm">388.00000000<img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt=""></div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">선택</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold">1x2<br/>France</div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">배당률</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold">4.4</div>
+                                    </div>
+                                    <div class="flex items-center text-xs mb-2">
+                                        <div class="w-1/5 text-light">신분증</div>
+                                        <div class="flex items-center gap-2 text-white font-semibold">#1596853</div>
+                                    </div>
+                                </div>
+                                <button class="mo_table_open_btn flex items-center justify-between w-full p-4 text-xs text-light border-t border-white border-opacity-10"><span>세부 정보</span><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                
+                                <div class="hidden overflow-x-auto scrollbar flex gap-2 p-4 pt-0">
+                                    <div class="flex flex-col gap-1 w-[280px] flex-shrink-0 p-3 mb-2 bg-table rounded-md text-xs font-medium">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                            <img src="./dist/images/sports/wimbledon.svg" alt="">
+                                            <span class="text-light text-sm">Wimbledon Women Singles</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-light">
+                                            <span>02.07.2024 01:00</span>
+                                            <span>0:0 | 1:0</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-white">France</span>
+                                            <span class="text-primary">1</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-white">Belgium</span>
+                                            <span class="text-primary">0</span>
+                                        </div>
+                                        <div class="border-t border-white border-opacity-10 mt-2 pt-2">
+                                            <div class="flex gap-1 mb-2">
+                                                <p class="w-1/5 text-light">선택</p>
+                                                <p class="text-white font-medium">정확한 스코어<br/>0:2</p>
+                                            </div>
+                                            <div class="flex gap-1 mb-2">
+                                                <p class="w-1/5 text-light">배당률</p>
+                                                <p class="text-white font-medium">3.3000
+                                                </p>
+                                            </div>
+                                            <div class="flex gap-1">
+                                                <p class="w-1/5 text-light">상태</p>
+                                                <button class="btn btn-sm btn-success p-1 py-0 text-white font-bold">우승</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-1 w-[280px] flex-shrink-0 p-3 mb-2 bg-table rounded-md text-xs font-medium">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <img src="./dist/images/sports/icon_tennis.svg" alt="">
+                                            <img src="./dist/images/sports/wimbledon.svg" alt="">
+                                            <span class="text-light text-sm">Wimbledon Women Singles</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-light">
+                                            <span>02.07.2024 01:00</span>
+                                            <span>0:0 | 1:0</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-white">France</span>
+                                            <span class="text-primary">1</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-white">Belgium</span>
+                                            <span class="text-primary">0</span>
+                                        </div>
+                                        <div class="border-t border-white border-opacity-10 mt-2 pt-2">
+                                            <div class="flex gap-1 mb-2">
+                                                <p class="w-1/5 text-light">선택</p>
+                                                <p class="text-white font-medium">정확한 스코어<br/>0:2</p>
+                                            </div>
+                                            <div class="flex gap-1 mb-2">
+                                                <p class="w-1/5 text-light">배당률</p>
+                                                <p class="text-white font-medium">3.3000
+                                                </p>
+                                            </div>
+                                            <div class="flex gap-1">
+                                                <p class="w-1/5 text-light">상태</p>
+                                                <button class="btn btn-sm btn-success p-1 py-0 text-white font-bold">우승</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 마지막 수상자 -->
+                    <div class="mt-6">
+                        <div class="text-lg font-bold">마지막 수상자</div>
+                        <div class="mySwiper overflow-hidden mt-4" data-per="auto" data-gap="10">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_1.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">GreyArea</a>
+                                            <p class="flex items-center gap-1 text-primary mont font-medium">승리 — 15.8 <img class="w-3" src="./dist/images/coin/litecoin-ltc-logo.svg" alt=""> </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Monkeys Go Bananas MultiMax</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_2.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">Alpaczo</a>
+                                            <p class="text-primary mont font-medium">승리 — 9.93 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Wild Spin Deluxe</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_3.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">mac72888</a>
+                                            <p class="text-primary mont font-medium">승리 — 27.05 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Retro Sweets</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_4.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">volcanicdogg</a>
+                                            <p class="text-primary mont font-medium">승리 — 29.93 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 5 Lions Megaways</a>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide !w-56 flex items-center gap-2">
+                                        <a href="javascsript:;" class="w-14 shrink-0"><img class="rounded" src="./dist/images/main/winners_game_5.webp" alt=""></a>
+                                        <div class="text-xs">
+                                            <a href="javascript:;" class="text-white font-medium">Vadim4ik</a>
+                                            <p class="text-primary mont font-medium">승리 — 5.55 € </p>
+                                            <a href="javascript:;" class="text-light hover:text-white">에 Happy Fishing</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+               
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script> 
+        <!-- END: JS Assets-->
+
+        <script>
+            // 탭버튼
+            $('.fame_tab button').on('click',function(){
+                $(this).addClass('active').parent("li").siblings().find('button').removeClass('active')
+            })
+
+            // 테이블 여닫
+            $('.fame_table .table_open_btn').on('click',function(){
+                $(this).parents('.fame_table').toggleClass('open')
+            })
+
+            // 모바일 테이블 여닫
+            $('.mo_table_open_btn').on('click',function(){
+                $(this).toggleClass('on')
+                $(this).next().toggleClass('hidden')
+            })
+
+        </script>
+    </body>
+</html>

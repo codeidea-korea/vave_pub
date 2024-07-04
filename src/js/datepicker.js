@@ -12,7 +12,12 @@ import Litepicker from "litepicker";
             numberOfColumns: 2,
             numberOfMonths: 2,
             showWeekNumbers: true,
-            format: "D MMM, YYYY",
+            format: "YYYY-MM-DD",
+            lang: "ko-KR",
+            delimiter:" ~ ",
+            tooltipText: {
+                other: "일",
+            },
             dropdowns: {
                 minYear: 1990,
                 maxYear: null,

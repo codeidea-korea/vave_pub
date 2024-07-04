@@ -318,8 +318,21 @@
 /* ----------------------------------------------
             명예의 전당
 ---------------------------------------------- */
-.hall_sub_visual {position:relative; width:100%; height:400px; background:rgb(24,32,38) url('../images/banner/hall-of-fame-banner-casino-bg.webp') no-repeat right center / contain; }
+.hall_sub_visual,
+.hall_sub_visual_sports {position:relative; width:100%; height:400px; background:rgb(24,32,38) url('../images/banner/hall-of-fame-banner-casino-bg.webp') no-repeat right center / contain; }
+.hall_sub_visual_sports {background:rgb(25,35,41) url('../images/banner/hall-of-fame-banner-sport-bg.webp') no-repeat right center / contain; }
+
+.fame_table tr.detail {display:none; background-color:rgba(16,23,29,.5); border-top:1px solid rgba(43,198,157,.1); }
+.fame_table.open tr.detail {display:table-row; }
+.fame_table.open {box-shadow:0 0 10px rgba(43,198,157,.5); }
+.fame_table .table_open_btn {transform:rotate(0); transition:all 0.5s; }
+.mo_table_open_btn svg {transform:rotate(90deg); transition:all 0.5s; }
+.fame_table.open .table_open_btn {transform:rotate(180deg); }
+.mo_table_open_btn.on svg {transform:rotate(270deg); }
+
 
 @media all and (max-width:1279px){
-    .hall_sub_visual {height:300px; }
+    .hall_sub_visual,
+    .hall_sub_visual_sports {height:300px; }
 }
+
