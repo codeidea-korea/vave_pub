@@ -315,6 +315,11 @@ header .gnb .bettors a,
 .bettors .side-nav .bettors .side-menu__title,
 .bettors .side-nav .bettors .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 
+/* body 에 클래스 fame 붙었을때 */
+header .gnb .fame a,
+.fame .side-nav .fame .side-menu__title,
+.fame .side-nav .fame .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
+
 .mo_menu_bg {display:none; }
 
 @media all and (max-width:1279px){

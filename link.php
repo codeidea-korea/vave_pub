@@ -116,6 +116,12 @@ echo txtRecord('./@record/');
 						<li><button class="pop-modal" onclick="modalOpen('bettor_terms-modal');">베터 이용약관 모달</button></li>
 					</ul>
 				</li>
+				<li>
+					<a href="./hall_of_fame.html" target="_blank" class="">명에의전당</a>
+					<ul>
+						<li><a href="./hall_of_fame_sports.html" target="_blank" class="">명예의전당 스포츠</a></li>
+					</ul>
+				</li>
 				<li><a href="./referrals.html" target="_blank" class="">추천</a></li>
 			</ul>
 		</li>
