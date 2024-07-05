@@ -185,6 +185,16 @@
     "/dist/images/producer/truelab1.svg": "/dist/images/producer/truelab1.svg",
     "/dist/images/producer/wazdan.svg": "/dist/images/producer/wazdan.svg",
     "/dist/images/promotion/join_promotion.webp": "/dist/images/promotion/join_promotion.webp",
+    "/dist/images/promotion/promotion_1.webp": "/dist/images/promotion/promotion_1.webp",
+    "/dist/images/promotion/promotion_10.webp": "/dist/images/promotion/promotion_10.webp",
+    "/dist/images/promotion/promotion_2.webp": "/dist/images/promotion/promotion_2.webp",
+    "/dist/images/promotion/promotion_3.webp": "/dist/images/promotion/promotion_3.webp",
+    "/dist/images/promotion/promotion_4.webp": "/dist/images/promotion/promotion_4.webp",
+    "/dist/images/promotion/promotion_5.webp": "/dist/images/promotion/promotion_5.webp",
+    "/dist/images/promotion/promotion_6.webp": "/dist/images/promotion/promotion_6.webp",
+    "/dist/images/promotion/promotion_7.webp": "/dist/images/promotion/promotion_7.webp",
+    "/dist/images/promotion/promotion_8.webp": "/dist/images/promotion/promotion_8.webp",
+    "/dist/images/promotion/promotion_9.webp": "/dist/images/promotion/promotion_9.webp",
     "/dist/images/slots/slots_1.webp": "/dist/images/slots/slots_1.webp",
     "/dist/images/slots/slots_10.webp": "/dist/images/slots/slots_10.webp",
     "/dist/images/slots/slots_11.webp": "/dist/images/slots/slots_11.webp",
@@ -254,5 +264,6 @@
     "/dist/images/vip/level-9.webp": "/dist/images/vip/level-9.webp",
     "/dist/images/vip/sport-info-reward-bg.webp": "/dist/images/vip/sport-info-reward-bg.webp",
     "/dist/images/vip/sport-info-reward.webp": "/dist/images/vip/sport-info-reward.webp",
-    "/dist/images/vip/your-vave-point.webp": "/dist/images/vip/your-vave-point.webp"
+    "/dist/images/vip/your-vave-point.webp": "/dist/images/vip/your-vave-point.webp",
+    "/dist/images/icon/chat_profile.png": "/dist/images/icon/chat_profile.png"
 }

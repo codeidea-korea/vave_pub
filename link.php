@@ -111,6 +111,13 @@ echo txtRecord('./@record/');
 		<li class="mt40" data-label="네비게이션">
 			<ul>
 				<li>
+					<a href="./promotion.html" target="_blank" class="">프로모션</a>
+					<ul>
+						<li><a href="./promotion_detail.html" target="_blank" class="">프로모션 상세</a></li>
+						<li><button class="pop-modal" onclick="modalOpen('promotion_terms-modal');">프로모션 이용약관 모달</button></li>
+					</ul>
+				</li>
+				<li>
 					<a href="./bettors_tournament.html" target="_blank" class="">리더보드</a>
 					<ul>
 						<li><button class="pop-modal" onclick="modalOpen('bettor_terms-modal');">베터 이용약관 모달</button></li>

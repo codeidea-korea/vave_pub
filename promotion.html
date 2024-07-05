@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="promotion">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <div class="box mb-5">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="hidden xl:block text-3xl font-bold shrink-0">프로모션</h3>
+
+                        <ul class="nav nav-boxed-tabs !w-auto mb-3 p-1 bg-sub rounded-lg font-semibold">
+                            <li class="nav-item"><button class="nav-link py-1.5 text-sm active" type="button" data-filter="all">모두</button></li>
+                            <li class="nav-item"><button class="nav-link py-1.5 text-sm" type="button" data-filter="sports">스포츠</button></li>
+                            <li class="nav-item"><button class="nav-link py-1.5 text-sm" type="button" data-filter="casino">카지노</button></li>
+                            <li class="nav-item"><button class="nav-link py-1.5 text-sm" type="button" data-filter="vip">VIP</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="promotion_box grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="promotion_items all casino rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_1.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">캐시백 카지노에 오신 것을 환영합니다.</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">최대 1 BTC까지 100% 카지노 캐시백 보너스</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all sports rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_2.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#ball"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">환영 스포츠 보너스</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">100% 스포츠 보너스, 최대 500 USDT</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all casino rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_3.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">목요일 리로드</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">50% 최대 150 USDT<br/>+ Wild Cash (BGaming) 100회 무료 스핀</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all casino rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_4.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">토요일 무료 스핀 보너스</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">최대 100 회 무료 스핀</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all casino rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_5.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">행운의 휠</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">등록 및 입금에 대한 행운의 휠 보너스</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all vip rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_6.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#vip"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">카지노 VIP 프로그램</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">Vave와 함께 상금을 받아보십시오!<br/>100,000 USDT</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all vip rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_7.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#vip"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">스포츠 VIP 프로그램</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">매월 10,000 USDT 이상을 받아 보십시오!</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all casino rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_8.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#slot-machine"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">카지노 슬롯 레이스</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">매월 15,000 USDT 및 15,000회 무료 스핀</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all sports rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_9.webp" alt="">
+                                <i class="z-10 absolute right-4 top-4 p-2 bg-box rounded"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#ball"></use></svg></i>
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">베터 토너먼트</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">2,250 USDT 이상의 상금</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs btn-primary" onclick="modalOpen('cashier-modal'); tabChange('#cashier-1-tab button');">보너스 받기</button>
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="promotion_items all rounded-lg">
+                            <a href="javascript:;" class="p-4">
+                                <img src="./dist/images/promotion/promotion_10.webp" alt="">
+                                <div class="txt_box">
+                                    <h6 class="truncate-2 text-lg font-semibold leading-tight">추천 프로그램</h6>
+                                    <p class="mt-1 truncate-2 text-xs font-medium">최대 30% 수익 공유</p>
+                                </div>
+                                <div class="z-10 relative flex items-center mt-2 gap-2 btn_box">
+                                    <button class="btn h-8 flex-1 text-xs border-2 btn-outline-primary">더 보기<svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 ml-2"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg></button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+
+        <script>
+            $('.nav-boxed-tabs button').on('click',function(){
+                $(this).addClass('active').parent("li").siblings().find('button').removeClass('active')
+            });
+
+            $('.nav-boxed-tabs button').on('click',function(){
+                let filter = $(this).data('filter');
+                $('.promotion_box > div').each(function(){
+                    if(!$(this).hasClass(filter)){
+                        $(this).addClass('hidden')
+                    }else{
+                        $(this).removeClass('hidden')
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1904,6 +1904,9 @@ select{
 .top-3{
     top: 0.75rem;
 }
+.top-4{
+    top: 1rem;
+}
 .z-10{
     z-index: 10;
 }
@@ -2032,6 +2035,12 @@ select{
 }
 .mt-9{
     margin-top: 2.25rem;
+}
+.mb-7{
+    margin-bottom: 1.75rem;
+}
+.mt-14{
+    margin-top: 3.5rem;
 }
 .block{
     display: block;
@@ -2171,6 +2180,9 @@ select{
 .w-1\/4{
     width: 25%;
 }
+.w-1\/5{
+    width: 20%;
+}
 .w-10{
     width: 2.5rem;
 }
@@ -2234,17 +2246,20 @@ select{
 .w-\[220px\]{
     width: 220px;
 }
+.w-\[280px\]{
+    width: 280px;
+}
 .w-\[450px\]{
     width: 450px;
 }
 .w-full{
     width: 100%;
 }
-.w-1\/5{
-    width: 20%;
+.w-44{
+    width: 11rem;
 }
-.w-\[280px\]{
-    width: 280px;
+.w-9{
+    width: 2.25rem;
 }
 .max-w-\[305px\]{
     max-width: 305px;
@@ -2654,6 +2669,9 @@ select{
 .p-8{
     padding: 2rem;
 }
+.p-16{
+    padding: 4rem;
+}
 .px-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -2677,6 +2695,10 @@ select{
 .px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+}
+.py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .py-1{
     padding-top: 0.25rem;
@@ -2717,10 +2739,6 @@ select{
 .py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
-}
-.py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
 }
 .\!pl-0{
     padding-left: 0px !important;
@@ -2767,6 +2785,9 @@ select{
 .pr-\[30\%\]{
     padding-right: 30%;
 }
+.pt-0{
+    padding-top: 0px;
+}
 .pt-2{
     padding-top: 0.5rem;
 }
@@ -2782,8 +2803,8 @@ select{
 .pt-5{
     padding-top: 1.25rem;
 }
-.pt-0{
-    padding-top: 0px;
+.pb-12{
+    padding-bottom: 3rem;
 }
 .\!text-left{
     text-align: left !important;
@@ -2875,6 +2896,9 @@ select{
 }
 .leading-tight{
     line-height: 1.25;
+}
+.leading-normal{
+    line-height: 1.5;
 }
 .\!text-white{
     --tw-text-opacity: 1 !important;
@@ -12081,6 +12105,9 @@ html body{
     .md\:w-\[340px\]{
         width: 340px;
     }
+    .md\:w-44{
+        width: 11rem;
+    }
     .md\:grid-cols-2{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -12092,6 +12119,9 @@ html body{
     }
     .md\:flex-row{
         flex-direction: row;
+    }
+    .md\:flex-col{
+        flex-direction: column;
     }
     .md\:items-center{
         align-items: center;
@@ -12110,6 +12140,9 @@ html body{
     }
     .md\:text-left{
         text-align: left;
+    }
+    .md\:text-right{
+        text-align: right;
     }
     .md\:text-2xl{
         font-size: 1.5rem;
@@ -12193,9 +12226,6 @@ html body{
     .xl\:\!inline-flex{
         display: inline-flex !important;
     }
-    .xl\:table{
-        display: table;
-    }
     .xl\:table-cell{
         display: table-cell;
     }
@@ -12259,6 +12289,9 @@ html body{
     .xl\:gap-0{
         gap: 0px;
     }
+    .xl\:rounded-lg{
+        border-radius: 0.5rem;
+    }
     .xl\:bg-gray-700{
         --tw-bg-opacity: 1;
         background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -12293,6 +12326,12 @@ html body{
     }
     .xl\:p-8{
         padding: 2rem;
+    }
+    .xl\:p-4{
+        padding: 1rem;
+    }
+    .xl\:\!p-4{
+        padding: 1rem !important;
     }
     .xl\:px-0{
         padding-left: 0px;

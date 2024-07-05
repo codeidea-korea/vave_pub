@@ -58,6 +58,11 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .hover_scale_img img {transform:scale(1); transition:transform 0.2s; }
 .hover_scale_img:hover img {transform:scale(1.1); }
 
+/* 말줄임표 */
+.truncate-2 {-webkit-line-clamp: 2; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+.truncate-3 {-webkit-line-clamp: 3; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+.truncate-4 {-webkit-line-clamp: 4; display: -webkit-box; word-wrap: break-word;-webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden;}
+
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
@@ -319,6 +324,12 @@ header .gnb .bettors a,
 header .gnb .fame a,
 .fame .side-nav .fame .side-menu__title,
 .fame .side-nav .fame .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
+
+/* body 에 클래스 promotion 붙었을때 */
+header .gnb .promotion a,
+.promotion .side-nav .promotion .side-menu__title,
+.promotion .side-nav .promotion .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
+.promotion .side-nav .promotion .side-menu__title span {color:#fff; }
 
 .mo_menu_bg {display:none; }
 
@@ -669,20 +680,4 @@ footer .footer_currency .img_list img {height:30px; }
 @media all and (max-width:767px){
     .game_item.swiper-slide {width:144px; }
 }
-
-
-/* ----------------------------------------------
-            공급자 리스트
----------------------------------------------- */
-.producer_btn:hover img {filter:brightness(0) invert(1); }
-.producer_list button {border-radius:6px; }
-.producer_list button span {width:calc(100% - 37px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left; }
-.producer_list button:hover span {color:var(--primary-color); }
-.producer_list button.active {background-color:var(--sub-color); }
-.producer_list button.active span {color:var(--primary-color); }
-
-@media all and (max-width:1279px){
-    .producer_btn {background:var(--block-color) url('../images/icon/simple-arrow.svg') no-repeat 97% center / 14px 14px; }
-}
-
 

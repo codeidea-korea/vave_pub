@@ -326,6 +326,8 @@
 .fame_table.open tr.detail {display:table-row; }
 .fame_table.open {box-shadow:0 0 10px rgba(43,198,157,.5); }
 .fame_table .table_open_btn {transform:rotate(0); transition:all 0.5s; }
+
+.mo_table_box.on {box-shadow:0 0 10px rgba(43,198,157,.5); }
 .mo_table_open_btn svg {transform:rotate(90deg); transition:all 0.5s; }
 .fame_table.open .table_open_btn {transform:rotate(180deg); }
 .mo_table_open_btn.on svg {transform:rotate(270deg); }
@@ -335,4 +337,49 @@
     .hall_sub_visual,
     .hall_sub_visual_sports {height:300px; }
 }
+
+/* ----------------------------------------------
+            프로모션
+---------------------------------------------- */
+.promotion_items {position:relative; overflow:hidden; box-shadow:0 4px 23px rgba(43,198,157,.38); }
+.promotion_items a {position:relative; display:flex; flex-direction:column; justify-content:flex-end; width:100%; min-height:236px; }
+.promotion_items img {z-index:1; position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; }
+.promotion_items:after {content:''; z-index:2; position:absolute; left:0; bottom:0; width:100%; height:120px; background:linear-gradient(rgba(16, 23, 29, 0) 10%, #10171D 100%); border-bottom-left-radius:8px; border-bottom-right-radius:8px; }
+.promotion_items .txt_box {z-index:3; position:relative; width:100%; }
+.promotion_items .btn_box {display:none; }
+.promotion_items:hover .btn_box {display:flex; }
+
+.promotion_detail {position:relative; min-height:570px; background-color:rgb(17,43,70); }
+.promotion_detail > img {z-index:5; position:absolute; left:0; bottom:0; max-width:100%; height:100%; object-fit:cover; }
+.promotion_detail > div {z-index:10; position:relative; }
+.promotion_detail .number {right:-8px; bottom:-8px; display:flex; align-items:center; justify-content:center; width:60px; height:60px; border:8px solid #112b46; background-color:var(--primary-color); border-radius:50%; }
+
+@media all and (max-width:767px){
+    .promotion_detail:before {content:''; z-index:8; position:absolute; left:0; bottom:0; width:100%; height:100%; background:linear-gradient(to top, rgb(17, 43, 70), rgba(255, 255, 255, 0)); }
+}
+
+
+/* ----------------------------------------------
+            공급자 리스트
+---------------------------------------------- */
+.producer_btn:hover img {filter:brightness(0) invert(1); }
+.producer_list button {border-radius:6px; }
+.producer_list button span {width:calc(100% - 37px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left; }
+.producer_list button:hover span {color:var(--primary-color); }
+.producer_list button.active {background-color:var(--sub-color); }
+.producer_list button.active span {color:var(--primary-color); }
+
+@media all and (max-width:1279px){
+    .producer_btn {background:var(--block-color) url('../images/icon/simple-arrow.svg') no-repeat 97% center / 14px 14px; }
+}
+
+
+/* ----------------------------------------------
+            CHATTING
+---------------------------------------------- */
+.chat_box {z-index:100; position:fixed; right:16px; bottom:16px; }
+.chat_box .chat_btn {overflow:hidden; width:300px; height:60px; background-color:#22474F; }
+.chat_box .chat_btn > div {height:100%; }
+.chat_box .chat_btn i {display:block; height:100%; padding:15px; background: linear-gradient(135deg, #01DCBA 0%, #7F30CB 100%);}
+
 
