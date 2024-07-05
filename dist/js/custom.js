@@ -128,6 +128,7 @@ const headerScript = ()=>{
         $('body').removeClass('overflow-hidden')
     });
 
+    $('.chat_box').draggable();
     
 }
     

@@ -206,6 +206,7 @@ echo txtRecord('./@record/');
 <script src='https://design01.codeidea.io/link_script.js'></script>
 <script src="./dist/js/app.js"></script>
 <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
 <script src="./dist/js/swiper-bundle.min.js"></script>
 <script src="./dist/js/custom.js"></script>
 
