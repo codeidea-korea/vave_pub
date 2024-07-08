@@ -377,9 +377,28 @@
 /* ----------------------------------------------
             CHATTING
 ---------------------------------------------- */
-.chat_box {z-index:100; position:fixed; right:16px; bottom:16px; }
+.chat_box {z-index:100; position:fixed; right:16px; bottom:16px; cursor:pointer; }
 .chat_box .chat_btn {overflow:hidden; width:300px; height:60px; background-color:#22474F; }
 .chat_box .chat_btn > div {height:100%; }
 .chat_box .chat_btn i {display:block; height:100%; padding:15px; background: linear-gradient(135deg, #01DCBA 0%, #7F30CB 100%);}
 
+.chat_box > div:not(.chat_btn) {width:375px; height:520px; background-color:rgba(16,23,29,1); }
+.chat_box.size_lg {width:50%; height:85%;}
+.chat_box.size_lg > div:not(.chat_btn) {width:100%; height:100%; }
 
+.chat_box .chat_cont .input_form input {border:1px solid rgba(53, 68, 78, 0.20); }
+.chat_box .chat_cont .chat_1 {color:rgba(0, 178, 71, 1); }
+.chat_box .chat_cont .chat_2 {color:#ef5da8; }
+.chat_box .chat_cont .chat_3 {color:#ffed00; }
+.chat_box .chat_cont .chat_4 {color:#fff; }
+.chat_box .chat_cont .chat_5 {color:#eb4d3d; }
+.chat_box .chat_cont .chat_6 {color:#ff2d55; }
+.chat_box .chat_cont .chat_7 {color:#7b38a5; }
+.chat_box .chat_cont .chat_8 {color:#5d5fef; }
+.chat_box .chat_cont .chat_9 {color:#0d6eff; }
+
+.chat_box .user_box .open svg {transform:rotate(270deg); }
+
+@media all and (max-width:767px){
+    .chat_box {display:none; }
+}

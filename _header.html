@@ -37,7 +37,7 @@
                 </button>
                 <div class="dropdown-menu !w-[300px]">
                     <div class="dropdown-content mont">
-                        <div class="relative mo_tit p-6 text-center text-xl font-medium">
+                        <div class="relative mo_tit p-6 text-center text-lg font-medium">
                             암호 화폐 계정
                             <button class="absolute right-3 top-3" onclick="dropdownClose(this)"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
                         </div>
@@ -316,12 +316,624 @@
 
 
 <!-- 채팅 -->
-<div class="chat_box ui-widget-content">
-    <button class="chat_btn flex justify-between rounded-lg">
+<div class="chat_box">
+    <div class="chat_btn flex justify-between rounded-lg" onclick="chatOpen(this,'.chat_info')">
         <div class="flex items-center flex-1 px-3">
             <img class="w-9 mr-2" src="./dist/images/icon/chat_profile.png" alt="">
             <p class="text-left">usera674c8s<br/>??</p>
         </div>
         <i><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg?0705#svg-watchers-chat"></use></svg></i>
-    </button>
+    </div>
+
+    <!-- 채팅 규칙 -->
+    <div class="chat_info flex flex-col hidden p-4 rounded-2xl">
+        <div class="relative text-center">
+            <div class="absolute left-0 top-0 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_info'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">채팅 규칙</b>
+        </div>
+        <div class="flex-1 text-base pt-5">
+            <div class="flex items-start gap-3 mb-5">
+                <b class="flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded-full shrink-0 text-lg">1</b>
+                <div>
+                    <b>예의 바르게 행동하기</b>
+                    <p class="text-white text-opacity-40">채팅에서 적대적이거나 음란한 언어는 금지되어 있습니다.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 mb-5">
+                <b class="flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded-full shrink-0 text-lg">2</b>
+                <div>
+                    <b>조심하세요</b>
+                    <p class="text-white text-opacity-40">개인 정보를 공유하거나 다른 사람에게 개인 정보를 묻지 마세요.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3">
+                <b class="flex items-center justify-center w-9 h-9 bg-white bg-opacity-10 rounded-full shrink-0 text-lg">3</b>
+                <div>
+                    <b>광고하지 마십시오</b>
+                    <p class="text-white text-opacity-40">의견이나 감정을 공유하세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom"><button class="btn btn-primary w-full h-12 text-base" onclick="chatOpen($(this).parents('.chat_info'),'.chat_cont')">수락하고 계속하기</button></div>
+    </div>
+
+    <!-- 채팅 -->
+    <div class="chat_cont flex flex-col hidden rounded-2xl">
+        <div class="flex items-center justify-between px-4 py-2 border-b border-white border-opacity-30">
+            <div class="flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_cont'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="flex items-center justify-center w-7 h-7 rounded-full bg-table border border-table"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?07082#lang"></use></svg></button>
+                <button class="flex items-center justify-center gap-1 h-7 px-2 rounded-2xl bg-table border border-table text-light" onclick="chatOpen($(this).parents('.chat_cont'),'.user_box')">
+                    <svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?07082#peoples"></use></svg>
+                    16
+                </button>
+                <button class="flex items-center justify-center w-7 h-7 rounded-full bg-table border border-table" onclick="chatOpen($(this).parents('.chat_cont'),'.chat_setting')"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?07082#setting"></use></svg></button>
+            </div>
+        </div>
+        <div class="overflow-y-auto flex-1 p-1 pr-5 scrollbar">
+            <!-- 채팅 리스트 -->
+            <div class="text-center mb-2 pl-5"><span class="px-2 py-0.5 bg-table text-light fs10 rounded-lg">오늘</span></div>
+
+            <div class="flex items-end gap-2 mb-2">
+                <div class="w-9 h-9 shrink-0 rounded-full"><img src="./dist/images/icon/chat_profile.png" alt=""></div>
+                <div class="p-2 bg-table rounded-lg">
+                    <b class="fs13 chat_1 font-semibold">user42d74bs</b>
+                    <p class="fs15">Waarom doet mijn uitbetalng zo lang staat pending</p>
+                    <div class="text-right"><span class="text-light fs10">09:14</span></div>
+                </div>
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+                <div class="w-9 h-9 shrink-0 rounded-full"><img src="./dist/images/icon/chat_profile_2.png" alt=""></div>
+                <div class="p-2 bg-table rounded-lg">
+                    <b class="fs13 chat_4 font-semibold">userfbc8c8s</b>
+                    <p class="fs15">How to use bonuses?</p>
+                    <div class="text-right"><span class="text-light fs10">10:35</span></div>
+                </div>
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+                <div class="w-9 h-9 shrink-0 rounded-full"></div>
+                <div class="p-2 bg-table rounded-lg">
+                    <b class="fs13 chat_8 font-semibold">userec3372s</b>
+                    <p class="fs15">Hi</p>
+                    <div class="text-right"><span class="text-light fs10">11:08</span></div>
+                </div>
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+                <div class="w-9 h-9 shrink-0 rounded-full"><img src="./dist/images/icon/chat_profile_4.png" alt=""></div>
+                <div class="p-2 bg-table rounded-lg">
+                    <p class="fs15">আছা ভাই এখানে ডিপু কত টাকা</p>
+                    <div class="text-right"><span class="text-light fs10">11:08</span></div>
+                </div>
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+                <div class="w-9 h-9 shrink-0 rounded-full"></div>
+                <div class="p-2 bg-table rounded-lg">
+                    <b class="fs13 chat_8 font-semibold">user11adeas</b>
+                    <p class="fs15">Hi i am new here can anyone tell me how much time it take to withdraw the money?</p>
+                    <div class="text-right"><span class="text-light fs10">11:11</span></div>
+                </div>
+            </div>
+            <div class="flex items-end gap-2 mb-2">
+                <div class="w-9 h-9 shrink-0 rounded-full"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="p-2 bg-table rounded-lg">
+                    <p class="fs15">For crypto</p>
+                    <div class="text-right"><span class="text-light fs10">11:11</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom border-t border-white border-opacity-10">
+            <div class="input_form flex items-center gap-4 px-4 py-2">
+                <div class="relative flex-1">
+                    <input type="text" class="form-control !bg-table !rounded-3xl" placeholder="메시지...">
+                    <button class="absolute right-2 top-2"><svg viewBox="0 0 17 18" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?070822#sticker"></use></svg></button>
+                </div>
+                <button class="w-9 h-9 flex-shrink-0 bg-sub rounded-full"><img src="./dist/images/icon/thumbs_up_static.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 채팅 유저목록 -->
+    <div class="user_box flex flex-col hidden rounded-2xl">
+        <div class="relative text-center p-4">
+            <div class="absolute left-4 top-4 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.user_box'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">참가자</b>
+            <div class="absolute right-4 top-4">
+                <button onclick="chatOpen($(this).parents('.user_box'),'.chat_cont')" class="cursor-pointer text-light"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>
+        </div>
+        <div class="flex-1 overflow-y-auto overflow-x-hidden scrollbar p-4">
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_14.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">user81e004s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_3.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userc6c619s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_5.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userb1c234s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">user2dfa3fs</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userf4775fs</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_14.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">user81e004s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_3.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userc6c619s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_5.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userb1c234s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">user2dfa3fs</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userf4775fs</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_14.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">user81e004s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_3.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userc6c619s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_5.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userb1c234s</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">user2dfa3fs</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-9 h-9 mt-1.5 shrink-0"><img src="./dist/images/icon/chat_profile_7.png" alt=""></div>
+                <div class="flex-1">
+                    <div class="flex-1 flex items-center justify-between h-12 border-b border-white border-opacity-30" onclick="chatUser(this)">
+                        <p class="font-bold fs15">userf4775fs</p>
+                        <button><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light rotate-90 transition-all"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                    </div>
+                    <div class="hidden py-2 border-b border-white border-opacity-30">
+                        <button class="flex items-center justify-between w-full">
+                            <div class="text-light text-left text-xs">
+                                <span class="block text-white">차단</span>
+                                사용자의 모든 메시지 숨기기
+                            </div>
+                            <svg viewBox="0 0 24 24" class="svg-icon w-9 h-9 text-light "><use href="./dist/images/icon-defs.svg?070807#user-controls"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 채팅 설정 -->
+    <div class="chat_setting flex flex-col hidden rounded-2xl">
+        <div class="relative text-center p-4">
+            <div class="absolute left-4 top-4 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_setting'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">설정</b>
+            <div class="absolute right-4 top-4">
+                <button onclick="chatOpen($(this).parents('.chat_setting'),'.chat_cont')" class="cursor-pointer text-light"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>
+        </div>
+        <div class="flex-1 px-4">
+            <p class="pl-4 fs15 mb-2 font-bold">개인 설정</p>
+            <div class="rounded-2xl bg-white bg-opacity-10">
+                <button class="flex items-center justify-between w-full border-b border-white border-opacity-30 py-3 px-4 fs15 font-medium" onclick="chatOpen($(this).parents('.chat_setting'),'.chat_setting_profile')">
+                    프로필
+                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                </button>
+                <button class="flex items-center justify-between w-full border-b border-white border-opacity-30 py-3 px-4 fs15 font-medium" onclick="chatOpen($(this).parents('.chat_setting'),'.chat_setting_interface')">
+                    언어 및 인터페이스
+                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                </button>
+                <button class="flex items-center justify-between w-full py-3 px-4 fs15 font-medium">
+                    차단됨
+                    <span class="flex items-center gap-1 fs13 text-light">
+                        1
+                        <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="text-center p-4">
+            <div class="mb-3"><button class="text-white text-opacity-60 fs13">채팅 규칙</button></div>
+            <div><button class="text-white text-opacity-60 fs13">프로필 삭제</button></div>
+        </div>
+    </div>
+
+    <!-- 채팅 설정 > 프로필 -->
+    <div class="chat_setting_profile flex flex-col hidden rounded-2xl">
+        <div class="relative text-center p-4">
+            <div class="absolute left-4 top-4 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_setting_profile'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">프로필</b>
+            <div class="absolute right-4 top-4">
+                <button onclick="chatOpen($(this).parents('.chat_setting_profile'),'.chat_setting')" class="cursor-pointer text-light"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>
+        </div>
+        <div class="flex-1 px-4">
+            <div class="text-center">
+                <img class="w-16 mx-auto" src="./dist/images/icon/chat_profile_12.png" alt="">
+                <button class="text-primary fs13 mt-2" onclick="chatOpen($(this).parents('.chat_setting_profile'),'.chat_setting_profile_avatar')">다른 아바타 선택하기</button>
+            </div>
+            <div class="mt-4">
+                <p class="text-light fs15">채팅 이름</p>
+                <div class="relative mt-2">
+                    <input type="text" class="form-control h-12 !border !border-table !border-solid text-base" value="usere8x123s">
+                    <button class="absolute right-0 top-0 h-full px-3 text-primary text-base">변경</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 채팅 설정 > 프로필 > 아바타 -->
+    <div class="chat_setting_profile_avatar flex flex-col hidden rounded-2xl">
+        <div class="relative text-center p-4">
+            <div class="absolute left-4 top-4 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_setting_profile_avatar'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">아바타</b>
+            <div class="absolute right-4 top-4">
+                <button onclick="chatOpen($(this).parents('.chat_setting_profile_avatar'),'.chat_setting_profile')" class="cursor-pointer text-light"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>
+        </div>
+        <div class="flex-1 px-4">
+            <div class="grid grid-cols-6 gap-2.5"><img class="w-full" src="./dist/images/icon/chat_profile_12.png" alt=""></div>
+            <div class="mt-2">
+                <p class="fs15">다른 이름을 선택하세요:</p>
+                <div class="grid grid-cols-6 gap-2.5 mt-2">
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_1" name="profile_avatar">
+                        <label for="profile_1"><img class="w-full" src="./dist/images/icon/chat_profile.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_2" name="profile_avatar">
+                        <label for="profile_2"><img class="w-full" src="./dist/images/icon/chat_profile_2.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_3" name="profile_avatar">
+                        <label for="profile_3"><img class="w-full" src="./dist/images/icon/chat_profile_3.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_4" name="profile_avatar">
+                        <label for="profile_4"><img class="w-full" src="./dist/images/icon/chat_profile_4.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_5" name="profile_avatar">
+                        <label for="profile_5"><img class="w-full" src="./dist/images/icon/chat_profile_5.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_6" name="profile_avatar">
+                        <label for="profile_6"><img class="w-full" src="./dist/images/icon/chat_profile_6.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_7" name="profile_avatar">
+                        <label for="profile_7"><img class="w-full" src="./dist/images/icon/chat_profile_7.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_8" name="profile_avatar">
+                        <label for="profile_8"><img class="w-full" src="./dist/images/icon/chat_profile_8.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_9" name="profile_avatar">
+                        <label for="profile_9"><img class="w-full" src="./dist/images/icon/chat_profile_9.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_10" name="profile_avatar">
+                        <label for="profile_10"><img class="w-full" src="./dist/images/icon/chat_profile_10.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_11" name="profile_avatar">
+                        <label for="profile_11"><img class="w-full" src="./dist/images/icon/chat_profile_11.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_12" name="profile_avatar">
+                        <label for="profile_12"><img class="w-full" src="./dist/images/icon/chat_profile_12.png" alt=""></label>
+                    </div>
+                    <div>
+                        <input type="radio" class="custom_radio" id="profile_13" name="profile_avatar">
+                        <label for="profile_13"><img class="w-full" src="./dist/images/icon/chat_profile_13.png" alt=""></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-4">
+            <button class="btn btn-primary w-full h-12">저장</button>
+        </div>
+    </div>
+
+    <!-- 채팅 설정 > 언어 및 인터페이스 -->
+    <div class="chat_setting_interface flex flex-col hidden rounded-2xl">
+        <div class="relative text-center p-4">
+            <div class="absolute left-4 top-4 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_setting_interface'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">언어 및 인터페이스</b>
+            <div class="absolute right-4 top-4">
+                <button onclick="chatOpen($(this).parents('.chat_setting_interface'),'.chat_setting')" class="cursor-pointer text-light"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>
+        </div>
+        <div class="flex-1 px-4">
+            <div class="rounded-2xl bg-white bg-opacity-10">
+                <button class="flex items-center justify-between w-full border-b border-white border-opacity-30 py-3 px-4 fs15 font-medium">
+                    채팅 메시지 번역하기
+                    <div class="form-check form-switch"> 
+                        <input id="checkbox-switch-7" class="form-check-input sm" type="checkbox"> 
+                    </div>
+                </button>
+                <button class="flex items-center justify-between w-full py-3 px-4 fs15 font-medium" onclick="chatOpen($(this).parents('.chat_setting_interface'),'.chat_setting_interface_lang')">
+                    한국어
+                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 채팅 설정 > 메시지 번역 -->
+    <div class="chat_setting_interface_lang flex flex-col hidden rounded-2xl">
+        <div class="relative text-center p-4">
+            <div class="absolute left-4 top-4 flex items-center gap-1">
+                <button onclick="chatOpen($(this).parents('.chat_setting_interface_lang'),'.chat_btn')" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-watchers-close"></use></svg></button>
+                <button onclick="chatSize(this)" class="cursor-pointer"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0708#svg-full-size"></use></svg></button>
+            </div>
+            <b class="text-base font-semibold">메시지를 다음으로 번역</b>
+            <div class="absolute right-4 top-4">
+                <button onclick="chatOpen($(this).parents('.chat_setting_interface_lang'),'.chat_setting_interface')" class="cursor-pointer text-light"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>
+        </div>
+        <div class="overflow-y-auto flex-1 px-4 scrollbar">
+            <div class="rounded-2xl bg-white bg-opacity-10 p-2">
+                <div><input type="checkbox" id="lang_1" class="custom_check w-full"><label for="lang_1" class="px-2 py-3 border-b border-white border-opacity-30">갈리시아어</label></div>
+                <div><input type="checkbox" id="lang_2" class="custom_check w-full"><label for="lang_2" class="px-2 py-3 border-b border-white border-opacity-30">과라니어</label></div>
+                <div><input type="checkbox" id="lang_3" class="custom_check w-full"><label for="lang_3" class="px-2 py-3 border-b border-white border-opacity-30">구자라트어</label></div>
+                <div><input type="checkbox" id="lang_4" class="custom_check w-full"><label for="lang_4" class="px-2 py-3 border-b border-white border-opacity-30">그리스어</label></div>
+                <div><input type="checkbox" id="lang_5" class="custom_check w-full"><label for="lang_5" class="px-2 py-3 border-b border-white border-opacity-30">네덜란드어</label></div>
+                <div><input type="checkbox" id="lang_6" class="custom_check w-full"><label for="lang_6" class="px-2 py-3 border-b border-white border-opacity-30">네팔어</label></div>
+                <div><input type="checkbox" id="lang_7" class="custom_check w-full"><label for="lang_7" class="px-2 py-3 border-b border-white border-opacity-30">노르웨이어</label></div>
+                <div><input type="checkbox" id="lang_8" class="custom_check w-full"><label for="lang_8" class="px-2 py-3 border-b border-white border-opacity-30">덴마크어</label></div>
+                <div><input type="checkbox" id="lang_9" class="custom_check w-full"><label for="lang_9" class="px-2 py-3 border-b border-white border-opacity-30">도그리어</label></div>
+                <div><input type="checkbox" id="lang_10" class="custom_check w-full"><label for="lang_10" class="px-2 py-3 border-b border-white border-opacity-30">독일어</label></div>
+                <div><input type="checkbox" id="lang_11" class="custom_check w-full"><label for="lang_11" class="px-2 py-3 border-b border-white border-opacity-30">라틴어</label></div>
+                <div><input type="checkbox" id="lang_12" class="custom_check w-full"><label for="lang_12" class="px-2 py-3 border-b border-white border-opacity-30">러시아어</label></div>
+                <div><input type="checkbox" id="lang_13" class="custom_check w-full"><label for="lang_13" class="px-2 py-3 border-b border-white border-opacity-30">몽골어</label></div>
+                <div><input type="checkbox" id="lang_14" class="custom_check w-full"><label for="lang_14" class="px-2 py-3 border-b border-white border-opacity-30">영어</label></div>
+                <div><input type="checkbox" id="lang_15" class="custom_check w-full"><label for="lang_15" class="px-2 py-3 border-b border-white border-opacity-30">일본어</label></div>
+                <div><input type="checkbox" id="lang_16" class="custom_check w-full"><label for="lang_16" class="px-2 py-3 border-b border-white border-opacity-30">한국어</label></div>
+                
+            </div>
+        </div>
+        <div class="p-4 pt-0">
+            <button class="btn btn-primary w-full h-12">저장</button>
+        </div>
+    </div>
+
+
+
+    <!-- 채팅 설정 > 차단됨 -->
 </div>

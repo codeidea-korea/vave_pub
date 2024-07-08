@@ -310,11 +310,24 @@ const walletChange = (item)=>{
     }
 }
 
-// 클릭시 스와이퍼 이동
-const swiperClick = (item)=>{
-    swiper.slideTo(3)
+// 클릭시 다른 div open 
+const chatOpen = (e,item)=>{
+    $(e).addClass('hidden').siblings(item).removeClass('hidden')
+    if(item == ".chat_btn"){
+        $(e).parents('.chat_box').removeClass('size_lg')
+    }
 }
 
+// 채팅 사이즈 변경
+const chatSize = (item)=>{
+    $(item).parents('.chat_box').toggleClass('size_lg')
+}
+
+// 채팅 참가자 open 
+const chatUser = (item)=>{
+    $(item).next().toggleClass('hidden')
+    $(item).toggleClass('open')
+}
 
 
 // jquery 모음

@@ -18,6 +18,9 @@
 body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
 .roboto {font-family:Roboto; }
 .mont {font-family: "Montserrat", sans-serif;}
+.fs10 {font-size:10px; }
+.fs13 {font-size:13px; }
+.fs15 {font-size:15px; }
 
 /* svg 공통 */
 .svg-icon {fill:currentColor !important; }
@@ -40,10 +43,14 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-box {background:var(--box-color);}
 .bg-box2 {background:var(--box-color-2);}
 .bg-table {background:var(--table-color);}
+.\!bg-table {background:var(--table-color) !important;}
 
 .bg-gold {background:var(--gold-color); }
 .bg-silver {background:var(--silver-color); }
 .bg-bronze {background:var(--bronze-color); }
+
+.border-table {border-color:var(--table-color); }
+.\!border-table {border-color:var(--table-color) !important; }
 
 @media (min-width:1280px){
     .xl\:bg-sub {background-color:var(--sub-color);}
@@ -589,7 +596,15 @@ footer .footer_currency .img_list img {height:30px; }
 .form-switch .form-check-input:before {width:27px; height:27px; }
 .form-switch .form-check-input:checked::before {margin-left:29px; }
 
+.form-switch .form-check-input[type="checkbox"].sm {width:46px; height:28px; }
+.form-switch .form-check-input[type="checkbox"].sm:before {width:24px; height:24px; }
+.form-switch .form-check-input.sm:checked::before {margin-left:18px; }
+
 .form-check-input[type="checkbox"] {width:20px; height:20px; border:2px solid #94aeb4; background-color:transparent; }
+
+.custom_check[type="checkbox"] {display:none; }
+.custom_check[type="checkbox"] + label {position:relative; display:block; width:100%; font-size:15px; }
+.custom_check[type="checkbox"]:checked + label:before {content:''; position:absolute; right:12px; top:12px; width:18px; height:18px; background:url('../images/icon/check.svg') no-repeat center center; }
 
 .form-check-input[type="radio"] {position:relative; width:24px; height:24px; border:2px solid #94aeb4; background-color:transparent; }
 .form-check-input[type="radio"]:before {content:''; position:absolute; left:3px; top:3px; width:14px; height:14px; background-color:transparent; border-radius:50%; }
@@ -598,6 +613,12 @@ footer .footer_currency .img_list img {height:30px; }
 
 .form-check-input[type="radio"]:disabled:not(:checked) {background-color:transparent; opacity:.5;}
 .form-check-input[type="radio"]:disabled:not(:checked) + label {opacity:.5; }
+
+.custom_radio[type="radio"] {display:none; }
+.custom_radio[type="radio"] + label {position:relative; cursor:pointer; }
+.custom_radio[type="radio"] + label:before {content:''; position:absolute; right:0; bottom:0; width:14px; height:14px; border-radius:50%; }
+.custom_radio[type="radio"]:checked + label:before {background:rgb(var(--color-primary)) url('../images/icon/radio_check.svg') no-repeat center center / 20px 20px;}
+
 /* ----------------------------------------------
             HOVER_CUSTOM
 ---------------------------------------------- */
