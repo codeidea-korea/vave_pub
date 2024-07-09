@@ -64,7 +64,9 @@ window.addEventListener("load", ()=>{
     .then((response) => response.text())
     .then((htmlData) => {
         $('#wrap').append(htmlData);
-        loadJquery();
+        setTimeout(()=>{
+            loadJquery();
+        },100)
     })
     .catch((error) => {
         console.log(error);
@@ -129,6 +131,44 @@ const headerScript = ()=>{
     });
 
     $('.chat_box').draggable();
+
+     // 채팅
+     $('.chat_cont .sticker_btn').each(function(){
+        $(this).on('click',function(){
+            let href = $('.chat_cont .sticker_btn.type02').find('use').attr('href').split('#')
+            if($('.chat_cont .sticker_box').hasClass('open')){
+                $('.chat_cont .sticker_box').removeClass('open')
+                $('.chat_cont .sticker_btn.type02').find('use').attr('href',`${href[0]}#sticker`)
+            }else{
+                $('.chat_cont .sticker_box').addClass('open')
+                $('.chat_cont .sticker_btn.type02').find('use').attr('href',`${href[0]}#keyboard`)
+            }
+        })
+    })
+    $('.emoji_nav button').on('click',function(){
+        let target = $(this).data('target');
+        let emoji_top = $(`.emoji_wrap #${target}`).offset().top - $('.emoji_wrap').offset().top + $('.emoji_wrap').scrollTop();
+        
+        $('.emoji_wrap').scrollTop(emoji_top + 1)
+    });
+    $('.emoji_wrap').on('scroll',function(e){
+        console.log(e.target.scrollTop)
+        let scT = e.target.scrollTop 
+        $('.emoji_wrap > div').each(function(){
+            let emoji_top = $(this).offset().top - $('.emoji_wrap').offset().top + $('.emoji_wrap').scrollTop();
+            if(scT > emoji_top){
+                $(`.emoji_nav button[data-target=${$(this).attr("id")}]`).addClass('active').siblings().removeClass('active')
+            }
+            console.log(scT , emoji_top, $(this).attr("id"))
+        })
+    });
+    $('.chat_cont .emotion_btn').on('click',function(){
+        $('.chat_cont .emotions_anim').addClass('open',function(){
+            setTimeout(function(){
+                $('.chat_cont .emotions_anim').removeClass('open')
+            },5000)
+        })
+    })
     
 }
     
@@ -329,6 +369,13 @@ const chatUser = (item)=>{
     $(item).toggleClass('open')
 }
 
+const moChatOpen = ()=>{
+    $('.chat_box').toggleClass('open')
+    $('.chat_box > div').each(function(){
+        $(this).addClass('hidden')
+    });
+    $('.chat_box .chat_info').removeClass('hidden')
+}
 
 // jquery 모음
 const loadJquery = ()=>{
@@ -433,7 +480,6 @@ const loadJquery = ()=>{
         }else{
             $(this).find('use').attr('href',`${href_origin}#category-my-favorites-inactive`)
         }
-
     })
 
 };

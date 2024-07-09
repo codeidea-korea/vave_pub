@@ -105,6 +105,17 @@ echo txtRecord('./@record/');
 				<li>
 					<button class="pop-modal" onclick="modalOpen('spin-modal');">행운의 휠(SPIN) 모달</button>
 				</li>
+				<li class="mt20">
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_info')">채팅규칙</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_cont')">채팅</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.user_box')">채팅 참가자</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_setting')">채팅 설정</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_setting_profile')">채팅 설정 > 프로필</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_setting_profile_avatar')">채팅 설정 > 프로필 > 아바타 </button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_setting_interface')">채팅 설정 > 언어 및 인터페이스</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_setting_interface_lang')">채팅 설정 > 메시지 번역</button>
+					<button class="pop-modal" onclick="chatOpen($('.chat_box > div:not(.hidden)'),'.chat_blocked')">채팅 설정 > 차단됨</button>
+				</li>
 			</ul>
 		</li>
 

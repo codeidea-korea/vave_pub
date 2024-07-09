@@ -397,8 +397,37 @@
 .chat_box .chat_cont .chat_8 {color:#5d5fef; }
 .chat_box .chat_cont .chat_9 {color:#0d6eff; }
 
+.chat_box .chat_cont {position:relative; }
+.chat_box .chat_cont .emotions_anim {z-index:100; position:absolute; right:0; bottom:0; display:none; width:100%; height:calc(100% - 45px); }
+.chat_box .chat_cont .emotions_anim .emotions_item {width: 34px; height: 34px; position: absolute; bottom: 0; right: 50px; background-repeat: no-repeat; background-position: center; background-size: 100%; transform-origin: bottom right; animation-duration: 5s; animation-timing-function: linear; animation-fill-mode: forwards; background-image:url('../images/icon/thumbs_up_static.png'); }
+.chat_box .chat_cont .emotions_anim.open {display:block; }
+.chat_box .chat_cont .emotions_anim.open .emotions_item {animation-name:animFirst; }
+
+@keyframes animFirst {
+    0% {bottom:0; opacity:0; transform:translateX(0) scale(.5); }
+    21% {opacity:.35; transform:translateX(20px) scale(.5); }
+    31% {opacity:.7; transform:translateX(-6px) scale(.55); }
+    38% {opacity:1; transform:translateX(-20px) scale(.55); }
+    48% {opacity:1; transform:translateX(-20px) scale(.65); }
+    62% {opacity:1; transform:translateX(20px) scale(1); }
+    82% {opacity:.7; transform:translateX(-14px) scale(.75); }
+    89% {opacity:.35; transform:translateX(20px) scale(.5); }
+    100% {bottom:100%; opacity:0; transform:translateX(-20px) scale(.5); }
+}
+
 .chat_box .user_box .open svg {transform:rotate(270deg); }
 
-@media all and (max-width:767px){
-    .chat_box {display:none; }
+.chat_box .sticker_box {display:none; }
+.chat_box .sticker_box.open {display:block; }
+.chat_box .sticker_box .tab-pane {height:214px; }
+.chat_box .emoji_box > div:first-of-type {height:172px; }
+.chat_box .emoji_box button {line-height:1.2; }
+.chat_box .emoji_box .emoji_nav {height:42px; }
+.chat_box .emoji_box .emoji_nav button {border-bottom:2px solid transparent; color:rgba(255, 255, 255, 0.65); }
+.chat_box .emoji_box .emoji_nav button.active {border-bottom:2px solid var(--primary-color); color:var(--primary-color); }
+
+@media all and (max-width:1279px){
+    .chat_box {display:none; right:0 !important; left:0 !important; top:auto !important; bottom:50px; width:100%; }
+    .chat_box.open {display:block; }
+    .chat_box > div:not(.chat_btn) {width:100%; }
 }

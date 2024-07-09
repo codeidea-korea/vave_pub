@@ -26,6 +26,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .svg-icon {fill:currentColor !important; }
 /* 스크롤바 커스텀 */
 .scrollbar {scrollbar-color: rgba(43,198,157,.5) rgba(0,0,0,0); scrollbar-width: thin; }
+.noscrollbar::-webkit-scrollbar {display:none; }
 
 /* 색상 */
 .text-sub {color:var(--sub-color); }
@@ -159,6 +160,9 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .table.thead-px-sm thead th{padding-right:10px; padding-left:10px; }
 .table.tbody-px-sm tbody td{padding-right:10px; padding-left:10px; }
 
+
+.nav.nav-link-tabs .nav-item .nav-link.active {color:rgb(var(--color-primary)); }
+.nav.nav-link-tabs .nav-item .nav-link.active svg {}
 
 @media all and (max-width:1279px){
     .table.mo_hide {display:none; }
