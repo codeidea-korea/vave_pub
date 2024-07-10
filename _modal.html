@@ -1495,3 +1495,33 @@
         </div>
     </div>
 </div>
+
+<!-- 스포츠 검색 모달 -->
+<div id="sports_search-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-top modal-xl">
+        <div class="modal-content modal-transparent">
+            <div class="modal-body">
+                <button class="close_btn inner" onclick="closeModal('sports_search-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="modal_search mt-5">
+                    <div class="relative bg-modal2 h-10 rounded-lg">
+                        <button class="absolute left-0 h-full flex items-center px-3"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg#search"></use></svg></button>
+                        <input type="text" class="form-control h-full pl-10" placeholder="검색">
+                    </div>
+                </div>
+                <div class="overflow-y-auto scrollbar modal_search_result mt-3 rounded-lg">
+                    <!-- 검색결과 -->
+                    검색결과 작업진행중
+
+                    <!-- 처음 보여지는 화면 -->
+                    <div class="bg-block p-8 text-light">Enter name of competitor, league, tournament or sport<br/>Required length from 3 to 50 symbols<br/>Search works both in your interface language and in English</div>
+                    <!-- 데이터 없을떄 -->
+                    <div class="bg-block p-8 text-light"><img class="mx-auto" src="./dist/images/icon/new-search-no-results.webp" alt=""><p class="mt-2 text-center text-white">No results</p></div>
+                    <!-- 로딩시 -->
+                    <div class="bg-block p-8">
+                        <img class="w-32 max-w-full mx-auto" src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

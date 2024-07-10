@@ -66,7 +66,7 @@ window.addEventListener("load", ()=>{
         $('#wrap').append(htmlData);
         setTimeout(()=>{
             loadJquery();
-        },100)
+        },1000)
     })
     .catch((error) => {
         console.log(error);
@@ -110,6 +110,18 @@ const sideMenu = ()=>{
 
 // 헤더 스크립트
 const headerScript = ()=>{
+
+    // 헤더 ...
+    $('header .gnb .gnb_dot').on('click',function(){
+        $(this).next('.gnb_list').toggleClass('open')
+    })
+    document.addEventListener('click',(e)=>{
+        const select = document.querySelector('.more_gnb')
+
+        if(select && !select.contains(e.target)){
+            select.querySelector('.gnb_list').classList.remove('open')
+        }
+    })
 
     // 모바일 하단 - 퀵메뉴
     $(".quick_menu ul li.type02 > div > a").on('click',function(){

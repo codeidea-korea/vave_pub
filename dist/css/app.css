@@ -1913,6 +1913,9 @@ select{
 .bottom-full{
     bottom: 100%;
 }
+.left-2{
+    left: 0.5rem;
+}
 .z-10{
     z-index: 10;
 }
@@ -2279,6 +2282,12 @@ select{
 .w-\[72px\]{
     width: 72px;
 }
+.w-40{
+    width: 10rem;
+}
+.w-32{
+    width: 8rem;
+}
 .max-w-\[305px\]{
     max-width: 305px;
 }
@@ -2293,6 +2302,9 @@ select{
 }
 .shrink-0{
     flex-shrink: 0;
+}
+.flex-grow{
+    flex-grow: 1;
 }
 .rotate-180{
     --tw-rotate: 180deg;
@@ -2416,6 +2428,11 @@ select{
 }
 .overflow-y-hidden{
     overflow-y: hidden;
+}
+.truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .whitespace-nowrap{
     white-space: nowrap;
@@ -2653,6 +2670,9 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
+.\!bg-transparent{
+    background-color: transparent !important;
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -2871,6 +2891,12 @@ select{
 }
 .pb-2{
     padding-bottom: 0.5rem;
+}
+.pl-10{
+    padding-left: 2.5rem;
+}
+.pr-2{
+    padding-right: 0.5rem;
 }
 .\!text-left{
     text-align: left !important;
@@ -12338,8 +12364,14 @@ html body{
     .xl\:w-auto{
         width: auto;
     }
+    .xl\:\!w-auto{
+        width: auto !important;
+    }
     .xl\:flex-1{
         flex: 1 1 0%;
+    }
+    .xl\:flex-grow-0{
+        flex-grow: 0;
     }
     .xl\:grid-cols-2{
         grid-template-columns: repeat(2, minmax(0, 1fr));

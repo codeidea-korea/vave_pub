@@ -6,6 +6,7 @@
     --sub-color:#22474f;
     --light-color:#94aeb4; 
     --modal-color:#1F2931;
+    --modal2-color:#10171D; 
     --box-color:rgba(16,23,29,0.5);
     --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
@@ -27,6 +28,8 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 /* 스크롤바 커스텀 */
 .scrollbar {scrollbar-color: rgba(43,198,157,.5) rgba(0,0,0,0); scrollbar-width: thin; }
 .noscrollbar::-webkit-scrollbar {display:none; }
+.scrollbar_hover {scrollbar-color: transparent transparent; scrollbar-width: thin; }
+.scrollbar_hover:hover {scrollbar-color: rgba(43,198,157,1) rgba(0,0,0,0);}
 
 /* 색상 */
 .text-sub {color:var(--sub-color); }
@@ -40,6 +43,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-block {background-color:var(--block-color); }
 .bg-sub {background-color:var(--sub-color); }
 .bg-modal {background-color:var(--modal-color); }
+.bg-modal2 {background-color:var(--modal2-color); }
 .\!bg-sub {background-color:var(--sub-color) !important; }
 .bg-box {background:var(--box-color);}
 .bg-box2 {background:var(--box-color-2);}
@@ -111,10 +115,12 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 /* ----------------------------------------------
             CONTENT
 ---------------------------------------------- */
+.sports .content {padding:10px; }
 .content {padding:30px 35px 35px; }
 .box {padding:32px; border-radius:16px; background:rgba(16,23,29,.3); }
 
 @media all and (max-width:1279px){
+    .sports .content {padding:10px; }
     .content {padding:15px 15px 0 15px; }
     .box {padding:0; padding-bottom:30px; border-radius:0; background:transparent; }
 }
@@ -179,10 +185,14 @@ header .left_box {display:flex; align-items:center; gap:30px; }
 header h1.logo:first-of-type {padding-right:15px; }
 header h1.logo a {display:flex; align-items:center; gap:6px; }
 header ul.gnb {display:flex; align-items:center; gap:10px;  }
+header ul.gnb li {position:relative; }
 header ul.gnb li a {padding:10px 20px; color:#fff; font-weight:500; white-space:nowrap; }
 header ul.gnb li a.gnb_dot {display:none; font-size:8px; }
-header ul.gnb .gnb_list {display:none; }
-header ul.gnb .gnb_list li {display:none; }
+header ul.gnb .gnb_list {display:none; position:absolute; left:0; top:100%; min-width:200px; padding:10px 0; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); border-radius:8px; }
+header ul.gnb .gnb_list li {padding:10px 25px; }
+header ul.gnb .gnb_list li a {padding:0; }
+/* header ul.gnb .gnb_list li {display:none; } */
+header ul.gnb .gnb_list.open {display:block; }
 
 header .right_box {display:flex; align-items:center; gap:20px; }
 header .right_box .ham_btn {display:none; }
@@ -327,20 +337,23 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .referrals .side-nav .referrals .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 
 /* body 에 클래스 bettors 붙었을때 */
-header .gnb .bettors a,
+.bettors header .gnb .bettors a,
 .bettors .side-nav .bettors .side-menu__title,
 .bettors .side-nav .bettors .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 
 /* body 에 클래스 fame 붙었을때 */
-header .gnb .fame a,
+.fame header .gnb .fame a,
 .fame .side-nav .fame .side-menu__title,
 .fame .side-nav .fame .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 
 /* body 에 클래스 promotion 붙었을때 */
-header .gnb .promotion a,
+.promotion header .gnb .promotion a,
 .promotion .side-nav .promotion .side-menu__title,
 .promotion .side-nav .promotion .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 .promotion .side-nav .promotion .side-menu__title span {color:#fff; }
+
+.sports header .gnb .sports a {color:rgb(var(--color-primary)); font-weight:600; }
+.sports .side-nav {display:none; }
 
 .mo_menu_bg {display:none; }
 
@@ -384,6 +397,29 @@ header .gnb .promotion a,
     100% {transform:rotate(1turn); }
 }
 
+.sports .side_menu {padding-left:5px; }
+.side_menu .sports_nav {display:none; }
+.sports .side_menu .sports_nav {z-index:90; position:sticky; top:90px; left:0; display:flex; }
+.side_menu .sports_nav .category { width:65px; height:calc(100vh - 105px); padding:0 5px 15px; }
+.side_menu .sports_nav .category a {display:block; padding:6px 4px; text-align:center; border-radius:6px; }
+.side_menu .sports_nav .category a + a {margin-top:4px; }
+.side_menu .sports_nav .category a svg {max-width:20px; margin:0 auto 6px;}
+.side_menu .sports_nav .category a img {max-width:20px; margin:0 auto 6px; filter:grayscale(100%); }
+.side_menu .sports_nav .category a span {display:block; font-size:9px; color:#fff; line-height:1.2; }
+.side_menu .sports_nav .category a:hover img,
+.side_menu .sports_nav .category a.active img {filter:grayscale(0); }
+.side_menu .sports_nav .category a:hover svg,
+.side_menu .sports_nav .category a.active svg {color:rgb(var(--color-primary)); }
+.side_menu .sports_nav .category a.active {background-color: rgba(16, 23, 29, 0.5); box-shadow:0 0 20px rgba(0, 0, 0, 0.1); }
+
+.side_menu .sports_nav .sport_tab {width:calc(17vw - 15px); height:calc(100vh - 105px); padding:0 5px 15px;  }
+.side_menu .sports_nav .sports_filter_top input[type="checkbox"] {display:none} 
+.side_menu .sports_nav .sports_filter_top input[type="checkbox"] + span {display:block; width:16px; height:16px; border:2px solid #94AEB4; }
+
+
+@media all and (max-width:1279px){
+    .sports .side_menu .sports_nav {display:none; }
+}
 
 /* ----------------------------------------------
             MAIN-LOADER
@@ -494,7 +530,9 @@ footer .footer_currency .img_list img {height:30px; }
 ---------------------------------------------- */
 .modal {overflow:hidden; overflow-y:auto; overflow-x:hidden; background-color:rgba(0,0,0,.3); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); scrollbar-color: rgba(43,198,157,.5) rgba(0,0,0,0); scrollbar-width: thin; }
 .modal .modal-dialog {display:flex; align-items:center; min-height:100%; padding:30px 0; margin-top:0 !important; margin-bottom:0 !important; }
+.modal .modal-dialog.modal-top {align-items:flex-start; }
 .modal .modal-dialog .modal-content {background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); box-shadow:0 0 200px #2bc69d; border-radius:8px; }
+.modal .modal-dialog .modal-content.modal-transparent {background:transparent; box-shadow:none; }
 .modal .modal-dialog.confirm_modal .modal-content {border:1px solid var(--primary-color); }
 .modal .modal-header {border:0 none; }
 .modal .modal-header .close_btn {position:absolute; right:10px; top:10px; }
@@ -604,6 +642,10 @@ footer .footer_currency .img_list img {height:30px; }
 .form-switch .form-check-input[type="checkbox"].sm:before {width:24px; height:24px; }
 .form-switch .form-check-input.sm:checked::before {margin-left:18px; }
 
+.form-switch .form-check-input[type="checkbox"].xs {width:25px; height:18px; }
+.form-switch .form-check-input[type="checkbox"].xs:before {width:14px; height:14px; }
+.form-switch .form-check-input.xs:checked::before {margin-left:8px; }
+
 .form-check-input[type="checkbox"] {width:20px; height:20px; border:2px solid #94aeb4; background-color:transparent; }
 
 .custom_check[type="checkbox"] {display:none; }
@@ -646,13 +688,13 @@ footer .footer_currency .img_list img {height:30px; }
             CUSTOM_SELECT
 ---------------------------------------------- */
 .custom_select {z-index:5; position:relative; }
-.custom_select > button {display:flex; align-items:center; justify-content:space-between; width:100%; height:48px; padding:5px 16px; background:#1c252d; border-radius:8px; }
+.custom_select > button:not(.nostyle) {display:flex; align-items:center; justify-content:space-between; width:100%; height:48px; padding:5px 16px; background:#1c252d; border-radius:8px; }
 .custom_select > button .arrow {position:absolute; right:16px; top:50%; font-size:20px; color:var(--light-color); transform:translateY(-50%) rotate(90deg); }
-.custom_select > div {position:absolute; left:0; top:calc(100% + 10px); overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; padding:10px 0; background:#10171d; box-shadow:0 4px 100px rgba(43,198,157,.2); border-radius:8px; }
+.custom_select > div:not(.nodiv) {position:absolute; left:0; top:calc(100% + 10px); overflow-y:auto; overflow-x:hidden; display:none; width:100%; max-height:320px; padding:10px 0; background:#10171d; box-shadow:0 4px 100px rgba(43,198,157,.2); border-radius:8px; }
 .custom_select ul li {display:flex; align-items:center; justify-content:space-between; padding:13px 12px; min-height:44px; color:var(--light-color); font-weight:700; }
 .custom_select ul li:hover {background:rgba(53,68,78,.2); color:#fff; cursor:pointer; }
 .custom_select.open > button .arrow {transform:translateY(-50%) rotate(-90deg); }
-.custom_select.open > div {display:block; }
+.custom_select.open > div:not(.nodiv) {display:block; }
 
 
 /* ----------------------------------------------

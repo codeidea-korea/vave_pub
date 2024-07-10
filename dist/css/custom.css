@@ -429,5 +429,17 @@
 @media all and (max-width:1279px){
     .chat_box {display:none; right:0 !important; left:0 !important; top:auto !important; bottom:50px; width:100%; }
     .chat_box.open {display:block; }
-    .chat_box > div:not(.chat_btn) {width:100%; }
+    .chat_box > div:not(.chat_btn) {width:100%; border-bottom-left-radius:0; border-bottom-right-radius:0; }
 }
+
+
+/* ----------------------------------------------
+            스포츠 검색 모달
+---------------------------------------------- */
+.modal_search {}
+.modal_search_result {box-shadow:0px 0px 1000px 0px #2BC69D; }
+
+
+
+
+
