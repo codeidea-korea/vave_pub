@@ -7,6 +7,7 @@
     --light-color:#94aeb4; 
     --modal-color:#1F2931;
     --modal2-color:#10171D; 
+    --sports-color:#151E24;
     --box-color:rgba(16,23,29,0.5);
     --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
@@ -40,15 +41,18 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .text-silver {background:var(--silver-color); -webkit-background-clip: text; -webkit-text-fill-color: rgba(0, 0, 0, 0);}
 .text-bronze {background:var(--bronze-color); -webkit-background-clip: text; -webkit-text-fill-color: rgba(0, 0, 0, 0);}
 
+.bg-light {background-color:var(--light-color);}
 .bg-block {background-color:var(--block-color); }
 .bg-sub {background-color:var(--sub-color); }
 .bg-modal {background-color:var(--modal-color); }
 .bg-modal2 {background-color:var(--modal2-color); }
 .\!bg-sub {background-color:var(--sub-color) !important; }
 .bg-box {background:var(--box-color);}
+.hover\:bg-box:hover {background:var(--box-color);}
 .bg-box2 {background:var(--box-color-2);}
 .bg-table {background:var(--table-color);}
 .\!bg-table {background:var(--table-color) !important;}
+.bg-sports {background-color:var(--sports-color); }
 
 .bg-gold {background:var(--gold-color); }
 .bg-silver {background:var(--silver-color); }
@@ -56,6 +60,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 .border-table {border-color:var(--table-color); }
 .\!border-table {border-color:var(--table-color) !important; }
+.border-box {border-color:var(--box-color); }
 
 @media (min-width:1280px){
     .xl\:bg-sub {background-color:var(--sub-color);}
@@ -109,6 +114,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         SUB_VISUAL
         INPUT_CUSTOM
         GAME_ITEM
+        BETTING_SLIP
 */
 
 
@@ -415,6 +421,19 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .side_menu .sports_nav .sport_tab {width:calc(17vw - 15px); height:calc(100vh - 105px); padding:0 5px 15px;  }
 .side_menu .sports_nav .sports_filter_top input[type="checkbox"] {display:none} 
 .side_menu .sports_nav .sports_filter_top input[type="checkbox"] + span {display:block; width:16px; height:16px; border:2px solid #94AEB4; }
+.side_menu .sports_nav .sports_filter_top input[type="checkbox"]:checked + span {position:relative; border-color:#fff; }
+.side_menu .sports_nav .sports_filter_top input[type="checkbox"]:checked + span:before {content:''; position:absolute; left:0; top:-2px; right:0; bottom:0; width:9px; height:5px; margin:auto; border-bottom:2px solid #fff; border-left:2px solid #fff; transform:rotate(-45deg); }
+
+.side_menu .sports_nav .sports_filter_list {}
+.side_menu .sports_nav .sports_filter_list > ul {}
+.side_menu .sports_nav .sports_filter_list > ul > li {padding:10px; }
+.side_menu .sports_nav .sports_filter_list > ul > li + li {margin-top:10px; }
+.side_menu .sports_nav .sports_filter_list > ul > li:hover,
+.side_menu .sports_nav .sports_filter_list > ul > li.open {background-color:rgba(16, 23, 29, 0.5); }
+.side_menu .sports_nav .sports_filter_list > ul > li ul {display:none; }
+.side_menu .sports_nav .sports_filter_list > ul > li.open ul {display:block; }
+.side_menu .sports_nav .sports_filter_list > ul > li > button svg {transition:all 0.5s; }
+.side_menu .sports_nav .sports_filter_list > ul > li.open > button svg {transform:rotate(270deg); }
 
 
 @media all and (max-width:1279px){
@@ -747,4 +766,11 @@ footer .footer_currency .img_list img {height:30px; }
 @media all and (max-width:767px){
     .game_item.swiper-slide {width:144px; }
 }
+
+/* ----------------------------------------------
+            BETTING_SLIP
+---------------------------------------------- */
+.right_bet {width:18vw; min-width:330px; padding-right:15px; }
+.right_bet_slip {z-index:90; position:sticky; top:90px; background-color:#19232A; box-shadow:0 0 5px rgba(0, 0, 0, 0.3); border-radius:6px; }
+
 

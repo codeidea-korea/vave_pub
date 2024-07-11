@@ -440,6 +440,23 @@
 .modal_search_result {box-shadow:0px 0px 1000px 0px #2BC69D; }
 
 
+/* ----------------------------------------------
+            스포츠 
+---------------------------------------------- */
+.sports_bet_wrap .bet_btn ,
+.sports_body_btn .bet_btn {border:0 none; background-color:var(--box-color); font-weight:900; box-shadow:inset 0 0 1px rgba(16, 23, 29, 0.5); }
+.sports_bet_wrap .bet_btn:hover ,
+.sports_body_btn .bet_btn:hover {background-color:#94AEB4; }
+.sports_bet_wrap .bet_btn.active ,
+.sports_body_btn .bet_btn.active {background-color:var(--primary-color);}
 
+.sports_body_info {display:none; }
+.sports_body_info.open {display:flex; }
 
+.sports_bet_wrap {display:none; }
+.sports_bet_wrap.open {display:block; }
 
+.sports_bet_wrap dl dd {display:none; }
+.sports_bet_wrap dl dt button svg {transform:rotate(90deg); transition:all 0.3s; }
+.sports_bet_wrap dl.open dd {display:grid; }
+.sports_bet_wrap dl.open dt button svg {transform:rotate(-90deg); }

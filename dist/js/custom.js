@@ -389,6 +389,46 @@ const moChatOpen = ()=>{
     $('.chat_box .chat_info').removeClass('hidden')
 }
 
+// 스포츠 메뉴 - 상위리그 클릭시
+const sportInputClick = (item)=>{
+    $(item).siblings('input').click()
+}
+const sportFilterOpen = (item)=>{
+    $(item).parent().toggleClass('open')
+}
+
+// 스포츠 > 상위이벤트 베팅버튼 클릭
+const sportsBetClick = (item)=>{
+    $(item).addClass('active').parent().siblings().find('button').removeClass('active')
+}
+
+const sportsBetCheck = (item)=>{
+    $(item).parents('.sports_bet_wrap').find('.bet_btn').each(function(){
+        if($(this).text() != $(item).text()){
+            $(this).removeClass('active')
+        }
+    })
+    $(item).toggleClass('active')
+}
+
+const sportsBetAllbtn = (item)=>{
+    $(item).find('svg').toggleClass('rotate-180')
+    $(item).parents('.sports_bet_wrap').find('dl').each(function(){
+        if($(item).find('svg').hasClass('rotate-180')){
+            $(this).removeClass('open')
+        }else{
+            $(this).addClass('open')
+        }
+    })
+}
+const sportsBetbtn = (item)=>{
+    $(item).parents('dl').toggleClass('open')
+}
+const sportsConOpen = (item,target)=>{
+    $(item).find('svg').toggleClass('rotate-180')
+    $(item).parents('.sports_body').find(`.${target}`).toggleClass('open')
+}
+
 // jquery 모음
 const loadJquery = ()=>{
 
@@ -493,5 +533,7 @@ const loadJquery = ()=>{
             $(this).find('use').attr('href',`${href_origin}#category-my-favorites-inactive`)
         }
     })
+
+
 
 };

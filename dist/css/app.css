@@ -2069,6 +2069,9 @@ select{
 .table{
     display: table;
 }
+.table-column{
+    display: table-column;
+}
 .grid{
     display: grid;
 }
@@ -2149,6 +2152,9 @@ select{
 }
 .h-\[266px\]{
     height: 266px;
+}
+.h-96{
+    height: 24rem;
 }
 .\!max-h-24{
     max-height: 6rem !important;
@@ -2312,6 +2318,14 @@ select{
 }
 .rotate-90{
     --tw-rotate: 90deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-45{
+    --tw-rotate: 45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-rotate-90{
+    --tw-rotate: -90deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform{
@@ -2673,6 +2687,10 @@ select{
 .\!bg-transparent{
     background-color: transparent !important;
 }
+.bg-light{
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-light) / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -2814,6 +2832,10 @@ select{
     padding-top: 0.125rem;
     padding-bottom: 0.125rem;
 }
+.px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
 .\!pl-0{
     padding-left: 0px !important;
 }
@@ -2898,6 +2920,9 @@ select{
 .pr-2{
     padding-right: 0.5rem;
 }
+.pr-2\.5{
+    padding-right: 0.625rem;
+}
 .\!text-left{
     text-align: left !important;
 }
@@ -2979,6 +3004,12 @@ select{
 }
 .font-semibold{
     font-weight: 600;
+}
+.font-light{
+    font-weight: 300;
+}
+.font-normal{
+    font-weight: 400;
 }
 .leading-relaxed{
     line-height: 1.625;
@@ -3098,6 +3129,9 @@ select{
 }
 .opacity-50{
     opacity: 0.5;
+}
+.opacity-80{
+    opacity: 0.8;
 }
 .shadow{
     --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -12203,6 +12237,12 @@ html body{
 @media (min-width: 768px){
     .md\:table-cell{
         display: table-cell;
+    }
+    .md\:table-column{
+        display: table-column;
+    }
+    .md\:hidden{
+        display: none;
     }
     .md\:h-16{
         height: 4rem;
