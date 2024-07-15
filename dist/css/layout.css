@@ -8,6 +8,7 @@
     --modal-color:#1F2931;
     --modal2-color:#10171D; 
     --sports-color:#151E24;
+    --betslip-color:#1D2832;
     --box-color:rgba(16,23,29,0.5);
     --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
@@ -53,6 +54,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-table {background:var(--table-color);}
 .\!bg-table {background:var(--table-color) !important;}
 .bg-sports {background-color:var(--sports-color); }
+.bg-betslip {background-color:var(--betslip-color); }
 
 .bg-gold {background:var(--gold-color); }
 .bg-silver {background:var(--silver-color); }
@@ -115,6 +117,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
         INPUT_CUSTOM
         GAME_ITEM
         BETTING_SLIP
+        3xl:
 */
 
 
@@ -679,6 +682,9 @@ footer .footer_currency .img_list img {height:30px; }
 .form-check-input[type="radio"]:disabled:not(:checked) {background-color:transparent; opacity:.5;}
 .form-check-input[type="radio"]:disabled:not(:checked) + label {opacity:.5; }
 
+.form-check-input[type="radio"].type02 {width:18px; height:18px; border:1px solid rgb(var(--color-primary)); background-color:#fff; }
+.form-check-input[type="radio"].type02:before {width:10px; height:10px; }
+
 .custom_radio[type="radio"] {display:none; }
 .custom_radio[type="radio"] + label {position:relative; cursor:pointer; }
 .custom_radio[type="radio"] + label:before {content:''; position:absolute; right:0; bottom:0; width:14px; height:14px; border-radius:50%; }
@@ -771,6 +777,31 @@ footer .footer_currency .img_list img {height:30px; }
             BETTING_SLIP
 ---------------------------------------------- */
 .right_bet {width:18vw; min-width:330px; padding-right:15px; }
-.right_bet_slip {z-index:90; position:sticky; top:90px; background-color:#19232A; box-shadow:0 0 5px rgba(0, 0, 0, 0.3); border-radius:6px; }
+.right_bet .tab_btn {position:absolute; right:calc(100% + 30px); top:10px; display:flex; align-items:center; justify-content:center; gap:5px; width:110px; height:30px; background-color:rgb(var(--color-primary)); font-size:14px; border-radius:8px 8px 0 0; box-shadow:0px 4px 48px rgba(255, 255, 255, 0.15), 0px 4px 48px rgba(43, 198, 157, 0.4); transform-origin:top right; transform:rotate(-90deg); }
+.right_bet_wrap {z-index:90; position:sticky; top:90px; height:calc(100vh - 105px);}
+.right_bet_slip {background-color:#19232A; box-shadow:0 0 5px rgba(0, 0, 0, 0.3); border-radius:6px; }
+.right_bet_slip .nav-link-tabs button {color:#fff !important; }
+.right_bet_slip .bet_check input + label {border:1px solid transparent; }
+.right_bet_slip .bet_check input:checked + label {border:1px solid rgb(var(--color-primary)); }
+.right_bet_slip .accordion .accordion-button:before {display:none; }
+.right_bet_slip .accordion .accordion-button.collapsed svg {transform:rotate(90deg); }
+.right_bet_slip .accordion .accordion-button svg {transform:rotate(270deg); transition:all 0.3s; }
 
+@media all and (max-width:1400px){
+    .right_bet {position:fixed; top:75px; left:calc(100% - 10px); width:330px; height:calc(100% - 75px); padding-right:0; background-color:#19232A; }
+    .right_bet.open {left:calc(100% - 330px); }
+    .right_bet.open .tab_btn {width:30px; }
+    .right_bet.open .tab_btn span {display:none; }
+    .right_bet.open .tab_btn svg {transform:rotate(180deg); }
+    .right_bet_wrap {height:100%; border-radius:0; }
+}
+@media all and (max-width:1279px){
+    .right_bet {display:none; }
+}
 
+/* ----------------------------------------------
+            3xl:
+---------------------------------------------- */
+@media (min-width:1750px){
+    .\33xl\:block {display:block; }
+}

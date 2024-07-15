@@ -460,3 +460,13 @@
 .sports_bet_wrap dl dt button svg {transform:rotate(90deg); transition:all 0.3s; }
 .sports_bet_wrap dl.open dd {display:grid; }
 .sports_bet_wrap dl.open dt button svg {transform:rotate(-90deg); }
+
+/* 모바일 상단 탭 */
+.mo_sports_tab {display:flex; align-items:center; gap:10px; }
+.mo_sports_tab button {width:48px; }
+.mo_sports_tab .sports_list {display:flex; width:calc(100% - 60px); }
+.mo_sports_tab .sports_list a {display:flex; flex-direction:column; align-items:center; height:50px; padding:3px 12px 5px; border-radius:8px; }
+.mo_sports_tab .sports_list a img {width:23px; }
+
+
+

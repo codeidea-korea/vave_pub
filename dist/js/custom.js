@@ -72,6 +72,18 @@ window.addEventListener("load", ()=>{
         console.log(error);
     });
 
+    // 스포츠영역 
+    fetch("./_right_bet.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        if($('body').hasClass('sports')){
+            $('#wrap').append(htmlData);
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
 });
 
 // 사이드메뉴 스크립트
@@ -427,6 +439,11 @@ const sportsBetbtn = (item)=>{
 const sportsConOpen = (item,target)=>{
     $(item).find('svg').toggleClass('rotate-180')
     $(item).parents('.sports_body').find(`.${target}`).toggleClass('open')
+}
+
+// sports > betslip
+const betslipOpen = (item)=>{
+    $(item).parent('.right_bet').toggleClass('open')
 }
 
 // jquery 모음
