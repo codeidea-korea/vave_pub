@@ -441,9 +441,30 @@ const sportsConOpen = (item,target)=>{
     $(item).parents('.sports_body').find(`.${target}`).toggleClass('open')
 }
 
+// 모바일 bet_btn 클릭시
+const moSportsBetClick = (item)=>{
+    $(item).addClass('active').siblings().removeClass('active');
+    $(item).parents('.swiper-slide').siblings().find('.bet_btn').removeClass('active');
+}
+
+// 모바일 스포츠 탭
+const moSportsTab = (item)=>{
+    $(item).parents('.mo_sports_tab').find('a').each(function(){
+        $(this).removeClass('active')
+    })
+    $(item).addClass('active')
+}
+
 // sports > betslip
 const betslipOpen = (item)=>{
     $(item).parent('.right_bet').toggleClass('open')
+}
+const moBetslipOpen = (target)=>{
+    $('.right_bet').addClass('open')
+    $(`.right_bet ${target} button`).click();
+}
+const moBetslipClose = ()=>{
+    $('.right_bet').removeClass('open')
 }
 
 // jquery 모음
@@ -478,7 +499,11 @@ const loadJquery = ()=>{
             centeredSlides: slideCenter,
             autoplay: slidePlayTime ? {delay: parseInt(slidePlayTime),disableOnInteraction:true} : false,
             loop: slideLoop,
-            initialSlide: initial
+            initialSlide: initial,
+            scrollbar: {
+                el: '.mySwiper.num' + index + ' .swiper-scrollbar',
+                hide: true,
+            }
         });		
         if($(this).attr('data-slideto') == '1') {
             $(slideWrapper.find('.swiper-slide')).click(function() {
@@ -489,6 +514,12 @@ const loadJquery = ()=>{
         if($(this).attr('data-click')){
             $('.mySwiper li').on('click',function(){
                 swiper.slideTo($(this).index())
+            })
+        }
+        if($(this).attr('data-group')){
+            swiper.on('slideChangeTransitionEnd',function(swiper){
+                let data = $('.mySwiper.num'+index).find('.swiper-slide-active').data('group')
+                $('.mySwiper.num'+index).find('.group').text(data)
             })
         }
     });

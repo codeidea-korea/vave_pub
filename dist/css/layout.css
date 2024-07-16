@@ -9,6 +9,7 @@
     --modal2-color:#10171D; 
     --sports-color:#151E24;
     --betslip-color:#1D2832;
+    --aggregate-color:#35444e;
     --box-color:rgba(16,23,29,0.5);
     --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
@@ -55,6 +56,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .\!bg-table {background:var(--table-color) !important;}
 .bg-sports {background-color:var(--sports-color); }
 .bg-betslip {background-color:var(--betslip-color); }
+.bg-aggregate {background-color:var(--aggregate-color); }
 
 .bg-gold {background:var(--gold-color); }
 .bg-silver {background:var(--silver-color); }
@@ -254,11 +256,11 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 /* ----------------------------------------------
             QUICK_MENU
 ---------------------------------------------- */
-.quick_menu {z-index:101; position:fixed; left:0; bottom:0; display:none; width:100%; height:50px; }
+.quick_menu {z-index:101; position:fixed; left:0; bottom:0; display:none; width:100%; height:60px; }
 .quick_menu .quick_bg {z-index:9; position:fixed; left:0; top:0; display:none; width:100%; height:100%; background:rgba(16,23,29,0.5); backdrop-filter:blur(24px); }
 .quick_menu.active .quick_bg {display:block; }
 
-.quick_menu > ul {position:relative; z-index:10; display:flex; align-items:center; height:100%; background-color:var(--sub-color); }
+.quick_menu > ul {position:relative; z-index:10; display:flex; align-items:center; height:100%; padding-bottom:10px; background-color:var(--sub-color); }
 .quick_menu.active > ul {outline:3px solid rgba(16, 23, 29, 0.5); }
 .quick_menu > ul > li {flex-grow:1; height:100%; }
 .quick_menu > ul > li.active {color:rgb(var(--color-primary))}
@@ -271,6 +273,17 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .quick_menu .depth {display:none; position:absolute; left:0; bottom:100%; width:150px; padding:5px 0; border-radius:15px 15px 15px 0; background-color:rgb(var(--color-primary)); }
 .quick_menu .active_open .depth {display:block; }
 .quick_menu .depth li a {display:flex; align-items:center; gap:12px; height:40px; padding:0 20px; }
+
+.quick_menu .live,
+.quick_menu .mybet,
+.quick_menu .sport {display:none; }
+.sports .quick_menu .live,
+.sports .quick_menu .mybet,
+.sports .quick_menu .sport {display:block; }
+
+.sports .quick_menu .sports,
+.sports .quick_menu .casino,
+.sports .quick_menu .promotion {display:none; }
 
 
 @media all and (max-width:1279px){
@@ -553,8 +566,10 @@ footer .footer_currency .img_list img {height:30px; }
 .modal {overflow:hidden; overflow-y:auto; overflow-x:hidden; background-color:rgba(0,0,0,.3); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); scrollbar-color: rgba(43,198,157,.5) rgba(0,0,0,0); scrollbar-width: thin; }
 .modal .modal-dialog {display:flex; align-items:center; min-height:100%; padding:30px 0; margin-top:0 !important; margin-bottom:0 !important; }
 .modal .modal-dialog.modal-top {align-items:flex-start; }
+.modal .modal-dialog.modal-bottom {align-items:flex-end; }
 .modal .modal-dialog .modal-content {background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); box-shadow:0 0 200px #2bc69d; border-radius:8px; }
 .modal .modal-dialog .modal-content.modal-transparent {background:transparent; box-shadow:none; }
+.modal .modal-dialog .modal-content.modal-dark {background:#10171D;}
 .modal .modal-dialog.confirm_modal .modal-content {border:1px solid var(--primary-color); }
 .modal .modal-header {border:0 none; }
 .modal .modal-header .close_btn {position:absolute; right:10px; top:10px; }
@@ -569,6 +584,7 @@ footer .footer_currency .img_list img {height:30px; }
 @media (max-width:767px){
     .modal .modal-dialog.mo_full {width:100% !important; max-width:100% !important; height:100% !important; max-height:100vh !important; margin-top:0; margin-bottom:0; padding:0; }
     .modal .modal-dialog.mo_full .modal-content {height:100%; padding:0; }
+    .modal .modal-dialog.w_full {width:100% !important; max-width:100% !important; }
 }
 
 @media (min-width:640px){
@@ -797,6 +813,13 @@ footer .footer_currency .img_list img {height:30px; }
 }
 @media all and (max-width:1279px){
     .right_bet {display:none; }
+    .right_bet .tab_btn {display:none; }
+    .right_bet.open {display:block; z-index:100; position:fixed; left:0; right:0; top:60px; width:100%; height:calc(100% - 120px); }
+    .right_bet .right_bet_slip {height:100%;}
+    .right_bet .right_bet_slip > .tab-content ,
+    .right_bet .right_bet_slip > .tab-content > div {height:100%;}
+    .right_bet .betslip_wrap .tab-content {height:calc(100% - 110px); }
+    .right_bet .betslip_wrap .tab-content > div {height:100%; }
 }
 
 /* ----------------------------------------------

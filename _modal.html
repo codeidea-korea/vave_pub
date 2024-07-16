@@ -1525,3 +1525,75 @@
         </div>
     </div>
 </div>
+
+<!-- betslip - 삭제모달 -->
+<div id="betslip_delete-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-dark">
+            <div class="modal-body p-10">
+                <!-- <button class="close_btn" onclick="closeModal('betslip_delete-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button> -->
+                <p class="text-xl font-semibold text-center">모든 결과 삭제하기</p>
+                <p class="mt-1 text-center">모든 결과를 삭제하시겠습니까?</p>
+                <div class="flex items-center gap-2 mt-4">
+                    <button class="flex-1 btn btn-outline-primary border-2" onclick="closeModal('betslip_delete-modal')">아니오</button>
+                    <button class="flex-1 btn btn-primary">네</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- betslip - 베팅설정 -->
+<div id="betslip_betsetting-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-dark">
+            <div class="modal-body p-4">
+                <button class="close_btn" onclick="closeModal('betslip_betsetting-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <p class="text-xl font-semibold text-center">베팅 설정</p>
+                <div class="form-check mt-2 bg-sub p-3 rounded">
+                    <input id="bet_set_2-1" class="form-check-input" type="radio" name="bet_set_2__" value="vertical-radio-chris-evans"> 
+                    <label class="form-check-label text-white" for="bet_set_2-1">모든 배당률 수락<br/><span>가장 빠른 라이브 베팅 체험</span></label> 
+                </div>
+                <div class="form-check mt-2 bg-sub p-3 rounded">
+                    <input id="bet_set_2-2" class="form-check-input" type="radio" name="bet_set_2__" value="vertical-radio-liam-neeson"> 
+                    <label class="form-check-label text-white" for="bet_set_2-2">변경된 배당률을 수락하지 않음</label> 
+                </div>
+                <div class="form-check mt-2 bg-sub p-3 rounded"> 
+                    <input id="bet_set_2-3" class="form-check-input" type="radio" name="bet_set_2__" value="vertical-radio-daniel-craig"> 
+                    <label class="form-check-label text-white" for="bet_set_2-3">더 높은 배당률 수락하기</label> 
+                </div>
+                <div class="flex items-center gap-2 mt-4">
+                    <button class="flex-1 btn btn-primary">완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- betslip - 설정 -->
+<div id="betslip_setting-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-bottom w_full !p-0 !mx-0">
+        <div class="modal-content modal-dark">
+            <div class="modal-body p-4">
+                <button class="close_btn" onclick="closeModal('betslip_setting-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <p class="text-base text-light font-semibold text-left">설정</p>
+                <p class="text-light font-bold">Odds format</p>
+                <div class="form-check mt-2 bg-sub p-3 rounded">
+                    <input id="bet_set_3-1" class="form-check-input" type="radio" name="bet_set_3__" value="vertical-radio-chris-evans"> 
+                    <label class="form-check-label text-white" for="bet_set_3-1">모든 배당률 수락<br/><span>가장 빠른 라이브 베팅 체험</span></label> 
+                </div>
+                <div class="form-check mt-2 bg-sub p-3 rounded">
+                    <input id="bet_set_3-2" class="form-check-input" type="radio" name="bet_set_3__" value="vertical-radio-liam-neeson"> 
+                    <label class="form-check-label text-white" for="bet_set_3-2">변경된 배당률을 수락하지 않음</label> 
+                </div>
+                <div class="form-check mt-2 bg-sub p-3 rounded">
+                    <input id="bet_set_3-3" class="form-check-input" type="radio" name="bet_set_3__" value="vertical-radio-daniel-craig"> 
+                    <label class="form-check-label text-white" for="bet_set_3-3">더 높은 배당률 수락하기</label> 
+                </div>
+                <div class="flex items-center gap-2 mt-4">
+                    <button class="flex-1 btn btn-primary">적용</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

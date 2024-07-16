@@ -462,11 +462,27 @@
 .sports_bet_wrap dl.open dt button svg {transform:rotate(-90deg); }
 
 /* 모바일 상단 탭 */
-.mo_sports_tab {display:flex; align-items:center; gap:10px; }
-.mo_sports_tab button {width:48px; }
-.mo_sports_tab .sports_list {display:flex; width:calc(100% - 60px); }
-.mo_sports_tab .sports_list a {display:flex; flex-direction:column; align-items:center; height:50px; padding:3px 12px 5px; border-radius:8px; }
-.mo_sports_tab .sports_list a img {width:23px; }
+.mo_sports_tab {display:flex; align-items:flex-start; gap:10px; }
+.mo_sports_tab .all_btn {width:48px; }
+.mo_sports_tab .sports_list {display:flex; width:calc(100% - 60px); padding-bottom:8px; }
+.mo_sports_tab .all_btn,
+.mo_sports_tab .sports_list a {display:flex; flex-direction:column; align-items:center; justify-content:space-between; height:50px; padding:3px 12px 5px; border-radius:8px; }
+.mo_sports_tab .all_btn.active ,
+.mo_sports_tab .sports_list a.active {background-color:var(--primary-color); }
+.mo_sports_tab .sports_list a img {width:23px; max-width:23px; }
+.mo_sports_tab .all_btn span,
+.mo_sports_tab .sports_list a span {font-size:10px; }
 
+.bet_slide_box .pagination span {width:6px; height:6px; margin:0 2px !important; }
+
+.mo_sports_bet_wrap .bet_btn {overflow:hidden; }
+.mo_sports_bet_wrap .bet_btn > * {display:flex; align-items:center; justify-content:center; width:50%; height:100%; }
+.mo_sports_bet_wrap .bet_btn.active > span {background-color:#1E6F5C; }
+.mo_sports_bet_wrap .bet_btn.active > b {background-color:var(--primary-color); }
+
+.bet_slide_box .swiper-scrollbar {position:absolute; left:0; bottom:0; height:4px; background-color:transparent; }
+.bet_slide_box .swiper-scrollbar .swiper-scrollbar-drag {background:var(--primary-color); opacity:.8; }
+
+.betslip_btn {z-index:100; position:fixed; right:24px; bottom:74px; height:56px; padding:0 15px; border-radius:36px; background:linear-gradient(270deg,#4cd8b3,#2BC69D); box-shadow:0 1px 4px #2BC69D, 0px 4px 24px rgba(43, 198, 157, 0.7); }
 
 
