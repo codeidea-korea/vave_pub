@@ -10,6 +10,8 @@
     --sports-color:#151E24;
     --betslip-color:#1D2832;
     --aggregate-color:#35444e;
+    --search-color:#584E2A;
+    --result-color:#1a252d;
     --box-color:rgba(16,23,29,0.5);
     --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
@@ -57,6 +59,8 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .bg-sports {background-color:var(--sports-color); }
 .bg-betslip {background-color:var(--betslip-color); }
 .bg-aggregate {background-color:var(--aggregate-color); }
+.bg-search {background-color:var(--search-color); }
+.bg-result {background-color:var(--result-color); }
 
 .bg-gold {background:var(--gold-color); }
 .bg-silver {background:var(--silver-color); }
@@ -482,6 +486,7 @@ footer .footer_currency .img_list img {height:30px; }
 
 
 @media all and (max-width:1279px){
+    .content.\!p-0 footer {width:100%; margin:0; }
     footer {width:calc(100% + 30px); margin:0 -15px; padding:16px 16px 66px 16px; border-radius:0; }
     footer .footer_top {flex-direction: column-reverse; }
 
@@ -490,7 +495,9 @@ footer .footer_currency .img_list img {height:30px; }
     footer .footer_currency .btn_box {order:2; max-width:50%; min-width:50%; }
 }
 
-
+/* 모바일에서 상단으로 올라가는 버튼 */
+.totop_btn {position:fixed; left:10px; bottom:80px; visibility:hidden; opacity:0; display:flex; align-items:center; justify-content:center; width:40px; height:40px; background-color:rgb(var(--color-primary)); border-radius:50%; transition:opacity 0.3s; }
+.totop_btn.on {visibility:visible; opacity:1; }
 
 /* ----------------------------------------------
             CASHBACK_POPUP
@@ -700,6 +707,13 @@ footer .footer_currency .img_list img {height:30px; }
 
 .form-check-input[type="radio"].type02 {width:18px; height:18px; border:1px solid rgb(var(--color-primary)); background-color:#fff; }
 .form-check-input[type="radio"].type02:before {width:10px; height:10px; }
+
+.form-check-input[type="radio"].type03 {display:none; }
+.form-check-input[type="radio"].type03 + label {position:relative; display:block; width:100%; padding:12px 12px 12px 40px; border:1px solid #94AEB4; border-radius:3px; }
+.form-check-input[type="radio"].type03 + label:before {content:''; position:absolute; left:14px; top:14px; width:16px; height:16px; border:2px solid #94aeb4; border-radius:50%; }
+.form-check-input[type="radio"].type03:checked + label {border:1px solid rgb(var(--color-primary)); }
+.form-check-input[type="radio"].type03:checked + label:before {border-color:rgb(var(--color-primary) / 1); }
+.form-check-input[type="radio"].type03:checked + label:after {content:''; position:absolute; left:18px; top:18px; width:8px; height:8px; background-color:rgb(var(--color-primary)); border-radius:50%; }
 
 .custom_radio[type="radio"] {display:none; }
 .custom_radio[type="radio"] + label {position:relative; cursor:pointer; }

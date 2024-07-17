@@ -203,9 +203,13 @@
                     </div>
 
                 </div>
-                <div id="betslip-tab-2" class="tab-pane leading-relaxed py-3 px-4" role="tabpanel" aria-labelledby="betslip-2-tab">
-                    <div class="flex items-center justify-between">
-                        <p class="font-medium">나의 베팅 필터링하기</p>
+                <div id="betslip-tab-2" class="tab-pane leading-relaxed xl:py-3 xl:px-4" role="tabpanel" aria-labelledby="betslip-2-tab">
+                    <div class="flex items-center justify-between py-3 xl:py-0 px-4 xl:px-0 xl:bg-transparent bg-betslip">
+                        <div class="flex items-center gap-1">
+                            <button onclick="moBetslipClose()"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg></button>
+                            <p class="xl:hidden block font-medium">MY BETS</p>
+                            <p class="hidden xl:block font-medium">나의 베팅 필터링하기</p>
+                        </div>
                         <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0715#filter"></use></svg></button>
                     </div>
                     <div class="text-center py-5">

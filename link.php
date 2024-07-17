@@ -120,12 +120,21 @@ echo txtRecord('./@record/');
 		</li>
 		<li class="mt40" data-label="스포츠">
 			<ul>
-				<li><a href="./sports.html" target="_blank" class="">스포츠 베팅</a></li>
+				<li>
+					<a href="./sports.html" target="_blank" class="">스포츠 베팅</a>
+					<ul>
+						<li><button class="pop-modal" onclick="modalOpen('sports_search-modal')">스포츠 검색 모달</button></li>
+					</ul>
+				</li>
 				<li>
 					<a href="./sports_mo.html" target="_blank" class="">스포츠 베팅 - 모바일</a>
 					<ul>
-						<li><button class="pop-modal" onclick="modalOpen('betslip_delete-modal')">betslip 삭제 모달</button></li>
-						<li><button class="pop-modal" onclick="modalOpen('betslip_betsetting-modal')">betslip 베팅 설정 모달</button></li>
+						<li><a href="./sports_mo_search.html" target="_blank" class="">스포츠 베팅 - 모바일</a></li>
+						<li>
+							<button class="pop-modal" onclick="modalOpen('betslip_delete-modal')">betslip 삭제 모달</button>
+							<button class="pop-modal" onclick="modalOpen('betslip_betsetting-modal')">betslip 베팅 설정 모달</button>
+							<button class="pop-modal" onclick="modalOpen('betslip_setting-modal')">betslip 설정 모달</button>
+						</li>
 					</ul>
 				</li>
 			</ul>

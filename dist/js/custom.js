@@ -210,6 +210,15 @@ const footerScript = ()=>{
         }
     });
 
+    $(window).on('scroll',function(){
+        let scT = $(window).scrollTop()
+        if(scT > 100){
+            $('.totop_btn').addClass('on')
+        }else{
+            $('.totop_btn').removeClass('on')
+        }
+    })
+
 }
 
 
@@ -465,6 +474,11 @@ const moBetslipOpen = (target)=>{
 }
 const moBetslipClose = ()=>{
     $('.right_bet').removeClass('open')
+}
+
+// 상단으로
+const scTHandle = ()=>{
+    $('body,html').animate({scrollTop:0},300)
 }
 
 // jquery 모음
