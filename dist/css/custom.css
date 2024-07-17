@@ -448,11 +448,16 @@
             스포츠 
 ---------------------------------------------- */
 .sports_bet_wrap .bet_btn ,
-.sports_body_btn .bet_btn {border:0 none; background-color:var(--box-color); font-weight:900; box-shadow:inset 0 0 1px rgba(16, 23, 29, 0.5); }
+.sports_body_btn .bet_btn {overflow:hidden; position:relative; border:0 none; background-color:var(--box-color); font-weight:900; box-shadow:inset 0 0 1px rgba(16, 23, 29, 0.5); }
 .sports_bet_wrap .bet_btn:hover ,
 .sports_body_btn .bet_btn:hover {background-color:#94AEB4; }
 .sports_bet_wrap .bet_btn.active ,
 .sports_body_btn .bet_btn.active {background-color:var(--primary-color);}
+.sports_body_btn .bet_btn:before { -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0MyA0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwVjBDNS45IDIwLjggMjIuMiAzNyA0MyA0M1Y0M0gwVjBaIiAvPg0KPC9zdmc+DQo=) no-repeat; mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0MyA0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwVjBDNS45IDIwLjggMjIuMiAzNyA0MyA0M1Y0M0gwVjBaIiAvPg0KPC9zdmc+DQo=) no-repeat; -webkit-mask-size: cover; mask-size: cover;}
+.sports_body_btn .bet_btn.up:before {content:''; position:absolute; right:0; top:0; width:40px; height:40px; background:linear-gradient(305deg, rgba(31,233,136,1) 0, rgba(31,233,136,0) 50% ); transform:rotate(180deg); border-bottom-left-radius:8px; }
+.sports_body_btn .bet_btn.up:after {content:''; position:absolute; right:0; top:0; width:40px; height:40px; background:linear-gradient(55deg, rgba(31,233,136,1) 0, rgba(31,233,136,0) 50% ); transform:rotate(180deg); filter:blur(7px); border-bottom-left-radius:8px; }
+.sports_body_btn .bet_btn.down:before {content:''; position:absolute; left:0; bottom:0; width:40px; height:40px; background:linear-gradient(305deg, rgba(255,78,78,1) 0, rgba(255,78,78,0) 50% ); border-bottom-left-radius:8px; }
+.sports_body_btn .bet_btn.down:after {content:''; position:absolute; left:0; bottom:0; width:40px; height:40px; background:linear-gradient(55deg, rgba(255,78,78,1) 0, rgba(255,78,78,0) 50% ); filter:blur(7px); border-bottom-left-radius:8px; }
 
 .sports_body_info {display:none; }
 .sports_body_info.open {display:flex; }
@@ -479,14 +484,22 @@
 
 .bet_slide_box .pagination span {width:6px; height:6px; margin:0 2px !important; }
 
-.mo_sports_bet_wrap .bet_btn {overflow:hidden; }
+.mo_sports_bet_wrap .bet_btn {position:relative; overflow:hidden; }
 .mo_sports_bet_wrap .bet_btn > * {display:flex; align-items:center; justify-content:center; width:50%; height:100%; }
 .mo_sports_bet_wrap .bet_btn.active > span {background-color:#1E6F5C; }
 .mo_sports_bet_wrap .bet_btn.active > b {background-color:var(--primary-color); }
+.mo_sports_bet_wrap .bet_btn:before { -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0MyA0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwVjBDNS45IDIwLjggMjIuMiAzNyA0MyA0M1Y0M0gwVjBaIiAvPg0KPC9zdmc+DQo=) no-repeat; mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0MyA0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwVjBDNS45IDIwLjggMjIuMiAzNyA0MyA0M1Y0M0gwVjBaIiAvPg0KPC9zdmc+DQo=) no-repeat; -webkit-mask-size: cover; mask-size: cover;}
+.mo_sports_bet_wrap .bet_btn.up:before {content:''; position:absolute; right:0; top:0; width:40px; height:40px; background:linear-gradient(305deg, rgba(31,233,136,1) 0, rgba(31,233,136,0) 50% ); transform:rotate(180deg); border-bottom-left-radius:8px; }
+.mo_sports_bet_wrap .bet_btn.up:after {content:''; position:absolute; right:0; top:0; width:40px; height:40px; background:linear-gradient(55deg, rgba(31,233,136,1) 0, rgba(31,233,136,0) 50% ); transform:rotate(180deg); filter:blur(7px); border-bottom-left-radius:8px; }
+.mo_sports_bet_wrap .bet_btn.down:before {content:''; position:absolute; left:0; bottom:0; width:40px; height:40px; background:linear-gradient(305deg, rgba(255,78,78,1) 0, rgba(255,78,78,0) 50% ); border-bottom-left-radius:8px; }
+.mo_sports_bet_wrap .bet_btn.down:after {content:''; position:absolute; left:0; bottom:0; width:40px; height:40px; background:linear-gradient(55deg, rgba(255,78,78,1) 0, rgba(255,78,78,0) 50% ); filter:blur(7px); border-bottom-left-radius:8px; }
 
 .bet_slide_box .swiper-scrollbar {position:absolute; left:0; bottom:0; height:4px; background-color:transparent; }
 .bet_slide_box .swiper-scrollbar .swiper-scrollbar-drag {background:var(--primary-color); opacity:.8; }
 
-.betslip_btn {z-index:100; position:fixed; right:24px; bottom:74px; height:56px; padding:0 15px; border-radius:36px; background:linear-gradient(270deg,#4cd8b3,#2BC69D); box-shadow:0 1px 4px #2BC69D, 0px 4px 24px rgba(43, 198, 157, 0.7); }
+.betslip_btn {z-index:100; position:fixed; right:24px; bottom:74px; display:none; height:56px; padding:0 15px; border-radius:36px; background:linear-gradient(270deg,#4cd8b3,#2BC69D); box-shadow:0 1px 4px #2BC69D, 0px 4px 24px rgba(43, 198, 157, 0.7); }
+.betslip_btn.delete {background:linear-gradient(270deg,#ff8181,#FF4E4E); box-shadow:0 1px 4px #FF4E4E,0 4px 24px rgba(255, 78, 78, 0.7); }
 
-
+@media all and (max-width:1279px){
+    .betslip_btn {display:block; }
+}

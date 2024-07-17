@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="sports">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+                
+            
+
+                <!-- 모바일 검색 -->
+                <div class="flex items-center justify-between bg-box py-2 px-3 mb-2 rounded-md">
+                    <p class="font-medium">라이브 베팅</p>
+                    <a href="javascript:;" class="block"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4 opacity-90"><use href="./dist/images/icon-defs.svg?071505#svg-find"></use></svg></a>
+                </div>
+
+                <!-- 모바일 스포츠 탭 -->
+                <div class="mo_sports_tab">
+                    <a href="javascript:;" class="all_btn" onclick="moSportsTab(this)"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg?0716#modern-all-sports-filter"></use></svg><span>모두</span></a>
+                    <span class="h-[50px] border-r border-solid border-box"></span>
+                    <div class="sports_list overflow-x-auto scrollbar">
+                        <a href="javascript:;" class="active" onclick="moSportsTab(this)"><svg class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0710#modern-top"></use></svg><span class="truncate">Top</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><svg class="svg-icon w-5 h-5 bg-yellow-400 rounded"><use href="./dist/images/icon-defs.svg#boosted-odd-icon"></use></svg><span class="truncate">Boosted</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_football.svg" alt=""><span class="truncate">축구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_tennis.svg" alt=""><span class="truncate">테니스</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_basketball.svg" alt=""><span class="truncate">농구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_table-tennis.svg" alt=""><span class="truncate">탁구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_ice-hockey.svg" alt=""><span class="truncate">아이스 하키</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_vollyball.svg" alt=""><span class="truncate">배구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_esport-fifa.svg" alt=""><span class="truncate">전자 축구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_cricket.svg" alt=""><span class="truncate">크리켓</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_mma.svg" alt=""><span class="truncate">MMA</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_baseball.svg" alt=""><span class="truncate">야구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_rugby.svg" alt=""><span class="truncate">럭비</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_handball.svg" alt=""><span class="truncate">핸드볼</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/american-football.svg" alt=""><span class="truncate">미식축구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_boxing.svg" alt=""><span class="truncate">권투</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_formula.svg" alt=""><span class="truncate">포뮬러1</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_snooker.svg" alt=""><span class="truncate">스누커</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_counter-strike.svg" alt=""><span class="truncate">카운터-스트라이크</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_dota2.svg" alt=""><span class="truncate">도타2</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_darts.svg" alt=""><span class="truncate">다트</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_beach-volleyball.svg" alt=""><span class="truncate">비치발리볼</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_water-polo.svg" alt=""><span class="truncate">수구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_hockey.svg" alt=""><span class="truncate">하키</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_special.svg" alt=""><span class="truncate">스페셜</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_biatholn.svg" alt=""><span class="truncate">바이애슬론</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_cycle.svg" alt=""><span class="truncate">사이클</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_golf.svg" alt=""><span class="truncate">골프</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_bike.svg" alt=""><span class="truncate">오토바이 경주</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_olympics.svg" alt=""><span class="truncate">올림픽</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_alpine-skiing.svg" alt=""><span class="truncate">알파인 스키</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_gaelic-football.svg" alt=""><span class="truncate">게일식 풋볼</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_athletics.svg" alt=""><span class="truncate">육상</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_swim.svg" alt=""><span class="truncate">수영</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_surfing.svg" alt=""><span class="truncate">서핑</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_speedway.svg" alt=""><span class="truncate">스피드웨이</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_pesapallo.svg" alt=""><span class="truncate">페사팔로</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_aussie-rules.svg" alt=""><span class="truncate">오지 룰스</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_basketball3.svg" alt=""><span class="truncate">3x3 농구</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_cross-cup-tree.svg" alt=""><span class="truncate">크로스 컵트리</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_call-of-duty.svg" alt=""><span class="truncate">콜 오브 듀티</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_esport-king-of-glory.svg" alt=""><span class="truncate">E스포츠 킹 오브 글로리</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_league-of-legends.svg" alt=""><span class="truncate">리그 오브 레전드</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_starcraft.svg" alt=""><span class="truncate">스타크래프트</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_valorant.svg" alt=""><span class="truncate">발로란트</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_gaelic-hurling.svg" alt=""><span class="truncate">게일식 헐링</span></a>
+                        <a href="javascript:;" onclick="moSportsTab(this)"><img src="./dist/images/sports/icon_nascar-cup-series.svg" alt=""><span class="truncate">스톡 카 레이싱</span></a>
+                    </div>
+                </div>
+
+                <!-- bet 버튼 -->
+                <!-- 삭제할 것 있을때 class delete 추가 -->
+                <button class="betslip_btn delete flex items-center gap-2" onclick="moBetslipOpen('#betslip-1-tab')">
+                    <svg class="svg-icon w-7 h-7"><use href="./dist/images/icon-defs.svg?07163#svg-ticket"></use></svg>
+                    <div>
+                        <p class="text-base font-bold">Delete outcomes</p>
+                        <p class="text-xs">some outcomes inactive</p>
+                    </div>
+                </button>
+
+                <div class="box">
+
+                    <div class="mt-4">
+                    
+                        <div class="mb-4">
+                            <a href="javascript:;" class="flex items-center justify-between mb-2 py-2 px-3 bg-box rounded-lg">
+                                <div class="flex items-center gap-2 text-xs">
+                                    <img class="w-5" src="./dist/images/sports/champions-league-vavestyle.svg" alt="">
+                                    <span>UEFA 챔피언스리그</span>
+                                </div>
+                                <div class="mont font-base font-bold">6</div>
+                            </a>
+
+                            <!-- 벳 리스트 -->
+                            <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                <div class="flex items-center justify-between">
+                                    <p class="flex items-center gap-2 mb-1 mont">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                        <img src="./dist/images/sports/live.svg" alt="">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg>
+                                        <b>90:00</b>
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#modern-broadcast"></use></svg>
+                                    </p>
+                                    <div class="fs10">후반전 2:0 | 1:0</div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>베키크, 돈나</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>파올리니, 자스민</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                    <p>스포츠 정보 들어가는 곳</p>
+                                </div>
+                                <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                    <div class="flex items-center justify-between w-full mb-2">
+                                        <div class="group text-xs text-light">1x2</div>
+                                        <div class="pagination !w-auto mr-0"></div>
+                                    </div>
+                                    <div class="swiper-container relative">
+                                        <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                            <li class="swiper-slide" data-group="1x2">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">-</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">-</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">-</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Total">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Handicap">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Doubles">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 벳 리스트 -->
+                            <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                <div class="flex items-center justify-between">
+                                    <p class="flex items-center gap-2 mb-1 mont">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                        <img src="./dist/images/sports/live.svg" alt="">
+                                        <!-- <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg> -->
+                                        <b>90:00</b>
+                                        <span class="bg-primary px-1 rounded tooltip fs10 leading-normal" title="3세트">3</span>
+                                    </p>
+                                    <div class="fs10">경기시작전</div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>베키크, 돈나</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="flex items-center justify-between w-5 font-extrabold text-light text-sm mont"><i class="inline-flex w-1 h-1 bg-primary rounded-full"></i> 0</b>
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>파올리니, 자스민</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-light text-sm mont">0</b>
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                    <p>스포츠 정보 들어가는 곳</p>
+                                </div>
+                                <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                    <div class="flex items-center justify-between w-full mb-2">
+                                        <div class="group text-xs text-light">1x2</div>
+                                        <div class="pagination !w-auto mr-0"></div>
+                                    </div>
+                                    <div class="swiper-container relative ">
+                                        <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                            <li class="swiper-slide" data-group="1x2">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn up flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">1.32</b></button>
+                                                    <button class="bet_btn down flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">5.6</b></button>
+                                                    <button class="bet_btn up flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">9.6</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Total">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Handicap">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Doubles">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 벳 리스트 -->
+                            <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                <div class="flex items-center justify-between">
+                                    <p class="flex items-center gap-2 mb-1 mont">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                        <img src="./dist/images/sports/live.svg" alt="">
+                                        <!-- <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg> -->
+                                        <b>90:00</b>
+                                        <span class="bg-primary px-1 rounded tooltip fs10" title="3세트">3</span>
+                                    </p>
+                                    <div class="fs10">경기시작전</div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>베키크, 돈나</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="flex items-center justify-between w-5 font-extrabold text-light text-sm mont"><i class="inline-flex w-1 h-1 bg-primary rounded-full"></i> 0</b>
+                                        <b class="w-5 font-extrabold text-white text-sm mont">2</b>
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>파올리니, 자스민</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-light text-sm mont">15</b>
+                                        <b class="w-5 font-extrabold text-white text-sm mont">1</b>
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                    <p>스포츠 정보 들어가는 곳</p>
+                                </div>
+                                <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                    <div class="flex items-center justify-between w-full mb-2">
+                                        <div class="group text-xs text-light">1x2</div>
+                                        <div class="pagination !w-auto mr-0"></div>
+                                    </div>
+                                    <div class="swiper-container relative ">
+                                        <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                            <li class="swiper-slide" data-group="1x2">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">1.32</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">5.6</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">9.6</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Total">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Handicap">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Doubles">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 벳 리스트 -->
+                            <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                <div class="flex items-center justify-between">
+                                    <p class="flex items-center gap-2 mb-1 mont">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?07173#match-stopped"></use></svg>
+                                        <img src="./dist/images/sports/live.svg" alt="">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg>
+                                        <b>90:00</b>
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#modern-broadcast"></use></svg>
+                                    </p>
+                                    <div class="fs10 tooltip" title="18:17 | 18:12">Second break</div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>아랍에미레이츠</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">36</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>Future Sports USA</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">29</b>
+                                    </div>
+                                </div>
+                                <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                    <p>스포츠 정보 들어가는 곳</p>
+                                </div>
+                                <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                    <div class="flex items-center justify-between w-full mb-2">
+                                        <div class="group text-xs text-light">1x2</div>
+                                        <div class="pagination !w-auto mr-0"></div>
+                                    </div>
+                                    <div class="swiper-container relative ">
+                                        <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                            <li class="swiper-slide" data-group="1x2">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">1.32</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">5.6</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">9.6</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Total">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Handicap">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Doubles">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <a href="javascript:;" class="flex items-center justify-between mb-2 py-2 px-3 bg-box rounded-lg">
+                                <div class="flex items-center gap-2 text-xs">
+                                    <img class="w-5" src="./dist/images/sports/icon_tennis.svg" alt="">
+                                    <span>ATP 함부르크, 독일 남자 단식</span>
+                                </div>
+                                <div class="mont font-base font-bold">6</div>
+                            </a>
+
+                            <!-- 벳 리스트 -->
+                            <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                <div class="flex items-center justify-between">
+                                    <p class="flex items-center gap-2 mb-1 mont">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                        <img src="./dist/images/sports/live.svg" alt="">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg>
+                                        <b>90:00</b>
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#modern-broadcast"></use></svg>
+                                    </p>
+                                    <div class="fs10">후반전 2:0 | 1:0</div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>베키크, 돈나</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>파올리니, 자스민</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                    <p>스포츠 정보 들어가는 곳</p>
+                                </div>
+                                <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                    <div class="flex items-center justify-between w-full mb-2">
+                                        <div class="group text-xs text-light">1x2</div>
+                                        <div class="pagination !w-auto mr-0"></div>
+                                    </div>
+                                    <div class="swiper-container relative">
+                                        <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                            <li class="swiper-slide" data-group="1x2">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">-</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">-</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">-</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Total">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Handicap">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Doubles">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 벳 리스트 -->
+                            <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                <div class="flex items-center justify-between">
+                                    <p class="flex items-center gap-2 mb-1 mont">
+                                        <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                        <img src="./dist/images/sports/live.svg" alt="">
+                                        <!-- <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg> -->
+                                        <b>90:00</b>
+                                        <span class="bg-primary px-1 rounded tooltip fs10 leading-normal" title="3세트">3</span>
+                                    </p>
+                                    <div class="fs10">경기시작전</div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>베키크, 돈나</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="flex items-center justify-between w-5 font-extrabold text-light text-sm mont"><i class="inline-flex w-1 h-1 bg-primary rounded-full"></i> 0</b>
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p>파올리니, 자스민</p>
+                                    <div class="flex items-center justify-end text-right">
+                                        <b class="w-5 font-extrabold text-light text-sm mont">0</b>
+                                        <b class="w-5 font-extrabold text-primary text-sm mont">0</b>
+                                    </div>
+                                </div>
+                                <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                    <p>스포츠 정보 들어가는 곳</p>
+                                </div>
+                                <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                    <div class="flex items-center justify-between w-full mb-2">
+                                        <div class="group text-xs text-light">1x2</div>
+                                        <div class="pagination !w-auto mr-0"></div>
+                                    </div>
+                                    <div class="swiper-container relative ">
+                                        <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                            <li class="swiper-slide" data-group="1x2">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn up flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">1.32</b></button>
+                                                    <button class="bet_btn down flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">5.6</b></button>
+                                                    <button class="bet_btn up flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">9.6</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Total">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Handicap">
+                                                <div class="grid grid-cols-2 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide" data-group="Doubles">
+                                                <div class="grid grid-cols-3 gap-2">
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                    <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-scrollbar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 데이터 없을때 -->
+                        <div class="flex flex-col items-center justify-center gap-4 py-10">
+                            <svg class="svg-icon w-24 h-24"><use href="./dist/images/icon-defs.svg?07162#not-found-modern"></use></svg>
+                            <p class="text-xl font-bold">no any events for this sports</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 들어오는 베팅 -->
+                    <div class="mt-6">
+                        <div class="flex flex-col items-center justify-between gap-5 w-full p-4 md:p-6 pt-4 md:pt-8 text-lg md:text-2xl font-bold text-center md:text-left">
+                            들어오는 베팅
+                            <ul class="nav nav-boxed-tabs fame_tab !w-auto mr-0 p-1 bg-sub rounded-lg mr-2">
+                                <li class="nav-item"><button class="nav-link py-1.5 !px-3 text-sm active" type="button"> 모든 베팅 </button> </li>
+                                <li class="nav-item"><button class="nav-link py-1.5 !px-3 text-sm" type="button"> 하이 롤러 </button> </li>
+                                <li class="nav-item"><button class="nav-link py-1.5 !px-3 text-sm" type="button"> 싱글 </button> </li>
+                                <li class="nav-item"><button class="nav-link py-1.5 !px-3 text-sm" type="button"> 멀티 베팅 </button> </li>
+                            </ul>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="table table-striped no-border thead-py-big bg-box rounded-md">
+                                <thead class="border-t border-b border-gray-700">
+                                    <tr>
+                                        <th class="whitespace-nowrap text-xs text-primary">이벤트</th>
+                                        <th class="whitespace-nowrap text-xs text-primary">배당률</th>
+                                        <th class="whitespace-nowrap text-xs text-primary">베팅 금액</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="font-bold text-xs">
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_football.svg" alt=""><span class="block truncate">Uruguay - Colombia</span></div></td>
+                                        <td>1.65</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_football.svg" alt=""><span class="block truncate">Uruguay - Colombia</span></div></td>
+                                        <td>1.65</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_basketball.svg" alt=""><span class="block truncate">Utah Jazz - Philadelphia 76ers</span></div></td>
+                                        <td>3.25</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_basketball.svg" alt=""><span class="block truncate">Utah Jazz - Philadelphia 76ers</span></div></td>
+                                        <td>1.65</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_football.svg" alt=""><span class="block truncate">Uruguay - Colombia</span></div></td>
+                                        <td>1.65</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_football.svg" alt=""><span class="block truncate">Uruguay - Colombia</span></div></td>
+                                        <td>1.65</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_basketball.svg" alt=""><span class="block truncate">Utah Jazz - Philadelphia 76ers</span></div></td>
+                                        <td>3.25</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="flex items-center gap-2"><img src="./dist/images/sports/icon_basketball.svg" alt=""><span class="block truncate">Utah Jazz - Philadelphia 76ers</span></div></td>
+                                        <td>1.65</td>
+                                        <td><span class="flex items-center gap-2"><img class="w-4 h-4" src="./dist/images/coin/binance-coin-bnb-logo.svg" alt="">0.00349679</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END: Content -->
+        </div>
+    
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

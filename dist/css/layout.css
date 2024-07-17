@@ -378,8 +378,11 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .promotion .side-nav .promotion .side-menu__icon {color:rgb(var(--color-primary)); font-weight:600; }
 .promotion .side-nav .promotion .side-menu__title span {color:#fff; }
 
-.sports header .gnb .sports a {color:rgb(var(--color-primary)); font-weight:600; }
+.sports:not(.live):not(.result) header .gnb .sports a {color:rgb(var(--color-primary)); font-weight:600; }
 .sports .side-nav {display:none; }
+
+.sports.live header .gnb .live a {color:rgb(var(--color-primary)); font-weight:600; }
+.sports.result header .gnb .result a {color:rgb(var(--color-primary)); font-weight:600; }
 
 .mo_menu_bg {display:none; }
 
@@ -406,6 +409,8 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
     .slot .side-nav > ul > li.casino li.more_list {display:block; }
     .slot .side-nav > ul > li.slots li.cate_more_list,
     .slot .side-nav > ul > li.casino li.cate_more_list {display:none; }
+
+    .sports .side-nav {display:block; }
 }
 
 @media all and (max-width:400px){
@@ -438,7 +443,7 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .side_menu .sports_nav .category a.active svg {color:rgb(var(--color-primary)); }
 .side_menu .sports_nav .category a.active {background-color: rgba(16, 23, 29, 0.5); box-shadow:0 0 20px rgba(0, 0, 0, 0.1); }
 
-.side_menu .sports_nav .sport_tab {width:calc(17vw - 15px); height:calc(100vh - 105px); padding:0 5px 15px;  }
+.side_menu .sports_nav .sport_tab {width:calc(14vw - 15px); height:calc(100vh - 105px); padding:0 5px 15px;  }
 .side_menu .sports_nav .sports_filter_top input[type="checkbox"] {display:none} 
 .side_menu .sports_nav .sports_filter_top input[type="checkbox"] + span {display:block; width:16px; height:16px; border:2px solid #94AEB4; }
 .side_menu .sports_nav .sports_filter_top input[type="checkbox"]:checked + span {position:relative; border-color:#fff; }
@@ -455,6 +460,13 @@ header .right_box  .cash_btn {width:32px; height:32px; background-color:rgb(var(
 .side_menu .sports_nav .sports_filter_list > ul > li > button svg {transition:all 0.5s; }
 .side_menu .sports_nav .sports_filter_list > ul > li.open > button svg {transform:rotate(270deg); }
 
+
+@media all and (max-width:1800px){
+    .side_menu .sports_nav .sport_tab {width:calc(14vw - 15px); }
+}
+@media all and (max-width:1600px){
+    .side_menu .sports_nav .sport_tab {width:calc(16vw - 15px); }
+}
 
 @media all and (max-width:1279px){
     .sports .side_menu .sports_nav {display:none; }
@@ -496,8 +508,13 @@ footer .footer_currency .img_list img {height:30px; }
 }
 
 /* 모바일에서 상단으로 올라가는 버튼 */
-.totop_btn {position:fixed; left:10px; bottom:80px; visibility:hidden; opacity:0; display:flex; align-items:center; justify-content:center; width:40px; height:40px; background-color:rgb(var(--color-primary)); border-radius:50%; transition:opacity 0.3s; }
+.totop_btn {z-index:100; position:fixed; left:10px; bottom:80px; visibility:hidden; opacity:0; display:none; align-items:center; justify-content:center; width:40px; height:40px; background-color:rgb(var(--color-primary)); border-radius:50%; transition:opacity 0.3s; }
 .totop_btn.on {visibility:visible; opacity:1; }
+
+
+@media all and (max-width:1279px){
+    .totop_btn {display:flex; }
+}
 
 /* ----------------------------------------------
             CASHBACK_POPUP
@@ -813,6 +830,10 @@ footer .footer_currency .img_list img {height:30px; }
 .right_bet_slip .nav-link-tabs button {color:#fff !important; }
 .right_bet_slip .bet_check input + label {border:1px solid transparent; }
 .right_bet_slip .bet_check input:checked + label {border:1px solid rgb(var(--color-primary)); }
+.right_bet_slip .bet_check input:disabled + label p:not(.text-primary),
+.right_bet_slip .bet_check input:disabled + label span,
+.right_bet_slip .bet_check input:disabled + label img {filter:grayscale(1); color:var(--light-color); }
+.right_bet_slip .bet_check input:disabled + label .text-primary {opacity:.5; }
 .right_bet_slip .accordion .accordion-button:before {display:none; }
 .right_bet_slip .accordion .accordion-button.collapsed svg {transform:rotate(90deg); }
 .right_bet_slip .accordion .accordion-button svg {transform:rotate(270deg); transition:all 0.3s; }

@@ -118,6 +118,11 @@ const sideMenu = ()=>{
             }
         }
     });
+
+    // 스포츠 좌측메뉴 클릭시 active
+    $('.side_menu .sports_nav .category a').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active')
+    })
 }
 
 // 헤더 스크립트

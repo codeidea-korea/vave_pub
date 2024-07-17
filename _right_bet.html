@@ -17,7 +17,7 @@
             <div class="tab-content xl:mt-2">
                 <div id="betslip-tab-1" class="betslip_wrap flex flex-col xl:block tab-pane leading-relaxed xl:py-4 xl:px-2 active" role="tabpanel" aria-labelledby="betslip-1-tab">
                     <!-- 모바일에서만 -->
-                    <div class="flex items-center justify-between px-4 py-2 bg-betslip">
+                    <div class="flex xl:hidden items-center justify-between px-4 py-2 bg-betslip">
                         <button onclick="moBetslipClose()"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
                         <div class="flex items-center gap-3">
                             <button class="flex items-center gap-1" onclick="moBetslipOpen('#betslip-2-tab')">My bets <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?071650#svg-my-bets"></use></svg></button>
@@ -58,7 +58,7 @@
                                             <span class="text-xs">코볼리, 플라비오 - 알트마이엘, 다니엘</span>
                                         </div>
                                         <div class="font-semibold mt-1">
-                                            1x2: 드로
+                                            <p>1x2: 드로</p>
                                         </div>
                                     </label>
                                 </div>
@@ -76,7 +76,25 @@
                                             <span class="text-xs">코볼리, 플라비오 - 알트마이엘, 다니엘</span>
                                         </div>
                                         <div class="font-semibold mt-1">
-                                            게임 핸디캡:코볼리,플라비오(-1.5)
+                                            <p>게임 핸디캡:코볼리,플라비오(-1.5)</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="bet_check mb-2">
+                                    <input type="radio" id="bet_3" class="hidden" name="bet_" checked disabled>
+                                    <label for="bet_3" class="block bg-betslip p-3 cursor-pointer rounded-lg">
+                                        <div class="flex items-center justify-between">
+                                            <p class="flex items-center gap-1 text-xs"><img src="./dist/images/sports/icon_football.svg" alt=""><span>종료</span><b class="opacity-50">15.07.2024</b><span class="opacity-50">09:45</span></p>
+                                            <div class="flex items-center gap-2">
+                                                <p class="font-bold text-primary">완료</p>
+                                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 mt-2">
+                                            <span class="text-xs">코볼리, 플라비오 - 알트마이엘, 다니엘</span>
+                                        </div>
+                                        <div class="font-semibold mt-1">
+                                            <p>게임 핸디캡:코볼리,플라비오(-1.5)</p>
                                         </div>
                                     </label>
                                 </div>

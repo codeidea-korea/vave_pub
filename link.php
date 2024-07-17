@@ -129,7 +129,7 @@ echo txtRecord('./@record/');
 				<li>
 					<a href="./sports_mo.html" target="_blank" class="">스포츠 베팅 - 모바일</a>
 					<ul>
-						<li><a href="./sports_mo_search.html" target="_blank" class="">스포츠 베팅 - 모바일</a></li>
+						<li><a href="./sports_mo_search.html" target="_blank" class="">스포츠 검색 - 모바일</a></li>
 						<li>
 							<button class="pop-modal" onclick="modalOpen('betslip_delete-modal')">betslip 삭제 모달</button>
 							<button class="pop-modal" onclick="modalOpen('betslip_betsetting-modal')">betslip 베팅 설정 모달</button>
@@ -137,6 +137,9 @@ echo txtRecord('./@record/');
 						</li>
 					</ul>
 				</li>
+				<li><a href="./sports_live.html" target="_blank" class="">라이브 베팅</a></li>
+				<li><a href="./sports_live_mo.html" target="_blank" class="">라이브 베팅 - 모바일</a></li>
+				<li><a href="./sports_result.html" target="_blank" class="">스포츠 - 결과</a></li>
 			</ul>
 		</li>
 
