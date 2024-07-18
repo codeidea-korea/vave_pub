@@ -55,6 +55,12 @@
                     <!-- 상위 이벤트 -->
                     <div>
                         <h3 class="mb-3 text-xl font-bold">상위 이벤트</h3>
+                        
+                        <!-- 카테고리 클릭시 보여짐. -->
+                        <div class="sports_category_box">
+                            <button class="h-10 px-3 bg-box rounded font-bold" onclick="sportCateAllDelete(this)">Clear all</button>
+                        </div>
+
                         <div class="mb-4">
                             <div class="sports_heading flex items-center bg-sports px-3 py-2 rounded-md">
                                 <div class="flex items-center gap-2 w-72">
@@ -261,14 +267,14 @@
                                         </div>
                                     </div>
                                     <div class="sports_body_btn flex-1 flex items-center gap-1 text-center mont font-bold">
-                                        <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
-                                        <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
-                                        <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
+                                        <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)" disabled><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
+                                        <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)" disabled><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
+                                        <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)" disabled><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
                                         <div class="hidden 2xl:block flex-1 opacity-50 font-extrabold">+3.5-</div>
-                                        <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
-                                        <div class="hidden 3xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
+                                        <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)" disabled><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
+                                        <div class="hidden 3xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)" disabled><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
                                         <div class="hidden 3xl:block flex-1 opacity-50 font-extrabold">22</div>
-                                        <div class="hidden 3xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
+                                        <div class="hidden 3xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)" disabled><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-lock"></use></svg></button></div>
                                         <div class="flex-1"><button class="flex items-center justify-center gap-2 mx-auto" onclick="sportsConOpen(this,'sports_bet_wrap')">176<svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-180"><use href="./dist/images/icon-defs.svg#base-arrow"></use></svg></button></div>
                                     </div>
                                 </div>

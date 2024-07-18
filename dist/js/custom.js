@@ -417,8 +417,41 @@ const moChatOpen = ()=>{
 
 // 스포츠 메뉴 - 상위리그 클릭시
 const sportInputClick = (item)=>{
-    $(item).siblings('input').click()
+    let target = $(item).find('a span').html()
+
+    if($(item).find('input').prop('checked')){
+        $(item).find('input').prop('checked',false)
+        // 카테고리 삭제
+        $('.sports_category_box > div').each(function(){
+            if(target == $(this).find('span').html()){
+                $(this).remove();
+            }
+        })
+    }else{
+        $(item).find('input').prop('checked',true)
+        // 카테고리 추가
+        $('.sports_category_box').prepend(`
+            <div class="flex items-center justify-center gap-1 h-10 px-3 bg-box rounded">
+                <span class="flex items-center gap-1">${target}</span>
+                <button class="w-4 h-4 bg-light rounded-full" onclick="sportCateDelete(this)"><svg viewBox="0 0 24 24" class="svg-icon w-2 h-2 mx-auto"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+            </div>`)
+    }
 }
+
+const sportCateDelete = (item)=>{
+    let target = $(item).siblings('span').html();
+
+    $('.sports_nav .sports_filter_top').each(function(){
+        if(target == $(this).find('a span').html()){
+            $(this).find('input').prop('checked',false)
+        }
+    })
+    $(item).parent().remove();
+}
+const sportCateAllDelete = (item)=>{
+    $(item).siblings().find('button').click();
+}
+
 const sportFilterOpen = (item)=>{
     $(item).parent().toggleClass('open')
 }
@@ -447,6 +480,18 @@ const sportsBetAllbtn = (item)=>{
         }
     })
 }
+// 스포츠 > 디테일 베팅 닫기
+const sportsDetailBetAllbtn = (item)=>{
+    $(item).find('svg').toggleClass('rotate-180')
+    $('.sports_bet_wrap').find('dl').each(function(){
+        if($(item).find('svg').hasClass('rotate-180')){
+            $(this).removeClass('open')
+        }else{
+            $(this).addClass('open')
+        }
+    })
+}
+
 const sportsBetbtn = (item)=>{
     $(item).parents('dl').toggleClass('open')
 }
@@ -479,6 +524,12 @@ const moBetslipOpen = (target)=>{
 }
 const moBetslipClose = ()=>{
     $('.right_bet').removeClass('open')
+}
+
+// 스포츠 detail > breadcrumbs ... 클릭시 상세 보여주기
+const breadcrumbsHandle = (item)=>{
+    $(item).addClass('hidden')
+    $(item).next().removeClass('hidden')
 }
 
 // 상단으로

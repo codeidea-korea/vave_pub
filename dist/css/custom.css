@@ -503,3 +503,35 @@
 @media all and (max-width:1279px){
     .betslip_btn {display:block; }
 }
+
+/* 스포츠 카테고리 */
+.sports_category_box {flex-wrap:wrap; display:flex; align-items:center; gap:10px; margin:10px 0; }
+.sports_category_box > button:nth-child(1),
+.sports_category_box > button:nth-child(2) {display:none; }
+
+
+/* ----------------------------------------------
+            스포츠 디테일
+---------------------------------------------- */
+
+/* 스포츠 디테일 비쥬얼 */
+.sports_detail_visual {overflow:hidden; position:relative; background-repeat:no-repeat; background-position:center right; background-size:100%; }
+.sports_detail_visual:before {content:''; z-index:1; position:absolute; left:0; top:0; width:100%; height:100%; background-color:rgba(33, 48, 60, 0.9);}
+.sports_detail_visual > div {z-index:2; position:relative; }
+.sports_detail_visual .visual_info {background:radial-gradient(100% 162.16% at 100% 0%, rgba(16, 23, 29, 0.5) 0%, rgba(16, 23, 29, 0.5) 100%); }
+
+/* 스포츠 디테일 탭 */
+.sport_detail_tab {}
+.sport_detail_tab .analysis_btn {background:linear-gradient(to right, #01DCBA 60%, #7F30CB); background-size:300% 200%; animation:bggradient 2s ease-in infinite; }
+.sport_detail_tab .analysis_btn.active {background:var(--primary-color); animation:none; }
+
+@keyframes bggradient {
+    0% {background-position:50% 0%; }
+    50% {background-position:99% 300%; }
+    100% {background-position:50% 0%; }
+}
+
+@media all and (max-width:1279px){
+    .sports_detail_visual .visual_info {background:transparent; }
+    .sports_detail_top {width:calc(100% + 20px); margin:0 -10px; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
+}
