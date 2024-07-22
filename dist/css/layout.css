@@ -603,6 +603,9 @@ footer .footer_currency .img_list img {height:30px; }
 .modal .modal-body .close_btn {z-index:20; position:absolute; left:calc(100% + 2px); bottom:calc(100% + 2px); }
 .modal .modal-body .close_btn.inner {left:auto; bottom:auto; right:10px; top:10px; }
 
+.modal.type02 {position:absolute; width:100%; height:100%; }
+.modal.type02 .modal-dialog {width:90%; }
+
 @media all and (max-width:1279px){
     .modal .modal-body .close_btn {left:auto; bottom:auto; right:10px; top:10px; }
 }
@@ -841,7 +844,7 @@ footer .footer_currency .img_list img {height:30px; }
 .right_bet_slip .accordion .accordion-button svg {transform:rotate(270deg); transition:all 0.3s; }
 
 @media all and (max-width:1400px){
-    .right_bet {position:fixed; top:75px; left:calc(100% - 10px); width:330px; height:calc(100% - 75px); padding-right:0; background-color:#19232A; }
+    .right_bet {z-index:50; position:fixed; top:75px; left:calc(100% - 10px); width:330px; height:calc(100% - 75px); padding-right:0; background-color:#19232A; }
     .right_bet.open {left:calc(100% - 330px); }
     .right_bet.open .tab_btn {width:30px; }
     .right_bet.open .tab_btn span {display:none; }

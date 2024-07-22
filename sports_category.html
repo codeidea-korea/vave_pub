@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="sports">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+                
+                <div class="hidden lg:flex items-center gap-2 mb-3 text-xs">
+                    <a href="/index.html" class="flex items-center justify-center w-12 h-8 bg-sub rounded-3xl"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#breadcrumbs-home"></use></svg></a>
+                    <span>/</span>
+                    <span class="flex items-center justify-center h-8 px-5 bg-sub rounded-3xl">LINE</span>
+                    <span>/</span>
+                    <span class="flex items-center justify-center h-8 px-5 bg-sub rounded-3xl">축구</span>
+                    <span>/</span>
+                    <span class="flex items-center justify-center h-8 px-5 bg-light rounded-3xl">엘리테세리엔</span>
+                </div>
+
+
+                <div class="box">
+                    <!-- 상위 이벤트 -->
+                    <div>
+                        <h3 class="mb-3 text-xl font-bold hidden xl:block">스포츠 베팅</h3>
+
+                        <!-- 모바일 상단 -->
+                        <div class="flex lg:hidden items-center justify-between bg-box py-2 px-3 mb-2 rounded-md">
+                            <div class="flex items-center gap-2">
+                                <a href="javascrsipt:;"><svg viewBox="0 0 24 24" class="svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg></a>
+                                <p class="font-bold text-base">League</p>
+                            </div>
+                            <button onclick="modalOpen('sports_timefilter-modal')" class="flex items-center gap-1 fs13">모두 <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?07191#modern-time"></use></svg></button>
+                        </div>
+                        
+                        <!-- 카테고리 클릭시 보여짐. -->
+                        <div class="sports_category_box">
+                            <div class="flex items-center justify-center gap-1 h-10 px-3 bg-box rounded">
+                                <span class="flex items-center gap-1"><img class="w-5" src="./dist/images/sports/euro2024.svg" alt="">UEFA Euro</span>
+                                <button class="w-4 h-4 bg-light rounded-full" onclick="sportCateDelete(this)"><svg viewBox="0 0 24 24" class="svg-icon w-2 h-2 mx-auto"><use href="./dist/images/icon-defs.svg#svg-close"></use></svg></button>
+                            </div>
+                            <button class="h-10 px-3 bg-box rounded font-bold" onclick="sportCateAllDelete(this)">Clear all</button>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="sports_heading flex items-center bg-sports px-3 py-2 rounded-md">
+                                <div class="flex items-center gap-2 w-72">
+                                    <img class="w-5" src="./dist/images/sports/icon_football.svg" alt="">
+                                    <img class="w-5" src="./dist/images/sports/europa-league-vavestyle.svg" alt="">
+                                    <b class="text-xs font-bold">UEFA 유로파 리그</b>
+                                </div>
+                                <div class="flex-1 tab-content">
+                                    <div id="sportTab-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="sportTab-1-tab">
+                                        <div class="flex-1 hidden xl:flex items-center gap-1 text-center mont font-bold">
+                                            <span class="flex-1">1</span>
+                                            <span class="flex-1">X</span>
+                                            <span class="flex-1">2</span>
+                                            <span class="hidden 2xl:block flex-1">1X</span>
+                                            <span class="hidden 2xl:block flex-1">12</span>
+                                            <span class="hidden 2xl:block flex-1">2X</span>
+                                            <span class="hidden 3xl:block flex-1">1</span>
+                                            <span class="hidden 3xl:block flex-1">HANDICAP</span>
+                                            <span class="hidden 3xl:block flex-1">2</span>
+                                            <span class="flex-1"></span>
+                                        </div>
+                                    </div>
+                                    <div id="sportTab-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sportTab-2-tab"></div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- 중간 탭 -->
+                            <ul class="nav bg-box my-2 rounded-md" role="tablist">
+                                <li id="sportTab-1-tab" class="nav-item" role="presentation"> 
+                                    <button class="nav-link !text-white font-bold py-2 active" data-tw-toggle="pill" data-tw-target="#sportTab-tab-1" type="button" role="tab" aria-controls="sportTab-tab-1" aria-selected="true"> Events </button> 
+                                </li>
+                                <li id="sportTab-2-tab" class="nav-item" role="presentation"> 
+                                    <button class="nav-link !text-white font-bold py-2" data-tw-toggle="pill" data-tw-target="#sportTab-tab-2" type="button" role="tab" aria-controls="sportTab-tab-2" aria-selected="false"> Outrights </button> 
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="sportTab-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="sportTab-1-tab">
+                                    <!-- pc용 -->
+                                    <div class="hidden xl:block">
+                                        <div class="sports_body p-3 mt-2 bg-box2 hover:bg-box border border-box rounded-md">
+                                            <div class="flex items-center">
+                                                <div class="flex items-center justify-between w-72 pr-2.5">
+                                                    <div class="text-xs cursor-pointer">
+                                                        <p class="flex items-center gap-2 mb-1 mont">
+                                                            <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                                            <b>12.07.2024,</b><span>02:00</span>
+                                                        </p>
+                                                        <p>아이에프 엘프스보리</p>
+                                                        <p>파포스 FC</p>
+                                                    </div>
+                                                    <div class="flex items-center gap-2">
+                                                        <button><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#modern-factor-stats"></use></svg></button>
+                                                        <button onclick="sportsConOpen(this,'sports_body_info')"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-180"><use href="./dist/images/icon-defs.svg#base-arrow"></use></svg></button>
+                                                    </div>
+                                                </div>
+                                                <div class="sports_body_btn flex-1 flex items-center gap-1 text-center mont font-bold">
+                                                    <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">1.8</button></div>
+                                                    <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">3.75</button></div>
+                                                    <div class="flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">4.2</button></div>
+                                                    <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">1.23</button></div>
+                                                    <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">1.27</button></div>
+                                                    <div class="hidden 2xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">1.93</button></div>
+                                                    <div class="hidden 3xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">1.78</button></div>
+                                                    <div class="hidden 3xl:block flex-1 opacity-50 font-extrabold">-0.5+</div>
+                                                    <div class="hidden 3xl:block flex-1"><button class="btn w-full h-12 bet_btn" onclick="sportsBetClick(this)">2.01</button></div>
+                                                    <div class="flex-1"><button class="flex items-center justify-center gap-2 mx-auto" onclick="sportsConOpen(this,'sports_bet_wrap')">859<svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-180"><use href="./dist/images/icon-defs.svg#base-arrow"></use></svg></button></div>
+                                                </div>
+                                            </div>
+                                            <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                                <p>스포츠 정보 들어가는 곳</p>
+                                            </div>
+                                            <div class="sports_bet_wrap mt-3">
+                                                <div class="flex items-center gap-2 w-full">
+                                                    <p class="flex items-center flex-1 h-9 px-5 rounded-md bg-sub font-bold">메인</p>
+                                                    <button class="flex items-center justify-center w-11 h-10 rounded-md bg-sub" onclick="sportsBetAllbtn(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#modern-collapse"></use></svg></button>
+                                                </div>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">1x2</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">더블 기회</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">드로 노 베트</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">두 팀 모두 득점</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">예</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아니오</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">토탈</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 17.5</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 17.5</p><b>5</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 18</p><b>1.19</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 18</p><b>4.7</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 18.5</p><b>1.29</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 18.5</p><b>3.65</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 19</p><b>1.33</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 19</p><b>3.55</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 19.5</p><b>1.47</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 19.5</p><b>2.7</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 20</p><b>1.53</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 20</p><b>2.55</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 20.5</p><b>1.65</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 20.5</p><b>2.26</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 21</p><b>1.72</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 21</p><b>2.13</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 21.5</p><b>1.82</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 21.5</p><b>1.99</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 22</p><b>1.95</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 22</p><b>1.86</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 22.5</p><b>2.1</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 22.5</p><b>1.74</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 23</p><b>2.24</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 23</p><b>1.66</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 23.5</p><b>2.35</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 23.5</p><b>1.6</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 24</p><b>2.41</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 24</p><b>1.58</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 24.5</p><b>2.45</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 24.5</p><b>1.56</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 25</p><b>2.6</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 25</p><b>1.5</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 25.5</p><b>2.7</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 25.5</p><b>1.47</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">Asian Total</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+0.5)</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-0.5)</p><b>5</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+1)</p><b>1.19</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-1)</p><b>4.7</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+1.5)</p><b>1.29</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-1.5)</p><b>3.65</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+2)</p><b>1.33</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-2)</p><b>3.55</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+2.5)</p><b>1.47</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-2.5)</p><b>2.7</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+3)</p><b>1.53</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-3)</p><b>2.55</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+3.5)</p><b>1.65</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-3.5)</p><b>2.26</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+4)</p><b>1.72</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-4)</p><b>2.13</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+4.5)</p><b>1.82</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-4.5)</p><b>1.99</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+5)</p><b>1.95</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-5)</p><b>1.86</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+5.5)</p><b>2.1</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-5.5)</p><b>1.74</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+6)</p><b>2.24</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-6)</p><b>1.66</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">배키크,돈나(+6.5)</p><b>2.35</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-6.5)</p><b>1.6</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">오버 2.5</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">언더 2.5</p><b>5</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 0:1</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 0:2</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 0:3</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 0:4</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 0:5</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 1:0</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 2:0</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">핸디캡 3:0</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-3 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">아이에프 엘프스보리</p><b>1.8</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.75</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파포스 FC</p><b>4.2</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">정확한 스코어</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">2:0</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">2:1</p><b>5</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">0:2</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">1:2</p><b>5</b></button>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="open mt-2">
+                                                    <dt class="cursor-pointer">
+                                                        <button class="flex items-center justify-between w-full h-10 px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                            <span class="font-bold">세트 핸디캡</span>
+                                                            <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                        </button>
+                                                    </dt>
+                                                    <dd class="grid grid-cols-2 gap-2 mt-2">
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">베키크,돈나(-1.5)</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(+1.5)</p><b>5</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">베키크,돈나(+1.5)</p><b>1.17</b></button>
+                                                        <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">파올리니,자스민(-1.5)</p><b>5</b></button>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 모바일용 -->
+                                    <div class="block xl:hidden">
+                                        <div class="p-4 bg-box2 rounded-lg sports_body mb-2">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <p class="flex items-center gap-1 mont text-xs">
+                                                    <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0711#sports-graph"></use></svg>
+                                                    <b>11.07.2024,</b><span>21:30</span>
+                                                </p>
+                                                <div class="flex items-center gap-1">
+                                                    <span class="px-1 rounded fs10 bg-aggregate">2:1</span>
+                                                    <button><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#modern-factor-stats"></use></svg></button>
+                                                    <button onclick="sportsConOpen(this,'sports_body_info')"><svg viewBox="0 0 24 24" class="svg-icon w-4 h-4 rotate-180"><use href="./dist/images/icon-defs.svg#base-arrow"></use></svg></button>
+                                                </div>
+                                            </div>
+                                            <a href="javscript:;">
+                                                <div class="flex items-center gap-1 mb-1"><img class="w-4" src="./dist/images/sports/team/280003.png" alt=""><span>FC 발카니</span></div>
+                                                <div class="flex items-center gap-1"><img class="w-4" src="./dist/images/sports/team/37949.png" alt=""><span>UE Santa Coloma</span></div>
+                                            </a>
+                                            <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports">
+                                                <p>스포츠 정보 들어가는 곳</p>
+                                            </div>
+                                            <div class="overflow-hidden mySwiper bet_slide_box mt-2 mont" data-gap="10" data-loop="false" data-group="true">
+                                                <div class="flex items-center justify-between w-full mb-2">
+                                                    <div class="group text-xs text-light">1x2</div>
+                                                    <div class="pagination !w-auto mr-0"></div>
+                                                </div>
+                                                <div class="swiper-container relative">
+                                                    <ul class="swiper-wrapper mo_sports_bet_wrap">
+                                                        <li class="swiper-slide" data-group="1x2">
+                                                            <div class="grid grid-cols-3 gap-2">
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1</span><b class="font-bold">1.32</b></button>
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">X</span><b class="font-bold">5.6</b></button>
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2</span><b class="font-bold">9.6</b></button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="swiper-slide" data-group="Total">
+                                                            <div class="grid grid-cols-2 gap-2">
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TU 3</span><b class="font-bold">1.77</b></button>
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">TO 3</span><b class="font-bold">2.1</b></button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="swiper-slide" data-group="Handicap">
+                                                            <div class="grid grid-cols-2 gap-2">
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H1-1.5</span><b class="font-bold">1.91</b></button>
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">H2+1.5</span><b class="font-bold">1.94</b></button>
+                                                            </div>
+                                                        </li>
+                                                        <li class="swiper-slide" data-group="Doubles">
+                                                            <div class="grid grid-cols-3 gap-2">
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">1X</span><b class="font-bold">1.08</b></button>
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">12</span><b class="font-bold">1.15</b></button>
+                                                                <button class="bet_btn flex h-10 bg-box rounded-lg" onclick="moSportsBetClick(this)"><span class="font-bold text-xs">2X</span><b class="font-bold">3.2</b></button>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper-scrollbar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="sportTab-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="sportTab-2-tab">
+                                    <div class="sports_bet_wrap open mt-3">
+                                        <dl class="open bg-sub mb-2 py-2.5 rounded-lg">
+                                            <dt class="cursor-pointer">
+                                                <button class="flex items-center justify-between w-full px-5 bg-sub rounded-md" onclick="sportsBetbtn(this)">
+                                                    <p class="flex items-center gap-1 text-left">
+                                                        <span class="font-bold">엘리트세리엔 - 우승팀</span>
+                                                        <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg?0719#modern-timer"></use></svg>
+                                                        <b class="text-xs">02.12.2024</b><span class="text-xs">01:00</span>
+                                                    </p>
+                                                    <svg viewBox="0 0 24 24" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#svg-arrow"></use></svg>
+                                                </button>
+                                            </dt>
+                                            <dd class="grid grid-cols-2 gap-2 mt-2 px-3 pb-1">
+                                                <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">FK 보되/글림트</p><b>1.25</b></button>
+                                                <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">몰데 FK</p><b>4.99</b></button>
+                                                <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">SK 브란</p><b>1.25</b></button>
+                                                <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">바이킹 FK</p><b>4.99</b></button>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+    
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

@@ -453,10 +453,15 @@
 .sports_body_btn .bet_btn:hover {background-color:#94AEB4; }
 .sports_bet_wrap .bet_btn.active ,
 .sports_body_btn .bet_btn.active {background-color:var(--primary-color);}
+.sports_bet_wrap .bet_btn:before ,
 .sports_body_btn .bet_btn:before { -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0MyA0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwVjBDNS45IDIwLjggMjIuMiAzNyA0MyA0M1Y0M0gwVjBaIiAvPg0KPC9zdmc+DQo=) no-repeat; mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0MyA0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMCAwVjBDNS45IDIwLjggMjIuMiAzNyA0MyA0M1Y0M0gwVjBaIiAvPg0KPC9zdmc+DQo=) no-repeat; -webkit-mask-size: cover; mask-size: cover;}
+.sports_bet_wrap .bet_btn.up:before ,
 .sports_body_btn .bet_btn.up:before {content:''; position:absolute; right:0; top:0; width:40px; height:40px; background:linear-gradient(305deg, rgba(31,233,136,1) 0, rgba(31,233,136,0) 50% ); transform:rotate(180deg); border-bottom-left-radius:8px; }
+.sports_bet_wrap .bet_btn.up:after,
 .sports_body_btn .bet_btn.up:after {content:''; position:absolute; right:0; top:0; width:40px; height:40px; background:linear-gradient(55deg, rgba(31,233,136,1) 0, rgba(31,233,136,0) 50% ); transform:rotate(180deg); filter:blur(7px); border-bottom-left-radius:8px; }
+.sports_bet_wrap .bet_btn.down:before,
 .sports_body_btn .bet_btn.down:before {content:''; position:absolute; left:0; bottom:0; width:40px; height:40px; background:linear-gradient(305deg, rgba(255,78,78,1) 0, rgba(255,78,78,0) 50% ); border-bottom-left-radius:8px; }
+.sports_bet_wrap .bet_btn.down:after,
 .sports_body_btn .bet_btn.down:after {content:''; position:absolute; left:0; bottom:0; width:40px; height:40px; background:linear-gradient(55deg, rgba(255,78,78,1) 0, rgba(255,78,78,0) 50% ); filter:blur(7px); border-bottom-left-radius:8px; }
 
 .sports_body_info {display:none; }
@@ -466,9 +471,9 @@
 .sports_bet_wrap.open {display:block; }
 
 .sports_bet_wrap dl dd {display:none; }
-.sports_bet_wrap dl dt button svg {transform:rotate(90deg); transition:all 0.3s; }
+.sports_bet_wrap dl dt button > svg {transform:rotate(90deg); transition:all 0.3s; }
 .sports_bet_wrap dl.open dd {display:grid; }
-.sports_bet_wrap dl.open dt button svg {transform:rotate(-90deg); }
+.sports_bet_wrap dl.open dt button > svg {transform:rotate(-90deg); }
 
 /* 모바일 상단 탭 */
 .mo_sports_tab {display:flex; align-items:flex-start; gap:10px; }
@@ -509,6 +514,9 @@
 .sports_category_box > button:nth-child(1),
 .sports_category_box > button:nth-child(2) {display:none; }
 
+@media all and (max-width:1279px){
+    .sports_category_box {display:none; }
+}
 
 /* ----------------------------------------------
             스포츠 디테일

@@ -12,7 +12,7 @@
                         <button class="nav-link py-2" data-tw-toggle="pill" data-tw-target="#betslip-tab-2" type="button" role="tab" aria-controls="betslip-tab-2" aria-selected="false">나의 베팅</button> 
                     </li>
                 </ul>
-                <button class="text-light opacity-80"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                <button class="text-light opacity-80" onclick="modalOpen('betslip_delete_pc-modal')"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
             </div>
             <div class="tab-content xl:mt-2">
                 <div id="betslip-tab-1" class="betslip_wrap flex flex-col xl:block tab-pane leading-relaxed xl:py-4 xl:px-2 active" role="tabpanel" aria-labelledby="betslip-1-tab">
@@ -50,7 +50,7 @@
                                             <p class="flex items-center gap-1 text-xs"><img src="./dist/images/sports/icon_football.svg" alt=""><img src="./dist/images/sports/live.svg" alt=""><span class="opacity-50">경기시작전</span></p>
                                             <div class="flex items-center gap-2">
                                                 <p class="font-bold">2.9</p>
-                                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                                                <button onclick="modalOpen('betslip_delete_pc-modal')"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 mt-2">
@@ -69,7 +69,7 @@
                                             <p class="flex items-center gap-1 text-xs"><img src="./dist/images/sports/icon_football.svg" alt=""><b class="opacity-50">15.07.2024</b><span class="opacity-50">09:45</span></p>
                                             <div class="flex items-center gap-2">
                                                 <p class="font-bold">1.86</p>
-                                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                                                <button onclick="modalOpen('betslip_delete_pc-modal')"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 mt-2">
@@ -87,7 +87,7 @@
                                             <p class="flex items-center gap-1 text-xs"><img src="./dist/images/sports/icon_football.svg" alt=""><span>종료</span><b class="opacity-50">15.07.2024</b><span class="opacity-50">09:45</span></p>
                                             <div class="flex items-center gap-2">
                                                 <p class="font-bold text-primary">완료</p>
-                                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                                                <button onclick="modalOpen('betslip_delete_pc-modal')"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 mt-2">
@@ -136,7 +136,7 @@
                                             <p class="flex items-center gap-1 text-xs"><img src="./dist/images/sports/icon_football.svg" alt=""><img src="./dist/images/sports/live.svg" alt=""><span class="opacity-50">경기시작전</span></p>
                                             <div class="flex items-center gap-2">
                                                 <p class="font-bold">2.9</p>
-                                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                                                <button onclick="modalOpen('betslip_delete_pc-modal')"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 mt-2">
@@ -153,7 +153,7 @@
                                             <p class="flex items-center gap-1 text-xs"><img src="./dist/images/sports/icon_football.svg" alt=""><b class="opacity-50">15.07.2024</b><span class="opacity-50">09:45</span></p>
                                             <div class="flex items-center gap-2">
                                                 <p class="font-bold">1.86</p>
-                                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
+                                                <button onclick="modalOpen('betslip_delete_pc-modal')"><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#svg-trashbin"></use></svg></button>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 mt-2">
@@ -238,6 +238,24 @@
                     </div>
                 </div>
             </div>
+
+            <!-- pc 삭제 모달 -->
+            <div id="betslip_delete_pc-modal" class="modal type02" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-dark">
+                        <div class="modal-body p-10 !py-4">
+                            <!-- <button class="close_btn" onclick="closeModal('betslip_delete-modal')"><svg viewBox="0 0 24 24" class="svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg#close"></use></svg></button> -->
+                            <p class="text-xl font-semibold text-center">모든 결과 삭제하기</p>
+                            <p class="mt-1 text-center">모든 결과를 삭제하시겠습니까?</p>
+                            <div class="flex items-center gap-2 mt-4">
+                                <button class="flex-1 btn btn-outline-primary border-2" onclick="closeModal('betslip_delete_pc-modal')">아니오</button>
+                                <button class="flex-1 btn btn-primary">네</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

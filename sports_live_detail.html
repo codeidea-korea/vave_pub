@@ -70,46 +70,53 @@
                     <!-- 모바일에서 상단고정 -->
                     <div class="z-10 lg:relative sticky lg:top-0 top-[60px] lg:p-0 p-3 sports_detail_top">
                         <!-- 스포츠 상단 visual -->
-                        <div class="sports_detail_visual p-3 lg:p-5 rounded-lg" style="background-image:url('./dist/images/sports/detail_visual.webp')">
-                            <div class="w-[500px] max-w-full">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex-wrap flex items-center gap-2">
-                                        <img class="w-5" src="./dist/images/sports/icon_football.svg" alt="">
-                                        <img class="w-5 lg:block hidden" src="./dist/images/sports/europa-league-vavestyle.svg" alt="">
-                                        <b class="lg:block hidden font-normal">UEFA 유로파 리그</b>
-                                        <span class="lg:hidden block">KF 을라피 vs 위즐라 크라코우</span>
+                        <div class="flex gap-2">
+                            <div class="flex-1 sports_detail_visual p-3 lg:p-5 rounded-lg" style="background-image:url('./dist/images/sports/detail_visual.webp')">
+                                <div class="w-[380px] max-w-full">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex-wrap flex items-center gap-2">
+                                            <img class="w-5" src="./dist/images/sports/icon_football.svg" alt="">
+                                            <img class="w-5 lg:block hidden" src="./dist/images/sports/conmebol.svg" alt="">
+                                            <b class="lg:block hidden font-normal">코파 수다메리카나</b>
+                                            <span class="lg:hidden block">KF 을라피 vs 위즐라 크라코우</span>
+                                        </div>
+                                        <button class="block lg:hidden w-8 h-8 bg-sub rounded-full"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?0718#modern-analytics-bars"></use></svg></button>
                                     </div>
-                                    <button class="block lg:hidden w-8 h-8 bg-sub rounded-full"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?0718#modern-analytics-bars"></use></svg></button>
+                                    <div class="flex items-center justify-between gap-2 mt-2 lg:mt-5 ">
+                                        <div class="flex items-center gap-1">
+                                            <img src="./dist/images/sports/live.svg" alt="">
+                                            <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#live-timer"></use></svg>
+                                            <span>81:01</span>
+                                            <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#modern-broadcast"></use></svg>
+                                        </div>
+                                        <div class="mont">
+                                            후반전 1:0 | 0:1
+                                        </div>
+                                    </div>
+                                    <div class="visual_info mt-5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 lg:p-3 rounded-md">
+                                        <div class="w-full">
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center gap-2">
+                                                    <img class="w-5" src="./dist/images/sports/team/277847.png" alt="">
+                                                    <b class="text-xs">KF 을라피</b>
+                                                </div>
+                                                <p class="text-primary font-bold">1</p>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center gap-2 mt-1 lg:mt-3">
+                                                    <img class="w-5" src="./dist/images/sports/team/3111.png" alt="">
+                                                    <b class="text-xs">위즐라 크라코우</b>
+                                                </div>
+                                                <p class="text-primary font-bold">1</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                <div class="mt-2 lg:mt-5 text-xs lg:text-sm opacity-50"><b>18.07.2024</b> <span>23:30</span></div>
-                                <div class="visual_info mt-5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 lg:p-3 rounded-md">
-                                    <div>
-                                        <div class="flex items-center gap-2">
-                                            <img class="w-5" src="./dist/images/sports/team/277847.png" alt="">
-                                            <b class="text-xs">KF 을라피</b>
-                                        </div>
-                                        <div class="flex items-center gap-2 mt-1 lg:mt-3">
-                                            <img class="w-5" src="./dist/images/sports/team/3111.png" alt="">
-                                            <b class="text-xs">위즐라 크라코우</b>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <div class="flex flex-col itmes-center justify-center min-w-[50px] h-12 border border-dashed border-white border-opacity-10 bg-white bg-opacity-10 rounded mont leading-snug text-center">
-                                            <p class="pt-1 fs10">HRS</p>
-                                            <b class="text-xl font-bold leading-tight">10</b>
-                                        </div>
-                                        <span class="font-extrabold">:</span>
-                                        <div class="flex flex-col itmes-center justify-center min-w-[50px] h-12 border border-dashed border-white border-opacity-10 bg-white bg-opacity-10 rounded mont leading-snug text-center">
-                                            <p class="pt-1 fs10">분</p>
-                                            <b class="text-xl font-bold leading-tight">16</b>
-                                        </div>
-                                        <span class="font-extrabold">:</span>
-                                        <div class="flex flex-col itmes-center justify-center min-w-[50px] h-12 border border-dashed border-white border-opacity-10 bg-white bg-opacity-10 rounded mont leading-snug text-center">
-                                            <p class="pt-1 fs10">초</p>
-                                            <b class="text-xl font-bold leading-tight">44</b>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                            <!-- 비디오  -->
+                            <div class="flex items-center justify-center w-[260px] bg-box rounded-lg">
+                                <p>비디오 들어가는 곳</p>
                             </div>
                         </div>
 
@@ -236,8 +243,8 @@
                                     </button>
                                 </dt>
                                 <dd class="grid grid-cols-2 lg:grid-cols-3 gap-2 mt-2 px-3 pb-3">
-                                    <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">KF 을라피</p><b>3.1</b></button>
-                                    <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.4</b></button>
+                                    <button class="bet_btn up flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">KF 을라피</p><b>3.1</b></button>
+                                    <button class="bet_btn down flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">드로</p><b>3.4</b></button>
                                     <button class="bet_btn flex items-center justify-between w-full h-10 px-4 text-xs rounded-md" onclick="sportsBetCheck(this)"><p class="font-normal">위즐라 크라코우</p><b>2.26</b></button>
                                 </dd>
                             </dl>

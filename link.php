@@ -120,26 +120,42 @@ echo txtRecord('./@record/');
 		</li>
 		<li class="mt40" data-label="스포츠">
 			<ul>
-				<li>
-					<a href="./sports.html" target="_blank" class="">스포츠 베팅</a>
+				<li data-label="스포츠 베팅">
 					<ul>
-						<li><button class="pop-modal" onclick="modalOpen('sports_search-modal')">스포츠 검색 모달</button></li>
-					</ul>
-				</li>
-				<li>
-					<a href="./sports_mo.html" target="_blank" class="">스포츠 베팅 - 모바일</a>
-					<ul>
-						<li><a href="./sports_mo_search.html" target="_blank" class="">스포츠 검색 - 모바일</a></li>
 						<li>
-							<button class="pop-modal" onclick="modalOpen('betslip_delete-modal')">betslip 삭제 모달</button>
-							<button class="pop-modal" onclick="modalOpen('betslip_betsetting-modal')">betslip 베팅 설정 모달</button>
-							<button class="pop-modal" onclick="modalOpen('betslip_setting-modal')">betslip 설정 모달</button>
+							<a href="./sports.html" target="_blank" class="">스포츠 베팅</a>
+							<ul>
+								<li><button class="pop-modal" onclick="modalOpen('sports_search-modal')">스포츠 검색 모달</button></li>
+							</ul>
 						</li>
+						<li>
+							<a href="./sports_mo.html" target="_blank" class="">스포츠 베팅 - 모바일</a>
+							<ul>
+								<li><a href="./sports_mo_search.html" target="_blank" class="">스포츠 검색 - 모바일</a></li>
+								<li>
+									<button class="pop-modal" onclick="modalOpen('betslip_delete-modal')">betslip 삭제 모달</button>
+									<button class="pop-modal" onclick="modalOpen('betslip_betsetting-modal')">betslip 베팅 설정 모달</button>
+									<button class="pop-modal" onclick="modalOpen('betslip_setting-modal')">betslip 설정 모달</button>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="./sports_category.html" target="_blank" class="">스포츠 베팅 - 카테고리 선택시</a>
+							<ul>
+								<li><button class="pop-modal" onclick="modalOpen('sports_timefilter-modal')">모바일 - timefilter 모달</button></li>
+							</ul>
+						</li>
+						<li><a href="./sports_detail.html" target="_blank" class="">스포츠 상세</a></li>
 					</ul>
 				</li>
-				<li><a href="./sports_live.html" target="_blank" class="">라이브 베팅</a></li>
-				<li><a href="./sports_live_mo.html" target="_blank" class="">라이브 베팅 - 모바일</a></li>
-				<li><a href="./sports_result.html" target="_blank" class="">스포츠 - 결과</a></li>
+				<li data-label="라이브 베팅">
+					<ul>
+						<li><a href="./sports_live.html" target="_blank" class="">라이브 베팅</a></li>
+						<li><a href="./sports_live_mo.html" target="_blank" class="">라이브 베팅 - 모바일</a></li>
+						<li><a href="./sports_live_detail.html" target="_blank" class="">스포츠 라이브 상세</a></li>
+					</ul>
+				</li>
+				<li><a href="./sports_result.html" target="_blank" class="">결과</a></li>
 			</ul>
 		</li>
 
