@@ -39,6 +39,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 /* 색상 */
 .text-sub {color:var(--sub-color); }
 .text-light {color:var(--light-color); }
+.\!text-light {color:var(--light-color) !important; }
 .text-gradient-yellow {background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), #F7C23C); -webkit-background-clip: text; -webkit-text-fill-color: rgba(0, 0, 0, 0); }
 .text-primary-shadow {text-shadow: 0 0 10px rgb(var(--color-primary)); }
 .text-gold {background:var(--gold-color); -webkit-background-clip: text; -webkit-text-fill-color: rgba(0, 0, 0, 0);}
@@ -58,6 +59,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .\!bg-table {background:var(--table-color) !important;}
 .bg-sports {background-color:var(--sports-color); }
 .bg-betslip {background-color:var(--betslip-color); }
+.\!bg-betslip {background-color:var(--betslip-color) !important; }
 .bg-aggregate {background-color:var(--aggregate-color); }
 .bg-search {background-color:var(--search-color); }
 .bg-result {background-color:var(--result-color); }
@@ -71,6 +73,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .border-box {border-color:var(--box-color); }
 
 @media (min-width:1280px){
+    .xl\:bg-box {background-color:var(--box-color);}
     .xl\:bg-sub {background-color:var(--sub-color);}
     .xl\:bg-block {background-color:var(--block-color);}
     .xl\:bg-table {background-color:var(--table-color);}

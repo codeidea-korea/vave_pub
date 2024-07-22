@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="mypage">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <!-- 모바일 상단 -->
+                <div class="flex items-center justify-between xl:hidden px-4 py-3 mb-4 bg-box rounded-md">
+                    <button class="flex items-center gap-1 text-light"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg> 뒤로 가기</button>
+                    <p class="text-base font-bold">이중 인증</p>
+                </div>
+
+                <div class="box flex gap-4 mb-8">
+                    <!-- mypage_side -->
+
+                    <!-- mypage-content -->
+                    <div class="w-full xl:flex-1 xl:bg-box xl:p-6 rounded-lg">
+                        <h3 class="mb-4 text-lg xl:text-2xl font-bold">이중 인증</h3>
+                        <p class="text-light">계정의 안전성을 높이려면 이중 인증을 사용 설정하십시오.</p>
+                        <div class="flex md:flex-row flex-col flex-start gap-4 w-full my-3">
+                            <div class="w-40 h-40 bg-box">
+                            </div>
+                            <div class="pt-2 pb-5 text-light">
+                                <p class="text-xs">본 코드를 인증자 앱에 복사합니다.</p>
+                                <div class="flex-wrap flex items-center gap-1 p-2 my-2 bg-box rounded text-white font-bold">
+                                    GIYTIM3BMM3TEYLBGRSDEODBGQ3TCZJT
+                                    <svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 shrink-0"><use href="./dist/images/icon-defs.svg?0722#files"></use></svg>
+                                </div>
+                                <p class="text-xs">다른 사람에게 보여주지 마십시오!</p>
+                            </div>
+                        </div>
+                        <div class="w-[400px] max-w-full my-3">
+                            <div class="input_wrap w-full"> 
+                                <input id="mypa-password" type="password" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)">  
+                                <label for="mypa-password" class="form-label">비밀번호</label> 
+                                <button class="password_btn text-light" onclick="passwordChange(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#eye"></use></svg></button>
+                            </div>
+                            <div class="input_wrap w-full mt-3"> 
+                                <input id="login-code" type="text" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)">  
+                                <label for="mypa-code" class="form-label">이중 코드</label> 
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-3" disabled>제출</button>
+                    </div>
+
+                </div>
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

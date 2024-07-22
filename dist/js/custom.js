@@ -84,6 +84,18 @@ window.addEventListener("load", ()=>{
         console.log(error);
     });
 
+    // 마이페이지 
+    fetch("./_mypage_side.html")
+    .then((response) => response.text())
+    .then((htmlData) => {
+        if($('body').hasClass('mypage')){
+            $('#wrap .content .box').prepend(htmlData);
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
 });
 
 // 사이드메뉴 스크립트
@@ -536,6 +548,14 @@ const breadcrumbsHandle = (item)=>{
 const scTHandle = ()=>{
     $('body,html').animate({scrollTop:0},300)
 }
+
+
+// 마이페이지 
+const mypageTableHandle = (item)=>{
+    $(item).toggleClass('active')
+    $(item).next('.detail').toggleClass('active')
+}
+
 
 // jquery 모음
 const loadJquery = ()=>{

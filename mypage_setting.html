@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="ko" class="">
+    <!-- BEGIN: Head -->
+    <head>
+        <meta charset="utf-8">
+        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="LEFT4CODE">
+        <title>Vave: 스포츠 베팅 및 온라인 카지노</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="./dist/images/logo/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- BEGIN: CSS Assets-->
+        <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <link rel="stylesheet" href="./dist/css/layout.css" />
+        <link rel="stylesheet" href="./dist/css/custom.css" />
+        <!-- END: CSS Assets-->
+    </head>
+    <!-- END: Head -->
+    <body class="mypage">
+        <!-- BEGIN: Header -->
+        <!-- END: Header -->
+
+            
+        <div class="main-loader">
+            <div class="main-loader__image">
+                <img src="./dist/images/logo/loading_logo.svg" title="Vave" alt="Vave">
+            </div>
+        </div>
+
+        <div id="wrap" class="flex">
+            <!-- BEGIN: Side Menu -->
+            
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+
+                <!-- 모바일 상단 -->
+                <div class="flex items-center justify-between xl:hidden px-4 py-3 mb-4 bg-box rounded-md">
+                    <button class="flex items-center gap-1 text-light"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 rotate-180"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg> 뒤로 가기</button>
+                    <p class="text-base font-bold">설정</p>
+                </div>
+
+                <div class="box flex gap-4 mb-8">
+                    <!-- mypage_side -->
+
+                    <!-- mypage-content -->
+                    <div class="flex-1 xl:bg-box xl:p-6 rounded-lg">
+                        <h3 class="mb-4 text-lg xl:text-2xl font-bold">설정</h3>
+                        <h4 class="mb-4 text-base xl:text-xl font-bold">디스플레이 기본 설정</h4>
+
+                        <div class="flex-wrap flex items-center gap-4">
+                            <div class="md:w-auto w-full">
+                                <p class="mb-1 text-light font-semibold">배당률 표시 형식</p>
+                                <div class="custom_select w-full md:w-28">
+                                    <button class="font-medium"><p>10 진법</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                                    <div class="scrollbar">
+                                        <ul>
+                                            <li><p>10 진법</p></li>
+                                            <li><p>미국 형식</p></li>
+                                            <li><p>분수 형식</p></li>
+                                            <li><p>말레이시아 배당률</p></li>
+                                            <li><p>인도네시아 배당률</p></li>
+                                            <li><p>홍콩 배당률</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-auto w-full">
+                                <p class="mb-1 text-light font-semibold">시간 형식</p>
+                                <div class="custom_select w-full md:w-28">
+                                    <button class="font-medium"><p>24</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                                    <div class="scrollbar">
+                                        <ul>
+                                            <li><p>24</p></li>
+                                            <li><p>12</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-auto w-full">
+                                <p class="mb-1 text-light font-semibold">기본 시간대</p>
+                                <div class="custom_select w-full md:w-40">
+                                    <button class="font-medium"><p>Asia/Seoul</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                                    <div class="scrollbar">
+                                        <ul>
+                                            <li><p>Asia/Seoul</p></li>
+                                            <li><p>Africa/Accra</p></li>
+                                            <li><p>Africa/Addis Ababa</p></li>
+                                            <li><p>Africa/Algiers</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-auto w-full">
+                                <p class="mb-1 text-light font-semibold">배당률 변경 표시</p>
+                                <div class="custom_select w-full md:w-40">
+                                    <button class="font-medium"><p>전체 애니메이션</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                                    <div class="scrollbar">
+                                        <ul>
+                                            <li><p>전체 애니메이션</p></li>
+                                            <li><p>화살표만 표시</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-6 mb-4 text-base xl:text-xl font-bold">베팅 설정</h4>
+                        <div class="form-check mt-2"> 
+                            <input id="mp_setting_1_1" class="form-check-input" type="radio" name="mp_setting_1"> 
+                            <label class="form-check-label" for="mp_setting_1_1">모든 배당률 수락 <span class="text-primary">가장 빠른 라이브 베팅 체험</span></label> 
+                        </div>
+                        <div class="form-check mt-2"> 
+                            <input id="mp_setting_1_2" class="form-check-input" type="radio" name="mp_setting_1"> 
+                            <label class="form-check-label" for="mp_setting_1_2">변경된 비당률을 수락하지 않음</label> 
+                        </div>
+                        <div class="form-check mt-2"> 
+                            <input id="mp_setting_1_3" class="form-check-input" type="radio" name="mp_setting_1"> 
+                            <label class="form-check-label" for="mp_setting_1_3">더 높은 배당률 수락하기</label> 
+                        </div>
+
+                        <div class="flex items-center gap-3 mt-6">
+                            <label for="mp_check_1">
+                                <h4 class="text-base xl:text-xl font-bold">보너스 지급</h4>
+                            </label>
+                            <div class="form-check form-switch">
+                                <input id="mp_check_1" class="form-check-input" type="checkbox"> 
+                            </div>
+                        </div>
+                        <div class="mt-2 text-light">보너스 지급 기능이 꺼져있는 경우, 토너먼트 보너스와 VIP 프로그램 보너스를 포함한 모든 보너스를 수령하실 수 없습니다.</div>
+                        
+                        <h4 class="mt-6 text-base xl:text-xl font-bold">보너스 지급</h4>
+                        <div class="mt-2 text-light">마케팅 기본 설정 설명</div>
+
+                        <div class="flex items-center gap-3 mt-6">
+                            <label for="mp_check_2">
+                                <p class="text-light">이메일</p>
+                            </label>
+                            <div class="form-check form-switch">
+                                <input id="mp_check_2" class="form-check-input" type="checkbox"> 
+                            </div>
+                        </div>
+
+                        <h4 class="mt-6 text-base xl:text-xl font-bold">커뮤니티 채팅 기본 설정</h4>
+                        <div class="flex items-center gap-3 mt-3">
+                            <label for="mp_check_3">
+                                <p class="text-light">채팅 표시하기</p>
+                            </label>
+                            <div class="form-check form-switch">
+                                <input id="mp_check_3" class="form-check-input" type="checkbox"> 
+                            </div>
+                            <label for="mp_check_4">
+                                <p class="text-light">마지막 메시지 표시하기</p>
+                            </label>
+                            <div class="form-check form-switch">
+                                <input id="mp_check_4" class="form-check-input" type="checkbox"> 
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary mt-7">저장</button>
+
+                        <h4 class="mt-6 text-base xl:text-xl font-bold">비밀번호 변경</h4>
+                        <div class="mt-3 flex-wrap flex items-center gap-2">
+                            <div class="input_wrap md:w-auto w-full xl:flex-1"> 
+                                <input id="login-password" type="password" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)">  
+                                <label for="login-password" class="form-label">현재 비밀번호</label> 
+                                <button class="password_btn text-light" onclick="passwordChange(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#eye"></use></svg></button>
+                            </div>
+                            <div class="input_wrap flex-1"> 
+                                <input id="login-password" type="password" class="form-control w-full" onchange="inputChange(this)" oninput="inputChange(this)">  
+                                <label for="login-password" class="form-label">새로운 비밀번호</label> 
+                                <button class="password_btn text-light" onclick="passwordChange(this)"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 mx-auto"><use href="./dist/images/icon-defs.svg?#eye"></use></svg></button>
+                            </div>
+                            <button class="btn btn-primary" disabled>비밀번호 변경</button>
+                        </div>
+
+                        
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEGIN: Footer -->
+                <div class="footer"></div>
+                <!-- END: Footer -->
+
+
+
+
+            </div>
+            <!-- END: Content -->
+        </div>
+       
+        
+        <!-- BEGIN: JS Assets-->
+        <script src="./dist/js/app.js"></script>
+        <script src="./dist/js/jquery-1.12.4.js"></script>
+        <script src="./dist/js/jquery-ui.js"></script>
+        <script src="./dist/js/swiper-bundle.min.js"></script>
+        <script src="./dist/js/custom.js"></script>
+        <!-- END: JS Assets-->
+    </body>
+</html>

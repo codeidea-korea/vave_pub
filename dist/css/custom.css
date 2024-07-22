@@ -543,3 +543,33 @@
     .sports_detail_visual .visual_info {background:transparent; }
     .sports_detail_top {width:calc(100% + 20px); margin:0 -10px; background:radial-gradient(100% 200% at 0% 0%, #35444e, #19242d); }
 }
+
+
+/* ----------------------------------------------
+            마이페이지
+---------------------------------------------- */
+.mypage_side {width:215px; }
+
+.mypage_accordion.accordion .accordion-item .accordion-header .accordion-button:before {display:none !important; }
+.mypage_accordion.accordion button.collapsed svg {transform:rotate(90deg); }
+.mypage_accordion.accordion button svg {transform:rotate(-90deg); transition:all 0.4s; }
+
+.mypage_menu .active {background-color:var(--sub-color); color:var(--primary-color); }
+
+@media all and (max-width:1279px){
+    .mypage_side {display:none; }
+}
+
+.mypage_bonus_table tr {cursor:pointer; }
+.mypage_bonus_table tr.active:not(.detail) {border-left:1px solid var(--primary-color); }
+.mypage_bonus_table .detail {display:none; }
+.mypage_bonus_table .detail.active {display:table-row; }
+
+
+
+
+
+
+
+
+

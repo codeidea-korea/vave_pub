@@ -118,6 +118,14 @@ echo txtRecord('./@record/');
 				</li>
 			</ul>
 		</li>
+		<li class="mt40" data-label="마이페이지">
+			<ul>
+				<li><a href="./mypage.html" target="_blank" class="">개인정보</a></li>
+				<li><a href="./mypage_bonus.html" target="_blank" class="">보너스</a></li>
+				<li><a href="./mypage_setting.html" target="_blank" class="">설정</a></li>
+				<li><a href="./mypage_security.html" target="_blank" class="">안전</a></li>
+			</ul>
+		</li>
 		<li class="mt40" data-label="스포츠">
 			<ul>
 				<li data-label="스포츠 베팅">
