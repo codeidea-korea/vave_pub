@@ -342,7 +342,7 @@
             프로모션
 ---------------------------------------------- */
 .promotion_items {position:relative; overflow:hidden; box-shadow:0 4px 23px rgba(43,198,157,.38); }
-.promotion_items a {position:relative; display:flex; flex-direction:column; justify-content:flex-end; width:100%; min-height:236px; }
+.promotion_items > div {position:relative; display:flex; flex-direction:column; justify-content:flex-end; width:100%; min-height:236px; }
 .promotion_items img {z-index:1; position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; }
 .promotion_items:after {content:''; z-index:2; position:absolute; left:0; bottom:0; width:100%; height:120px; background:linear-gradient(rgba(16, 23, 29, 0) 10%, #10171D 100%); border-bottom-left-radius:8px; border-bottom-right-radius:8px; }
 .promotion_items .txt_box {z-index:3; position:relative; width:100%; }
@@ -506,7 +506,7 @@
 .betslip_btn.delete {background:linear-gradient(270deg,#ff8181,#FF4E4E); box-shadow:0 1px 4px #FF4E4E,0 4px 24px rgba(255, 78, 78, 0.7); }
 
 @media all and (max-width:1279px){
-    .betslip_btn {display:block; }
+    .betslip_btn {display:flex; }
 }
 
 /* 스포츠 카테고리 */

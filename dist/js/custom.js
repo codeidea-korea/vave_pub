@@ -90,6 +90,7 @@ window.addEventListener("load", ()=>{
     .then((htmlData) => {
         if($('body').hasClass('mypage')){
             $('#wrap .content .box').prepend(htmlData);
+            setTimeout(()=>{Mypage()},1000)
         }
     })
     .catch((error) => {
@@ -97,6 +98,17 @@ window.addEventListener("load", ()=>{
     });
 
 });
+
+// 마이페이지 스크립트
+const Mypage = ()=>{
+    let pathname = window.location.pathname.split('/')[2]
+    
+    $('.mypage_menu a').each(function(){
+        if(pathname == $(this).attr('href').split('/')[1]){
+            $(this).addClass('active')
+        }
+    })
+}
 
 // 사이드메뉴 스크립트
 const sideMenu = ()=>{
