@@ -2360,6 +2360,15 @@ select{
 .w-\[400px\]{
     width: 400px;
 }
+.w-auto{
+    width: auto;
+}
+.w-56{
+    width: 14rem;
+}
+.w-48{
+    width: 12rem;
+}
 .min-w-\[50px\]{
     min-width: 50px;
 }
@@ -12369,9 +12378,21 @@ html body{
 .hover\:opacity-100:hover{
     opacity: 1;
 }
+.dark .dark\:border-darkmode-800{
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--color-darkmode-800) / var(--tw-border-opacity));
+}
+.dark .dark\:bg-darkmode-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-darkmode-700) / var(--tw-bg-opacity));
+}
 .dark .dark\:text-slate-500{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-500) / var(--tw-text-opacity));
+}
+.dark .dark\:text-slate-400{
+    --tw-text-opacity: 1;
+    color: rgb(var(--color-slate-400) / var(--tw-text-opacity));
 }
 @media (min-width: 640px){
     .sm\:h-\[300px\]{
@@ -12442,6 +12463,12 @@ html body{
     }
     .md\:w-auto{
         width: auto;
+    }
+    .md\:w-1\/4{
+        width: 25%;
+    }
+    .md\:flex-auto{
+        flex: 1 1 auto;
     }
     .md\:grid-cols-2{
         grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -123,7 +123,10 @@ echo txtRecord('./@record/');
 				<li><a href="./mypage.html" target="_blank" class="">개인정보</a></li>
 				<li><a href="./mypage_bonus.html" target="_blank" class="">보너스</a></li>
 				<li><a href="./mypage_setting.html" target="_blank" class="">설정</a></li>
+				<li><a href="./mypage_referrals.html" target="_blank" class="">추천인</a></li>
 				<li><a href="./mypage_security.html" target="_blank" class="">안전</a></li>
+				<li><a href="./mypage_history.html" target="_blank" class="">베팅 내역</a></li>
+				<li><a href="./mypage_transaction.html" target="_blank" class="">거래 내역</a></li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="스포츠">
