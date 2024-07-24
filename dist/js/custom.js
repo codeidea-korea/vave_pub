@@ -102,7 +102,7 @@ window.addEventListener("load", ()=>{
 // 마이페이지 스크립트
 const Mypage = ()=>{
     let pathname = window.location.pathname.split('/')[2]
-    
+
     $('.mypage_menu a').each(function(){
         if(pathname == $(this).attr('href').split('/')[1]){
             $(this).addClass('active')
@@ -255,7 +255,11 @@ const footerScript = ()=>{
 const hamToggle = ()=>{
     $('.side_menu').toggleClass('open');
     $('.mo_menu_bg').toggleClass('open');
-    $('body').toggleClass('overflow-hidden');
+    if($('.mo_menu_bg').hasClass('open')){
+        $('body').addClass('overflow-hidden');
+    }else{
+        $('body').removeClass('overflow-hidden');
+    }
 }
 
 // 닫기 - 공통
@@ -647,11 +651,13 @@ const loadJquery = ()=>{
     })
     // custom_select 외의 영역 선택했을 시 닫기 
     document.addEventListener('click',(e)=>{
-        const select = document.querySelector('.custom_select')
+        const select = document.querySelectorAll('.custom_select.open')
 
-        if(select && !select.contains(e.target)){
-            select.classList.remove('open')
-        }
+        select.forEach((item)=>{
+            if(item && !item.contains(e.target)){
+                item.classList.remove('open')
+            }
+        })
     })
 
     // 모달 배경 클릭시 body overflow-hidden 클래스 빼기

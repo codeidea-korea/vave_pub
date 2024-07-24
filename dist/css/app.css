@@ -12425,8 +12425,14 @@ html body{
     .md\:mt-3{
         margin-top: 0.75rem;
     }
+    .md\:mt-0{
+        margin-top: 0px;
+    }
     .md\:block{
         display: block;
+    }
+    .md\:flex{
+        display: flex;
     }
     .md\:table-cell{
         display: table-cell;
@@ -12467,6 +12473,12 @@ html body{
     .md\:w-1\/4{
         width: 25%;
     }
+    .md\:w-2\/5{
+        width: 40%;
+    }
+    .md\:w-3\/5{
+        width: 60%;
+    }
     .md\:flex-auto{
         flex: 1 1 auto;
     }
@@ -12478,6 +12490,9 @@ html body{
     }
     .md\:grid-cols-4{
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .md\:grid-rows-3{
+        grid-template-rows: repeat(3, minmax(0, 1fr));
     }
     .md\:flex-row{
         flex-direction: row;

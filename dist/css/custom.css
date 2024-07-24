@@ -155,7 +155,7 @@
 }
 @media all and (max-width:767px){
     .referrals_visual {background:#0c353e;}
-    .referrals_visual .visual_box {padding-top:200px; background:url('../images/banner/referrals-invite-bg.mobile.webp') no-repeat center top;  }
+    .referrals_visual .visual_box {padding-top:200px; background:url('../images/banner/referrals-invite-bg.mobile.webp') no-repeat center top / 100% auto;  }
     
     .referrals_banner {padding:0 16px; background:url('../images/banner/referrals-email-bg.mobile.webp') no-repeat center center / cover;}
 }
@@ -427,8 +427,8 @@
 .chat_box .emoji_box .emoji_nav button.active {border-bottom:2px solid var(--primary-color); color:var(--primary-color); }
 
 @media all and (max-width:1279px){
-    .chat_box {display:none; right:0 !important; left:0 !important; top:auto !important; bottom:50px; width:100%; }
-    .chat_box.open {display:block; }
+    .chat_box {display:none; right:0 !important; left:0 !important; top:auto !important; bottom:60px; width:100%; }
+    .chat_box.open {z-index:101; display:block; }
     .chat_box > div:not(.chat_btn) {width:100%; border-bottom-left-radius:0; border-bottom-right-radius:0; }
 }
 
