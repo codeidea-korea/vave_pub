@@ -51,8 +51,506 @@
 
                 <div class="box mb-4">
                     <h3 class="text-xl font-bold">결과</h3>
-                    <div class="sports_body_info flex items-center justify-center h-96 mt-3 bg-sports open">
-                        <p>결과 정보 들어가는 곳</p>
+                    <div class="mt-3 bg-modal2">
+                        <div class="flex items-center justify-between p-1">
+                            <div class="flex items-center gap-2 pl-2">
+                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg?08269#result_ham"></use></svg></button>
+                                <div class="leading-snug">
+                                    <span>축구 / 유럽 / 잉글랜드</span>
+                                    <p class="text-lg">프리미어 리그 24/25</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg?082696#result_search"></use></svg></button>
+                                <button><svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-6 h-6"><use href="./dist/images/icon-defs.svg?082696#result_global"></use></svg></button>
+                                <button></button>
+                            </div>
+                        </div>
+                        <div class="flex-wrap flex items-center gap-4 py-3 px-2">
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_1"></use></svg>
+                                개요
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_2"></use></svg>
+                                맞대결
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_3"></use></svg>
+                                경기일정
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_4"></use></svg>
+                                테이블
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_5"></use></svg>
+                                팀
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_6"></use></svg>
+                                아카이브
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_7"></use></svg>
+                                심판진
+                            </button>
+                            <button class="flex items-center gap-1">
+                                <svg viewBox="0 0 24 24" class="shrink-0 svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg?082610#result_menu_8"></use></svg>
+                                경기장
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 py-4 bg-sports">
+                            <div class="custom_select">
+                                <button class="nostyle p-2 pr-8 border border-primary font-medium"><p>프리미어 리그</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                                <div class="scrollbar">
+                                    <ul>
+                                        <li><p>EFL Cup</p></li>
+                                        <li><p>FA컵</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="custom_select">
+                                <button class="nostyle p-2 pr-8 border border-primary font-medium"><p>리버풀</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-3 h-3"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
+                                <div class="!w-60 scrollbar">
+                                    <div class="px-2">
+                                        <div class="relative mt-2 bg-box rounded-md">
+                                            <input type="text" class="form-control h-10" placeholder="검색">
+                                        <button class="absolute right-2 top-0 flex items-center h-full"><svg viewBox="0 0 24 24" class="svg-icon w-5 h-5 text-light"><use href="./dist/images/icon-defs.svg#search"></use></svg></button>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li><p>노팅엄</p></li>
+                                        <li><p>뉴캐슬</p></li>
+                                        <li><p>레스터</p></li>
+                                        <li><p>맨체스터 시티</p></li>
+                                        <li><p>맨체스터 유나이티드</p></li>
+                                        <li><p>브라이트</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-3 px-1">
+                            <div class="flex md:flex-row flex-col items-center md:gap-0 gap-3 p-3">
+                                <div class="flex items-center justify-center md:justify-start w-full md:w-1/3">
+                                    <svg viewBox="0 0 50 50" class="w-12 h-12" style="fill: rgb(0, 0, 0);"><path d="M39 8l-8-3-1-1H20l-1 1-8 3-6 14 9 2v22h22V24l9-2"></path><path d="M18 6l-5 2 2 16v21h20V24l2-16-5-2-2 1H20" fill="#e41e2c"></path><path d="M21 5h8l1 1H20M7 21l7 2-2-14M43 21l-7 2 2-14" fill="#e41e2c"></path><path d="M7 21v-1l7 2v1M43 21v-1l-7 2v1" fill="#f20202"></path></svg>
+                                    <svg viewBox="0 0 50 50" class="w-12 h-12" style="fill: rgb(0, 0, 0);"><path d="M39 8l-8-3-1-1H20l-1 1-8 3-6 14 9 2v22h22V24l9-2"></path><path d="M18 6l-5 2 2 16v21h20V24l2-16-5-2-2 1H20" fill="#000000"></path><path d="M21 5h8l1 1H20M7 21l7 2-2-14M43 21l-7 2 2-14" fill="#4fb5c1"></path></svg>
+                                    <p class="pl-2 text-2xl font-bold">리버풀</p>
+                                </div>
+                                <div class="flex items-center justify-center gap-10 w-full md:w-2/3">
+                                    <div class="text-center">
+                                        <span class="border-b border-white border-opacity-20 pb-1">감독</span>
+                                        <p class="flex items-center gap-1 mt-3"><img class="w-6" src="./dist/images/nation/nl.png" alt="">아르네 슬롯</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <span class="border-b border-white border-opacity-20 pb-1">경기장</span>
+                                        <p class="flex items-center gap-1 mt-3">안필드, 리버풀</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex md:flex-row flex-col items-center md:gap-0 gap-2 border-t border-dblue py-4 text-center">
+                                <div class="w-full md:w-1/3">
+                                    <p class="text-xs">최근 퍼포먼스</p>
+                                    <div class="flex items-center justify-center mt-2">
+                                        <div class="relative flex items-center gap-1 sr-line">
+                                            <svg class="w-1.5" viewBox="0 0 6 24" xmlns="http://www.w3.org/2000/svg" fill="#22474f"><g><path transform="rotate(180 3,12)" d="m6.034948546921179,12.000000445445558 l-6.0698967168030755,6.074855782748176 l0,-12.149711565496348 l6.0698967168030755,6.074855782748176 z"></path></g></svg>
+                                            <svg viewBox="0 0 101 101" class="w-6 h-6" fill="#1fe988"><rect class="form-win-shape" stroke-width="5px" width="101" height="101" x="0" y="0"></rect><text fill="#000" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">승</text></svg>
+                                            <svg viewBox="0 0 101 101" class="w-6 h-6" fill="#1fe988"><rect class="form-win-shape" stroke-width="5px" width="101" height="101" x="0" y="0"></rect><text fill="#000" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">승</text></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/3">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <svg viewBox="0 0 50 100" xmlns="http://www.w3.org/2000/svg" fill="#466580" class="w-4 opacity-50"><g><rect width="50" height="100" fill="#466580" class="opacity-50"></rect><rect y="0" width="50" height="100" class="graphics-primary-fill"></rect></g></svg>
+                                        <p><b class="text-3xl font-bold">100</b>%</p>
+                                    </div>
+                                    <p class="text-xs">폼</p>
+                                </div>
+                                <div class="w-full md:w-1/3">
+                                    <p class="text-xs">MATCH DIFFICULTY</p>
+                                    <div class="flex items-center justify-center mt-2">
+                                        <div class="relative flex items-center gap-1 sr-line">
+                                            <div title="(5) 강력한 상대" class="sr-container w-6 h-6 cursor-pointer"><svg viewBox="0 0 101 101" class="margin-center"><circle class="rating-5-shape" cx="51" cy="51" r="48"></circle><text class="rating-5-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">5</text></svg></div>
+                                            <div title="(2) 상대적으로 약한 상대" class="sr-container w-6 h-6 cursor-pointer"><svg viewBox="0 0 101 101" class="margin-center"><circle class="rating-2-shape" cx="51" cy="51" r="48"></circle><text class="rating-2-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">2</text></svg></div>
+                                            <div title="(4) 상대적으로 강력한 상대" class="sr-container w-6 h-6 cursor-pointer "><svg viewBox="0 0 101 101" class="margin-center"><circle class="rating-4-shape" cx="51" cy="51" r="48"></circle><text class="rating-4-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">4</text></svg></div>
+                                            <div title="(1) 아주 약한 상대" class="sr-container w-6 h-6 cursor-pointer "><svg viewBox="0 0 101 101" class="margin-center"><circle class="rating-1-shape" cx="51" cy="51" r="48"></circle><text class="rating-1-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">1</text></svg></div>
+                                            <div title="(5) 강력한 상대" class="sr-container w-6 h-6 cursor-pointer "><svg viewBox="0 0 101 101" class="margin-center"><circle class="rating-5-shape" cx="51" cy="51" r="48"></circle><text class="rating-5-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">5</text></svg></div>
+                                            <div title="(4) 상대적으로 강력한 상대" class="sr-container w-6 h-6 cursor-pointer "><svg viewBox="0 0 101 101" class="margin-center"><circle class="rating-4-shape" cx="51" cy="51" r="48"></circle><text class="rating-4-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">4</text></svg></div>
+                                            <svg class="w-1.5" viewBox="0 0 6 24" xmlns="http://www.w3.org/2000/svg" fill="#22474f">
+                                                <g><path d="m6.034948546921179,12.000000445445558 l-6.0698967168030755,6.074855782748176 l0,-12.149711565496348 l6.0698967168030755,6.074855782748176 z"></path></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-center h-10 bg-sub font-bold">프리미어 리그</div>
+                            <div class="overflow-x-auto p-2">
+                                <table class="min-w-[800px] table no-border table-pd-sm table-hover">
+                                    <colgroup>
+                                        <col width="50px">
+                                        <col width="50px">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th colspan="3"></th>
+                                            <th colspan="8">전체</th>
+                                            <th colspan="8">홈</th>
+                                            <th colspan="8">원정팀</th>
+                                        </tr>
+                                        <tr>
+                                            <th>순위</th>
+                                            <th></th>
+                                            <th class="w-1/4 text-left">팀</th>
+
+                                            <th>#</th>
+                                            <th>승</th>
+                                            <th>D</th>
+                                            <th>패</th>
+                                            <th>득점</th>
+                                            <th>GA</th>
+                                            <th>골득실</th>
+                                            <th>PTS</th>
+
+                                            <th>#</th>
+                                            <th>승</th>
+                                            <th>D</th>
+                                            <th>패</th>
+                                            <th>득점</th>
+                                            <th>GA</th>
+                                            <th>골득실</th>
+                                            <th>PTS</th>
+
+                                            <th>#</th>
+                                            <th>승</th>
+                                            <th>D</th>
+                                            <th>패</th>
+                                            <th>득점</th>
+                                            <th>GA</th>
+                                            <th>골득실</th>
+                                            <th>PTS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center cursor-pointer">
+                                        <tr>
+                                            <td>2</td>
+                                            <td><svg class="w-3 h-3 fill-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M 24,12 21.885,9.885 13.5,18.255 13.5,0 l -3,0 0,18.255 L 2.13,9.87 0,12 12,24 24,12 Z"></path></g></svg></td>
+                                            <td class="border-r text-left">브라이튼</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><svg class="w-3 h-3 fill-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M 24,12 21.885,9.885 13.5,18.255 13.5,0 l -3,0 0,18.255 L 2.13,9.87 0,12 12,24 24,12 Z"></path></g></svg></td>
+                                            <td class="border-r text-left">아스널</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><svg class="w-3 h-3 fill-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M 24,12 21.885,9.885 13.5,18.255 13.5,0 l -3,0 0,18.255 L 2.13,9.87 0,12 12,24 24,12 Z"></path></g></svg></td>
+                                            <td class="border-r text-left">리버풀</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><svg class="w-3 h-3 fill-primary rotate-180" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M 24,12 21.885,9.885 13.5,18.255 13.5,0 l -3,0 0,18.255 L 2.13,9.87 0,12 12,24 24,12 Z"></path></g></svg></td>
+                                            <td class="border-r text-left">토트넘</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><svg class="w-3 h-3 fill-primary rotate-180" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M 24,12 21.885,9.885 13.5,18.255 13.5,0 l -3,0 0,18.255 L 2.13,9.87 0,12 12,24 24,12 Z"></path></g></svg></td>
+                                            <td class="border-r text-left">뉴캐슬</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td class="border-r">6</td>
+
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>6</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 mt-2">
+                                <div>
+                                    <div class="flex items-center justify-center h-10 bg-sub font-bold">지난 경기</div>
+                                    <div class="p-2">
+                                        <table class="table no-border table-pd-sm table-hover">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th>TO/R</th>
+                                                    <th>매치</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="cursor-pointer text-center">
+                                                <tr>
+                                                    <td class="border-r">PL 2</td>
+                                                    <td>
+                                                        <div class="flex items-center justify-between ">
+                                                            <div class="w-1/3 text-primary text-right">리버풀</div>
+                                                            <div class="w-1/3">26/08/24<br/><span class="text-primary">2</span> : 0 (FT)</div>
+                                                            <div class="w-1/3 text-left">브렌트포드</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border-r">PL 1</td>
+                                                    <td>
+                                                        <div class="flex items-center justify-between">
+                                                            <div class="w-1/3 text-right">입스위치 타운</div>
+                                                            <div class="w-1/3">17/08/24<br/>0 : <span class="text-primary">2</span> (FT)</div>
+                                                            <div class="w-1/3 text-left text-primary">리버풀</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-center h-10 bg-sub font-bold">다음 경기</div>
+                                    <div class="p-2">
+                                        <table class="table no-border table-pd-sm table-hover">
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="*">
+                                            </colgroup>
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th></th>
+                                                    <th>TO/R</th>
+                                                    <th>매치</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="cursor-pointer text-center">
+                                                <tr>
+                                                    <td><svg viewBox="0 0 101 101" class="sr-container w-6 h-6 pl-1"><rect class="rating-5-shape" stroke-width="5px" width="101" height="101" x="0" y="0"></rect><text class="rating-5-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">5</text></svg></td>
+                                                    <td class="border-r">PL 3</td>
+                                                    <td>
+                                                        <div class="flex items-center justify-between ">
+                                                            <div class="w-1/3 text-right">맨체스터 유나이티드</div>
+                                                            <div class="w-1/3">02/09/24<br/> - : -</div>
+                                                            <div class="w-1/3 text-left">리버풀</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td class="border-r">PL 4</td>
+                                                    <td>
+                                                        <div class="flex items-center justify-between">
+                                                            <div class="w-1/3 text-right">리버풀</div>
+                                                            <div class="w-1/3">14/09/24<br/>- : -</div>
+                                                            <div class="w-1/3 text-left ">노팅엄</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><svg viewBox="0 0 101 101" class="sr-container w-6 h-6 pl-1"><rect class="rating-2-shape" stroke-width="5px" width="101" height="101" x="0" y="0"></rect><text class="rating-2-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">2</text></svg></td>
+                                                    <td class="border-r">PL 5</td>
+                                                    <td>
+                                                        <div class="flex items-center justify-between ">
+                                                            <div class="w-1/3 text-right">리버풀</div>
+                                                            <div class="w-1/3">21/09/24<br/> - : -</div>
+                                                            <div class="w-1/3 text-left">본머스</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><svg viewBox="0 0 101 101" class="sr-container w-6 h-6 pl-1"><rect class="rating-4-shape" stroke-width="5px" width="101" height="101" x="0" y="0"></rect><text class="rating-4-text" x="51" y="54" font-size="40" style="text-anchor: middle; dominant-baseline: middle;">4</text></svg></td>
+                                                    <td class="border-r">PL 6</td>
+                                                    <td>
+                                                        <div class="flex items-center justify-between ">
+                                                            <div class="w-1/3 text-right">울버햄튼</div>
+                                                            <div class="w-1/3">21/09/24<br/> - : -</div>
+                                                            <div class="w-1/3 text-left">리버풀</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="mt-2 text-center">
+                                            <button class="btn btn-primary">더 보기</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-center h-10 bg-sub font-bold">현재 팀</div>
+                            <div class="overflow-x-auto p-2">
+                                <table class="min-w-[800px] table no-border table-pd-sm table-hover">
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th>라인업</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th>생일</th>
+                                            <th>Apps</th>
+                                            <th>분</th>
+                                            <th>득점</th>
+                                            <th>어시스트</th>
+                                            <th><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><g><rect width="80" height="120" rx="10" ry="10" x="20" y="0" fill="#ffbc3c"></rect></g></svg></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="cursor-pointer text-center">
+                                        <tr>
+                                            <td>골키퍼</td>
+                                            <td>56</td>
+                                            <td><img class="w-6" src="./dist/images/nation/cz.png" alt=""></td>
+                                            <td class="text-left">비테슬라프 야로스</td>
+                                            <td>23/07/01</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>골키퍼</td>
+                                            <td>1</td>
+                                            <td><img class="w-6" src="./dist/images/nation/br.png" alt=""></td>
+                                            <td class="text-left">알리송</td>
+                                            <td>02/10/92</td>
+                                            <td>2</td>
+                                            <td>180</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
 

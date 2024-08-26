@@ -12,6 +12,7 @@
     --aggregate-color:#35444e;
     --search-color:#584E2A;
     --result-color:#1a252d;
+    --dblue-color:#466580;
     --box-color:rgba(16,23,29,0.5);
     --box-color-2:rgba(16,23,29,0.2);
     --table-color:rgba(53, 68, 78, 0.2); 
@@ -71,6 +72,7 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .border-table {border-color:var(--table-color); }
 .\!border-table {border-color:var(--table-color) !important; }
 .border-box {border-color:var(--box-color); }
+.border-dblue {border-color:var(--dblue-color); }
 
 @media (min-width:1280px){
     .xl\:bg-box {background-color:var(--box-color);}
@@ -93,6 +95,23 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 
 .dots {display:flex; align-items:center; gap:6px; }
 .dots i {width:6px; height:6px; background-color:#fff; opacity:.3; border-radius:50%; }
+
+
+.sr-container .rating-1-text { fill: #000; }
+.sr-container .rating-1-shape { fill: #9ccad4; stroke: #22474f; }
+.sr-container .rating-2-text { fill: #000; }
+.sr-container .rating-2-shape { fill: #7ea9b3; stroke: #22474f; }
+.sr-container .rating-3-text { fill: #fff; }
+.sr-container .rating-3-shape { fill: #5f8992; stroke: #22474f; }
+.sr-container .rating-4-text { fill: #fff; }
+.sr-container .rating-4-shape { fill: #416870; stroke: #22474f; }
+.sr-container .rating-5-text { fill: #fff; }
+.sr-container .rating-5-shape { fill: #22474f; stroke: #22474f; }
+.sr-container .rating-0-text { fill: #000; }
+.sr-container .rating-0-shape { fill: #99b1c6; stroke: #22474f; }
+.sr-line:before {content:''; z-index:0; position:absolute; left:0; top:calc(50% - 1px); width:100%; height:2px; background-color:#22474f;}
+.sr-line > * {z-index: 1;}
+
 
 /* 
         **레이아웃 및 공통으로 쓰여지는 레이아웃**
@@ -186,6 +205,12 @@ body {font-family: "Noto Sans KR", sans-serif; color:#fff; background:radial-gra
 .table.thead-px-sm thead th{padding-right:10px; padding-left:10px; }
 .table.tbody-px-sm tbody td{padding-right:10px; padding-left:10px; }
 
+.table.table-pd-sm thead th,
+.table.table-pd-sm tbody td {padding:8px 5px; }
+
+.table.table-hover tr td {border-bottom:1px solid #10171d; background:#141d22; }
+.table.table-hover tr td.border-r {border-right:1px solid #10171d; }
+.table.table-hover tr:hover td {color:#fff; background:#202b31; }
 
 .nav.nav-link-tabs .nav-item .nav-link.active {color:rgb(var(--color-primary)); }
 .nav.nav-link-tabs .nav-item .nav-link.active svg {}
