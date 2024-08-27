@@ -125,7 +125,12 @@ echo txtRecord('./@record/');
 				<li><a href="./mypage_setting.html" target="_blank" class="">설정</a></li>
 				<li><a href="./mypage_referrals.html" target="_blank" class="">추천인</a></li>
 				<li><a href="./mypage_security.html" target="_blank" class="">안전</a></li>
-				<li><a href="./mypage_history.html" target="_blank" class="">베팅 내역</a></li>
+				<li>
+					<a href="./mypage_history.html" target="_blank" class="">베팅 내역</a>
+					<ul>
+						<li><button class="pop-modal" onclick="modalOpen('bet_history-modal');">모바일 베팅내역 상세 모달</button></li>
+					</ul>
+				</li>
 				<li><a href="./mypage_transaction.html" target="_blank" class="">거래 내역</a></li>
 			</ul>
 		</li>

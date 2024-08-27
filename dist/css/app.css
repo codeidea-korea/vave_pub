@@ -1919,6 +1919,18 @@ select{
 .top-\[60px\]{
     top: 60px;
 }
+.left-2{
+    left: 0.5rem;
+}
+.top-1{
+    top: 0.25rem;
+}
+.left-5{
+    left: 1.25rem;
+}
+.top-5{
+    top: 1.25rem;
+}
 .z-10{
     z-index: 10;
 }
@@ -2768,6 +2780,10 @@ select{
     --tw-bg-opacity: 1;
     background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
+.bg-danger{
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--color-danger) / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
     --tw-bg-opacity: 0.1;
 }
@@ -2950,6 +2966,10 @@ select{
 .py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+.px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 .\!pl-0{
     padding-left: 0px !important;
@@ -12450,6 +12470,9 @@ html body{
     .md\:grid-cols-4{
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+    .md\:grid-cols-none{
+        grid-template-columns: none;
+    }
     .md\:grid-rows-3{
         grid-template-rows: repeat(3, minmax(0, 1fr));
     }
@@ -12458,6 +12481,9 @@ html body{
     }
     .md\:flex-col{
         flex-direction: column;
+    }
+    .md\:flex-wrap{
+        flex-wrap: wrap;
     }
     .md\:items-center{
         align-items: center;
@@ -12767,6 +12793,10 @@ html body{
     .xl\:py-4{
         padding-top: 1rem;
         padding-bottom: 1rem;
+    }
+    .xl\:py-6{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     .xl\:pb-14{
         padding-bottom: 3.5rem;

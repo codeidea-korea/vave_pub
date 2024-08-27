@@ -323,8 +323,8 @@
 .hall_sub_visual_sports {background:rgb(25,35,41) url('../images/banner/hall-of-fame-banner-sport-bg.webp') no-repeat right center / contain; }
 
 .fame_table tr.detail {display:none; background-color:rgba(16,23,29,.5); border-top:1px solid rgba(43,198,157,.1); }
-.fame_table.open tr.detail {display:table-row; }
-.fame_table.open {box-shadow:0 0 10px rgba(43,198,157,.5); }
+.fame_table.open tr.detail { display:table-row; }
+.fame_table.open {z-index:2; display:relative; box-shadow:0 0 10px rgba(43,198,157,.5); }
 .fame_table .table_open_btn {transform:rotate(0); transition:all 0.5s; }
 
 .mo_table_box.on {box-shadow:0 0 10px rgba(43,198,157,.5); }

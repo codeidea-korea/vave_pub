@@ -71,7 +71,7 @@
                             </div>
                             <div class="tab-content mt-2">
                                 <div id="mypate_bet-tab-1" class="tab-pane leading-relaxed active" role="tabpanel" aria-labelledby="mypate_bet-1-tab">
-                                    <div class="flex-wrap flex items-center gap-2 mb-4">
+                                    <div class="grid grid-cols-2 md:grid-cols-none md:flex-wrap md:flex items-center gap-2 mb-4">
                                         <div class="custom_select w-full md:w-36">
                                             <button class="font-medium"><p>보류 중</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
                                             <div class="scrollbar">
@@ -85,49 +85,393 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="relative w-40 bg-table rounded-lg mont">
-                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-table"> 
+                                        <button class="btn btn-outline-primary md:hidden block border-2">리셋</button>
+                                        <div class="relative w-full md:w-40 bg-sub md:bg-table rounded-lg mont">
+                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-box md:bg-table"> 
                                                 <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#calendar"></use></svg>
                                             </div> 
                                             <input type="text" class="datepicker form-control py-3 pl-12" data-single-mode="true">
                                         </div>
-                                        <div class="relative w-40 bg-table rounded-lg mont">
-                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-table"> 
+                                        <div class="relative w-full md:w-40 bg-sub md:bg-table rounded-lg mont">
+                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-box md:bg-table"> 
                                                 <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#calendar"></use></svg>
                                             </div> 
                                             <input type="text" class="datepicker form-control py-3 pl-12" data-single-mode="true">
                                         </div>
-                                        <button class="btn btn-outline-primary border-2">리셋</button>
+                                        <button class="btn btn-outline-primary md:block hidden border-2">리셋</button>
 
                                     </div>
 
-                                    <div>
+                                    <div class="md:block hidden">
                                         <table class="table table-striped striped_type03 no-border tbody-px-sm thead-py-big mont">
                                            
                                             <tbody class="font-bold text-xs xl:text-sm">
                                                 <tr>
-                                                    <td><div class="text-light text-xs">신분증</div>#1961192</td>
-                                                    <td><div class="text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
-                                                    <td><div class="text-light text-xs">멀티 베팅</div></td>
-                                                    <td><div class="text-light text-xs">배당률</div>13.32</td>
-                                                    <td>
-                                                        <div class="text-light text-xs">스테이크</div>
-                                                        <p class="flex items-center gap-1">
-                                                            <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
-                                                            0.99957737
-                                                        </p>
+                                                    <td colspan="6" class="!p-0">
+                                                        <table class="table fame_table">
+                                                            <colgroup>
+                                                                <col width="12%">
+                                                                <col width="16%">
+                                                                <col width="16%">
+                                                                <col width="12%">
+                                                                <col width="16%">
+                                                                <col width="18%">
+                                                            </colgroup>
+                                                            <tbody class="align-top">
+                                                                <tr>
+                                                                    <td><div class="mb-2 text-light text-xs">신분증</div>#1961192</td>
+                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                    <td>
+                                                                        <div class="mb-2 text-light text-xs">멀티 베팅</div>
+                                                                        <div class="p-2 bg-light-opacity-20 rounded-md text-light">
+                                                                            <p>2 결과</p>
+                                                                            <div class="flex items-center gap-2 mt-2">
+                                                                                <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                            </div>
+                                                                            <div class="flex items-center gap-1 mt-3">
+                                                                                <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                                                <span class="w-6 h-2 bg-primary rounded-lg"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>13.32</td>
+                                                                    <td>
+                                                                        <div class="mb-2 text-light text-xs">스테이크</div>
+                                                                        <p class="flex items-center gap-1 text-light">
+                                                                            <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                                            0.99957737
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="relative !pr-10">
+                                                                        <div class="mb-2 text-light text-xs">상태</div><button class="btn btn-sm btn-danger">패배</button>
+                                                                        <button class="table_open_btn absolute right-3 top-3"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5 rotate-90 text-light"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="detail">
+                                                                    <td colspan="6" class="!p-0">
+                                                                        <table>
+                                                                            <colgroup>
+                                                                                <col width="15%">
+                                                                                <col width="15%">
+                                                                                <col width="20%">
+                                                                                <col width="15%">
+                                                                                <col width="15%">
+                                                                                <col width="10%">
+                                                                            </colgroup>
+                                                                            <tbody class="align-top">
+                                                                                <tr>
+                                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                                    <td>
+                                                                                        <div class="mb-2 text-light text-xs">이벤트</div>
+                                                                                        <div class="flex items-start gap-1">
+                                                                                            <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                            <span>뉴욕 리버티<br/>댈러스 윙스</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td><div class="mb-2 text-light text-xs">선택</div>승자(오버타임 포함): 댈러스 윙스</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>7.2</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">결과</div>79-71 (14-17, 21-15, 18-17, 26-22)</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">상태</div><span class="btn btn-sm btn-danger">패배</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                                    <td>
+                                                                                        <div class="mb-2 text-light text-xs">이벤트</div>
+                                                                                        <div class="flex items-start gap-1">
+                                                                                            <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                            <span>로드 워리어스<br/>Blackwater Bossing</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td><div class="mb-2 text-light text-xs">선택</div>합계(오버타임 포함): 언더 215.5</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>1.85</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">결과</div>104-87 (23-22, 28-15, 33-25, 20-25)</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">상태</div><span class="btn btn-sm btn-primary">우승</span></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </td>
-                                                    <td><div class="text-light text-xs">상태</div><button class="btn btn-sm btn-danger">패배</button></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="6" class="!p-0">
+                                                        <table class="table fame_table">
+                                                            <colgroup>
+                                                                <col width="12%">
+                                                                <col width="16%">
+                                                                <col width="16%">
+                                                                <col width="12%">
+                                                                <col width="16%">
+                                                                <col width="18%">
+                                                            </colgroup>
+                                                            <tbody class="align-top">
+                                                                <tr>
+                                                                    <td><div class="mb-2 text-light text-xs">신분증</div>#1961192</td>
+                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                    <td>
+                                                                        <div class="mb-2 text-light text-xs">멀티 베팅</div>
+                                                                        <div class="p-2 bg-light-opacity-20 rounded-md text-light">
+                                                                            <p>4 결과</p>
+                                                                            <div class="flex items-center gap-2 mt-2">
+                                                                                <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                            </div>
+                                                                            <div class="flex items-center gap-1 mt-3">
+                                                                                <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                                                <span class="w-6 h-2 bg-primary rounded-lg"></span>
+                                                                                <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                                                <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>13.32</td>
+                                                                    <td>
+                                                                        <div class="mb-2 text-light text-xs">스테이크</div>
+                                                                        <p class="flex items-center gap-1 text-light">
+                                                                            <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                                            0.99957737
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="relative !pr-10">
+                                                                        <div class="mb-2 text-light text-xs">상태</div><button class="btn btn-sm btn-danger">패배</button>
+                                                                        <button class="table_open_btn absolute right-3 top-3"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5 rotate-90 text-light"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="detail">
+                                                                    <td colspan="6" class="!p-0">
+                                                                        <table>
+                                                                            <colgroup>
+                                                                                <col width="15%">
+                                                                                <col width="15%">
+                                                                                <col width="20%">
+                                                                                <col width="15%">
+                                                                                <col width="15%">
+                                                                                <col width="10%">
+                                                                            </colgroup>
+                                                                            <tbody class="align-top">
+                                                                                <tr>
+                                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                                    <td>
+                                                                                        <div class="mb-2 text-light text-xs">이벤트</div>
+                                                                                        <div class="flex items-start gap-1">
+                                                                                            <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                            <span>뉴욕 리버티<br/>댈러스 윙스</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td><div class="mb-2 text-light text-xs">선택</div>승자(오버타임 포함): 댈러스 윙스</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>7.2</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">결과</div>79-71 (14-17, 21-15, 18-17, 26-22)</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">상태</div><span class="btn btn-sm btn-danger">패배</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                                    <td>
+                                                                                        <div class="mb-2 text-light text-xs">이벤트</div>
+                                                                                        <div class="flex items-start gap-1">
+                                                                                            <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                            <span>로드 워리어스<br/>Blackwater Bossing</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td><div class="mb-2 text-light text-xs">선택</div>합계(오버타임 포함): 언더 215.5</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>1.85</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">결과</div>104-87 (23-22, 28-15, 33-25, 20-25)</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">상태</div><span class="btn btn-sm btn-primary">우승</span></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="6" class="!p-0">
+                                                        <table class="table fame_table">
+                                                            <colgroup>
+                                                                <col width="12%">
+                                                                <col width="16%">
+                                                                <col width="16%">
+                                                                <col width="12%">
+                                                                <col width="16%">
+                                                                <col width="18%">
+                                                            </colgroup>
+                                                            <tbody class="align-top">
+                                                                <tr>
+                                                                    <td><div class="mb-2 text-light text-xs">신분증</div>#1961192</td>
+                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                    <td>
+                                                                        <div class="mb-2 text-light text-xs">single bet</div>
+                                                                        <div class="p-2 bg-light-opacity-20 rounded-md text-light">
+                                                                            <div class="flex items-center gap-1 mb-2 leading-tight">
+                                                                                <span class="px-1 py-0.5 text-white bg-danger rounded fs10">LIVE</span>
+                                                                                <span class="fs10">CONCACAF Central<br/> American Cup</span>
+                                                                            </div>
+                                                                            <div class="text-light text-xs">
+                                                                                CD 마라톤<br/>
+                                                                                CD 루이스 앙헬 피르포
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>13.32</td>
+                                                                    <td>
+                                                                        <div class="mb-2 text-light text-xs">스테이크</div>
+                                                                        <div class="flex items-center gap-1">
+                                                                            <p class="flex items-center gap-1 text-light">
+                                                                                <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                                                0.99957737
+                                                                            </p>
+                                                                            <svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 text-light"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg>
+                                                                        </div>
+                                                                        <p class="flex items-center gap-1 text-primary">
+                                                                            <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                                            1.64952398
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="relative !pr-10">
+                                                                        <div class="mb-2 text-light text-xs">상태</div><button class="btn btn-sm btn-primary">우승</button>
+                                                                        <button class="table_open_btn absolute right-3 top-3"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5 rotate-90 text-light"><use href="./dist/images/icon-defs.svg?07042#arrow"></use></svg></button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="detail">
+                                                                    <td colspan="6" class="!p-0">
+                                                                        <table>
+                                                                            <colgroup>
+                                                                                <col width="15%">
+                                                                                <col width="15%">
+                                                                                <col width="20%">
+                                                                                <col width="15%">
+                                                                                <col width="15%">
+                                                                                <col width="10%">
+                                                                            </colgroup>
+                                                                            <tbody class="align-top">
+                                                                                <tr>
+                                                                                    <td><div class="mb-2 text-light text-xs">날짜</div>22.08.2024 <p class="text-light text-xs">13:23</p></td>
+                                                                                    <td>
+                                                                                        <div class="mb-2 text-light text-xs">이벤트</div>
+                                                                                        <div class="flex items-start gap-1">
+                                                                                            <span class="px-1 py-0.5 text-white bg-danger rounded fs10">LIVE</span>
+                                                                                            <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                                                            <span>CD 마라톤<br/>CD 루이스 앙헬 피르포</span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td><div class="mb-2 text-light text-xs">선택</div>토탈:<br/>언더 1.5</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">배당률</div>7.2</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">결과</div>1–0 (0–0, 1–0)</td>
+                                                                                    <td><div class="mb-2 text-light text-xs">상태</div><span class="btn btn-sm btn-primary">우승</span></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div class="md:hidden block">
+                                        <div class="p-4 mb-2 bg-box rounded-lg" onclick="modalOpen('bet_history-modal')">
+                                            <div class="flex items-center justify-between">
+                                                <div class="text-xs">
+                                                    <p>멀티 베팅 <span class="text-light">22.08.2024 <span class="fs10">13:23</span></span></p>
+                                                    <p class="text-light">신분증 - #1961192</p>
+                                                </div>
+                                                <button class="btn btn-sm btn-danger">패배</button>
+                                            </div>
+                                            <div class="p-2 my-3 bg-light-opacity-20 rounded-md text-light">
+                                                <p>2 결과</p>
+                                                <div class="flex items-center gap-2 mt-2">
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                </div>
+                                                <div class="flex items-center gap-1 mt-3">
+                                                    <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                    <span class="w-6 h-2 bg-primary rounded-lg"></span>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-between font-bold">
+                                                <div class="flex items-center gap-1 text-light">
+                                                    <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                    <p>0.99957737</p>
+                                                </div>
+                                                <p class="text-xs">13.32</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 mb-2 bg-box rounded-lg" onclick="modalOpen('bet_history-modal')">
+                                            <div class="flex items-center justify-between">
+                                                <div class="text-xs">
+                                                    <p>멀티 베팅 <span class="text-light">22.08.2024 <span class="fs10">13:23</span></span></p>
+                                                    <p class="text-light">신분증 - #1961192</p>
+                                                </div>
+                                                <button class="btn btn-sm btn-danger">패배</button>
+                                            </div>
+                                            <div class="p-2 my-3 bg-light-opacity-20 rounded-md text-light">
+                                                <p>2 결과</p>
+                                                <div class="flex items-center gap-2 mt-2">
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                </div>
+                                                <div class="flex items-center gap-1 mt-3">
+                                                    <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                    <span class="w-6 h-2 bg-primary rounded-lg"></span>
+                                                    <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                    <span class="w-6 h-2 bg-danger rounded-lg"></span>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-between font-bold">
+                                                <div class="flex items-center gap-1 text-light">
+                                                    <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                    <p>0.99957737</p>
+                                                </div>
+                                                <p class="text-xs">13.32</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 mb-2 bg-box rounded-lg">
+                                            <div class="flex items-center justify-between">
+                                                <div class="text-xs">
+                                                    <p>single bet <span class="text-light">22.08.2024 <span class="fs10">13:23</span></span></p>
+                                                    <p class="text-light">신분증 - #1961192</p>
+                                                </div>
+                                                <button class="btn btn-sm btn-primary">우승</button>
+                                            </div>
+                                            <div class="my-3">
+                                                <div class="flex items-center gap-1 mb-2 leading-tight">
+                                                    <span class="px-1 py-0.5 text-white bg-danger rounded fs10">LIVE</span>
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#s2"></use></svg>
+                                                    <span class="text-light text-xs">1-0 CD 마라톤 - CD 루이스 앙헬 피르포</span>
+                                                </div>
+                                                <div class="font-bold">
+                                                    토탈: 언더 1.5
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-between font-bold">
+                                                <div class="flex items-center gap-1 text-light">
+                                                    <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                    <p>0.99957737</p>
+                                                    <svg viewBox="0 0 16 16" class="svg-icon w-3 h-3 text-light"><use href="./dist/images/icon-defs.svg#arrow-right"></use></svg>
+                                                    <img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt="">
+                                                    <p class="text-primary">1.64952398</p>
+                                                </div>
+                                                <p class="text-xs">13.32</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="py-10 text-center">
                                         <p>현재 선택에 사용할 수 있는 베팅이 없습니다</p>
                                     </div>
                                 </div>
                                 <div id="mypate_bet-tab-2" class="tab-pane leading-relaxed" role="tabpanel" aria-labelledby="mypate_bet-2-tab">
-                                    <div class="flex-wrap flex items-center gap-2 mb-4">
+                                    <div class="grid grid-cols-2 md:grid-cols-none md:flex-wrap md:flex items-center gap-2 mb-4">
                                         <div class="custom_select w-full md:w-36">
                                             <button class="font-medium"><p>보류 중</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
                                             <div class="scrollbar">
@@ -141,22 +485,23 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="relative w-40 bg-table rounded-lg mont">
-                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-table"> 
+                                        <button class="btn btn-outline-primary md:hidden block border-2">리셋</button>
+                                        <div class="relative w-full md:w-40 bg-sub md:bg-table rounded-lg mont">
+                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-box md:bg-table"> 
                                                 <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#calendar"></use></svg>
                                             </div> 
                                             <input type="text" class="datepicker form-control py-3 pl-12" data-single-mode="true">
                                         </div>
-                                        <div class="relative w-40 bg-table rounded-lg mont">
-                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-table"> 
+                                        <div class="relative w-full md:w-40 bg-sub md:bg-table rounded-lg mont">
+                                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-box md:bg-table"> 
                                                 <svg viewBox="0 0 16 16" class="svg-icon w-4 h-4"><use href="./dist/images/icon-defs.svg#calendar"></use></svg>
                                             </div> 
                                             <input type="text" class="datepicker form-control py-3 pl-12" data-single-mode="true">
                                         </div>
-                                        <button class="btn btn-outline-primary border-2">리셋</button>
+                                        <button class="btn btn-outline-primary md:block hidden border-2">리셋</button>
 
                                     </div>
-                                    <div>
+                                    <div class="md:block hidden">
                                         <table class="table table-striped striped_type03 no-border tbody-px-sm thead-py-big mont">
                                             <thead class="">
                                                 <tr>
@@ -187,6 +532,40 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div class="md:hidden block">
+                                        <div class="p-4 mb-2 bg-box rounded-lg">
+                                            <div class="flex items-center justify-between text-light">
+                                                <p>신분증: #107690997</p>
+                                                <p><b>22.08.2024</b> 13:21</p>
+                                            </div>
+                                            <div class="mt-2 mb-3">
+                                                <p>게임: Lightning Roulette</p>
+                                                <p>스테이크: <img class="inline-flex mr-1 w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt=""> 2.99865151</p>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <button class="btn btn-sm btn-primary">우승</button>
+                                                <div class="flex items-center gap-1 text-primary"><img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt=""> 23.98921205</div>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 mb-2 bg-box rounded-lg">
+                                            <div class="flex items-center justify-between text-light">
+                                                <p>신분증: #107690997</p>
+                                                <p><b>22.08.2024</b> 13:21</p>
+                                            </div>
+                                            <div class="mt-2 mb-3">
+                                                <p>게임: Lightning Roulette</p>
+                                                <p>스테이크: <img class="inline-flex mr-1 w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt=""> 2.99865151</p>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <button class="btn btn-sm btn-danger">패배</button>
+                                                <div class="flex items-center gap-1 text-primary"><img class="w-4" src="./dist/images/coin/tether-usdt-logo.svg" alt=""> 0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-end gap-2 mt-3">
+                                        <button class="p-2 bg-sub rounded-md"><svg viewBox="0 0 16 16" class="svg-icon w-4 h-4 opacity-60 rotate-180"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
+                                        <button class="p-2 bg-sub rounded-md"><svg viewBox="0 0 16 16" class="svg-icon w-4 h-4 opacity-60"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></button>
                                     </div>
                                     <div class="py-10 text-center">
                                         <p>표시할 거래가 없습니다.</p>
@@ -222,5 +601,18 @@
         <script src="./dist/js/swiper-bundle.min.js"></script>
         <script src="./dist/js/custom.js"></script>
         <!-- END: JS Assets-->
+        <script>
+             // 테이블 여닫
+             $('.fame_table .table_open_btn').on('click',function(){
+                $(this).parents('.fame_table').toggleClass('open')
+            })
+
+            // 모바일 테이블 여닫
+            $('.mo_table_open_btn').on('click',function(){
+                $(this).parents('.mo_table_box').toggleClass('on')
+                $(this).toggleClass('on')
+                $(this).next().toggleClass('hidden')
+            })
+        </script>
     </body>
 </html>

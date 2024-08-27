@@ -54,10 +54,10 @@
                     <!-- mypage-content -->
                     <div class="flex-1">
 
-                        <div class="mb-4 xl:bg-box xl:p-6 rounded-lg">
-                            <h3 class="mb-4 text-lg xl:text-2xl font-bold">거래 내역</h3>
+                        <div class="mb-4 xl:bg-box xl:py-6 rounded-lg">
+                            <h3 class="mb-4 text-lg xl:px-6 xl:text-2xl font-bold">거래 내역</h3>
                             
-                            <div class="flex-wrap flex items-center gap-2 mb-4">
+                            <div class="flex-wrap flex items-center gap-2 mb-4 xl:px-6">
                                 <div class="custom_select w-full md:w-36">
                                     <button class="font-medium"><p>보류 중</p> <span class="arrow"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg#simple-arrow"></use></svg></span></button>
                                     <div class="scrollbar">
@@ -86,6 +86,31 @@
                                 <button class="btn btn-outline-primary border-2">리셋</button>
 
                             </div>
+
+                            <div class="py-2">
+                                <div class="relative py-4 px-12 bg-box md:bg-table">
+                                    <div class="absolute left-5 top-4 text-primary"><svg viewBox="0 0 16 16" class="svg-icon w-5 h-5"><use href="./dist/images/icon-defs.svg?0827#checked"></use></svg></div>
+                                    <button class="absolute right-4 top-5" onclick="moreDetail(this)"><svg viewBox="0 0 16 16" class="svg-icon w-4 h-4 rotate-90"><use href="./dist/images/icon-defs.svg?0827#simple-arrow"></use></svg></button>
+                                    <div class="flex items-start justify-between">
+                                        <div>
+                                            <p class="font-medium">입금하기</p>
+                                            <div class="mt-2 text-xs">신분증: #1906019</div>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="text-right">
+                                                <p class="font-bold text-primary mb-2">+30.00000000 USDT</p>
+                                                <button class="btn btn-sm btn-primary">Success</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail hidden mt-1 text-xs">
+                                        생성날짜: 22.08.2024 12:56:29<br/>
+                                        GMT+9<br/><br/>
+                                        방법: USDTXustodyCrypto
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="py-10 text-center">
                                 <p>현재 선택에 사용할 수 있는 베팅이 없습니다</p>
                             </div>
@@ -117,5 +142,12 @@
         <script src="./dist/js/swiper-bundle.min.js"></script>
         <script src="./dist/js/custom.js"></script>
         <!-- END: JS Assets-->
+        <script>
+            const moreDetail = (item)=>{
+                $(item).toggleClass('rotate-180');
+                $(item).siblings('.detail').toggleClass('hidden');
+
+            }
+        </script>
     </body>
 </html>
