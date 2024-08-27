@@ -126,12 +126,12 @@ echo txtRecord('./@record/');
 				<li><a href="./mypage_referrals.html" target="_blank" class="">추천인</a></li>
 				<li><a href="./mypage_security.html" target="_blank" class="">안전</a></li>
 				<li>
-					<a href="./mypage_history.html" target="_blank" class="">베팅 내역</a>
+					<a href="./mypage_history.html" target="_blank" class="change">베팅 내역</a>
 					<ul>
-						<li><button class="pop-modal" onclick="modalOpen('bet_history-modal');">모바일 베팅내역 상세 모달</button></li>
+						<li><button class="pop-modal change" onclick="modalOpen('bet_history-modal');">모바일 베팅내역 상세 모달</button></li>
 					</ul>
 				</li>
-				<li><a href="./mypage_transaction.html" target="_blank" class="">거래 내역</a></li>
+				<li><a href="./mypage_transaction.html" target="_blank" class="change">거래 내역</a></li>
 			</ul>
 		</li>
 		<li class="mt40" data-label="스포츠">
@@ -171,7 +171,7 @@ echo txtRecord('./@record/');
 						<li><a href="./sports_live_detail.html" target="_blank" class="">스포츠 라이브 상세</a></li>
 					</ul>
 				</li>
-				<li><a href="./sports_result.html" target="_blank" class="">결과</a></li>
+				<li><a href="./sports_result.html" target="_blank" class="change">결과</a></li>
 			</ul>
 		</li>
 
